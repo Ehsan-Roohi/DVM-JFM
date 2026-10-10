@@ -135,6 +135,21 @@
     "sha256": "c1224488fce291a8d95d76d71cfe1c800e7a113c46d80c0485a6dacb4eb0098d"
   },
   {
+    "path": "corrected_heat_budget_figure2.pdf",
+    "bytes": 25480,
+    "sha256": "4c7a85c30f8818781d77e9bb6ef2c22dd4177bf8c216afdbafb1913256256348"
+  },
+  {
+    "path": "corrected_heat_budget_figure2.png",
+    "bytes": 83039,
+    "sha256": "e1b6fb2844843989a1a98149ae2a7414d6a565da8fa98493eb1609d7b81d7875"
+  },
+  {
+    "path": "corrected_heat_budget_figure2_data.npz",
+    "bytes": 73516,
+    "sha256": "a3b23ba0638c313b3ae91a768822a1beb1ad0cac2d61d129f59641d53789ab97"
+  },
+  {
     "path": "corrected_two_budget_audit.pdf",
     "bytes": 37902,
     "sha256": "35eebf86d44bef0ad06540f913ba1435edd7033545afb42473e06a5b524e2af4"
@@ -143,6 +158,11 @@
     "path": "corrected_two_budget_audit.png",
     "bytes": 270817,
     "sha256": "9d15948dd4cb23a0b5b57ca18ad0ba313fb59751deea8112edce9ff074561780"
+  },
+  {
+    "path": "FIGURE2_COMPACT_REGEN_CHECK.json",
+    "bytes": 224,
+    "sha256": "41c27c3364b04c6c82e0e290b36c645ad08b73df105a5721db3a58fd75a8551d"
   },
   {
     "path": "FIGURE5_CPU_REGEN_COMPARISON.json",
@@ -215,6 +235,11 @@
     "sha256": "a90c6be47182b1bdae46f75d7aa08b4453d526b89c92489a69c7c85ed2989f2e"
   },
   {
+    "path": "historical_figures/fig2_exact_budget.pdf",
+    "bytes": 26197,
+    "sha256": "6b9319326cc1bcbb196a1d968f35c682c2e9eb58e9e02679c4871cf5384e925e"
+  },
+  {
     "path": "historical_figures/fig3_two_budget_recovery.pdf",
     "bytes": 48748,
     "sha256": "b00a573a166531964adc3ee1b430e8e09c5119bfd55f9f464b37eeeb5d6ee121"
@@ -248,6 +273,11 @@
     "path": "MOMENT_SUFFICIENT_BUDGET_CHECK.json",
     "bytes": 4905,
     "sha256": "fffb2a975d2132d8fc53650ff62fc4e84a9cbd1cb5210f38fc837fb592a34703"
+  },
+  {
+    "path": "plot_corrected_figure2.py",
+    "bytes": 1342,
+    "sha256": "26df7ed00d960587acd912374e1a32c8bd7de717b6a335f306ebcbcd6d95af32"
   },
   {
     "path": "plot_corrected_figure3.py",

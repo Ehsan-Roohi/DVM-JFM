@@ -1,13 +1,16 @@
+% Standalone copy of the current inline primary table; main.tex does not input this file.
 \begin{table}
-\caption{Two-budget recovery of \(R^{\mathrm{cl}}_{xx}\). The heat-flux budget gives \(S=R^{\mathrm{cl}}_{xx}+\Delta/3\), while the scalar-excess budget gives \(\Delta\).}
-\label{tab:two_budget_recovery}
-\begin{tabular}{lrrrrrr}
-\toprule
-Mach & $\epsilon_\Delta$ budget (\%) & $\rho_\Delta$ & $\epsilon_R(\Delta=0)$ (\%) & $\epsilon_R(\Delta_{\rm full})$ (\%) & $\epsilon_R(\Delta_{\rm budget})$ (\%) & $\rho_R(\Delta_{\rm budget})$ \\
-\midrule
-M2 & 3.834 & 1.000 & 64.362 & 3.356 & 4.090 & 1.000 \\
-M3 & 3.435 & 1.000 & 63.226 & 3.102 & 3.537 & 1.000 \\
-M5 & 2.151 & 1.000 & 63.113 & 2.219 & 2.428 & 1.000 \\
-\bottomrule
-\end{tabular}
+  \begin{center}
+  \caption{Two-budget recovery of $R^{\cl}_{xx}$.  Errors are active-zone relative $L^2$ errors in percent.  The heat-flux budget alone gives $S$, while the scalar-excess budget supplies $\Delta$.}
+  \label{tab:two_budget}
+  \begin{tabular}{lrrrrr}
+  \toprule
+  Mach & $\epsilon_\Delta$ & $\epsilon_R(\Delta=0)$ & $\epsilon_R(\Delta_{\rm full})$ & $\epsilon_R(\Delta_{\rm bud})$ & $\rho_R(\Delta_{\rm bud})$\\
+  \midrule
+  M2 & 3.757 & 64.362 & 3.356 & 4.427 & 0.99950\\
+  M3 & 3.457 & 63.225 & 3.101 & 3.735 & 0.99949\\
+  M5 & 2.182 & 63.112 & 2.219 & 2.544 & 0.99974\\
+  \bottomrule
+  \end{tabular}
+  \end{center}
 \end{table}

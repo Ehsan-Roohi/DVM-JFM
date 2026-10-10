@@ -1,0 +1,18 @@
+{
+  "status": "PASS_SOURCE_HASH_REFERENCE_AND_VISUAL_CHECK",
+  "pdf_pages": 46,
+  "main_tex_sha256": "b0d70d10ed09603a5142dd6a19b29086c5e31d37a2de986009eb7f8557863e8c",
+  "main_pdf_sha256": "6503e8a4d70a6e332229977f452dd29d7094df3b2b7d3936accb39ee18a0dd7d",
+  "undefined_references": false,
+  "undefined_citations": false,
+  "duplicate_destinations": false,
+  "visual_review": "All46 pages in rendered contact sheets; first page at95dpi; no observed clipping/overlap. Minor class/figure box warnings retained in build log.",
+  "compiler": "Unity /usr/bin/pdflatex and bibtex; shell escape disabled; typesetting only",
+  "live_io": {
+    "actual_ws_list_path": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007",
+    "expiry": "2026-11-06 16:07:32",
+    "df_available_bytes": 37126091571200,
+    "build_subdirectory": "shock_response_review_20261010_v1",
+    "scope": "TeX typesetting only; no scientific integration; no project live I/O"
+  }
+}

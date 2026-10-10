@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "source": "BGK_M3_regenerated/reductions.npz",
+  "S_reconstruction_max_difference": 2.842170943040401e-14,
+  "heat_rhs_exact_match": true,
+  "residual_is_differential_consistency_only": true
+}
