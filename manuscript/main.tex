@@ -1049,8 +1049,10 @@ This appendix compares density and temperature with the S-model curves in figure
 The published curves are extracted from the original PDF vector paths (133 vertices per curve), rather than supplied numerical data. Density and temperature are normalised by their Rankine--Hugoniot jumps. One translation aligns each computed density midpoint with the reference density midpoint; the same translation is used for temperature, with no fitted stretching or independent temperature shift. At the reference vertices over $-20\leq x/\lambda_1\leq15$, the maximum absolute discrepancy, expressed as a percentage of the full jump, is reported in table~\ref{tab:m8_reference}. Figure~\ref{fig:m8_reference} shows both profiles and differences. Finite resolution of the published curves and interpolation introduce unquantified extraction uncertainty, so sub-percent differences should not be interpreted as exact solver errors.
 \end{revision}
 \begin{revision}
+\par\medskip
 \noindent\begin{minipage}{\linewidth}
 \makeatletter\def\@captype{table}\makeatother
+\captionsetup{width=\linewidth,justification=raggedright,singlelinecheck=false}
 \caption{Mach-8 comparison with the published Shakhov curves. Maximum discrepancies are percentages of the full density or temperature jump, after a shared density-midpoint alignment. The refined case doubles the spatial resolution and also halves the CFL time step.}
 \label{tab:m8_reference}
 \centering

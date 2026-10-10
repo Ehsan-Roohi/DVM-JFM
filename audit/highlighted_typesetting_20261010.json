@@ -1,0 +1,16 @@
+[
+  {
+    "base": "main",
+    "pages": 43,
+    "table11_page": 38,
+    "overfull": 43,
+    "all_reference_numbers_unchanged": true
+  },
+  {
+    "base": "main_highlighted",
+    "pages": 48,
+    "table11_page": 43,
+    "overfull": 39,
+    "all_reference_numbers_unchanged": true
+  }
+]

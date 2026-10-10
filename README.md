@@ -50,3 +50,7 @@ No global convergence, uniqueness, nonexistence or validated high-Mach accuracy 
 ## Clean reader revision
 
 The current [manuscript](manuscript/main.pdf) and source are frozen at `reviewer-revision-20261010`. See [revision notes](audit/READER_REVISION_20261010.md) for scientific scope and remaining provenance gaps. Historical Figure-5 filenames refer to the Shakhov consistency plot, now Figure 4 in this manuscript.
+
+## Marked revision and Table11 caption correction
+
+[Yellow marked PDF](manuscript/main_highlighted.pdf), 48 pages; [clean PDF](manuscript/main.pdf), 43 pages. The same content is typeset with/without existing revision markup. Table11 caption now fits the local column width in both versions. No numerical values changed. Tag: `reviewer-highlighted-20261010`.
