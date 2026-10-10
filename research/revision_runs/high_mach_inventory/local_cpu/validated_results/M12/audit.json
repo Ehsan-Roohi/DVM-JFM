@@ -1,0 +1,51 @@
+{
+  "provenance": {
+    "case": {
+      "tag": "M12",
+      "profile": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu\\M12\\standing_M12_hmom_x240_nx4200_v221_35_35_vmax64_fullstate.npz",
+      "distribution": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu\\M12\\standing_M12_hmom_x240_nx4200_v221_35_35_vmax64_fullstate_fullstate.npz",
+      "profile_sha256": "4c08c5b5e79813e948240cbfd59da182f8c790684a4fc157e73355a45daaeb4c",
+      "remote_profile": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep_extra/M12/standing_M12_hmom_x240_nx4200_v221_35_35_vmax64_fullstate.npz",
+      "remote_distribution": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep_extra/M12/standing_M12_hmom_x240_nx4200_v221_35_35_vmax64_fullstate_fullstate.npz"
+    },
+    "script_sha256": "ab7d6687534f0c286380b7e6fc09d91a2132b0e5425f2fe9967239145c129398",
+    "solver_sha256": "d7a73766437091d9a376761ebf7ebf358c3b396f69e368069d89b4711e1d33f8",
+    "job": null,
+    "profile_sha256": "4c08c5b5e79813e948240cbfd59da182f8c790684a4fc157e73355a45daaeb4c",
+    "distribution_sha256": "27ffd89fbe252b5a08084cd36538f29bd7f658d0a3232301a130c08e2ad2657a",
+    "members": [
+      "x.npy",
+      "x_scaled.npy",
+      "x_mfp.npy",
+      "f.npy",
+      "v.npy",
+      "w.npy",
+      "rho.npy",
+      "ux.npy",
+      "T.npy",
+      "qx.npy",
+      "sig.npy",
+      "states.npy"
+    ]
+  },
+  "audit": {
+    "minimum_f": 1.0000000031710769e-30,
+    "shape": [
+      4200,
+      270725
+    ],
+    "device": "cpu",
+    "dtype": "float64",
+    "reference_iterations": 4,
+    "comparison_iterations": 12,
+    "identity_max_abs": 9.094947017729282e-13,
+    "rho_stored_relative_l2": 4.430582526201395e-08,
+    "ux_stored_relative_l2": 7.33715307972274e-08,
+    "T_stored_relative_l2": 2.2997014244888776e-07,
+    "qx_stored_relative_l2": 9.046091121736842e-07,
+    "sig_stored_relative_l2": 4.354575730449164e-07,
+    "Rxx_closure_stored_relative_l2": 8.273725010199098e-07,
+    "Delta_dvm_iteration_relative_l2": 4.700022589588174e-06,
+    "Rxx_closure_iteration_relative_l2": 4.22296312385314e-07
+  }
+}

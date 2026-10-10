@@ -1,0 +1,16 @@
+[
+  {
+    "campaign": "bird_dsmc_m2_high_particles_20261009",
+    "original_sha256": "159f0f8c8aeb14ba1e99acf5fed07f74700934d5cdaad0e7953f40bfde4fb2ee",
+    "patched_sha256": "30fedcc04641694a43a8727d523f9a96b18a70b49346fbd8f4f4f193a0da5c8e",
+    "patch_sha256": "bce8cca4e7b9471ea46d0daab42b51c4b01492019a7e2460b98c27187f71932c",
+    "patch_bytes": 12087
+  },
+  {
+    "campaign": "bird_dsmc_m3_m5_high_particles_20261009",
+    "original_sha256": "159f0f8c8aeb14ba1e99acf5fed07f74700934d5cdaad0e7953f40bfde4fb2ee",
+    "patched_sha256": "30fedcc04641694a43a8727d523f9a96b18a70b49346fbd8f4f4f193a0da5c8e",
+    "patch_sha256": "bce8cca4e7b9471ea46d0daab42b51c4b01492019a7e2460b98c27187f71932c",
+    "patch_bytes": 12087
+  }
+]

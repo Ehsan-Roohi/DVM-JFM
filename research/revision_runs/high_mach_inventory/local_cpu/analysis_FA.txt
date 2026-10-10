@@ -1,0 +1,8 @@
+تحلیل محلی داده‌های تاریخی BGK؛ بدون تصحیح سکوی دوردست.
+هش خروجی‌ها و متناهی‌بودن میدان‌ها مستقلاً بررسی شد. اختلاف full/lite آزمون حساسیت است، نه اثبات همگرایی تک‌پارامتری.
+M6: minimum f=1e-30; Delta iteration relative L2=8.2931e-15; stored R relative L2=8.62663e-07
+M8: minimum f=1e-30; Delta iteration relative L2=1.08791e-14; stored R relative L2=7.18425e-07
+M12: minimum f=1e-30; Delta iteration relative L2=4.70002e-06; stored R relative L2=8.27373e-07
+M8lite: minimum f=1e-30; Delta iteration relative L2=1.00989e-14; stored R relative L2=1.03719e-06
+M12lite: minimum f=1e-30; Delta iteration relative L2=2.38868e-06; stored R relative L2=9.85943e-07
+شکل‌ها تشخیصی‌اند؛ پیش از درج در مقاله باید خطای تطبیق، اثر سکو و حساسیت پارامترها بررسی شود.

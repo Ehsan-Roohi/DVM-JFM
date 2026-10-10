@@ -1,0 +1,67 @@
+{
+  "source": "https://arxiv.org/pdf/1304.0865",
+  "figure": 1,
+  "pdf_page": 11,
+  "reference_sha256": "751ba56a56d5b5cc036bc27b55463bfefb1a3d002dfa921124451b9bfe5dbb74",
+  "extraction": "Original PDF vector polylines, 133 vertices per curve; linear interpolation. Not author-supplied numerical data.",
+  "axis_calibration": {
+    "x_range": [
+      -20,
+      15
+    ],
+    "x_width_pdf_points": 153,
+    "y0_top": 227.448,
+    "y1_top": 89.662
+  },
+  "normalization": "(rho-rho1)/(rho2-rho1), (T-T1)/(T2-T1); Rankine-Hugoniot states",
+  "rho2": 3.8208955223880596,
+  "T2": 20.8720703125,
+  "reference_density_midpoint": 0.3822301928901637,
+  "metrics": {
+    "baseline": {
+      "shift_lambda1": -0.4067814391428297,
+      "fields": {
+        "rho": {
+          "max_abs_percent_of_jump": 0.9663815354248206,
+          "rms_percent_of_jump": 0.36900278931891933
+        },
+        "T": {
+          "max_abs_percent_of_jump": 1.0886694555276577,
+          "rms_percent_of_jump": 0.4448284346885147
+        }
+      }
+    },
+    "time_extend": {
+      "shift_lambda1": -0.7742487963349551,
+      "fields": {
+        "rho": {
+          "max_abs_percent_of_jump": 0.9658194457296654,
+          "rms_percent_of_jump": 0.36896891488394307
+        },
+        "T": {
+          "max_abs_percent_of_jump": 1.0891011668394124,
+          "rms_percent_of_jump": 0.445211926359965
+        }
+      }
+    },
+    "space_refine": {
+      "shift_lambda1": -0.41793661730179965,
+      "fields": {
+        "rho": {
+          "max_abs_percent_of_jump": 0.7752962694743903,
+          "rms_percent_of_jump": 0.30154699605257046
+        },
+        "T": {
+          "max_abs_percent_of_jump": 0.9868343792901468,
+          "rms_percent_of_jump": 0.4100792836584024
+        }
+      }
+    }
+  },
+  "limitations": [
+    "Published curve discretization/interpolation uncertainty unquantified; plotted line thickness about 0.5 percentage points.",
+    "Single density-midpoint shift also used for temperature; no shape fitting.",
+    "All runs stationary=false. Signed-distribution negativity persists.",
+    "These are macroscopic S-model comparisons, not validation of fourth moments or of historical BGK runs."
+  ]
+}

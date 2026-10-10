@@ -1,0 +1,19 @@
+{
+  "src/week2_jfm_upgrade/plot_shakhov_channel_consistency_final.py": {
+    "original_sha256": "241f7d85b3297897ff5ecfba54d48df719c03402aa46864bcceb07efdba6ee18",
+    "corrected_sha256": "6d88d8cf71e7885d8ca833a410146de85cbd8a56a4eb759b0cd41c4a2d1e79d6"
+  },
+  "scripts/esfp_scalar_excess_source_from_profiles.py": {
+    "original_sha256": "622fa5b300d4092ce1e8751105ddf03d5b089b083d6e3d901ce54d067f577644",
+    "corrected_sha256": "6e099eb65c1f073b690030084f096a2b8ddae498eb69df3d008ee9bd5ee1611c"
+  },
+  "src/week2_jfm_upgrade/plot_two_budget_recovery_jfm.py": {
+    "original_sha256": "f2c842740bcbc08edf99c82fed0a404599d781c4ae09252a3db53fe2ecdab493",
+    "corrected_sha256": "21f8910c0e834fe6246b0a88c2ff8b1b510a610ceabd7f97d138e220e9409d95"
+  },
+  "src\\moment_closure_next\\exact_heatflux_budget_from_fullstate.py": {
+    "original_sha256": "628e1067c25740ed8e19c009b06e56aca24ea52bc3fbc6947d315a4a1e16dc37",
+    "corrected_sha256": "a5226819aac057319a4ccf6ff2d25558b7a0e5f8393800c40f19bbed34abb434",
+    "status": "Explicit normalization guard; not yet rerun on fullstate"
+  }
+}

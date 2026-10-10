@@ -1,0 +1,12 @@
+{
+  "midpoint_max": 1.197202506501386e-07,
+  "own_full_nodal_PDE": 0.006937311906216217,
+  "boundary_phase": 1.6986412276764895e-14,
+  "minpressure": 0.9999999999999982,
+  "closure_gap": 0.004575989570294148,
+  "reason": "ITERATION_LIMIT",
+  "iterations": 20,
+  "profile_sha": "f8fe5783d312d3b74c2d7381e5bed3858a6d25bd4ed7d88cfd35a06f3c81d133",
+  "own_numerical_criteria_pass": true,
+  "scientific_validation": false
+}

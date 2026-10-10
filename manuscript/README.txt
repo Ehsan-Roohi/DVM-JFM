@@ -1,0 +1,1 @@
+Open main.tex as the main document in Overleaf; compiler: pdfLaTeX. All required class, bibliography and figure files are included. Yellow highlighting is retained. The proposed shock schematic is not included. main.pdf is the matching compiled output. See revision_notes/CHANGES_FA.txt for changes and scientific limitations. No simulations were rerun.

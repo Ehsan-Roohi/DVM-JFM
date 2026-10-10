@@ -1,0 +1,101 @@
+{
+  "created_utc": "20261009T212610Z",
+  "label": "TRANSIENT_NOT_STATIONARY",
+  "source_sha256": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64",
+  "manifest_sha256": "f570d4e07eb352720e736dded7f47fd730d500cf4b780565a3b925354b5ce0e7",
+  "cases": {
+    "M3_x1920": {
+      "mach": 3,
+      "step": 254000,
+      "time": 238.125,
+      "stable_count": 0,
+      "drift_from_saved_previous": 5.21724898312518e-07,
+      "stationary_certified": false,
+      "finished": false,
+      "source_checkpoint": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/dvm_m3_m5_transport_match_20261008/runs/M3_x1920/checkpoint.npz",
+      "source_checkpoint_sha256": "48ccf20b9dadf1d91eeae85de380cabd180c6016b8ad55349e0fb6aa69ed6547",
+      "profile_sha256": "efc855adc73e6e4d93672b48d043af1f8aa717308574fed65e8a488716742220",
+      "shape": [
+        1920,
+        8
+      ],
+      "min_rho": 1.0000005867875696,
+      "min_T": 1.0000141882887938,
+      "config": {
+        "name": "M3_x1920",
+        "mach": 3,
+        "nx": 1920,
+        "L": 45,
+        "nv": 801,
+        "vmax": 40,
+        "Pr": 0.6666666666666666,
+        "omega": 1,
+        "mu1": 1,
+        "CFL": 0.8,
+        "tmax": 400
+      }
+    },
+    "M4_x2560": {
+      "mach": 4,
+      "step": 185000,
+      "time": 173.4375,
+      "stable_count": 0,
+      "drift_from_saved_previous": 1.1791531066834762e-05,
+      "stationary_certified": false,
+      "finished": false,
+      "source_checkpoint": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/dvm_m3_m5_transport_match_20261008/runs/M4_x2560/checkpoint.npz",
+      "source_checkpoint_sha256": "d26a4a840ba74cdc17711b6936be9226ed93320cdf91f38cf255e3887b183860",
+      "profile_sha256": "884484b23f7e5feea84861533eeeef77457f5328a5d0f6fb23c9a04da3817f26",
+      "shape": [
+        2560,
+        8
+      ],
+      "min_rho": 1.0000004021955513,
+      "min_T": 1.0000197094096006,
+      "config": {
+        "name": "M4_x2560",
+        "mach": 4,
+        "nx": 2560,
+        "L": 60,
+        "nv": 801,
+        "vmax": 40,
+        "Pr": 0.6666666666666666,
+        "omega": 1,
+        "mu1": 1,
+        "CFL": 0.8,
+        "tmax": 400
+      }
+    },
+    "M5_x3200": {
+      "mach": 5,
+      "step": 153000,
+      "time": 143.4375,
+      "stable_count": 0,
+      "drift_from_saved_previous": 8.687809061731868e-05,
+      "stationary_certified": false,
+      "finished": false,
+      "source_checkpoint": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/dvm_m3_m5_transport_match_20261008/runs/M5_x3200/checkpoint.npz",
+      "source_checkpoint_sha256": "10e72dde83a852eea4359f88763b8f9e15f538cdd4ffefd0c4fcdacf2e5193b2",
+      "profile_sha256": "d40fd178f5e3a222fda4a8c0257b32746852bb933994b1a9d053d58d9bd78225",
+      "shape": [
+        3200,
+        8
+      ],
+      "min_rho": 1.0000003529031678,
+      "min_T": 1.0000273674723605,
+      "config": {
+        "name": "M5_x3200",
+        "mach": 5,
+        "nx": 3200,
+        "L": 75,
+        "nv": 801,
+        "vmax": 40,
+        "Pr": 0.6666666666666666,
+        "omega": 1,
+        "mu1": 1,
+        "CFL": 0.8,
+        "tmax": 400
+      }
+    }
+  }
+}

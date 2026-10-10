@@ -1,0 +1,43 @@
+{
+  "variables": [
+    "rho",
+    "u",
+    "T",
+    "sig",
+    "q",
+    "m",
+    "R",
+    "D",
+    "phi",
+    "psi",
+    "om"
+  ],
+  "derivatives": [
+    "dr",
+    "du",
+    "dT",
+    "ds",
+    "dq",
+    "dm",
+    "dR",
+    "dD",
+    "dphi",
+    "dpsi",
+    "dom"
+  ],
+  "rows": [
+    "-(-9*T*du*rho + 9*dT*rho*u - 5*dm + 5*du*rho*u**2 - 9*du*sig)/5",
+    "(30*T**2*du*rho + 45*T*dT*rho*u - 60*T*du*rho*u**2 + 5*dD*u + 15*dR*u - 45*dT*rho*u**3 + 105*dT*sig*u + 30*du*m*u + 96*du*q*u)/(30*u)",
+    "(315*T**2*du*rho - 315*T*dT*rho*u - 315*T*du*rho*u**2 + 45*dR*u + 315*dT*sig*u + 175*dm*u**2 + 175*dphi*u + 490*du*m*u + 168*du*q*u + 315*du*sig*u**2)/(175*u)",
+    "(196*D*du + 1065*R*du - 1176*T**2*du*rho - 1764*T*dT*rho*u + 630*T*dm + 1134*T*du*sig + 315*dR*u + 2835*dT*m + 2352*dT*q + 2205*dT*sig*u + 84*dom + 315*dpsi + 630*du*m*u + 630*du*phi + 1176*du*q*u)/315",
+    "(7*D*du + 12*R*du - 24*T**2*du*rho - 36*T*dT*rho*u + 3*dD*u + 84*dT*q + 3*dom + 24*du*q*u)/3",
+    "(1296*R*du + 5040*T*dm + 9072*T*du*sig + 5040*dT*m + 2205*dphi*u + 560*dpsi + 5040*du*m*u + 7245*du*phi)/2205",
+    "(7290*R*dT + 3645*R*du*u + 3645*T*dR + 25515*T*dT*sig + 3150*T*dphi + 14490*T*du*m + 13608*T*du*q + 14175*dT*m*u + 17325*dT*phi + 1575*dpsi*u + 972*du*om + 3150*du*phi*u + 6020*du*psi)/1575",
+    "(105*D*dT + 35*D*du*u + 270*R*dT + 60*R*du*u + 35*T*dD + 60*T*dR + 420*T*dT*sig + 120*T*du*m + 504*T*du*q + 420*dT*q*u + 15*dom*u + 66*du*om + 60*du*psi)/15"
+  ],
+  "closures": [
+    "-16*(9*R*du + 35*T*dm + 63*T*du*sig + 35*dT*m + 35*du*m*u)/(245*rho)",
+    "-(810*R*dT + 405*R*du*u + 405*T*dR + 2835*T*dT*sig + 1610*T*du*m + 1512*T*du*q + 1575*dT*m*u)/(175*rho)",
+    "-(105*D*dT + 35*D*du*u + 270*R*dT + 60*R*du*u + 35*T*dD + 60*T*dR + 420*T*dT*sig + 120*T*du*m + 504*T*du*q + 420*dT*q*u)/(15*rho)"
+  ]
+}

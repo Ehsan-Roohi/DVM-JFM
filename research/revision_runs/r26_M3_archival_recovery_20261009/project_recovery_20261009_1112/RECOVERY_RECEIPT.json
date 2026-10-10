@@ -1,0 +1,117 @@
+{
+  "utc": "2026-10-09T11:10:40.424094+00:00",
+  "durable_HPC_project_archive_complete": true,
+  "recovered_bundles": [
+    {
+      "historical_pending_receipt": "m3_full_native_Hessian_pending_archive_receipt_20261009_0823.json",
+      "source": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/r26_M3_full_native_Hessian_20261009_0818/M3_full_native_Hessian_20261009_0818.zip",
+      "sha256": "0e702f8afa69a6a9aa58fd379722bb2d22ee6bd08cd9bb9880509ecadcc42ef9",
+      "bytes": 89385590,
+      "members": 22,
+      "destination_child": "M3_full_native_Hessian_20261009_0818",
+      "filename": "M3_full_native_Hessian_20261009_0818.zip",
+      "durable_project_bundle": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/r26_M3_stf_shakhov_20261009/pending_archive_recovery_20261009_1112/M3_full_native_Hessian_20261009_0818/M3_full_native_Hessian_20261009_0818.zip",
+      "source_and_destination_whole_and_member_SHA_verified": true
+    },
+    {
+      "historical_pending_receipt": "m3_saved_Hessian_banded_pending_archive_receipt_20261009_0842.json",
+      "source": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/r26_M3_saved_Hessian_banded_20261009_0839/M3_saved_Hessian_banded_20261009_0839_recovered_0842.zip",
+      "sha256": "73d3fd1eb6ff6bf663412c27dd7f5eaf11458e6b8a6e33597686e7be62e0cb74",
+      "bytes": 43783435,
+      "members": 15,
+      "destination_child": "M3_saved_Hessian_banded_20261009_0839",
+      "filename": "M3_saved_Hessian_banded_20261009_0839.zip",
+      "durable_project_bundle": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/r26_M3_stf_shakhov_20261009/pending_archive_recovery_20261009_1112/M3_saved_Hessian_banded_20261009_0839/M3_saved_Hessian_banded_20261009_0839.zip",
+      "source_and_destination_whole_and_member_SHA_verified": true
+    },
+    {
+      "historical_pending_receipt": "m3_formal_parameter_pending_archive_receipt_20261009_0856.json",
+      "source": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/r26_M3_formal_viscosity_parameter_20261009_0856/M3_formal_viscosity_parameter_20261009_0856.zip",
+      "sha256": "7d312cd1927ad058119c0fbfdb7a2dfc74c66cefc0b0b3e4b1b3a4a183b02a63",
+      "bytes": 125751,
+      "members": 14,
+      "destination_child": "M3_formal_viscosity_parameter_20261009_0856",
+      "filename": "M3_formal_viscosity_parameter_20261009_0856.zip",
+      "durable_project_bundle": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/r26_M3_stf_shakhov_20261009/pending_archive_recovery_20261009_1112/M3_formal_viscosity_parameter_20261009_0856/M3_formal_viscosity_parameter_20261009_0856.zip",
+      "source_and_destination_whole_and_member_SHA_verified": true
+    },
+    {
+      "historical_pending_receipt": "m3_native_parameter_stationarity_pending_archive_receipt_20261009_0915.json",
+      "source": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/r26_M3_native_parameter_stationarity_20261009_0915/M3_native_parameter_stationarity_20261009_0915.zip",
+      "sha256": "17c56441989814c2582772fd12926c88d97b172a32e1c579d2105b6731f99680",
+      "bytes": 34766801,
+      "members": 15,
+      "destination_child": "M3_native_parameter_stationarity_20261009_0915",
+      "filename": "M3_native_parameter_stationarity_20261009_0915.zip",
+      "durable_project_bundle": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/r26_M3_stf_shakhov_20261009/pending_archive_recovery_20261009_1112/M3_native_parameter_stationarity_20261009_0915/M3_native_parameter_stationarity_20261009_0915.zip",
+      "source_and_destination_whole_and_member_SHA_verified": true
+    },
+    {
+      "historical_pending_receipt": "m3_conditional_indicator_pending_archive_receipt_20261009_0928.json",
+      "source": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/r26_M3_conditional_indicator_20261009_0928/M3_conditional_indicator_20261009_0928.zip",
+      "sha256": "f7afd7bd7756090b9012a9c586981ea32e06d17608b803ceaff921aee0981549",
+      "bytes": 2092618,
+      "members": 15,
+      "destination_child": "M3_conditional_indicator_20261009_0928",
+      "filename": "M3_conditional_indicator_20261009_0928.zip",
+      "durable_project_bundle": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/r26_M3_stf_shakhov_20261009/pending_archive_recovery_20261009_1112/M3_conditional_indicator_20261009_0928/M3_conditional_indicator_20261009_0928.zip",
+      "source_and_destination_whole_and_member_SHA_verified": true
+    },
+    {
+      "historical_pending_receipt": "m3_source_remainder_pending_archive_receipt_20261009_0952.json",
+      "source": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/r26_M3_source_stationarity_remainder_20261009_0952/M3_source_stationarity_remainder_20261009_0952.zip",
+      "sha256": "0926ff32ea83b0d218d655e6bfac276bfa69c1aba6156ea0113354a8edfe845b",
+      "bytes": 7777261,
+      "members": 15,
+      "destination_child": "M3_source_stationarity_remainder_20261009_0952",
+      "filename": "M3_source_stationarity_remainder_20261009_0952.zip",
+      "durable_project_bundle": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/r26_M3_stf_shakhov_20261009/pending_archive_recovery_20261009_1112/M3_source_stationarity_remainder_20261009_0952/M3_source_stationarity_remainder_20261009_0952.zip",
+      "source_and_destination_whole_and_member_SHA_verified": true
+    },
+    {
+      "historical_pending_receipt": "m3_remainder_response_pending_archive_receipt_20261009_1017.json",
+      "source": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/r26_M3_conditional_remainder_response_20261009_1017/M3_conditional_remainder_response_20261009_1017.zip",
+      "sha256": "c2e7085a75dd4cc815f4ff645fc0a63f125d8fa13a19b56a804887c33c9bfe5c",
+      "bytes": 11925144,
+      "members": 20,
+      "destination_child": "M3_conditional_remainder_response_20261009_1017",
+      "filename": "M3_conditional_remainder_response_20261009_1017.zip",
+      "durable_project_bundle": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/r26_M3_stf_shakhov_20261009/pending_archive_recovery_20261009_1112/M3_conditional_remainder_response_20261009_1017/M3_conditional_remainder_response_20261009_1017.zip",
+      "source_and_destination_whole_and_member_SHA_verified": true
+    },
+    {
+      "historical_pending_receipt": "m3_registration_preparation_pending_archive_receipt_20261009_1041.json",
+      "source": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/r26_M3_affine_registration_preparation_20261009_1041/M3_affine_registration_preparation_20261009_1041.zip",
+      "sha256": "8dcc92d5c5c95c7620903703834852ec7f331cbc9f440c85c3e1b673f0853365",
+      "bytes": 146153,
+      "members": 20,
+      "destination_child": "M3_affine_registration_preparation_20261009_1041",
+      "filename": "M3_affine_registration_preparation_20261009_1041.zip",
+      "durable_project_bundle": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/r26_M3_stf_shakhov_20261009/pending_archive_recovery_20261009_1112/M3_affine_registration_preparation_20261009_1041/M3_affine_registration_preparation_20261009_1041.zip",
+      "source_and_destination_whole_and_member_SHA_verified": true
+    },
+    {
+      "historical_pending_receipt": "m3_native_registration_pending_archive_receipt_20261009_1110.json",
+      "source": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/r26_M3_native_registration_20261009_1110/M3_native_registration_20261009_1110.zip",
+      "sha256": "af8e79ac2ee468e5403a3971e94c575fb98688ec4f07cf9a0c8afe19159d7313",
+      "bytes": 132919,
+      "members": 17,
+      "destination_child": "M3_native_registration_20261009_1110",
+      "filename": "M3_native_registration_20261009_1110.zip",
+      "durable_project_bundle": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/r26_M3_stf_shakhov_20261009/pending_archive_recovery_20261009_1112/M3_native_registration_20261009_1110/M3_native_registration_20261009_1110.zip",
+      "source_and_destination_whole_and_member_SHA_verified": true
+    }
+  ],
+  "bundle_count": 9,
+  "total_members_verified": 153,
+  "total_bytes": 190135672,
+  "destination": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/r26_M3_stf_shakhov_20261009/pending_archive_recovery_20261009_1112",
+  "available_bytes_before": 3631218688,
+  "available_bytes_after": 3440377856,
+  "project_df_after": "Filesystem                             Type  Size  Used Avail Use% Mounted on\nnese:/exports/pi_roohie_umass_edu/nese nfs4   10T   10T  3.3G 100% /project/pi_roohie_umass_edu\n",
+  "scratch_copies_preserved": true,
+  "historical_pending_receipts_unchanged": true,
+  "cloud_sync_verified": false,
+  "no_jobs_modified_or_files_deleted_moved_or_accepted_cases_rerun": true,
+  "scientific_acceptance_unchanged": true
+}

@@ -1,0 +1,5 @@
+Version 18: based on user-supplied version 17, 7 October 2026.
+
+Replaced Figure 1 with the reproduced vector plot, overlaying Rxx_cl, Delta/3 and S in the bottom row. Replaced its explanatory paragraph and updated the caption. Preserved source continuum-reference profiles and original maximum-density-gradient centering; the caption explicitly records these conventions. Removed obsolete image cropping and placed the figure on a dedicated page to avoid interrupting body text.
+
+Compiled main.pdf: 40 pages. New explanation: page 9. Figure 1: page 10. References verified and affected pages visually inspected. No simulation data were changed. Other review notes/readmes in this package refer to prior revisions. Compile main.tex with pdfLaTeX and BibTeX.

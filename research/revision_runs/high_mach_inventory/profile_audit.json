@@ -1,0 +1,312 @@
+[
+  {
+    "file": "standing_M12_hmom_x240_nx4200_v221_35_35_vmax64_fullstate.npz",
+    "sha256": "4c08c5b5e79813e948240cbfd59da182f8c790684a4fc157e73355a45daaeb4c",
+    "mach_from_states": 12.0,
+    "nx": 4200,
+    "all_numeric_finite": true,
+    "rho_positive": true,
+    "T_positive": true,
+    "mass_flux_max_deviation_percent": 0.18036818808576974,
+    "rho_end_relative_errors_percent": [
+      -5.9604644775390625e-06,
+      -0.1453489065170288
+    ],
+    "T_end_relative_errors_percent": [
+      0.0020384788513183594,
+      0.39326660558174353
+    ],
+    "final_vs_running_relativeL2_percent": {
+      "rho": 0.008436334319412708,
+      "ux": 0.010015363804996014,
+      "T": 0.013617157936096191,
+      "qx": 0.08267812430858612,
+      "Rxx_closure": 0.15074430406093597
+    },
+    "snapshot_interval_unknown": true,
+    "missing_channels": [
+      "Delta_dvm",
+      "S_dvm"
+    ],
+    "fields": [
+      "x",
+      "x_mfp",
+      "rho",
+      "ux",
+      "T",
+      "qx",
+      "sigma_xx",
+      "sig",
+      "states",
+      "xhalf_mfp",
+      "kn_eff",
+      "M300_neq",
+      "M120_neq",
+      "M102_neq",
+      "M400_raw",
+      "M220_raw",
+      "M202_raw",
+      "M040_raw",
+      "mxxx",
+      "Rxx_neq",
+      "Rxx_closure",
+      "skewx_neq",
+      "kurtx_raw",
+      "Qxx_bgk",
+      "Qx_bgk",
+      "mxxx_norm",
+      "Rxx_neq_norm",
+      "Rxx_closure_norm",
+      "Qxx_norm",
+      "Qx_norm"
+    ]
+  },
+  {
+    "file": "standing_M12lite_hmom_x180_nx3200_v181_31_31_vmax56_fullstate.npz",
+    "sha256": "1a1d2600ca6d06b320aa30b3058ad4d0ae2fe5cfd3d9be231a9472337d4de3bd",
+    "mach_from_states": 12.0,
+    "nx": 3200,
+    "all_numeric_finite": true,
+    "rho_positive": true,
+    "T_positive": true,
+    "mass_flux_max_deviation_percent": 0.1870130118785551,
+    "rho_end_relative_errors_percent": [
+      3.5762786865234375e-05,
+      -1.1175870895385742e-05
+    ],
+    "T_end_relative_errors_percent": [
+      0.013232231140136719,
+      1.1087536555542954e-05
+    ],
+    "final_vs_running_relativeL2_percent": {
+      "rho": 0.006469190586358309,
+      "ux": 0.006948096211999655,
+      "T": 0.01246270164847374,
+      "qx": 0.09153864532709122,
+      "Rxx_closure": 0.08938657492399216
+    },
+    "snapshot_interval_unknown": true,
+    "missing_channels": [
+      "Delta_dvm",
+      "S_dvm"
+    ],
+    "fields": [
+      "x",
+      "x_mfp",
+      "rho",
+      "ux",
+      "T",
+      "qx",
+      "sigma_xx",
+      "sig",
+      "states",
+      "xhalf_mfp",
+      "kn_eff",
+      "M300_neq",
+      "M120_neq",
+      "M102_neq",
+      "M400_raw",
+      "M220_raw",
+      "M202_raw",
+      "M040_raw",
+      "mxxx",
+      "Rxx_neq",
+      "Rxx_closure",
+      "skewx_neq",
+      "kurtx_raw",
+      "Qxx_bgk",
+      "Qx_bgk",
+      "mxxx_norm",
+      "Rxx_neq_norm",
+      "Rxx_closure_norm",
+      "Qxx_norm",
+      "Qx_norm"
+    ]
+  },
+  {
+    "file": "standing_M6_hmom_x95_nx2400_v151_29_29_vmax26_fullstate.npz",
+    "sha256": "c719d0199d85c57a8ebb8405788614ac99047f6e073acb04276506420a949406",
+    "mach_from_states": 6.0,
+    "nx": 2400,
+    "all_numeric_finite": true,
+    "rho_positive": true,
+    "T_positive": true,
+    "mass_flux_max_deviation_percent": 0.16589503882657838,
+    "rho_end_relative_errors_percent": [
+      1.1920928955078125e-05,
+      -0.0005354483922359599
+    ],
+    "T_end_relative_errors_percent": [
+      0.002288818359375,
+      0.0013245704300057781
+    ],
+    "final_vs_running_relativeL2_percent": {
+      "rho": 9.619656339054927e-05,
+      "ux": 0.0001419577602064237,
+      "T": 0.0002268157695652917,
+      "qx": 0.0014038843801245093,
+      "Rxx_closure": 0.0021955864503979683
+    },
+    "snapshot_interval_unknown": true,
+    "missing_channels": [
+      "Delta_dvm",
+      "S_dvm"
+    ],
+    "fields": [
+      "x",
+      "x_mfp",
+      "rho",
+      "ux",
+      "T",
+      "qx",
+      "sigma_xx",
+      "sig",
+      "states",
+      "xhalf_mfp",
+      "kn_eff",
+      "M300_neq",
+      "M120_neq",
+      "M102_neq",
+      "M400_raw",
+      "M220_raw",
+      "M202_raw",
+      "M040_raw",
+      "mxxx",
+      "Rxx_neq",
+      "Rxx_closure",
+      "skewx_neq",
+      "kurtx_raw",
+      "Qxx_bgk",
+      "Qx_bgk",
+      "mxxx_norm",
+      "Rxx_neq_norm",
+      "Rxx_closure_norm",
+      "Qxx_norm",
+      "Qx_norm"
+    ]
+  },
+  {
+    "file": "standing_M8_hmom_x120_nx2800_v171_31_31_vmax32_fullstate.npz",
+    "sha256": "fa758ae2b3e6911c42aa0e11cc931853a777d2953deb96f8310f93128db3a9b6",
+    "mach_from_states": 8.0,
+    "nx": 2800,
+    "all_numeric_finite": true,
+    "rho_positive": true,
+    "T_positive": true,
+    "mass_flux_max_deviation_percent": 0.1498141599448868,
+    "rho_end_relative_errors_percent": [
+      2.384185791015625e-05,
+      -8.568167686462402e-06
+    ],
+    "T_end_relative_errors_percent": [
+      0.005853176116943359,
+      9.138281953369187e-06
+    ],
+    "final_vs_running_relativeL2_percent": {
+      "rho": 0.005355691537261009,
+      "ux": 0.006221145391464233,
+      "T": 0.008700530976057053,
+      "qx": 0.05172304809093475,
+      "Rxx_closure": 0.08083945512771606
+    },
+    "snapshot_interval_unknown": true,
+    "missing_channels": [
+      "Delta_dvm",
+      "S_dvm"
+    ],
+    "fields": [
+      "x",
+      "x_mfp",
+      "rho",
+      "ux",
+      "T",
+      "qx",
+      "sigma_xx",
+      "sig",
+      "states",
+      "xhalf_mfp",
+      "kn_eff",
+      "M300_neq",
+      "M120_neq",
+      "M102_neq",
+      "M400_raw",
+      "M220_raw",
+      "M202_raw",
+      "M040_raw",
+      "mxxx",
+      "Rxx_neq",
+      "Rxx_closure",
+      "skewx_neq",
+      "kurtx_raw",
+      "Qxx_bgk",
+      "Qx_bgk",
+      "mxxx_norm",
+      "Rxx_neq_norm",
+      "Rxx_closure_norm",
+      "Qxx_norm",
+      "Qx_norm"
+    ]
+  },
+  {
+    "file": "standing_M8lite_hmom_x120_nx2400_v151_29_29_vmax32_fullstate.npz",
+    "sha256": "c8d5b32024dc98a7fa766ca161bdd1aff828e8ea03fc6069ec114c6ed0b9738c",
+    "mach_from_states": 8.0,
+    "nx": 2400,
+    "all_numeric_finite": true,
+    "rho_positive": true,
+    "T_positive": true,
+    "mass_flux_max_deviation_percent": 0.18055372729978877,
+    "rho_end_relative_errors_percent": [
+      2.384185791015625e-05,
+      3.91155481338501e-06
+    ],
+    "T_end_relative_errors_percent": [
+      0.006616115570068359,
+      0.0
+    ],
+    "final_vs_running_relativeL2_percent": {
+      "rho": 0.009116427041590214,
+      "ux": 0.010595289058983326,
+      "T": 0.01459159143269062,
+      "qx": 0.0853867381811142,
+      "Rxx_closure": 0.13736359775066376
+    },
+    "snapshot_interval_unknown": true,
+    "missing_channels": [
+      "Delta_dvm",
+      "S_dvm"
+    ],
+    "fields": [
+      "x",
+      "x_mfp",
+      "rho",
+      "ux",
+      "T",
+      "qx",
+      "sigma_xx",
+      "sig",
+      "states",
+      "xhalf_mfp",
+      "kn_eff",
+      "M300_neq",
+      "M120_neq",
+      "M102_neq",
+      "M400_raw",
+      "M220_raw",
+      "M202_raw",
+      "M040_raw",
+      "mxxx",
+      "Rxx_neq",
+      "Rxx_closure",
+      "skewx_neq",
+      "kurtx_raw",
+      "Qxx_bgk",
+      "Qx_bgk",
+      "mxxx_norm",
+      "Rxx_neq_norm",
+      "Rxx_closure_norm",
+      "Qxx_norm",
+      "Qx_norm"
+    ]
+  }
+]

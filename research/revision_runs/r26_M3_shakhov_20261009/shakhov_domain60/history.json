@@ -1,0 +1,212 @@
+[
+  {
+    "iteration": 0,
+    "cost": 0.000173412575686608,
+    "seconds": 0.08039236068725586,
+    "midpoint_max": 0.007426260859124766,
+    "own_full_nodal_PDE": 0.006937311877948045,
+    "boundary_phase": 1.6986412276764895e-14,
+    "minpressure": 0.9999999999999982,
+    "closure_gap": 0.0
+  },
+  {
+    "iteration": 1,
+    "cost": 1.5394036938187368e-08,
+    "seconds": 0.8749825954437256,
+    "midpoint_max": 1.1733541790298617e-05,
+    "own_full_nodal_PDE": 0.005908063461610109,
+    "boundary_phase": 1.2666960147456052e-07,
+    "minpressure": 0.9999999999967333,
+    "closure_gap": 0.004254612119977352
+  },
+  {
+    "iteration": 2,
+    "cost": 2.4092614537502446e-09,
+    "seconds": 3.5597174167633057,
+    "midpoint_max": 6.6602814170146895e-06,
+    "own_full_nodal_PDE": 0.006280921593745484,
+    "boundary_phase": 2.690552203254981e-08,
+    "minpressure": 0.999999999932354,
+    "closure_gap": 0.004416794584065187
+  },
+  {
+    "iteration": 3,
+    "cost": 1.9301778988740337e-10,
+    "seconds": 6.017826557159424,
+    "midpoint_max": 1.776083857257804e-06,
+    "own_full_nodal_PDE": 0.006708174366787684,
+    "boundary_phase": 2.5780614421044845e-08,
+    "minpressure": 0.9999999999990532,
+    "closure_gap": 0.004531291396930204
+  },
+  {
+    "iteration": 4,
+    "cost": 4.460917101610667e-12,
+    "seconds": 8.294206857681274,
+    "midpoint_max": 1.9812197133243593e-07,
+    "own_full_nodal_PDE": 0.006902254130989978,
+    "boundary_phase": 5.167452910015413e-09,
+    "minpressure": 0.9999999999783071,
+    "closure_gap": 0.004570843231956889
+  },
+  {
+    "iteration": 5,
+    "cost": 5.188567235517396e-14,
+    "seconds": 10.26683783531189,
+    "midpoint_max": 1.1457447176195973e-07,
+    "own_full_nodal_PDE": 0.006935269981457281,
+    "boundary_phase": 1.6932288904314419e-10,
+    "minpressure": 0.9999999999933262,
+    "closure_gap": 0.004575777186862862
+  },
+  {
+    "iteration": 6,
+    "cost": 2.652742449534707e-14,
+    "seconds": 12.116199731826782,
+    "midpoint_max": 1.1955322768060957e-07,
+    "own_full_nodal_PDE": 0.006937269343539102,
+    "boundary_phase": 3.0638380721370595e-11,
+    "minpressure": 0.9999999999994262,
+    "closure_gap": 0.004575988883321447
+  },
+  {
+    "iteration": 7,
+    "cost": 2.646101406708884e-14,
+    "seconds": 14.012634515762329,
+    "midpoint_max": 1.1971579156518548e-07,
+    "own_full_nodal_PDE": 0.006937311631766184,
+    "boundary_phase": 2.1047608100843718e-12,
+    "minpressure": 0.9999999999999805,
+    "closure_gap": 0.004575989720702722
+  },
+  {
+    "iteration": 8,
+    "cost": 2.646089564546947e-14,
+    "seconds": 15.88483715057373,
+    "midpoint_max": 1.1972017577299707e-07,
+    "own_full_nodal_PDE": 0.006937311920755343,
+    "boundary_phase": 2.1649348980190553e-14,
+    "minpressure": 0.9999999999999982,
+    "closure_gap": 0.004575989563988525
+  },
+  {
+    "iteration": 9,
+    "cost": 2.646089513847276e-14,
+    "seconds": 17.835721015930176,
+    "midpoint_max": 1.197202441553339e-07,
+    "own_full_nodal_PDE": 0.006937311888061081,
+    "boundary_phase": 1.687538997430238e-14,
+    "minpressure": 0.9999999999999982,
+    "closure_gap": 0.004575989570550387
+  },
+  {
+    "iteration": 10,
+    "cost": 2.6460895078299757e-14,
+    "seconds": 19.766214847564697,
+    "midpoint_max": 1.197202506908468e-07,
+    "own_full_nodal_PDE": 0.006937311927426037,
+    "boundary_phase": 1.6986412276764895e-14,
+    "minpressure": 0.9999999999999982,
+    "closure_gap": 0.004575989570462902
+  },
+  {
+    "iteration": 11,
+    "cost": 2.6460895049361587e-14,
+    "seconds": 22.057353258132935,
+    "midpoint_max": 1.1972025069824827e-07,
+    "own_full_nodal_PDE": 0.0069373119259994445,
+    "boundary_phase": 1.6986412276764895e-14,
+    "minpressure": 0.9999999999999982,
+    "closure_gap": 0.004575989570394956
+  },
+  {
+    "iteration": 12,
+    "cost": 2.646089503753418e-14,
+    "seconds": 24.135342359542847,
+    "midpoint_max": 1.1972025070564975e-07,
+    "own_full_nodal_PDE": 0.006937311925208314,
+    "boundary_phase": 1.6986412276764895e-14,
+    "minpressure": 0.9999999999999982,
+    "closure_gap": 0.004575989570243522
+  },
+  {
+    "iteration": 13,
+    "cost": 2.64608950331059e-14,
+    "seconds": 30.059529542922974,
+    "midpoint_max": 1.1972025070564975e-07,
+    "own_full_nodal_PDE": 0.006937311924419671,
+    "boundary_phase": 1.6986412276764895e-14,
+    "minpressure": 0.9999999999999982,
+    "closure_gap": 0.004575989570242189
+  },
+  {
+    "iteration": 14,
+    "cost": 2.6460895032696733e-14,
+    "seconds": 32.360748529434204,
+    "midpoint_max": 1.1972025070564975e-07,
+    "own_full_nodal_PDE": 0.006937311924420263,
+    "boundary_phase": 1.6986412276764895e-14,
+    "minpressure": 0.9999999999999982,
+    "closure_gap": 0.004575989570184458
+  },
+  {
+    "iteration": 15,
+    "cost": 2.646089502648745e-14,
+    "seconds": 36.105801820755005,
+    "midpoint_max": 1.1972025509843218e-07,
+    "own_full_nodal_PDE": 0.0069373119221973895,
+    "boundary_phase": 1.6986412276764895e-14,
+    "minpressure": 0.9999999999999982,
+    "closure_gap": 0.004575989569826966
+  },
+  {
+    "iteration": 16,
+    "cost": 2.6460895010272387e-14,
+    "seconds": 38.87633562088013,
+    "midpoint_max": 1.197202506242334e-07,
+    "own_full_nodal_PDE": 0.006937311910239962,
+    "boundary_phase": 1.6986412276764895e-14,
+    "minpressure": 0.9999999999999982,
+    "closure_gap": 0.0045759895706063425
+  },
+  {
+    "iteration": 17,
+    "cost": 2.646089500253211e-14,
+    "seconds": 41.60952138900757,
+    "midpoint_max": 1.1972025063533564e-07,
+    "own_full_nodal_PDE": 0.006937311908746164,
+    "boundary_phase": 1.6986412276764895e-14,
+    "minpressure": 0.9999999999999982,
+    "closure_gap": 0.004575989570549943
+  },
+  {
+    "iteration": 18,
+    "cost": 2.646089499494886e-14,
+    "seconds": 44.05732011795044,
+    "midpoint_max": 1.19720255072527e-07,
+    "own_full_nodal_PDE": 0.0069373119062181715,
+    "boundary_phase": 1.6986412276764895e-14,
+    "minpressure": 0.9999999999999982,
+    "closure_gap": 0.004575989570407835
+  },
+  {
+    "iteration": 19,
+    "cost": 2.6460894994940106e-14,
+    "seconds": 47.43228030204773,
+    "midpoint_max": 1.19720255072527e-07,
+    "own_full_nodal_PDE": 0.0069373119062181715,
+    "boundary_phase": 1.6986412276764895e-14,
+    "minpressure": 0.9999999999999982,
+    "closure_gap": 0.004575989570407835
+  },
+  {
+    "iteration": 20,
+    "cost": 2.6460894972918018e-14,
+    "seconds": 50.5762403011322,
+    "midpoint_max": 1.197202506501386e-07,
+    "own_full_nodal_PDE": 0.006937311906216217,
+    "boundary_phase": 1.6986412276764895e-14,
+    "minpressure": 0.9999999999999982,
+    "closure_gap": 0.004575989570294148
+  }
+]

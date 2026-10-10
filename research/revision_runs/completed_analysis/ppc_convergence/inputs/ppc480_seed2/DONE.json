@@ -1,0 +1,17 @@
+{
+  "config": {
+    "M1": 3,
+    "cells": 400,
+    "steps": 180000,
+    "sample_start": 70000,
+    "sample_every": 10,
+    "out_every": 10000,
+    "dt": 0.005,
+    "ppc": 480,
+    "seed": 2
+  },
+  "time": 1790833753.107766,
+  "gate": "65092420",
+  "binary": "bdf0eec5eaa3e5ece28899601cbf1ac139de29cc661afe6076eb9e7e7fea25da",
+  "csv_sha256": "b06381340b1426c9251b1c5e1c390a9e12c79778f658346ac8fd3742ab22f918"
+}

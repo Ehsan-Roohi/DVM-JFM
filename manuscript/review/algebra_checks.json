@@ -1,0 +1,7 @@
+{
+  "purpose": "Independent Gaussian-quadrature checks of added algebra, not a shock rerun",
+  "gaussian_stress_max_error": 5.551115123125783e-16,
+  "coefficient7_max_abs_error": 5.329070518200751e-15,
+  "mixture_delta": 2.0159999999999734,
+  "mixture_variance_identity_error": 2.4424906541753444e-14
+}

@@ -1,0 +1,62 @@
+MATHEMATICAL EXPOSITION REVIEW — TWO-ROUND RECORD
+Date: 2026-10-07
+Manuscript: overleaf/main.tex
+Reviewer role: constructive journal-style review of reader understanding and missing proofs, especially Sections 2–5 and supporting appendices.
+Scope: explanation and mathematical correctness under stated assumptions. No manuscript edits, new simulations, numerical-result changes, or global numerical-provenance certification were undertaken by this reviewer.
+
+ROUND 1 — QUESTIONS AND REQUESTED MINIMAL REPAIRS
+
+1. What assumptions justify R_yy = R_zz = -R_xx/2 and zero off-diagonal components?
+Location: sec:identifiability, eq:z_state; eq:es_1d_delta_target.
+Concern: spatial one-dimensionality alone is insufficient.
+Requested repair: specify transverse reflection and coordinate-interchange invariance for the distribution and equilibrium reference; prove off-diagonal cancellation, transverse equality, and trace zero. State corresponding quadrature symmetry requirements.
+Resolution: the main-text explanation and app:symmetry_proof now provide the componentwise proof, solution-branch assumptions, and finite-grid node-pairing conditions. They correctly distinguish these symmetries from full rotational grid invariance and from isotropic discrete-equilibrium stress.
+
+2. How is S reconstructed from the differential heat-flux balance, including its integration constant?
+Location: sec:heatflux, eq:heatbalance_general, eq:Bxx_split.
+Requested repair: give the integrated flux formula and identify the supplied anchor flux. Do not assume that an incoming reservoir condition fixes a full boundary flux or that discrete equilibrium implies S_d = 0.
+Resolution: eq:heat_flux_integrated supplies the formula; the adjacent explanation identifies the anchor and incoming-boundary limitation. It explicitly derives Delta_d = 0 but R_xx = -7 T sigma_xx[M_d] when f = M_d.
+
+3. What independent information is consumed by the scalar budget?
+Location: sec:delta_budget, eq:J_K_delta, eq:delta_rec; sec:two_budget.
+Requested repair: show K_Delta = 2 F_q, identify the fifth-order term in J_Delta, and distinguish a full-distribution consistency diagnostic from a closed solver based on lower-order fields. Explain source-law invertibility.
+Resolution: these identities and information requirements are explicit. The text correctly states that a generic Boltzmann production measurement does not by itself give an algebraic inversion for Delta.
+
+4. Why is the conventional stress subtraction 7 T sigma?
+Location: sec:reference, eq:Rdef.
+Requested repair: briefly derive the coefficient from Gaussian contraction of the standard stress polynomial and distinguish it from the trace-splitting coefficient 1/3.
+Resolution: app:symmetry_proof derives the sixth-order Gaussian contraction and its stress contraction. It correctly identifies 7 as the continuum R26 convention retained in the separately specified discrete-reference definition.
+
+5. What intermediate steps yield the ES-FP scalar source?
+Location: eq:fp_delta_source_general, eq:esfp_delta_source.
+Requested repair: state decay/boundary assumptions, give first and second kernel derivatives, and show cancellation of the isotropic terms.
+Resolution: the revised derivation gives these steps and the cancellation -60 + 24 + 36 = 0. It correctly notes that the invariant formula precedes normal-shock symmetry reduction and that finite-box boundary terms require separate consideration.
+
+6. Does Shakhov odd parity prove exact neutrality on the laboratory-frame DVM grid?
+Location: eq:generic_sources, sec:shakhov, tab:source_laws.
+Requested repair: separate full-space or peculiar-velocity-symmetric parity from measured finite-grid neutrality; identify the table's continuum conventions.
+Resolution: both qualifications are explicit. The fixed laboratory-frame box is correctly distinguished from a box symmetric about the local mean velocity.
+
+7. What happens to the ES-FP/ES-BGK correction ratio when stress vanishes?
+Location: eq:esfp_esbgk_ratio.
+Requested repair: present the everywhere-valid proportionality identity and restrict the ratio to nonzero denominator.
+Resolution: the identity, alpha_ES != 0 condition, and Delta_G != 0 restriction are now stated.
+
+Additional wording concerns:
+The review distinguished exact moment identities from approximate spatial reconstruction and a separate macroscopic benchmark from broad solver validation. The relevant section/caption and benchmark wording were narrowed without changing numerical claims.
+
+ROUND 2 — VERIFICATION AND FINAL PRECISION EDITS
+
+The reviewer reread the revised derivations, adjacent claims, and the complete new app:symmetry_proof. All seven substantive issues above were resolved. Three final precision edits were requested:
+
+A. Explicitly make the Maxwellian-mixture example a full-velocity-space, continuum-reference example; otherwise its zero tensorial moment is ambiguous beside the M_d-based definition.
+B. Replace 'the one-dimensional shock reduction gives' before the ES-FP invariant source with 'substitution gives'.
+C. Explain that the Gaussian internal-index pairing contributes the dimension 3, with the other pairings contributing 4, rather than suggesting three distinct internal-index pairings.
+
+FINAL READ-BACK CONFIRMATION
+
+All three final edits are present in main.tex. The mixture example now also states positive weights summing to one, T = sum(w_k T_k), and Delta_c = 15 rho [sum(w_k T_k^2) - T^2] > 0 for differing temperatures. This supplies a direct variance-based demonstration of scalar excess with zero continuum tensorial anisotropy. The pointwise inversion discussion additionally states that finite-sample recovery of a full field requires spatial interpolation assumptions.
+
+FINAL REVIEWER DECISION
+
+Accepted for the assigned mathematical-exposition and reader-understanding task. The symmetry assumptions, short proofs, reconstruction inputs, reference conventions, and source-law qualifications are now clear and mathematically consistent within their stated scope. No further explanatory proof repair is requested. This acceptance does not certify numerical provenance, simulation convergence, or broader scientific validation.

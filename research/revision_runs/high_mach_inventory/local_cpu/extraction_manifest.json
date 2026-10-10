@@ -1,0 +1,50 @@
+{
+  "scratch": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu",
+  "expiry_utc": "2026-10-31T13:29:50Z",
+  "archive": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu\\validated_results",
+  "solver_sha256": "d7a73766437091d9a376761ebf7ebf358c3b396f69e368069d89b4711e1d33f8",
+  "cases": [
+    {
+      "tag": "M6",
+      "profile": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu\\M6\\standing_M6_hmom_x95_nx2400_v151_29_29_vmax26_fullstate.npz",
+      "distribution": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu\\M6\\standing_M6_hmom_x95_nx2400_v151_29_29_vmax26_fullstate_fullstate.npz",
+      "profile_sha256": "c719d0199d85c57a8ebb8405788614ac99047f6e073acb04276506420a949406",
+      "remote_profile": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep_extra/M6/standing_M6_hmom_x95_nx2400_v151_29_29_vmax26_fullstate.npz",
+      "remote_distribution": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep_extra/M6/standing_M6_hmom_x95_nx2400_v151_29_29_vmax26_fullstate_fullstate.npz"
+    },
+    {
+      "tag": "M8",
+      "profile": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu\\M8\\standing_M8_hmom_x120_nx2800_v171_31_31_vmax32_fullstate.npz",
+      "distribution": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu\\M8\\standing_M8_hmom_x120_nx2800_v171_31_31_vmax32_fullstate_fullstate.npz",
+      "profile_sha256": "fa758ae2b3e6911c42aa0e11cc931853a777d2953deb96f8310f93128db3a9b6",
+      "remote_profile": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep_extra/M8/standing_M8_hmom_x120_nx2800_v171_31_31_vmax32_fullstate.npz",
+      "remote_distribution": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep_extra/M8/standing_M8_hmom_x120_nx2800_v171_31_31_vmax32_fullstate_fullstate.npz"
+    },
+    {
+      "tag": "M12",
+      "profile": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu\\M12\\standing_M12_hmom_x240_nx4200_v221_35_35_vmax64_fullstate.npz",
+      "distribution": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu\\M12\\standing_M12_hmom_x240_nx4200_v221_35_35_vmax64_fullstate_fullstate.npz",
+      "profile_sha256": "4c08c5b5e79813e948240cbfd59da182f8c790684a4fc157e73355a45daaeb4c",
+      "remote_profile": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep_extra/M12/standing_M12_hmom_x240_nx4200_v221_35_35_vmax64_fullstate.npz",
+      "remote_distribution": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep_extra/M12/standing_M12_hmom_x240_nx4200_v221_35_35_vmax64_fullstate_fullstate.npz"
+    },
+    {
+      "tag": "M8lite",
+      "profile": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu\\M8lite\\standing_M8lite_hmom_x120_nx2400_v151_29_29_vmax32_fullstate.npz",
+      "distribution": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu\\M8lite\\standing_M8lite_hmom_x120_nx2400_v151_29_29_vmax32_fullstate_fullstate.npz",
+      "profile_sha256": "c8d5b32024dc98a7fa766ca161bdd1aff828e8ea03fc6069ec114c6ed0b9738c",
+      "remote_profile": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep_extra/M8lite/standing_M8lite_hmom_x120_nx2400_v151_29_29_vmax32_fullstate.npz",
+      "remote_distribution": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep_extra/M8lite/standing_M8lite_hmom_x120_nx2400_v151_29_29_vmax32_fullstate_fullstate.npz"
+    },
+    {
+      "tag": "M12lite",
+      "profile": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu\\M12lite\\standing_M12lite_hmom_x180_nx3200_v181_31_31_vmax56_fullstate.npz",
+      "distribution": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu\\M12lite\\standing_M12lite_hmom_x180_nx3200_v181_31_31_vmax56_fullstate_fullstate.npz",
+      "profile_sha256": "1a1d2600ca6d06b320aa30b3058ad4d0ae2fe5cfd3d9be231a9472337d4de3bd",
+      "remote_profile": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep_extra/M12lite/standing_M12lite_hmom_x180_nx3200_v181_31_31_vmax56_fullstate.npz",
+      "remote_distribution": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep_extra/M12lite/standing_M12lite_hmom_x180_nx3200_v181_31_31_vmax56_fullstate_fullstate.npz"
+    }
+  ],
+  "purpose": "Historical full-distribution postprocessing only; no new physical simulation; outputs uncorrected for plateau until assessed.",
+  "original_remote_manifest": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\extraction_manifest.json"
+}

@@ -1,0 +1,11 @@
+{
+  "step": 342858,
+  "time": 400.00100000000003,
+  "stationary": false,
+  "reason": "time_limit_diagnostic",
+  "source": "d061329431229409b57f7c5188fe4893e76902e07b500cd8e01ede38f2e8d649",
+  "config": "122ca98f040b1269f5c0b366e36bc7e693bf24f42ad44bc12c5efeaa43121a05",
+  "checkpoint_sha256": "1f4f56ba6659f6c782d1c80d69e5a14d78dc032f9f95fbf2106323ca12fc17e6",
+  "final_sha256": "96fe3d54b5085e5592b9ad1e3da23904c9601e76a66fdd8ee325575fa27cdcee",
+  "scientific_validation": false
+}

@@ -1,0 +1,10 @@
+{
+  "gate_source_config_match": true,
+  "checkpoint_signature_match": true,
+  "checkpoint_finite": true,
+  "step": 342858,
+  "archive_hashes_verified": 9,
+  "g_min": -0.014064645392477749,
+  "h_min": -0.15391305260652868,
+  "scientific_accepted": false
+}

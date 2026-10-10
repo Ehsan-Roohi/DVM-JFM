@@ -1,0 +1,107 @@
+{
+  "method": "Eight seeds; linear density midpoint alignment on |x|<=15. Paired-label SE is descriptive; RNG trajectories diverge. Bootstrap norm intervals do not test zero effect. Corrected algorithm separate from original convergence campaign. Archive revalidation currently blocked by project availability.",
+  "results": {
+    "120": {
+      "Rxx_closure": {
+        "mean_difference_L2_percent": 3.6110596763124767,
+        "paired_SE_norm_percent": 3.3042747994265715,
+        "descriptive_bootstrap_norm95": [
+          1.9237411281112546,
+          8.783314419790063
+        ]
+      },
+      "Delta": {
+        "mean_difference_L2_percent": 2.8513196719899074,
+        "paired_SE_norm_percent": 2.4970606354697016,
+        "descriptive_bootstrap_norm95": [
+          1.8219036342664379,
+          6.688724856157519
+        ]
+      },
+      "S": {
+        "mean_difference_L2_percent": 3.288383856366361,
+        "paired_SE_norm_percent": 2.869365837365032,
+        "descriptive_bootstrap_norm95": [
+          1.4563796501131225,
+          8.221501321896133
+        ]
+      },
+      "QDelta_collision": {
+        "mean_difference_L2_percent": 3.5236315230004664,
+        "paired_SE_norm_percent": 3.858886980206205,
+        "descriptive_bootstrap_norm95": [
+          3.317332401885915,
+          7.790725652274288
+        ]
+      }
+    },
+    "960": {
+      "Rxx_closure": {
+        "mean_difference_L2_percent": 0.9325970827047931,
+        "paired_SE_norm_percent": 0.9712594502894054,
+        "descriptive_bootstrap_norm95": [
+          0.5064894412244828,
+          2.51518759788981
+        ]
+      },
+      "Delta": {
+        "mean_difference_L2_percent": 0.7338289848891374,
+        "paired_SE_norm_percent": 0.717725840143475,
+        "descriptive_bootstrap_norm95": [
+          0.5706113713071184,
+          1.7128830786830693
+        ]
+      },
+      "S": {
+        "mean_difference_L2_percent": 0.7996426343065847,
+        "paired_SE_norm_percent": 0.8085020547598731,
+        "descriptive_bootstrap_norm95": [
+          0.41027807441427816,
+          2.154162901103961
+        ]
+      },
+      "QDelta_collision": {
+        "mean_difference_L2_percent": 1.412800306460777,
+        "paired_SE_norm_percent": 1.2958205527507527,
+        "descriptive_bootstrap_norm95": [
+          1.4699976200665072,
+          2.495514462920966
+        ]
+      }
+    }
+  },
+  "sha256": {
+    "revision_runs\\completed_analysis\\ppc_convergence_3840\\inputs\\ppc120_seed1\\M3_final.csv": "e877554f22a77d8f68a460fba0178d05a4995779f91b1f2bf8a112540eec56d2",
+    "corrected_120_1": "edf5d13d3babd6dc5ed052d503b840b292f8a7f8a2efbc1434a3b3beff54fd00",
+    "revision_runs\\completed_analysis\\ppc_convergence_3840\\inputs\\ppc120_seed2\\M3_final.csv": "613284ff62ca5b4b1198986c7216580c8f973e253e4ba6e032427f75114c05be",
+    "corrected_120_2": "ca4fd24746d959f1436127401b2c2767bd3af1c472aa6ab276b2790f369c3367",
+    "revision_runs\\completed_analysis\\ppc_convergence_3840\\inputs\\ppc120_seed3\\M3_final.csv": "1ace9cfc8756d9ccd9a5e571bfea1582f3cc807d094f6182c009c5ecb0b7b092",
+    "corrected_120_3": "d5d5394e66399df228c0b2189c117694ec1c8e4522daf3f4dcb303227894ad39",
+    "revision_runs\\completed_analysis\\ppc_convergence_3840\\inputs\\ppc120_seed4\\M3_final.csv": "fd8c0f4a1b99997da40c46344d6e74745124da86c0b82d3b9f0c55cb1d191563",
+    "corrected_120_4": "1f063739a249bd4c4b8880df179e679538d63fa1f82f4ccadca6e1d30d562f0a",
+    "revision_runs\\completed_analysis\\ppc_convergence_3840\\inputs\\ppc120_seed5\\M3_final.csv": "296909721c05b6411c57a91d8d865d5e3258111589142bd9f714d8c0fd687c10",
+    "corrected_120_5": "a5c50e32e744af64bca2d52ccd33d92b6cb5628f5d13e1d2ad13aa925ccf52a6",
+    "revision_runs\\completed_analysis\\ppc_convergence_3840\\inputs\\ppc120_seed6\\M3_final.csv": "b302e69b8b563a9e8b26e2ac8d9c7111a7295b50872227a2a12763859facc7d5",
+    "corrected_120_6": "68a7beae180713bd6f12dee28b466b0103cc12d321cfb5c24ad631cdd7ec3acd",
+    "revision_runs\\completed_analysis\\ppc_convergence_3840\\inputs\\ppc120_seed7\\M3_final.csv": "e8081fd424f28fdcf6073af8b13fc7f521444897bb98ff7d9fc0d0e1ed7f504e",
+    "corrected_120_7": "8cf9e10180aedd0aa0eca9a2c36eb4f388503e6cf84d940d1bd1790f7d8d7bef",
+    "revision_runs\\completed_analysis\\ppc_convergence_3840\\inputs\\ppc120_seed8\\M3_final.csv": "e1a5eee1216b54d7a9f0f2b0df3042fcaddc2171008c14911d73a64a51c4f368",
+    "corrected_120_8": "cfda19b8049b1e7f93d711c8981824ecf686ce8368819edabb09df0ca2a38413",
+    "revision_runs\\completed_analysis\\ppc_convergence_3840\\inputs\\ppc960_seed1\\M3_final.csv": "10495bdc57dfa899d5a80e09c750cd8baf81b021779c2c065ff25e8b690b17f2",
+    "corrected_960_1": "18a7ea712c7f84f749a39b463e84f9276ef1630e57be447cd00e2e3db39e8938",
+    "revision_runs\\completed_analysis\\ppc_convergence_3840\\inputs\\ppc960_seed2\\M3_final.csv": "a7aa319f9b74c6b2739dd3c893f8d329f2da6b4d94a214686a34d8a5ece4f540",
+    "corrected_960_2": "01bd88345f9457b327e801480c07d0cdc692c7f13d381aaa1d591878e412bd54",
+    "revision_runs\\completed_analysis\\ppc_convergence_3840\\inputs\\ppc960_seed3\\M3_final.csv": "a49944abbfa58f512d2c19849d8da762a43a92c9b807ac783e00c7862beb52c6",
+    "corrected_960_3": "97e2effd6a48d93436292dfd42c202fc190ea1ef1d90e4c1c3009899edb87ba1",
+    "revision_runs\\completed_analysis\\ppc_convergence_3840\\inputs\\ppc960_seed4\\M3_final.csv": "01766afc3f2f49360848d8d1935637842ffed6243cc588b633859cc9d915b16c",
+    "corrected_960_4": "e1fe44d8d440a974ad321935a6b7573eaa36be4f7b61c26b27b5b0c50450602d",
+    "revision_runs\\completed_analysis\\ppc_convergence_3840\\inputs\\ppc960_seed5\\M3_final.csv": "3b8d8aeafcf164f5a0bc876532b973aae1b552aa1d42ec78c8e430b6be46ce9b",
+    "corrected_960_5": "c385f0c80dfbaef9b36f55c72ae139ce2e9d53f659cce9ec91c7841d1055eabe",
+    "revision_runs\\completed_analysis\\ppc_convergence_3840\\inputs\\ppc960_seed6\\M3_final.csv": "bb6c31c2e243d0383b5dc4a7dbec55c873ffcc389606c87b2dccd8906a3cf30c",
+    "corrected_960_6": "5ce2cb14c882b379f4dc4d99dbbb36449be2b7d570aa23638270889df2aafbcf",
+    "revision_runs\\completed_analysis\\ppc_convergence_3840\\inputs\\ppc960_seed7\\M3_final.csv": "0c7a0cd3657cf73df0a107ded57d9f90ffca42c6530dd4742a7fb77b2189fe0a",
+    "corrected_960_7": "ca5e560b78194998b3961c9b1de191bd19b74ff3ebae4f87875f892b8deb58fc",
+    "revision_runs\\completed_analysis\\ppc_convergence_3840\\inputs\\ppc960_seed8\\M3_final.csv": "2eef6a9b293d6203c5c90326a27245fdb00640f24a93f27b71655fa6b1764302",
+    "corrected_960_8": "96e39f1d9cdcee4f1c2ddc1abc8f47a9022d7f66a83a2ed0f079bd94ef7966a1"
+  }
+}

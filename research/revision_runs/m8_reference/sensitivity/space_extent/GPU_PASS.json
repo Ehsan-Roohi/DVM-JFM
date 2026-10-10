@@ -1,0 +1,15 @@
+{
+  "PASS": true,
+  "errors": {
+    "rho": 1.0460382567135087e-15,
+    "u": 4.704354359273861e-16,
+    "T": 2.375845869643147e-14,
+    "heat_decay": 2.966443114512649e-14
+  },
+  "restart_bitwise": true,
+  "source": "d061329431229409b57f7c5188fe4893e76902e07b500cd8e01ede38f2e8d649",
+  "config": "122ca98f040b1269f5c0b366e36bc7e693bf24f42ad44bc12c5efeaa43121a05",
+  "device": "cuda",
+  "mu_ref": 1.0338373583803977,
+  "peak_gpu_bytes": 131694080
+}

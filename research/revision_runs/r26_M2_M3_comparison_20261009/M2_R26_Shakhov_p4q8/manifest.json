@@ -1,0 +1,42 @@
+{
+  "config": {
+    "M": 2.0,
+    "N": 3841,
+    "K": 960,
+    "L": 45.0,
+    "width": 5.0,
+    "model": "corrected-consistent-Shakhov-R26",
+    "Pr": 0.6666666666666666,
+    "mu": "T",
+    "tau": "1/rho",
+    "degree": 4,
+    "Gauss_points": 8,
+    "BC_phase_weight": 100,
+    "iteration_budget": 40,
+    "PDE_strict": 0.01,
+    "BC_phase_strict": 0.0001,
+    "source_hashes": {
+      "physics\\implicit_shakhov.py": "a94a34470d8a0c90a35cf7731bfa02c9de9cb5f46d6f643b16aa0170685ea3ad",
+      "physics\\maxwell_repaired_mixed.py": "a89b6ff4a50fa7afeba408ae3f5bf9aec7a803a05fa0f4c3283ac81121a61108",
+      "physics\\projected_mixed.py": "b2d42523c54e112ae80dd87e3ca09562a622bb7c33af34424916d81cf1066e74",
+      "physics\\projected_transport.py": "512d3ab10cb7828f4cb8e1245db764a6f473888477980a9284fa4962f0791019",
+      "physics\\r26_shakhov.py": "7e99843a9d4041814aefe0b649698e656071afdd9475878bcbd46896163d280f",
+      "physics\\shock_pilot.py": "52293242155ec452726b2ef5a9b20a9567519990b40cf4b36471e689e724f9f6",
+      "physics\\cavity_source\\r26_bulk_equations.py": "9abe3943ce541e6c5243a61893c1428daea30cf8fae42ab3e90c140eb7ba6a06",
+      "physics\\cavity_source\\r26_state.py": "787583e2bacfd4d694d5eee3488eebaee3b37f2ae86e6c6c54bf63cba5d953ba",
+      "physics\\cavity_source\\r26_tensor_closures.py": "13037256b49de8ce0737136c56ab31fa5b1641545a79a65e77c761c25bcbbbea",
+      "stf_repaired_tensor\\implicit_repaired.py": "9fbe8859ac6877c597111e44acba4fd706e41108003d02c37b3816594b6a9485",
+      "stf_repaired_tensor\\r26_shakhov_tensor.py": "a2302a9a03699fcca9539b1df0359ee195c2f7d3a9effce7c41f55f0b84e5adc",
+      "stf_repaired_tensor\\shock_pilot.py": "52293242155ec452726b2ef5a9b20a9567519990b40cf4b36471e689e724f9f6",
+      "stf_repaired_tensor\\cavity_source\\r26_bulk_equations.py": "778d7c27935fce664034f2f3d1ef6885a6698227df65adf69bc22aac9bca7329",
+      "stf_repaired_tensor\\cavity_source\\r26_state.py": "787583e2bacfd4d694d5eee3488eebaee3b37f2ae86e6c6c54bf63cba5d953ba",
+      "stf_repaired_tensor\\cavity_source\\r26_tensor_closures.py": "768e3eaaa1559a7a42c1ae31370ce26719853cf538e265674db88bad7f0d12a9"
+    }
+  },
+  "runner_sha": "ab9403db00b794ffb66b92faf23df7ffc299a08ff32715b85bc6361b14f6027b",
+  "initial_sha": "4a781e723ea22b2affbc5eef710c377db00d491f122d18189dc403b2209aabc6",
+  "initialization": "independent analytical RH density, zero stress positive T=(momentum-mass*u)/rho; zero m/R/Delta; analytic closure lift; no clipping",
+  "automatic_successor": false,
+  "automatic_extension": false,
+  "old_accepted_profile_used": false
+}

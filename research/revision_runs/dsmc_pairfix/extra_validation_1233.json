@@ -1,0 +1,115 @@
+{
+  "at_utc": "2026-10-02T12:37:39.114694+00:00",
+  "diagnosis": "65158941_5 archive-only project path unavailable on compute node; no solver resubmission",
+  "runs": [
+    {
+      "seed": 3,
+      "ppc": 120,
+      "validated": true,
+      "archive_hashes": 22,
+      "archive_repaired": false,
+      "log_tail": "ep00160000.csv\n[step 170000] time=850 Np=96535 nsamp=10001 sample_time=500.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed3/M3_step00170000.csv\n[step 180000] time=900 Np=96539 nsamp=11001 sample_time=550.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed3/M3_step00180000.csv\n[done] wrote /scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed3/M3_final.csv\n",
+      "checkpoint_mtime": 1790939988.787224
+    },
+    {
+      "seed": 3,
+      "ppc": 960,
+      "validated": true,
+      "archive_hashes": 22,
+      "archive_repaired": false,
+      "log_tail": "00160000.csv\n[step 170000] time=850 Np=771731 nsamp=10001 sample_time=500.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed3/M3_step00170000.csv\n[step 180000] time=900 Np=771869 nsamp=11001 sample_time=550.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed3/M3_step00180000.csv\n[done] wrote /scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed3/M3_final.csv\n",
+      "checkpoint_mtime": 1790941558.402698
+    },
+    {
+      "seed": 4,
+      "ppc": 120,
+      "validated": true,
+      "archive_hashes": 22,
+      "archive_repaired": false,
+      "log_tail": "ep00160000.csv\n[step 170000] time=850 Np=96671 nsamp=10001 sample_time=500.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed4/M3_step00170000.csv\n[step 180000] time=900 Np=96853 nsamp=11001 sample_time=550.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed4/M3_step00180000.csv\n[done] wrote /scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed4/M3_final.csv\n",
+      "checkpoint_mtime": 1790939990.735257
+    },
+    {
+      "seed": 4,
+      "ppc": 960,
+      "validated": true,
+      "archive_hashes": 22,
+      "archive_repaired": false,
+      "log_tail": "00160000.csv\n[step 170000] time=850 Np=767146 nsamp=10001 sample_time=500.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed4/M3_step00170000.csv\n[step 180000] time=900 Np=767697 nsamp=11001 sample_time=550.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed4/M3_step00180000.csv\n[done] wrote /scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed4/M3_final.csv\n",
+      "checkpoint_mtime": 1790941411.2912169
+    },
+    {
+      "seed": 5,
+      "ppc": 120,
+      "validated": true,
+      "archive_hashes": 22,
+      "archive_repaired": false,
+      "log_tail": "ep00160000.csv\n[step 170000] time=850 Np=96449 nsamp=10001 sample_time=500.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed5/M3_step00170000.csv\n[step 180000] time=900 Np=96385 nsamp=11001 sample_time=550.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed5/M3_step00180000.csv\n[done] wrote /scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed5/M3_final.csv\n",
+      "checkpoint_mtime": 1790939988.2112143
+    },
+    {
+      "seed": 5,
+      "ppc": 960,
+      "validated": true,
+      "archive_hashes": 22,
+      "archive_repaired": false,
+      "log_tail": "00160000.csv\n[step 170000] time=850 Np=767035 nsamp=10001 sample_time=500.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed5/M3_step00170000.csv\n[step 180000] time=900 Np=767417 nsamp=11001 sample_time=550.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed5/M3_step00180000.csv\n[done] wrote /scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed5/M3_final.csv\n",
+      "checkpoint_mtime": 1790941530.776232
+    },
+    {
+      "seed": 6,
+      "ppc": 120,
+      "validated": true,
+      "archive_hashes": 22,
+      "archive_repaired": false,
+      "log_tail": "ep00160000.csv\n[step 170000] time=850 Np=93814 nsamp=10001 sample_time=500.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed6/M3_step00170000.csv\n[step 180000] time=900 Np=94099 nsamp=11001 sample_time=550.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed6/M3_step00180000.csv\n[done] wrote /scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed6/M3_final.csv\n",
+      "checkpoint_mtime": 1790939969.2158937
+    },
+    {
+      "seed": 6,
+      "ppc": 960,
+      "validated": true,
+      "archive_hashes": 22,
+      "archive_repaired": false,
+      "log_tail": "00160000.csv\n[step 170000] time=850 Np=768203 nsamp=10001 sample_time=500.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed6/M3_step00170000.csv\n[step 180000] time=900 Np=769365 nsamp=11001 sample_time=550.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed6/M3_step00180000.csv\n[done] wrote /scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed6/M3_final.csv\n",
+      "checkpoint_mtime": 1790941161.3440013
+    },
+    {
+      "seed": 7,
+      "ppc": 120,
+      "validated": true,
+      "archive_hashes": 22,
+      "archive_repaired": false,
+      "log_tail": "ep00160000.csv\n[step 170000] time=850 Np=98193 nsamp=10001 sample_time=500.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed7/M3_step00170000.csv\n[step 180000] time=900 Np=97890 nsamp=11001 sample_time=550.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed7/M3_step00180000.csv\n[done] wrote /scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed7/M3_final.csv\n",
+      "checkpoint_mtime": 1790939969.6629014
+    },
+    {
+      "seed": 7,
+      "ppc": 960,
+      "validated": true,
+      "archive_hashes": 22,
+      "archive_repaired": false,
+      "log_tail": "00160000.csv\n[step 170000] time=850 Np=763419 nsamp=10001 sample_time=500.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed7/M3_step00170000.csv\n[step 180000] time=900 Np=763429 nsamp=11001 sample_time=550.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed7/M3_step00180000.csv\n[done] wrote /scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed7/M3_final.csv\n",
+      "checkpoint_mtime": 1790941235.3322492
+    },
+    {
+      "seed": 8,
+      "ppc": 120,
+      "validated": true,
+      "archive_hashes": 22,
+      "archive_repaired": false,
+      "log_tail": "ep00160000.csv\n[step 170000] time=850 Np=95750 nsamp=10001 sample_time=500.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed8/M3_step00170000.csv\n[step 180000] time=900 Np=95623 nsamp=11001 sample_time=550.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed8/M3_step00180000.csv\n[done] wrote /scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc120_seed8/M3_final.csv\n",
+      "checkpoint_mtime": 1790941364.694431
+    },
+    {
+      "seed": 8,
+      "ppc": 960,
+      "validated": true,
+      "archive_hashes": 22,
+      "archive_repaired": false,
+      "log_tail": "00160000.csv\n[step 170000] time=850 Np=769879 nsamp=10001 sample_time=500.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed8/M3_step00170000.csv\n[step 180000] time=900 Np=768441 nsamp=11001 sample_time=550.005 wrote=/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed8/M3_step00180000.csv\n[done] wrote /scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001/outputs/corrected_ppc960_seed8/M3_final.csv\n",
+      "checkpoint_mtime": 1790942586.6840413
+    }
+  ],
+  "complete": true
+}

@@ -1,0 +1,12 @@
+{
+  "midpoint_max": 1.695829679497033e-07,
+  "own_full_nodal_PDE": 0.003958931772656211,
+  "boundary_phase": 2.446931546273845e-11,
+  "minpressure": 0.9999999999999982,
+  "closure_gap": 0.009624217472733676,
+  "reason": "PLATEAU",
+  "iterations": 14,
+  "profile_sha": "20fe3691b3ab642a4efbd46ade4a8f1e42a859abca9ee15c99a69bf5f9753666",
+  "own_numerical_criteria_pass": true,
+  "scientific_validation": false
+}

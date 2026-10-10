@@ -1,0 +1,38 @@
+{
+  "at_utc": "2026-10-02T11:17:03.345645+00:00",
+  "case": {
+    "M1": 5.0,
+    "nx": 2200,
+    "nvx": 211,
+    "nvy": 40,
+    "nvz": 40,
+    "vmax": 22.0,
+    "xhalf_mfp": 80.0,
+    "steps": 52000,
+    "cfl": 0.75,
+    "center_every": 50,
+    "name": "M5_velocity_refine"
+  },
+  "checkpoint_step": 52000,
+  "finite_checkpoint_and_final": true,
+  "source_gate_configuration_match": true,
+  "archive_files_verified": 35,
+  "archive": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/dvm_resume_20261001/outputs/dvm/M5_velocity_refine",
+  "done": {
+    "case": {
+      "M1": 5.0,
+      "nx": 2200,
+      "nvx": 211,
+      "nvy": 40,
+      "nvz": 40,
+      "vmax": 22.0,
+      "xhalf_mfp": 80.0,
+      "steps": 52000,
+      "cfl": 0.75,
+      "center_every": 50,
+      "name": "M5_velocity_refine"
+    },
+    "smoke": false,
+    "time": 1790938400.4417126
+  }
+}

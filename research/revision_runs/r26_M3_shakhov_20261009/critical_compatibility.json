@@ -1,0 +1,387 @@
+{
+  "models": {
+    "maxwell": [
+      {
+        "N": 961,
+        "dx": 0.09375,
+        "roots": [
+          {
+            "x": -6.126340022288286,
+            "singular_values": [
+              42.52911562979776,
+              15.88566641067909,
+              5.548713624067573,
+              4.489616110542771,
+              2.5341567589900973,
+              1.337064638006977,
+              0.16723587174666502,
+              9.252625005836179e-17
+            ],
+            "left_null_compatibility_absolute": 2.3010795141761853e-06,
+            "left_null_compatibility_relative": 1.2134112467434167e-06,
+            "interpolated_full_point_residual_max": 0.017711671592314238,
+            "physical_dTdx": 0.32193580171636454,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          },
+          {
+            "x": 0.5220105626588648,
+            "singular_values": [
+              72.87280740251778,
+              30.82913213876606,
+              5.022223646128773,
+              3.733236580380916,
+              2.3262060013594392,
+              0.7388368670922915,
+              0.23855521321302475,
+              1.141250188773524e-16
+            ],
+            "left_null_compatibility_absolute": 8.043393322693104e-05,
+            "left_null_compatibility_relative": 1.971700810673488e-05,
+            "interpolated_full_point_residual_max": 0.007170176173580636,
+            "physical_dTdx": 0.1291521729713193,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          }
+        ]
+      },
+      {
+        "N": 1921,
+        "dx": 0.046875,
+        "roots": [
+          {
+            "x": -6.126781843145834,
+            "singular_values": [
+              42.52961318718886,
+              15.884019100027734,
+              5.548671127305811,
+              4.489597869981512,
+              2.534092077445868,
+              1.33695982432271,
+              0.16723883969306866,
+              3.0460541530055504e-16
+            ],
+            "left_null_compatibility_absolute": 3.376448748126232e-05,
+            "left_null_compatibility_relative": 1.780744785505604e-05,
+            "interpolated_full_point_residual_max": 0.01138290349792559,
+            "physical_dTdx": 0.31550619366214844,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          },
+          {
+            "x": 0.5216586276220603,
+            "singular_values": [
+              72.87812171331645,
+              30.82926601745481,
+              5.022386802535232,
+              3.733235707272411,
+              2.326211129449924,
+              0.7389633612537774,
+              0.238555524005461,
+              1.3696138992811533e-16
+            ],
+            "left_null_compatibility_absolute": 5.3358201115294435e-05,
+            "left_null_compatibility_relative": 1.3078505677402532e-05,
+            "interpolated_full_point_residual_max": 0.01913819911593792,
+            "physical_dTdx": 0.12784344868200578,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          }
+        ]
+      },
+      {
+        "N": 3841,
+        "dx": 0.0234375,
+        "roots": [
+          {
+            "x": -6.126662734966552,
+            "singular_values": [
+              42.52986969564097,
+              15.884468755893462,
+              5.548685330126441,
+              4.489580346498898,
+              2.534104553361177,
+              1.3369804008783013,
+              0.1672358750406373,
+              8.25925563615611e-16
+            ],
+            "left_null_compatibility_absolute": 1.5094315137936798e-06,
+            "left_null_compatibility_relative": 7.960511620413979e-07,
+            "interpolated_full_point_residual_max": 0.0027380730064980874,
+            "physical_dTdx": 0.3195262385559725,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          },
+          {
+            "x": 0.521745323146664,
+            "singular_values": [
+              72.87941777387373,
+              30.829293451846997,
+              5.022393249745655,
+              3.7332385808413178,
+              2.326213791434229,
+              0.7389671943278332,
+              0.23855723867387535,
+              3.4240789394944526e-17
+            ],
+            "left_null_compatibility_absolute": 5.944084241926717e-06,
+            "left_null_compatibility_relative": 1.4569677565767106e-06,
+            "interpolated_full_point_residual_max": 0.006273474962166611,
+            "physical_dTdx": 0.12764597926784144,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          }
+        ]
+      },
+      {
+        "N": 7681,
+        "dx": 0.01171875,
+        "roots": [
+          {
+            "x": -6.126678845893574,
+            "singular_values": [
+              42.52992396538076,
+              15.884411108513556,
+              5.548684009339675,
+              4.48957789313253,
+              2.5341017516712574,
+              1.3369760303678206,
+              0.16723583872512743,
+              2.7433147569641584e-17
+            ],
+            "left_null_compatibility_absolute": 9.325331332965536e-07,
+            "left_null_compatibility_relative": 4.91806688260366e-07,
+            "interpolated_full_point_residual_max": 0.004407764953637372,
+            "physical_dTdx": 0.3186421218346036,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          },
+          {
+            "x": 0.521747032256528,
+            "singular_values": [
+              72.87969996374262,
+              30.829299525303227,
+              5.022398322093729,
+              3.733238919129521,
+              2.3262142030070927,
+              0.7389710644461532,
+              0.23855742381988498,
+              3.424091868433129e-16
+            ],
+            "left_null_compatibility_absolute": 3.975643969589271e-08,
+            "left_null_compatibility_relative": 9.74478318038834e-09,
+            "interpolated_full_point_residual_max": 0.0002971684326408125,
+            "physical_dTdx": 0.1275212540040065,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          }
+        ]
+      }
+    ],
+    "shakhov": [
+      {
+        "N": 961,
+        "dx": 0.09375,
+        "roots": [
+          {
+            "x": -6.146983343288133,
+            "singular_values": [
+              42.58142074914044,
+              15.699289384473555,
+              5.59328633268342,
+              4.445790634071865,
+              2.6148873614769323,
+              1.4072390763660556,
+              0.2700010689786291,
+              4.4083548480508663e-16
+            ],
+            "left_null_compatibility_absolute": 4.443948253426977e-05,
+            "left_null_compatibility_relative": 2.1666247761431365e-05,
+            "interpolated_full_point_residual_max": 0.004029495655895943,
+            "physical_dTdx": 0.26806308506602505,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          },
+          {
+            "x": 0.3770485496023626,
+            "singular_values": [
+              76.88100150492842,
+              31.08341674179387,
+              5.1278549229946515,
+              3.7376696551958686,
+              2.3843193448407027,
+              0.9953086051592275,
+              0.3908751423029624,
+              5.650126814883143e-16
+            ],
+            "left_null_compatibility_absolute": 0.0020863289746267943,
+            "left_null_compatibility_relative": 0.0005204531949488293,
+            "interpolated_full_point_residual_max": 0.05944173190490601,
+            "physical_dTdx": 0.14203083971684885,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          }
+        ]
+      },
+      {
+        "N": 1921,
+        "dx": 0.046875,
+        "roots": [
+          {
+            "x": -6.146978000918059,
+            "singular_values": [
+              42.58218661318982,
+              15.698897155241406,
+              5.593278287946586,
+              4.445763748592159,
+              2.614842124268707,
+              1.4072040149940015,
+              0.27000076927237165,
+              1.8191100945931222e-16
+            ],
+            "left_null_compatibility_absolute": 1.2126553973881848e-05,
+            "left_null_compatibility_relative": 5.912558989520942e-06,
+            "interpolated_full_point_residual_max": 0.011443694348697742,
+            "physical_dTdx": 0.2733123052229206,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          },
+          {
+            "x": 0.37834460602498066,
+            "singular_values": [
+              76.91213812996395,
+              31.084455328934524,
+              5.12799879860545,
+              3.7377114175674255,
+              2.3844007797471996,
+              0.9953590433944155,
+              0.39094034039609216,
+              1.5782885013874143e-16
+            ],
+            "left_null_compatibility_absolute": 0.00036503168531276664,
+            "left_null_compatibility_relative": 9.11006265934543e-05,
+            "interpolated_full_point_residual_max": 0.028647344199274838,
+            "physical_dTdx": 0.13908542511179234,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          }
+        ]
+      },
+      {
+        "N": 3841,
+        "dx": 0.0234375,
+        "roots": [
+          {
+            "x": -6.146915643060882,
+            "singular_values": [
+              42.58220931247816,
+              15.69899802769778,
+              5.593282014152692,
+              4.445759583289624,
+              2.6148438683415205,
+              1.4072097555563718,
+              0.27000168230523997,
+              4.845998863997567e-16
+            ],
+            "left_null_compatibility_absolute": 1.065969738256456e-06,
+            "left_null_compatibility_relative": 5.197316421944091e-07,
+            "interpolated_full_point_residual_max": 0.0035611274357334466,
+            "physical_dTdx": 0.2712725322713594,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          },
+          {
+            "x": 0.37857945758719175,
+            "singular_values": [
+              76.91793097736651,
+              31.084647694135242,
+              5.128030780025665,
+              3.737718823930909,
+              2.3844158209779027,
+              0.9953722985020459,
+              0.3909523357546338,
+              7.475818633149292e-17
+            ],
+            "left_null_compatibility_absolute": 5.82644860902537e-05,
+            "left_null_compatibility_relative": 1.4542120648751764e-05,
+            "interpolated_full_point_residual_max": 0.011991163344573926,
+            "physical_dTdx": 0.13769404508692168,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          }
+        ]
+      },
+      {
+        "N": 7681,
+        "dx": 0.01171875,
+        "roots": [
+          {
+            "x": -6.146913033885027,
+            "singular_values": [
+              42.582228766670525,
+              15.698980832007045,
+              5.593281693040262,
+              4.445758635913136,
+              2.614842307991888,
+              1.4072083985315862,
+              0.2700016672242955,
+              4.3867741784954095e-16
+            ],
+            "left_null_compatibility_absolute": 1.436669853777106e-07,
+            "left_null_compatibility_relative": 7.00474259747093e-08,
+            "interpolated_full_point_residual_max": 0.000278911801861792,
+            "physical_dTdx": 0.27045301922408493,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          },
+          {
+            "x": 0.3786155771148703,
+            "singular_values": [
+              76.9190310940365,
+              31.084682395385023,
+              5.128039518902728,
+              3.7377201041265726,
+              2.3844186199427386,
+              0.9953767482279824,
+              0.3909545468401226,
+              3.820966137369739e-16
+            ],
+            "left_null_compatibility_absolute": 6.115082195612409e-06,
+            "left_null_compatibility_relative": 1.526268980527926e-06,
+            "interpolated_full_point_residual_max": 0.0033581214885671615,
+            "physical_dTdx": 0.13699889346055213,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          }
+        ]
+      },
+      {
+        "N": 15361,
+        "dx": 0.005859375,
+        "roots": [
+          {
+            "x": -6.1469160497751645,
+            "singular_values": [
+              42.58223975755432,
+              15.698964662844261,
+              5.5932812661756515,
+              4.4457583552238775,
+              2.6148412799360248,
+              1.407207246524333,
+              0.27000159942372814,
+              6.06490139162935e-17
+            ],
+            "left_null_compatibility_absolute": 2.996804687183108e-07,
+            "left_null_compatibility_relative": 1.4611486949950553e-07,
+            "interpolated_full_point_residual_max": 0.0016337521205918026,
+            "physical_dTdx": 0.27095276821502473,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          },
+          {
+            "x": 0.3786161034718993,
+            "singular_values": [
+              76.91922314364383,
+              31.084687552171246,
+              5.1280424943420995,
+              3.7377202495950894,
+              2.384419078942074,
+              0.9953785816976306,
+              0.39095489675507306,
+              9.801632991247296e-16
+            ],
+            "left_null_compatibility_absolute": 2.919635723186431e-07,
+            "left_null_compatibility_relative": 7.287148082624121e-08,
+            "interpolated_full_point_residual_max": 0.0010358749478914674,
+            "physical_dTdx": 0.13661445135877956,
+            "note": "Finite-grid interpolation diagnostic; not a solution-error bound."
+          }
+        ]
+      }
+    ]
+  },
+  "interpretation": "At each determinant sign crossing, ell^T b is a necessary smooth-crossing condition of A(Y)Yprime+b(Y)=0. Saved-state interpolation, not independently imposed critical matching. Small compatibility does not prove unique branch or physical validity. No new threshold."
+}

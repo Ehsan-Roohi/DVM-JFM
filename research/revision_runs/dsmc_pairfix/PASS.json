@@ -1,0 +1,16 @@
+{
+  "time": 1790875097.120174,
+  "manifest": {
+    "original.cpp": "d83b9b3e079b6a3b5fa3dfd82ff03108b836f34990e5d9de63eeafd5e63e63b5",
+    "corrected.cpp": "48a9493918def709c5d603885417aa4db645ba0538524aedd10be87e978096e8",
+    "original": "60592470e9273e4d3fcc17307f2aea691547ad7c9dddf640bec5a80bb123f290",
+    "corrected": "0348c10d858f9a554d42bb7cf47b390f564c755563dba44a1dd5c2248e3e1507",
+    "collision_test.cpp": "d2f5aea71f02616b54ae733b8d80184af5aba131edc760c1b800f8e46fb373fe",
+    "run.py": "5189b5bdc218bca37efd0ffe9ff0cdf42baf1b9bcd259304643cc982a97c5069"
+  },
+  "restart": "bitwise each version",
+  "foreign_checkpoint": "rejected",
+  "pair_bijection": "exact",
+  "collision_conservation_trials": 10000,
+  "tolerance": 1e-12
+}

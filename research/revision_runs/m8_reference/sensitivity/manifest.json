@@ -1,0 +1,73 @@
+[
+  {
+    "index": 0,
+    "name": "time_extend",
+    "changes": {
+      "max_time": 800.0
+    },
+    "scratch": "/scratch4/workspace/roohie_umass_edu-jfm1439-m8-reference-20261002/sensitivity/time_extend",
+    "archive": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/m8_reference_20261002/sensitivity/time_extend",
+    "checkpoint_policy": "verified continuation from baseline",
+    "config_sha256": "3700766fe4b5c6476f7a44c942ca359c1b0ca5ae89ae6fc7481a16de33d99acf"
+  },
+  {
+    "index": 1,
+    "name": "space_refine",
+    "changes": {
+      "nx": 2400
+    },
+    "scratch": "/scratch4/workspace/roohie_umass_edu-jfm1439-m8-reference-20261002/sensitivity/space_refine",
+    "archive": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/m8_reference_20261002/sensitivity/space_refine",
+    "checkpoint_policy": "fresh same bimodal initialization",
+    "config_sha256": "f30c3069a38ffd179917491c7142504917363058f1fdfbfdddc14f58ea606525"
+  },
+  {
+    "index": 2,
+    "name": "dt_half",
+    "changes": {
+      "CFL": 0.35
+    },
+    "scratch": "/scratch4/workspace/roohie_umass_edu-jfm1439-m8-reference-20261002/sensitivity/dt_half",
+    "archive": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/m8_reference_20261002/sensitivity/dt_half",
+    "checkpoint_policy": "fresh same bimodal initialization",
+    "config_sha256": "9a6d5e292229e0219e54cde6399bdb6da7cf6772ea89218ae4893486e6409046"
+  },
+  {
+    "index": 3,
+    "name": "velocity_refine",
+    "changes": {
+      "nv": 801
+    },
+    "scratch": "/scratch4/workspace/roohie_umass_edu-jfm1439-m8-reference-20261002/sensitivity/velocity_refine",
+    "archive": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/m8_reference_20261002/sensitivity/velocity_refine",
+    "checkpoint_policy": "fresh same bimodal initialization",
+    "config_sha256": "6dcb6d280a37433a72a7d46d75d6bbed6d775f5ee85841d77cdf43b81287e0fa"
+  },
+  {
+    "index": 4,
+    "name": "velocity_extent",
+    "changes": {
+      "vmin": -50.0,
+      "vmax": 50.0,
+      "nv": 501,
+      "CFL": 0.875
+    },
+    "scratch": "/scratch4/workspace/roohie_umass_edu-jfm1439-m8-reference-20261002/sensitivity/velocity_extent",
+    "archive": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/m8_reference_20261002/sensitivity/velocity_extent",
+    "checkpoint_policy": "fresh same bimodal initialization",
+    "config_sha256": "d4ddde23c8d50b924693e20b30d8e7e65749ca368a77266b78b916396d2c413d"
+  },
+  {
+    "index": 5,
+    "name": "space_extent",
+    "changes": {
+      "xmin": -80.0,
+      "xmax": 50.0,
+      "nx": 1950
+    },
+    "scratch": "/scratch4/workspace/roohie_umass_edu-jfm1439-m8-reference-20261002/sensitivity/space_extent",
+    "archive": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/m8_reference_20261002/sensitivity/space_extent",
+    "checkpoint_policy": "fresh same bimodal initialization",
+    "config_sha256": "122ca98f040b1269f5c0b366e36bc7e693bf24f42ad44bc12c5efeaa43121a05"
+  }
+]

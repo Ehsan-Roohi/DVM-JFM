@@ -1,0 +1,30 @@
+{
+  "Maxwellian": {
+    "analytic": 0.0,
+    "computed": {
+      "rho": 1.0,
+      "T": 1.0,
+      "min_diffusion_eigenvalue_over_T": 0.9999999999999996,
+      "entropy_direct_over_rho": 6.580552715147938e-16,
+      "entropy_by_parts_over_rho": 6.580552715147952e-16,
+      "boundary_entropy_over_rho": 0.0,
+      "integration_by_parts_defect_over_rho": -1.3805065841367707e-30,
+      "mass_source_over_rho": -7.896312771987667e-33,
+      "energy_source_over_rhoT": 1.3161105430295853e-15
+    }
+  },
+  "anisotropic_Gaussian": {
+    "analytic": 0.125,
+    "computed": {
+      "rho": 0.9999999999999998,
+      "T": 0.9999999999999925,
+      "min_diffusion_eigenvalue_over_T": 0.7500000000000165,
+      "entropy_direct_over_rho": 0.12499999999884522,
+      "entropy_by_parts_over_rho": 0.1250000000001813,
+      "boundary_entropy_over_rho": -2.0282378666019378e-13,
+      "integration_by_parts_defect_over_rho": -1.3360978168341302e-12,
+      "mass_source_over_rho": -3.2976239469108277e-14,
+      "energy_source_over_rhoT": -2.512337126531225e-12
+    }
+  }
+}

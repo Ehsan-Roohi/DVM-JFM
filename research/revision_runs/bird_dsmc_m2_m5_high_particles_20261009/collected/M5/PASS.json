@@ -1,0 +1,49 @@
+{
+  "moment_tests": {
+    "maxwellian_and_direct_particle_pass": true,
+    "max_abs_error": 2.9558577807620168e-12
+  },
+  "cases": [
+    {
+      "Mach": 3,
+      "low_ppc_smoke": true,
+      "collision_conservation_max": 2.6645352591003757e-14,
+      "high_ppc": 2000,
+      "high_ppc_finite_positive": true,
+      "restart_block_bitwise": true,
+      "high_ppc_checkpoint_sha": "38423101d92fddf009f4f7ccd08551720dfd7186578be0ac8b7da97afb833e24"
+    },
+    {
+      "Mach": 4,
+      "low_ppc_smoke": true,
+      "collision_conservation_max": 4.796163466380676e-14,
+      "high_ppc": 2000,
+      "high_ppc_finite_positive": true,
+      "restart_block_bitwise": true,
+      "high_ppc_checkpoint_sha": "c8bab137cbe4799746a029bedc468f890bc8fb1fe95a8f245ae12b6d715b6625"
+    },
+    {
+      "Mach": 5,
+      "low_ppc_smoke": true,
+      "collision_conservation_max": 8.615330671091215e-14,
+      "high_ppc": 2000,
+      "high_ppc_finite_positive": true,
+      "restart_block_bitwise": true,
+      "high_ppc_checkpoint_sha": "6addae61cae0c714b564d7861a9b80fc09b7b223fe72ecdfcd4b7ea5e248c082"
+    }
+  ],
+  "PASS": true,
+  "manifest": "85953cea28738120e51a5a371fb1451ff9bb3b8abf5c29de666e8cc786d7effd",
+  "sources": {
+    "DSMC1S_original.for": "159f0f8c8aeb14ba1e99acf5fed07f74700934d5cdaad0e7953f40bfde4fb2ee",
+    "DSMC1S_paper.for": "30fedcc04641694a43a8727d523f9a96b18a70b49346fbd8f4f4f193a0da5c8e",
+    "paper_diagnostics.f90": "b414fa7487f721c37e19d2a5995f5b46e15d020bcfd332891a608d92eab7170b",
+    "postprocess.py": "9b0fe9c25a2a899dc2b2045fa1cea495c745c078a8ae51c9364fbf6b0cd3246a",
+    "preflight.py": "d439b1f3fcf5dcf3ba9a76b040f9fd779ac2d612f31cb28268cf70690b37fa2f",
+    "chain.py": "04ed2386255261f0741eaa241df6d8f82dfd7c939b67742534a957b441feca8e",
+    "plot.py": "00e476ae4b5f15cabf58bed9b3fe3d56d07bc6010e60220afd41e03d2e12b5f5",
+    "run.sbatch": "6bf1635eaa3fa441cf8383740a772a1a97907865fdab08ae3b39e5e1ac974f69",
+    "gate.sbatch": "5dd52422bed822511b0a28ccf38143645b59334b3e750b1a0db8239683dc0830"
+  },
+  "executable": "331ea362050247c8793863b18e9eb5e1a4052ef00ba2c2b713eb5f659781c283"
+}

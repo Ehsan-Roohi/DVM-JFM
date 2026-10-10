@@ -1,0 +1,49 @@
+{
+  "cases": [
+    {
+      "name": "M3_x1920",
+      "mach": 3,
+      "nx": 1920,
+      "L": 45,
+      "nv": 801,
+      "vmax": 40,
+      "Pr": 0.6666666666666666,
+      "omega": 1,
+      "mu1": 1,
+      "CFL": 0.8,
+      "tmax": 400
+    },
+    {
+      "name": "M4_x2560",
+      "mach": 4,
+      "nx": 2560,
+      "L": 60,
+      "nv": 801,
+      "vmax": 40,
+      "Pr": 0.6666666666666666,
+      "omega": 1,
+      "mu1": 1,
+      "CFL": 0.8,
+      "tmax": 400
+    },
+    {
+      "name": "M5_x3200",
+      "mach": 5,
+      "nx": 3200,
+      "L": 75,
+      "nv": 801,
+      "vmax": 40,
+      "Pr": 0.6666666666666666,
+      "omega": 1,
+      "mu1": 1,
+      "CFL": 0.8,
+      "tmax": 400
+    }
+  ],
+  "scratch": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/dvm_m3_m5_transport_match_20261008",
+  "archive": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/dvm_m3_m5_transport_match_20261008",
+  "scope": "Shakhov DVM, Pr=2/3, mu=T, tau=mu/(rho*T)=1/rho; not Maxwell Boltzmann operator",
+  "completed_M2_reused": true,
+  "stationarity_threshold": 1e-07,
+  "grid_note": "dx=.046875 equals completed finest M2; dv=.1; velocity extent40 covers hot M5 downstream; convergence not certified"
+}

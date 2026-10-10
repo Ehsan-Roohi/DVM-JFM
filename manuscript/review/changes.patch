@@ -1,0 +1,239 @@
+--- v15/main.tex
++++ revised/main.tex
+@@ -91,7 +91,7 @@
+    - 7T\sigma_{xx},
+   \label{eq:Rdef}
+ \end{equation}
+-The superscript $\mathrm{cl}$ identifies the tensorial closure moment.  With $M_d$ the conservative discrete Maxwellian on the same velocity grid, and
++The superscript $\mathrm{cl}$ identifies the tensorial closure moment. The subtraction $7T\sigma_{xx}$ removes the conventional stress contribution to the contracted fourth moment; its Gaussian-moment derivation is given in appendix~\ref{app:symmetry_proof}. With $M_d$ the conservative discrete Maxwellian on the same velocity grid, the scalar excess is
+ \begin{equation}
+   \Delta_d=\int |\boldsymbol c|^4(f-M_d)\,\dd\boldsymbol v .
+   \label{eq:Deltadef}
+@@ -163,7 +163,7 @@
+ \begin{revision}
+ There is a related spatial consideration for the present constant-$\tau$ BGK model. 
+ The BGK reference solver uses a Maxwellian relaxation target with Prandtl number $\Pr=1$ and constant relaxation time $\tau=1$ in computational units. Its continuum transport relation is $\mu=p\tau$.
+-A validation of the current solver at $\Pr=2/3$ with \citet{ChenXuCai2013} solution is provided in (Appendix~\ref{app:m8_reference}). 
++A separate matched-parameter Mach-8 Shakhov benchmark compares density and temperature with \citet{ChenXuCai2013} in appendix~\ref{app:m8_reference}; its scope and limitations are stated there. 
+ Transport over one relaxation time samples distances of order $|v_x|\tau$; the increasing bulk and thermal speeds therefore motivate greater separation between the shock layer and its equilibrium reservoirs. The larger spatial intervals provide this additional buffer for the non-equilibrium profiles and their tails. This is a rationale for the chosen computational domains, not a universal law for shock thickness or evidence that each boundary is sufficiently remote. The high-Mach full/lightweight comparisons vary several parameters together; isolated spatial-domain, velocity-domain, grid and temporal convergence remain separate requirements.
+ The independent direct simulation Monte Carlo (DSMC) collision-source test is described, with its full sampling protocol and particle-number audit, in \S\ref{sec:dsmc}.
+ \end{revision}
+@@ -183,7 +183,9 @@
+ \begin{revision}
+ The inverse question considered here is whether the heat-flux balance contains enough information to recover two distinct fourth-order moments. We take the lower-order fields and the required collision-source contributions as supplied, and ask what this one balance determines about the remaining moments. This separates an information question from the accuracy of a particular numerical reconstruction.
+ 
+-The choice of unknowns follows the moment hierarchy, rather than an assumed closure relation. In the usual R26 organization, a total of 13 equations for density (continuity equation), velocity (momentum equations in 3 directions), temperature (energy equation), stress (5 independent equations), and heat-flux (3 equations) are supplemented by seven components of the symmetric trace-free third-order moment $m_{ijk}$, five of the contracted trace-free fourth-order moment $R^{\cl}_{ij}$, and the scalar fourth-order excess $\Delta$ \citep{GuEmerson2009R26}. The last two describe different aspects of the fourth-order content: directional anisotropy and scalar excess relative to equilibrium. Planar normal-shock symmetry gives $R^{\cl}_{yy}=R^{\cl}_{zz}=-R^{\cl}_{xx}/2$ and zero off-diagonal components, but does not impose a relation between $R^{\cl}_{xx}$ and $\Delta$. We therefore collect the two components relevant to the streamwise heat-flux observation as
++The choice of unknowns follows the moment hierarchy, rather than an assumed closure relation. In the usual R26 organization, a total of 13 equations for density (continuity equation), velocity (momentum equations in 3 directions), temperature (energy equation), stress (5 independent equations), and heat-flux (3 equations) are supplemented by seven components of the symmetric trace-free third-order moment $m_{ijk}$, five of the contracted trace-free fourth-order moment $R^{\cl}_{ij}$, and the scalar fourth-order excess $\Delta$ \citep{GuEmerson2009R26}. The last two describe different aspects of the fourth-order content: directional anisotropy and scalar excess relative to equilibrium.
++
++For the normal-shock branch considered here, the distribution is invariant under transverse reflections and interchange of the two transverse velocity coordinates. Reflection makes every off-diagonal moment integrand odd, so those components vanish; interchange gives $R^{\cl}_{yy}=R^{\cl}_{zz}$. The tensor is trace-free by its defining kernel, hence $R^{\cl}_{xx}+2R^{\cl}_{yy}=0$ and $R^{\cl}_{yy}=R^{\cl}_{zz}=-R^{\cl}_{xx}/2$. Appendix~\ref{app:symmetry_proof} gives the componentwise proof, the underlying symmetry assumptions and their discrete-grid counterpart. Spatial one-dimensionality alone would not imply these identities. Nor does the trace condition connect this tensor to the separate scalar excess $\Delta$. We therefore collect the two components relevant to the streamwise heat-flux observation as
+ \begin{equation}
+   \boldsymbol z(x)=\begin{pmatrix}R^{\cl}_{xx}(x)\\ \Delta(x)\end{pmatrix} .
+   \label{eq:z_state}
+@@ -225,7 +227,7 @@
+ \end{equation}
+ Consequently, agreement with $S$ alone cannot establish that either constituent moment has been recovered correctly.
+ 
+-The differential heat-flux balance has the same limitation when its source and lower-order contributions are supplied: it determines $\partial_x S$, and an equilibrium boundary value fixes the integration constant. A perturbation $\eta(x)$ that vanishes at the boundaries still leaves both $S$ and those boundary values unchanged. This is an ambiguity of the selected observation, not a claim that every such perturbation is a realisable distribution or a solution of the full kinetic or R26 equations. Additional moment equations or constitutive information can constrain the unobserved direction. The flux-side projection is kinematic and persists across collision models; evaluating its source, or obtaining an independent channel, can require model-specific information.
++The differential heat-flux balance has the same limitation when its source and lower-order contributions are supplied: it determines $\partial_x S$, and a consistently evaluated boundary flux fixes the integration constant (\S\ref{sec:heatflux}). A perturbation $\eta(x)$ that vanishes at the boundaries still leaves both $S$ and those boundary values unchanged. This is an ambiguity of the selected observation, not a claim that every such perturbation is a realisable distribution or a solution of the full kinetic or R26 equations. Additional moment equations or constitutive information can constrain the unobserved direction. The flux-side projection is kinematic and persists across collision models; evaluating its source, or obtaining an independent channel, can require model-specific information.
+ \end{revision}
+ 
+ \begin{revision}
+@@ -244,7 +246,7 @@
+   R^{\cl}_{xx}=S-\Delta/3 .
+   \label{eq:R_from_S_Delta}
+ \end{equation}
+-This algebra explains why sparse scalar-excess probes can work: the missing information is a one-field complement to the observed heat-flux projection, not a dense direct measurement of the tensorial closure moment. Invertibility alone does not quantify reconstruction accuracy: with a common dimensional scaling, the perturbations satisfy $\delta R^{\cl}_{xx}=\delta S-\delta\Delta/3$ and hence $\|\delta R^{\cl}_{xx}\|\leq\|\delta S\|+\|\delta\Delta\|/3$. Relative errors can still be large where the recovered tensorial moment is small.
++This is a pointwise inversion; reconstructing an entire field from finitely many samples additionally requires spatial interpolation assumptions (\S\ref{sec:sparse_delta}). The algebra explains why sparse scalar-excess probes can work: the missing information is a one-field complement to the observed heat-flux projection, not a dense direct measurement of the tensorial closure moment. Invertibility alone does not quantify reconstruction accuracy: with a common dimensional scaling, the perturbations satisfy $\delta R^{\cl}_{xx}=\delta S-\delta\Delta/3$ and hence $\|\delta R^{\cl}_{xx}\|\leq\|\delta S\|+\|\delta\Delta\|/3$. Relative errors can still be large where the recovered tensorial moment is small.
+ 
+ The scalar-excess budget in \S\ref{sec:delta_budget} provides a physical route to this additional information; it is not inferred from the heat-flux balance itself.
+ \end{revision}
+@@ -269,7 +271,7 @@
+ \end{figure}
+ 
+ % AUTHOR VERIFICATION: Confirm that the scripts used for figures 2--4 retain the moving-frame term in eq:heatbalance_general and the discrete equilibrium/offset conventions. Numerical results below have been retained, not recomputed in this editorial review.
+-\section{Heat-flux budget and exact recovery of the observed channel}
++\section{Exact heat-flux balance and numerical recovery of the observed channel}
+ \label{sec:heatflux}
+ 
+ \begin{revision}
+@@ -288,6 +290,14 @@
+   \label{eq:Bxx_split}
+ \end{equation}
+ Here the subscript $d$ emphasises that the budget uses the uncorrected discrete-reference moments. The equilibrium and display-offset conventions are those specified in \S\ref{sec:identifiability}; they must be retained consistently when extracting $S$ from the differential balance.
++Explicitly, supplying $Q_q$, $u_x$ and $\mathcal L_q$ gives
++\begin{equation}
++ F_q(x)=F_q(x_0)+\int_{x_0}^{x}
++ \left[Q_q(\xi)-u_x'(\xi)\mathcal L_q(\xi)\right]\,\dd\xi .
++ \label{eq:heat_flux_integrated}
++\end{equation}
++The flux $F_q(x_0)$ is evaluated from the supplied reference distribution at an anchor point, or from a prescribed full equilibrium distribution when that condition applies. Specifying only incoming reservoir populations does not prescribe the full boundary flux. Equation~\eqref{eq:Bxx_split} then gives $S_d$. One must not impose $S_d=0$ merely because the anchor is called an equilibrium plateau: on a finite grid, $f=M_d$ gives $\Delta_d=0$ but $R^{\cl}_{xx}=-7T\sigma_{xx}[M_d]$, which can be non-zero.
++
+ \end{revision}
+ 
+ \begin{revision}
+@@ -296,10 +306,11 @@
+ 
+ \begin{figure}
+   \centerline{\includegraphics[width=0.78\textwidth]{figures/fig2_exact_budget.pdf}}
+-  \caption{Exact heat-flux-budget validation. The budget reconstructs the observed fourth-order channel $S=R^{\cl}_{xx}+\Delta/3$, not $R^{\cl}_{xx}$ alone. The residual panel verifies the budget on its own spatial-derivative scale; this figure establishes channel identification, while recovery of $R^{\cl}_{xx}$ requires the scalar-excess channel introduced in \S\ref{sec:delta_budget}.}
++  \caption{Heat-flux-budget reconstruction check. The budget reconstructs the observed fourth-order channel $S=R^{\cl}_{xx}+\Delta/3$, not $R^{\cl}_{xx}$ alone. The residual panel verifies the budget on its own spatial-derivative scale; this figure establishes channel identification, while recovery of $R^{\cl}_{xx}$ requires the scalar-excess channel introduced in \S\ref{sec:delta_budget}.}
+   \label{fig:budget}
+ \end{figure}
+ 
++\newpage
+ \section{\revisionheading{Scalar-excess budget and two-channel recovery}}
+ \label{sec:delta_budget}
+ 
+@@ -316,7 +327,12 @@
+   K_\Delta=\int v_x|\boldsymbol c|^2 c_x f\,\dd\boldsymbol v .
+   \label{eq:J_K_delta}
+ \end{equation}
+-Since $\partial_x|\boldsymbol c|^4=-4|\boldsymbol c|^2c_x\partial_xu_x$, one obtains
++These fluxes specify what additional information is needed. In fact $K_\Delta=2F_q$, whereas
++\[
++ J_\Delta=u_x\int |\boldsymbol c|^4f\,\dd\boldsymbol v
++             +\int c_x|\boldsymbol c|^4f\,\dd\boldsymbol v
++\]
++contains a fifth-order moment not determined by the lower-order fields and $S$. Here these fluxes are evaluated from the full DVM distribution: the two-budget procedure tests moment recovery and consistency, rather than defining a closed solver from low-order data alone. Since $\partial_x|\boldsymbol c|^4=-4|\boldsymbol c|^2c_x\partial_xu_x$, one obtains
+ \begin{equation}
+   \int |\boldsymbol c|^4 v_x\partial_x f\,\dd\boldsymbol v
+   =\partial_x J_\Delta+4(\partial_xu_x)K_\Delta .
+@@ -343,7 +359,7 @@
+   Q_\Delta=\int |\boldsymbol c|^4\,\mathcal C[f]~\dd\boldsymbol v .
+   \label{eq:generic_sources}
+ \end{equation}
+-The source changes with the collision model, while the observed fourth-order channel in the heat-flux flux remains the same kinematic projection. The analytic Shakhov, ES-BGK and ES-FP source laws below use full velocity-space integrals and the continuum-reference excess $\Delta=\Delta_c$, without plateau subtraction. Discrete-reference diagnostics require the corresponding equilibrium-offset corrections; finite-box Fokker--Planck evaluations also require boundary and discretisation checks.  BGK gives \eqref{eq:delta_bgk_source}.  The Shakhov target changes the heat-flux moment so that $Q_q=-Pr\,q_x/\Kn$, but its correction is odd in $\boldsymbol c$ and integrates to zero against the even kernel $|\boldsymbol c|^4$; therefore $Q_\Delta=-\Delta/\Kn$ is unchanged.  Thus a correct-Prandtl Shakhov correction alters the heat-flux relaxation without changing the scalar-excess source.
++The source changes with the collision model, while the observed fourth-order channel in the heat-flux flux remains the same kinematic projection. Recovering $\Delta$ from a budget requires a source law invertible for $\Delta$ once its other inputs are supplied; a general Boltzmann production measurement alone is not such an algebraic inversion. The analytic Shakhov, ES-BGK and ES-FP source laws below use full velocity-space integrals and the continuum-reference excess $\Delta=\Delta_c$, without plateau subtraction. Discrete-reference diagnostics require the corresponding equilibrium-offset corrections; finite-box Fokker--Planck evaluations also require boundary and discretisation checks.  BGK gives \eqref{eq:delta_bgk_source}.  The Shakhov target changes the heat-flux moment so that $Q_q=-Pr\,q_x/\Kn$, but its correction is odd in $\boldsymbol c$ and integrates to zero against the even kernel $|\boldsymbol c|^4$; therefore $Q_\Delta=-\Delta/\Kn$ is unchanged. This parity proof applies on full velocity space (or a domain symmetric in $\boldsymbol c$). A fixed laboratory-frame grid is generally not symmetric about the local $u_x$; discrete neutrality must be evaluated for the actual target and quadrature rather than inferred from this continuum argument. Thus a correct-Prandtl Shakhov correction alters the heat-flux relaxation without changing the scalar-excess source.
+ \end{revision}
+ 
+ \begin{revision}
+@@ -396,20 +412,26 @@
+   =-\partial_{c_i}(A_i f)+\frac12\partial_{c_i}\partial_{c_j}(D_{ij}f),
+   \label{eq:fp_operator}
+ \end{equation}
+-the production of the fourth scalar kernel $\phi=|\boldsymbol c|^4$ is obtained by integrating the adjoint generator against $f$:
++two integrations by parts on full velocity space, with sufficiently decaying distributions and vanishing boundary terms, transfer the derivatives to $\phi=|\boldsymbol c|^4$. Since $\partial_{c_i}\phi=4|\boldsymbol c|^2c_i$ and $\partial_{c_i}\partial_{c_j}\phi=8c_ic_j+4|\boldsymbol c|^2\delta_{ij}$, the scalar production is
+ \begin{equation}
+   Q_\Delta^{\rm FP}
+   =\int \left[4A_i|\boldsymbol c|^2c_i+4D_{ij}c_i c_j+2D_{ii}|\boldsymbol c|^2\right]f~\dd\boldsymbol v .
+   \label{eq:fp_delta_source_general}
+ \end{equation}
+-This form is useful because it makes the difference from BGK-type relaxation explicit.  In an ES-FP model with standard linear drift $A_i=-\nu c_i$ and anisotropic diffusion $D_{ij}=2\nu(T\delta_{ij}+\beta\sigma_{ij}/\rho)$, the one-dimensional shock reduction gives
++This form is useful because it makes the difference from BGK-type relaxation explicit.  In an ES-FP model with standard linear drift $A_i=-\nu c_i$ and anisotropic diffusion $D_{ij}=2\nu(T\delta_{ij}+\beta\sigma_{ij}/\rho)$, substitution gives
+ \begin{equation}
+   Q_\Delta^{\rm ES-FP}
+   =\nu\left[-4\Delta+\frac{8\beta}{\rho}\tr(\sigma^2)\right]
+   =4\nu\left[-\Delta+\frac{2\beta}{\rho}\tr(\sigma^2)\right].
+   \label{eq:esfp_delta_source}
+ \end{equation}
+-For the correct-Prandtl choice $\beta=-5/4$, the ES-FP correction is therefore proportional to the same stress-squared invariant as the ES-BGK correction, but with a different coefficient and opposite sign. This formal source identity presupposes an admissible diffusion tensor. With $\Theta=\rho^{-1}\int\boldsymbol c\boldsymbol c f\,\dd\boldsymbol v$, its normalised form is $D/(2\nu)=(1-\beta)TI+\beta\Theta$. At $\beta=-5/4$, positive definiteness requires every eigenvalue of $\Theta$ to be smaller than $9T/5$. A fixed correct-Prandtl coefficient does not guarantee this condition for arbitrary nonequilibrium states.  This is the scalar-excess analogue of the high-order-moment production differences emphasised in shock-wave benchmark studies of BGK, Shakhov, ES-BGK, ES-FP and Cubic-FP models \citep{FeiLiuLiuZhang2020ShockBenchmark}.  It also explains why equal Prandtl number does not imply equal fourth-order closure production: the heat-flux relaxation rate is a lower-order transport constraint, whereas $Q_\Delta$ samples an even fourth-order kernel.
++For the correct-Prandtl choice $\beta=-5/4$, the ES-FP correction is therefore proportional to the same stress-squared invariant as the ES-BGK correction, but with a different coefficient and opposite sign. For clarity, substitution of $\int c_ic_jf\,\dd\boldsymbol v=\rho T\delta_{ij}+\sigma_{ij}$ and $\tr\sigma=0$ gives
++\[
++ \frac{Q_\Delta}{\nu}
++ =-4(\Delta+15\rho T^2)+24\rho T^2+36\rho T^2
++   +\frac{8\beta}{\rho}\tr(\sigma^2).
++\]
++The equilibrium terms cancel, yielding \eqref{eq:esfp_delta_source} before any normal-shock symmetry reduction. On a finite velocity box the discarded boundary terms require a separate check. This formal source identity presupposes an admissible diffusion tensor. With $\Theta=\rho^{-1}\int\boldsymbol c\boldsymbol c f\,\dd\boldsymbol v$, its normalised form is $D/(2\nu)=(1-\beta)TI+\beta\Theta$. At $\beta=-5/4$, positive definiteness requires every eigenvalue of $\Theta$ to be smaller than $9T/5$. A fixed correct-Prandtl coefficient does not guarantee this condition for arbitrary nonequilibrium states.  This is the scalar-excess analogue of the high-order-moment production differences emphasised in shock-wave benchmark studies of BGK, Shakhov, ES-BGK, ES-FP and Cubic-FP models \citep{FeiLiuLiuZhang2020ShockBenchmark}.  It also explains why equal Prandtl number does not imply equal fourth-order closure production: the heat-flux relaxation rate is a lower-order transport constraint, whereas $Q_\Delta$ samples an even fourth-order kernel.
+ \end{revision}
+ 
+ \begin{revision}
+@@ -423,7 +445,7 @@
+   \Delta_G^{\rm ES}
+   =\frac{2\alpha_{\rm ES}^2}{\rho}\tr(\sigma^2).
+ \end{equation}
+-Hence their pointwise ratio is
++Equivalently, $Q_{\Delta,\mathrm{corr}}^{\rm ES-FP}/(4\nu)=(\beta/\alpha_{\rm ES}^2)\Delta_G^{\rm ES}$ for $\alpha_{\rm ES}\ne0$. Wherever $\Delta_G^{\rm ES}\ne0$, their pointwise ratio is
+ \begin{equation}
+   \frac{Q_{\Delta,\mathrm{corr}}^{\rm ES-FP}/(4\nu)}{\Delta_G^{\rm ES}}
+   =\frac{\beta}{\alpha_{\rm ES}^2}.
+@@ -463,7 +485,7 @@
+ \label{sec:shakhov}
+ 
+ \begin{revision}
+-The Shakhov model is the most direct correct-Prandtl test of the BGK result because it changes the heat-flux relaxation without replacing the Maxwellian covariance by an anisotropic one.  We therefore evaluate a conservative discrete Shakhov target \citep{Shakhov1968} on the Mach-3 DVM shock.  The Shakhov target has the form of a Maxwellian multiplied by an odd heat-flux correction.  Consequently its projection onto the heat-flux kernel is non-zero, while its projection onto the even scalar kernel $|\boldsymbol c|^4$ vanishes.  Numerically, the target gives $q_S/q=0.333323\simeq 1-Pr$ and the direct heat-flux collision source gives $Q_q/q=-0.666677\simeq -Pr$, as required for $Pr=2/3$.  At the same time, the scalar-excess source remains $Q_\Delta=-\Delta/\Kn$ to numerical precision.  
++The Shakhov model is the most direct correct-Prandtl test of the BGK result because it changes the heat-flux relaxation without replacing the Maxwellian covariance by an anisotropic one.  We therefore evaluate a conservative discrete Shakhov target \citep{Shakhov1968} on the Mach-3 DVM shock.  The Shakhov target has the form of a Maxwellian multiplied by an odd heat-flux correction.  Consequently its projection onto the heat-flux kernel is non-zero, while its projection onto the even scalar kernel $|\boldsymbol c|^4$ vanishes.  Numerically, the target gives $q_S/q=0.333323\simeq 1-Pr$ and the direct heat-flux collision source gives $Q_q/q=-0.666677\simeq -Pr$, as required for $Pr=2/3$.  At the same time, the evaluated scalar-excess source remains $Q_\Delta=-\Delta/\Kn$ to numerical precision for this target and grid; this is a numerical check of the discrete construction.  
+ \end{revision}
+ 
+ \begin{revision}
+@@ -496,7 +518,7 @@
+ 
+ \begin{table}
+   \begin{center}
+-  \caption{Observation channel and fourth-order source laws for the models considered here.  The heat-flux observation channel is kinematic, whereas the source laws are collision-model dependent.  Here $\psi_q=\frac12 |\boldsymbol c|^2c_x$, $G_\Theta$ is the ES-BGK anisotropic Gaussian, $A_i$ and $D_{ij}$ are Fokker--Planck drift and diffusion coefficients, and $Q(f,f)$ is the Boltzmann collision operator.}
++  \caption{Observation channel and fourth-order source laws for the models considered here.  The heat-flux observation channel is kinematic, whereas the source laws are collision-model dependent.  The analytic relaxation formulas use continuum-reference moments on full velocity space; discrete equilibrium and quadrature corrections are as described in the text. Here $\psi_q=\frac12 |\boldsymbol c|^2c_x$, $G_\Theta$ is the ES-BGK anisotropic Gaussian, $A_i$ and $D_{ij}$ are Fokker--Planck drift and diffusion coefficients, and $Q(f,f)$ is the Boltzmann collision operator.}
+   \label{tab:source_laws}
+   \begin{tabular}{p{0.17\textwidth}p{0.22\textwidth}p{0.23\textwidth}p{0.25\textwidth}}
+   \toprule
+@@ -900,6 +922,72 @@
+ The six sensitivity calculations test extended integration time, finer spatial resolution, a smaller time step, finer velocity resolution, a larger velocity domain and a larger spatial domain. The table and figure report comparisons for the baseline, extended-time and spatially refined calculations. Across the six tests, the maximum local negative-$g$ mass fraction remains approximately $2.13$--$2.15\%$, and the corresponding negative-$h$ energy fraction is $5.15$--$5.22\%$. Small aligned macroscopic sensitivities do not remove this positivity limitation. The reduced distributions also do not determine all three-dimensional fourth-order moments. This appendix therefore supports the reported density/temperature comparison only; it does not independently validate $R^{\cl}_{xx}$, $\Delta$ or $S$, or replace the constant-relaxation BGK high-Mach results in \S\ref{sec:high_mach}.
+ \end{revision}
+ 
++
++\clearpage
++\section{\revisionheading{Normal-shock symmetry and supporting moment identities}}
++\label{app:symmetry_proof}
++
++\begin{revision}
++\textbf{Symmetry assumptions.} The planar normal-shock problem has no transverse flow, forcing or preferred transverse direction. Its Maxwellian reservoirs and isotropic collision law are invariant under transverse reflections and rotations. We consider the solution branch that preserves these symmetries, as does evolution from symmetry-preserving initial data. This specifies the branch; it is not a uniqueness theorem for every steady solution of the kinetic boundary-value problem. At each fixed $x$, write $c_y=v_y$, $c_z=v_z$ and $c_x=v_x-u_x(x)$. The following three symmetries suffice for the moment reduction:
++\begin{equation}
++\begin{split}
++ f(c_x,c_y,c_z)&=f(c_x,-c_y,c_z)=f(c_x,c_y,-c_z),\\
++ f(c_x,c_y,c_z)&=f(c_x,c_z,c_y).
++\end{split}
++\label{eq:transverse_symmetries}
++\end{equation}
++The local equilibrium reference has the same symmetries. No reflection symmetry in $c_x$ is assumed: the streamwise heat flux may therefore be non-zero.
++\end{revision}
++
++\begin{revision}
++\textbf{Componentwise proof.} Extend \eqref{eq:q_sigma} and \eqref{eq:Rdef} to the full tensors, with $\delta_{ij}$ the Kronecker delta:
++\begin{equation}
++\begin{split}
++ C_{ij}(\boldsymbol c)&=c_i c_j-\tfrac13|\boldsymbol c|^2\delta_{ij},
++ \qquad \sigma_{ij}=\int C_{ij}f\,\dd\boldsymbol v,\\
++ R^{\cl}_{ij}&=\int |\boldsymbol c|^2 C_{ij}(f-M_d)\,\dd\boldsymbol v
++                 -7T\sigma_{ij}.
++\end{split}
++\label{eq:full_R_tensor}
++\end{equation}
++For $i\ne j$, $C_{ij}=c_i c_j$. Changing $c_y\to-c_y$ reverses the sign of the $xy$ and $yz$ integrands without changing $f$, $M_d$ or the integration measure; changing $c_z\to-c_z$ does the same for $xz$. Each such integral equals its negative and is zero. This proves that the off-diagonal components of both $\sigma$ and $R^{\cl}$ vanish. Next, changing variables $c_y\leftrightarrow c_z$ interchanges the $yy$ and $zz$ integrands while leaving the distributions and measure unchanged, giving equality of their integrals. Finally, the pointwise identity
++\[
++ \sum_{i=x,y,z} C_{ii}=|\boldsymbol c|^2-|\boldsymbol c|^2=0
++\]
++implies $\sum_i\sigma_{ii}=0$ and $\sum_i R^{\cl}_{ii}=0$, including the stress subtraction. Combining these facts yields
++\begin{equation}
++ R^{\cl}_{yy}=R^{\cl}_{zz}=-\tfrac12R^{\cl}_{xx},\qquad
++ \sigma_{yy}=\sigma_{zz}=-\tfrac12\sigma_{xx},\qquad
++ R^{\cl}_{ij}=\sigma_{ij}=0\quad(i\ne j).
++ \label{eq:normal_shock_tensor_reduction}
++\end{equation}
++Consequently $\tr(\sigma^2)=\sigma_{xx}^2+2(\sigma_{xx}/2)^2=3\sigma_{xx}^2/2$, as used in \eqref{eq:es_1d_delta_target}. These restrictions leave $\Delta$ independent: it is a scalar integral, not the trace of the already trace-free tensor $R^{\cl}$. For example, on full velocity space with continuum-reference moments, a mixture of isotropic Maxwellians with different temperatures and the same mean velocity has $R^{\cl}_{ij}=\sigma_{ij}=0$. For positive weights $w_k$ summing to one and component temperatures $T_k$, the mixture temperature is $T=\sum_k w_kT_k$ and $\Delta_c=15\rho[\sum_k w_kT_k^2-T^2]>0$ when the temperatures differ. This illustrates independence at the level of moment definitions, not an additional shock solution.
++\end{revision}
++
++\begin{revision}
++\textbf{Discrete velocities.} The same change-of-variables proof becomes a node-pairing proof when the transverse node sets and weights are invariant under sign changes and interchange, and the sampled distribution and fitted $M_d$ preserve those symmetries. Equal $y$ and $z$ grids symmetric about zero admit these pairings; invariance under arbitrary rotations is unnecessary. The trace identity holds nodewise even on a finite grid. The other equalities require the stated symmetries and are subject to numerical symmetry errors; finite-particle DSMC samples need not satisfy them exactly. In particular, symmetry enforces equality of the two transverse stresses, not vanishing diagonal stress of a finite-grid Maxwellian. It does not remove the equilibrium-quadrature defects reported in table~\ref{tab:high_mach_run_audit}.
++\end{revision}
++
++\newpage
++\begin{revision}
++\textbf{Why the coefficient $7$?} It is a continuum R26 moment convention, not a fitted correction. Let $M$ be the Maxwellian with covariance $T I$ and consider only its standard stress-polynomial contribution
++\[
++ f_\sigma=M\frac{\sigma_{kl}c_kc_l}{2\rho T^2},\qquad \sigma_{kk}=0,
++\]
++where repeated indices are summed. Gaussian contraction gives
++\begin{equation}
++ \int |\boldsymbol c|^2c_ic_jc_kc_l M\,\dd\boldsymbol v
++ =7\rho T^3(\delta_{ij}\delta_{kl}+\delta_{ik}\delta_{jl}
++                         +\delta_{il}\delta_{jk}).
++ \label{eq:gaussian_sixth_contraction}
++\end{equation}
++To verify the factor, write $|\boldsymbol c|^2=\sum_a c_a^2$: in the Gaussian pairings of $c_a c_a c_i c_j c_k c_l$, pairing the two $a$ indices together contributes the dimension $3$, while the remaining pairings contribute $4$, giving $3+4=7$ for each displayed Kronecker product. Contracting with $\sigma_{kl}/(2\rho T^2)$ removes the first product and gives $7T\sigma_{ij}$. The scalar trace contribution vanishes under the same contraction, so
++\[
++ \int |\boldsymbol c|^2 C_{ij}f_\sigma\,\dd\boldsymbol v=7T\sigma_{ij}.
++\]
++Subtracting this contribution defines the fourth-order departure used in \eqref{eq:full_R_tensor}; it does not assume the actual shock distribution equals a truncated Grad expansion. On a finite grid the Gaussian contraction need not be exact. The discrete-reference definition retains the coefficient $7$ as the chosen moment convention, with the separate $M_d$ subtraction explicitly specified in \eqref{eq:Rdef}.
++\end{revision}
++
+ \clearpage
+ \bibliographystyle{jfm}
+ \bibliography{references}

@@ -1,0 +1,132 @@
+{
+  "cases": {
+    "2": {
+      "blocks": 800,
+      "time": 400,
+      "upstream_ppc": 2000,
+      "baseline_ppc": 100,
+      "stationarity_certified": false,
+      "raw_profile_sha256": "6d9ca62e81cc34668a04b317bcf107e1f137b14539fc9dc46751ae968ca15376",
+      "display_smoothing": {
+        "method": "centered local quadratic least squares",
+        "nominal_width_lambda1": 0.75,
+        "window_points": 11
+      }
+    },
+    "3": {
+      "blocks": 800,
+      "time": 400,
+      "upstream_ppc": 2000,
+      "baseline_ppc": 100,
+      "stationarity_certified": false,
+      "raw_profile_sha256": "33026b0c3f90410a1f59dc1cafef27cf324cb8a50840ebc3c9350f83c3c16d69",
+      "display_smoothing": {
+        "method": "centered local quadratic least squares",
+        "nominal_width_lambda1": 0.75,
+        "window_points": 7
+      }
+    },
+    "4": {
+      "blocks": 800,
+      "time": 400,
+      "upstream_ppc": 2000,
+      "baseline_ppc": 100,
+      "stationarity_certified": false,
+      "raw_profile_sha256": "231d9d961472fc40c2aba3dba448dd65b9ce051464e58c68ab09c1666f9226c8",
+      "display_smoothing": {
+        "method": "centered local quadratic least squares",
+        "nominal_width_lambda1": 0.75,
+        "window_points": 5
+      }
+    },
+    "5": {
+      "blocks": 800,
+      "time": 400,
+      "upstream_ppc": 2000,
+      "baseline_ppc": 100,
+      "stationarity_certified": false,
+      "raw_profile_sha256": "de05a9fa9db0b9226bfcb34de852527589f11131463917bdcf5341da90583fb0",
+      "display_smoothing": {
+        "method": "centered local quadratic least squares",
+        "nominal_width_lambda1": 0.75,
+        "window_points": 5
+      }
+    }
+  },
+  "M2_raw_L2_difference_percent": {
+    "DVM": {
+      "rho": 0.14111179674956212,
+      "u": 0.09629320864147609,
+      "T": 0.18031011642707112,
+      "sigma": 3.2316721780648567,
+      "q": 2.9916917565329606,
+      "R": 14.564628729688128,
+      "Delta": 34.580939389612624,
+      "S": 8.632339721809283
+    },
+    "R26": {
+      "rho": 0.45931514590416267,
+      "u": 0.6199879249552779,
+      "T": 0.7247764125684579,
+      "sigma": 5.674162323174456,
+      "q": 7.506336373150488,
+      "R": 15.206378293678195,
+      "Delta": 15.045951315575753,
+      "S": 15.33848228519626
+    }
+  },
+  "M2_raw_100_vs_2000_ppc_L2_percent": {
+    "rho": 0.16455000251556978,
+    "u": 0.13825278022798418,
+    "T": 0.227452497806283,
+    "sigma": 2.659319016812529,
+    "q": 2.7972872568098177,
+    "R": 6.6529631763483215,
+    "Delta": 5.418928411855159,
+    "S": 4.0933205193515745
+  },
+  "alignment": "Rankine-Hugoniot density midpoint translation only; no width fit",
+  "smoothing": "Visualization only; all raw data retained and raw profiles used for reported L2 metrics",
+  "limitations": [
+    "Single independent high-particle seed per Mach; no autocorrelation-corrected confidence intervals.",
+    "DSMC finite-sample bias in fourth and higher central moments remains.",
+    "Different collision operators and boundary treatments mean model differences are not pure discretization error.",
+    "A smooth display curve is not a corrected DSMC estimator."
+  ],
+  "input_sha256": {
+    "baseline_100ppc\\M2\\profiles.npz": "689f0830bb79a2603d5f700bc99447ca4a0e919bf5cb8ea4c22abaaa27779aec",
+    "baseline_100ppc\\M2\\RECEIPT.json": "d6f535daa7d1f4f9767d2a2c80c5222a4237f9479101152d2e5d0a1bbad35670",
+    "baseline_100ppc\\M2\\status.json": "ea7e8962903edbb38c55c5a4c062f0a5c39579b056b210c4f413092b480c265e",
+    "baseline_100ppc\\M2\\analysis.json": "02d0a1021f147c66952adb1dd4023798d8d908aedfdb836aacf668efc6ae3956",
+    "collected\\M2\\profiles.npz": "6d9ca62e81cc34668a04b317bcf107e1f137b14539fc9dc46751ae968ca15376",
+    "collected\\M2\\RECEIPT.json": "c3ac3005c414de8f6d08fbdccbefd5804246e8b015f1686fa31b818c93ccedaf",
+    "collected\\M2\\status.json": "94120f92582b062891ee7d5e2f2489e045cfed208266f638a83fa56564ed98f6",
+    "collected\\M2\\analysis.json": "eefadcb94639d767ea7110482c8e5c7299c844683455f91fb1df164b1eaefcf2",
+    "baseline_100ppc\\M3\\profiles.npz": "d7e1ce370119cb18d8ef80e67e10458a24c2228d5b03e4af19f551b43b121c8c",
+    "baseline_100ppc\\M3\\RECEIPT.json": "9a3a8a6ee6a1c11208b10cc0782228cc200bfcb5a98ff12c99e4f06c5979d9f6",
+    "baseline_100ppc\\M3\\status.json": "71e8a7112767069637bde2ecc044f435535a9f39de14f8e1fc625cc80217a186",
+    "baseline_100ppc\\M3\\analysis.json": "88af76efeb34f7b361cfc51f493a3a64a16285fc5dc9c23ea36efe98eb65a267",
+    "collected\\M3\\profiles.npz": "33026b0c3f90410a1f59dc1cafef27cf324cb8a50840ebc3c9350f83c3c16d69",
+    "collected\\M3\\RECEIPT.json": "69579062102a740cc47e4304cc7a063dab8fddf2c6db01fd5ae7da148117bc80",
+    "collected\\M3\\status.json": "e63a839318913292e156524cd2b368c23b7c162e0881e6a39c55f5283779839b",
+    "collected\\M3\\analysis.json": "1a8a356d2e2da45c1cce7ce42f98fe924a3cb54152979f428711c283abb80428",
+    "baseline_100ppc\\M4\\profiles.npz": "0bbed476ca44711e11751a1f10c04206796b19f23772759166e29930148f8849",
+    "baseline_100ppc\\M4\\RECEIPT.json": "705974233dd60ae092667ceb02ee0c790e8f7317d9a53a1d79d0a8d69258e0f4",
+    "baseline_100ppc\\M4\\status.json": "b58a51743c04219e653d052c71267b84871aaae100f940f68aeace48483019fc",
+    "baseline_100ppc\\M4\\analysis.json": "8ab36c8f8ffaa763a7b460660cf13b97b3953d86603f5bc39aadd18b665b0e01",
+    "collected\\M4\\profiles.npz": "231d9d961472fc40c2aba3dba448dd65b9ce051464e58c68ab09c1666f9226c8",
+    "collected\\M4\\RECEIPT.json": "c3943f0fe97e2fd6488bdddf8c1387ff4971dca926d83b66d59690851d4ccc20",
+    "collected\\M4\\status.json": "4d9a1e4b8c9d29afe032d15bba6a1ebe6b113d69b2ff967d7c00accfd31bc109",
+    "collected\\M4\\analysis.json": "a68e89ee8cd1da17bef54db4aa72fb6b7f7a48eb8913e5b8a17be1bfffedc1b7",
+    "baseline_100ppc\\M5\\profiles.npz": "1a148d27a93a5fca5196bb4d46f041e7744e67e172b8da8e6f6f7e8691c6b622",
+    "baseline_100ppc\\M5\\RECEIPT.json": "8d4d9947298b7c0419269210a42cb15de000fe8727e897a0147b139cc492277f",
+    "baseline_100ppc\\M5\\status.json": "4358bf8e93bb5b030a662b68566dc4d279a5d13a11cfe472390b132442f0edce",
+    "baseline_100ppc\\M5\\analysis.json": "d5692fdcb096bad8e059b8099adb1460f3188645347f8aee3e256c2bbc5f1c94",
+    "collected\\M5\\profiles.npz": "de05a9fa9db0b9226bfcb34de852527589f11131463917bdcf5341da90583fb0",
+    "collected\\M5\\RECEIPT.json": "319bbb6a5b011f6927408b4003efa0df107a706d5e5d2670c333978f6c10430c",
+    "collected\\M5\\status.json": "5ee27bae1f5d6ab56ae524c9f863e4fcc8727f6cdd7ef27fcaf91329a80f7e91",
+    "collected\\M5\\analysis.json": "8d9f7a93cf8137788836b7dad16ff55179e9f66555c14aeedd0cb48e37f6bce1",
+    "revision_runs\\dvm_r26_transport_match_20261007\\completed_analysis\\DVM_profiles\\M2_x1280\\profiles.npz": "9ec68f5ffe30163a30f30364ab9fcb04c146dbe05c26d82bd9c2975169e7541b",
+    "revision_runs\\dvm_r26_transport_match_20261007\\completed_analysis\\R26_M2_N641_profile.npz": "3c02dd401481f2fa7bf5cd15dbf351b8c4206b155dd7cc5e83873b03fb815438"
+  }
+}

@@ -1,0 +1,81 @@
+[
+  {
+    "M1": 5.0,
+    "nx": 2200,
+    "nvx": 141,
+    "nvy": 27,
+    "nvz": 27,
+    "vmax": 22.0,
+    "xhalf_mfp": 80.0,
+    "steps": 52000,
+    "cfl": 0.75,
+    "center_every": 50,
+    "name": "M5_baseline"
+  },
+  {
+    "M1": 5.0,
+    "nx": 2200,
+    "nvx": 169,
+    "nvy": 33,
+    "nvz": 33,
+    "vmax": 26.4,
+    "xhalf_mfp": 80.0,
+    "steps": 62400,
+    "cfl": 0.75,
+    "center_every": 60,
+    "vmax_transverse": 27.076923076923077,
+    "name": "M5_velocity_extent"
+  },
+  {
+    "M1": 5.0,
+    "nx": 2200,
+    "nvx": 211,
+    "nvy": 40,
+    "nvz": 40,
+    "vmax": 22.0,
+    "xhalf_mfp": 80.0,
+    "steps": 52000,
+    "cfl": 0.75,
+    "center_every": 50,
+    "name": "M5_velocity_refine"
+  },
+  {
+    "M1": 5.0,
+    "nx": 3299,
+    "nvx": 141,
+    "nvy": 27,
+    "nvz": 27,
+    "vmax": 22.0,
+    "xhalf_mfp": 80.0,
+    "steps": 78000,
+    "cfl": 0.75,
+    "center_every": 75,
+    "name": "M5_space_refine"
+  },
+  {
+    "M1": 5.0,
+    "nx": 2200,
+    "nvx": 141,
+    "nvy": 27,
+    "nvz": 27,
+    "vmax": 22.0,
+    "xhalf_mfp": 80.0,
+    "steps": 104000,
+    "cfl": 0.375,
+    "center_every": 100,
+    "name": "M5_timestep_half"
+  },
+  {
+    "M1": 5.0,
+    "nx": 3300,
+    "nvx": 141,
+    "nvy": 27,
+    "nvz": 27,
+    "vmax": 22.0,
+    "xhalf_mfp": 120.0,
+    "steps": 52000,
+    "cfl": 0.75,
+    "center_every": 50,
+    "name": "M5_space_extent"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "files": {
+    "moments.npz": "588a6ae8a67fe5a5177926dc846da5d6c5598104fd79afa4e2360fc30359bb11",
+    "moments.csv": "3664283290c8fadc5f77e5bc75b0a139ae6e9df16a23f774fad60b85f57fbefe",
+    "audit.json": "4f76cd6a9842d876add670766afe805bd0730a3e5792470a87a264c21925e4a2"
+  },
+  "archive": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu\\validated_results\\M8",
+  "audit": {
+    "minimum_f": 1.0000000031710769e-30,
+    "shape": [
+      2800,
+      164331
+    ],
+    "device": "cpu",
+    "dtype": "float64",
+    "reference_iterations": 4,
+    "comparison_iterations": 12,
+    "identity_max_abs": 2.2737367544323206e-13,
+    "rho_stored_relative_l2": 4.224428879506178e-08,
+    "ux_stored_relative_l2": 7.822980595872864e-08,
+    "T_stored_relative_l2": 2.3806240761906962e-07,
+    "qx_stored_relative_l2": 8.969615245435733e-07,
+    "sig_stored_relative_l2": 2.7785567360714925e-07,
+    "Rxx_closure_stored_relative_l2": 7.184250325896372e-07,
+    "Delta_dvm_iteration_relative_l2": 1.0879123900714867e-14,
+    "Rxx_closure_iteration_relative_l2": 2.1159802968687883e-16
+  },
+  "scientific_acceptance": false
+}

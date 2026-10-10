@@ -1,0 +1,47 @@
+{
+  "moment_tests": {
+    "maxwellian_and_direct_particle_pass": true,
+    "max_abs_error": 2.9558577807620168e-12
+  },
+  "cases": [
+    {
+      "Mach": 2,
+      "finite_positive": true,
+      "collision_conservation_max": 1.0658141036401503e-14,
+      "checkpoint_sha": "99c7c8ad179cde1ad24da74a63c6810bc60a06694209cf1807f432383f092f42"
+    },
+    {
+      "Mach": 3,
+      "finite_positive": true,
+      "collision_conservation_max": 2.4202861936828413e-14,
+      "checkpoint_sha": "87145920695add2d183f5b9c8bdad397d8a49bb06a1db257358920728cc78532"
+    },
+    {
+      "Mach": 4,
+      "finite_positive": true,
+      "collision_conservation_max": 6.394884621840902e-14,
+      "checkpoint_sha": "3647d17c1a37f3f35c9728aa88fc87024601119ea0bff472752e6c91fae040dd"
+    },
+    {
+      "Mach": 5,
+      "finite_positive": true,
+      "collision_conservation_max": 8.526512829121202e-14,
+      "checkpoint_sha": "e8c5bdbf253f594a5ce99191117469af710eda7e1892bcabee7743e149668850"
+    }
+  ],
+  "restart_block_bitwise": true,
+  "PASS": true,
+  "manifest": "d3fbba232ab0ab93f61fc719ec3a4eb18aa266252fd1f23df81fec10c02bbf29",
+  "sources": {
+    "DSMC1S_original.for": "159f0f8c8aeb14ba1e99acf5fed07f74700934d5cdaad0e7953f40bfde4fb2ee",
+    "DSMC1S_paper.for": "46bbdddbba4bfa64705070ff9ef2c76dad02b0a32e6334540f8a244857580b10",
+    "paper_diagnostics.f90": "b414fa7487f721c37e19d2a5995f5b46e15d020bcfd332891a608d92eab7170b",
+    "postprocess.py": "9b0fe9c25a2a899dc2b2045fa1cea495c745c078a8ae51c9364fbf6b0cd3246a",
+    "preflight.py": "37f34e4b4f1ac80c0d60857cccc399d9079becc95a1fb86a8e07a03933382230",
+    "gate.sbatch": "44afe44040c31ea137fc504772666de6ba22f443788091217f0bdfae90eca759",
+    "chain.py": "04ed2386255261f0741eaa241df6d8f82dfd7c939b67742534a957b441feca8e",
+    "plot.py": "00e476ae4b5f15cabf58bed9b3fe3d56d07bc6010e60220afd41e03d2e12b5f5",
+    "run.sbatch": "4fdf70aaa1fa4f329879a63f562731b6eb726693e0637b6a800b8d59ae9e2340"
+  },
+  "executable": "5093e8c6735b3f3f327536592ea11c466683048dac43be5d2a107d1aec850346"
+}

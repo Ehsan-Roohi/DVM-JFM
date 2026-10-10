@@ -1,0 +1,22 @@
+{
+  "events": 21,
+  "maxima": {
+    "mass_over_rho": 4.6951645344961435e-05,
+    "momentum_over_rho_sqrtT": 0.0002262227062601596,
+    "energy_over_rhoT": 0.001326961675658822,
+    "q_over_rhoT15": 0.0008558997651562095,
+    "c4_over_rhoT2": 0.00788875762373209,
+    "R_kernel_over_rhoT2": 0.0011288599343970418
+  },
+  "sums_of_rowwise_maxima_upper_bounds": {
+    "mass_over_rho": 0.0009390302948304452,
+    "momentum_over_rho_sqrtT": 0.004524446616414934,
+    "energy_over_rhoT": 0.02653917868155986,
+    "q_over_rhoT15": 0.01711797615280375,
+    "c4_over_rhoT2": 0.15777496248483658,
+    "R_kernel_over_rhoT2": 0.022577159688808024
+  },
+  "max_clipped_nodes": 37938534,
+  "most_negative_preclip": -1.3274761840875726e-06,
+  "scope": "Clipping-only moment increments in pre-clip local frame, per event. Sums of spatial maxima are upper bounds, not net production at a fixed cell or residual of converged PDE. Matched20sweep branches remain non-steady diagnostic."
+}

@@ -1,0 +1,36 @@
+{
+  "moment_tests": {
+    "maxwellian_and_direct_particle_pass": true,
+    "max_abs_error": 2.2168933355715126e-12
+  },
+  "cases": [
+    {
+      "Mach": 2,
+      "finite_positive": true,
+      "collision_conservation_max": 8.881784197001252e-15,
+      "checkpoint_sha": "c18ffba10509f53f9fdd274254357ead58194691f13dcfd1b6c94506dcc8a5b4"
+    }
+  ],
+  "restart_block_bitwise": true,
+  "PASS": true,
+  "manifest": "a27b1c130cb6003b8d123ddb3a07596a2b40c5e47a870e882c9f58d97a472349",
+  "sources": {
+    "DSMC1S_original.for": "159f0f8c8aeb14ba1e99acf5fed07f74700934d5cdaad0e7953f40bfde4fb2ee",
+    "DSMC1S_paper.for": "30fedcc04641694a43a8727d523f9a96b18a70b49346fbd8f4f4f193a0da5c8e",
+    "paper_diagnostics.f90": "b414fa7487f721c37e19d2a5995f5b46e15d020bcfd332891a608d92eab7170b",
+    "postprocess.py": "9b0fe9c25a2a899dc2b2045fa1cea495c745c078a8ae51c9364fbf6b0cd3246a",
+    "preflight.py": "aedfe945f517664704c754e17d09d1f9b15534e2753334f8ddc43dd4c2b9152f",
+    "chain.py": "04ed2386255261f0741eaa241df6d8f82dfd7c939b67742534a957b441feca8e",
+    "plot.py": "00e476ae4b5f15cabf58bed9b3fe3d56d07bc6010e60220afd41e03d2e12b5f5",
+    "run.sbatch": "a9692a6e61a505b669c344c8f2c17162fdaaa3f10fbb5e932f82b696e29ac2f0",
+    "gate.sbatch": "89b883a462de0159770095f950930743ae826206acc87b7b8954bb87abd081df"
+  },
+  "executable": "331ea362050247c8793863b18e9eb5e1a4052ef00ba2c2b713eb5f659781c283",
+  "high_ppc_smoke": {
+    "ppc": 2000,
+    "final_block": 2,
+    "finite_positive": true,
+    "checkpoint_sha": "a1bcce79ab8cfa5a49fed522a4eeb2cc5a5c2c62f03895bd6086502b46a961de",
+    "max_abs_Delta": 17.93805455136114
+  }
+}

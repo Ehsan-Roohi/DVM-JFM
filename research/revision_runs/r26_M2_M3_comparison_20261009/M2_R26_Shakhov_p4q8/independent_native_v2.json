@@ -1,0 +1,23 @@
+{
+  "native_tensor_PDE": 0.004731067850455177,
+  "boundary_phase": 2.5005430954738728e-06,
+  "scalar_tensor_parity": 3.3561903256540406e-13,
+  "acceptance_criteria_unchanged": true,
+  "accepted": true,
+  "M": 2.0,
+  "N": 3841,
+  "L": 45.0,
+  "nine_fields_exact": 0.0,
+  "minpressure": 0.9999999900305889,
+  "finite": true,
+  "source_config_checkpoint_geometry_match": true,
+  "corrected_tensor_modules": {
+    "stf_repaired_tensor/r26_shakhov_tensor.py": "a2302a9a03699fcca9539b1df0359ee195c2f7d3a9effce7c41f55f0b84e5adc",
+    "stf_repaired_tensor/shock_pilot.py": "52293242155ec452726b2ef5a9b20a9567519990b40cf4b36471e689e724f9f6",
+    "stf_repaired_tensor/cavity_source/r26_bulk_equations.py": "778d7c27935fce664034f2f3d1ef6885a6698227df65adf69bc22aac9bca7329"
+  },
+  "profile_sha": "605a2e660ba39e9bbeb7352c550e47e5b805a6f2917558eca6af51b94485aaa3",
+  "old_113_unchanged": true,
+  "physical_validation": false,
+  "shoulder_repair": false
+}

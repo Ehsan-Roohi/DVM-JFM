@@ -1,0 +1,45 @@
+{
+  "step": 342858,
+  "negative_g": {
+    "value": -0.014064645392477749,
+    "x": -11.299999999999997,
+    "vx": 13.799999999999999,
+    "rho": 1.0352545689692012,
+    "T": 2.881063212283285,
+    "q": -28.22003901966686
+  },
+  "negative_h": {
+    "value": -0.15391305260652868,
+    "x": -6.899999999999999,
+    "vx": 13.799999999999999,
+    "rho": 1.0936402689569507,
+    "T": 5.396096859648026,
+    "q": -63.05888354186017
+  },
+  "target_g": {
+    "value": -0.02408245316201091,
+    "x": -15.233333333333334,
+    "vx": 13.799999999999999,
+    "rho": 1.0186754079900784,
+    "T": 2.0408467076996053,
+    "q": -15.876452583589973
+  },
+  "target_h": {
+    "value": -0.29461317947915855,
+    "x": -8.033333333333331,
+    "vx": 14.399999999999999,
+    "rho": 1.0690073695459972,
+    "T": 4.412546672417847,
+    "q": -49.85918427441649
+  },
+  "max_negative_mass_fraction": 0.021478700553552138,
+  "max_negative_transverse_energy_fraction": 0.05204909201071546,
+  "numerical_face_flux_relative_span": {
+    "mass": 0.0002551102331795972,
+    "momentum": 2.59235254406183e-07,
+    "energy": 0.00012746789324866384
+  },
+  "source_sha": "d061329431229409b57f7c5188fe4893e76902e07b500cd8e01ede38f2e8d649",
+  "checkpoint_sha": "72ef2413fe73bd2262996628fece25a4b0e4246818c51ca3ab4c8c422992938f",
+  "interpretation": "Signed Shakhov target assessed without clipping. Grid/time comparisons still required; negative marginal is incompatible with a nonnegative full distribution."
+}

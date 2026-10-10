@@ -1,0 +1,80 @@
+{
+  "method": "100*||model-DSMC2000||2/||DSMC2000||2; x in [-15,15] lambda1; each profile translated by its linearly interpolated RH density midpoint; no width fit/smoothing",
+  "M": 3,
+  "rho_midpoint": 2.0,
+  "fields": [
+    "rho",
+    "T",
+    "q",
+    "R",
+    "Delta",
+    "S"
+  ],
+  "source_sha256": {
+    "DSMC_2000ppc": "33026b0c3f90410a1f59dc1cafef27cf324cb8a50840ebc3c9350f83c3c16d69",
+    "Shakhov_DVM": "efc855adc73e6e4d93672b48d043af1f8aa717308574fed65e8a488716742220",
+    "Corrected_Shakhov_R26": "1b87004303b2d3a5e9c2fc377b2e7eca46e2151a24570b4119237337306b8768"
+  },
+  "midpoint_x": {
+    "DSMC_2000ppc": 0.12440924126889558,
+    "Shakhov_DVM": 0.09774294022686404,
+    "Corrected_Shakhov_R26": 1.741231524310331e-14
+  },
+  "L2_percent_DSMC_denominator_1201": {
+    "Shakhov_DVM": {
+      "rho": 0.26374751283405484,
+      "T": 0.6699434612382031,
+      "q": 4.602871710517601,
+      "R": 17.44530985787673,
+      "Delta": 25.288300389819135,
+      "S": 9.188895694806929
+    },
+    "Corrected_Shakhov_R26": {
+      "rho": 1.32755747713545,
+      "T": 2.6131068073524615,
+      "q": 15.267349431803224,
+      "R": 38.376289429060364,
+      "Delta": 26.390298293934958,
+      "S": 26.448842308160945
+    }
+  },
+  "L2_percent_DSMC_denominator_2401_check": {
+    "Shakhov_DVM": {
+      "rho": 0.26379704197341103,
+      "T": 0.6700532619659159,
+      "q": 4.6027865786911635,
+      "R": 17.44490368209435,
+      "Delta": 25.28827883206827,
+      "S": 9.188492159711034
+    },
+    "Corrected_Shakhov_R26": {
+      "rho": 1.3278427329027924,
+      "T": 2.6135698611549,
+      "q": 15.267295127333064,
+      "R": 38.376241682533845,
+      "Delta": 26.39013610148851,
+      "S": 26.4486803691529
+    }
+  },
+  "channel_signed_error_common_DSMC_S_denominator": {
+    "Shakhov_DVM": {
+      "error_R_percent_common_S_denominator": 8.836992021327305,
+      "error_Delta_over_3_percent_common_S_denominator": 13.589131374453975,
+      "error_S_percent_common_S_denominator": 9.188895694806929,
+      "signed_cross_correlation": -0.7424660779017899,
+      "cancellation_ratio": 0.40974070875466206
+    },
+    "Corrected_Shakhov_R26": {
+      "error_R_percent_common_S_denominator": 19.439664084821793,
+      "error_Delta_over_3_percent_common_S_denominator": 14.181310131529791,
+      "error_S_percent_common_S_denominator": 26.448842308160945,
+      "signed_cross_correlation": 0.2186070881007081,
+      "cancellation_ratio": 0.78667685647543
+    }
+  },
+  "notes": [
+    "R26 is accepted corrected Shakhov p4/q8 profile; it is not the historical pre-STF or Maxwell profile.",
+    "All metrics use unsmoothed raw profiles; the 1201 interpolated points are not independent samples.",
+    "DSMC is one-seed finite-time data; DVM is a nonstationary saved snapshot. Pairwise differences are descriptive, not certified model errors."
+  ]
+}

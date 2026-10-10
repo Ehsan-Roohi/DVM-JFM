@@ -1,0 +1,193 @@
+               JOBID                         NAME        STATE         NODELIST(REASON)
+         64934378_12                 article-gate   COMPLETING                   cpu009
+          64934378_8                 article-gate   COMPLETING                   cpu074
+          64934378_6                 article-gate   COMPLETING                   cpu055
+65007587_[3-4,6-7,9-               article-extend      PENDING             (Dependency)
+         64934378_46                 article-gate      RUNNING                   cpu051
+         64934378_47                 article-gate      RUNNING               uri-cpu004
+         64934378_45                 article-gate      RUNNING                   cpu058
+         64934378_42                 article-gate      RUNNING                   cpu045
+          65007284_5               article-extend      RUNNING         umd-cscdr-cpu044
+          65007284_1               article-extend      RUNNING                   cpu028
+          65007284_0               article-extend      RUNNING                   cpu025
+65150396_[14-16,21-5             curv-sensitivity      PENDING               (Priority)
+            65158825            jfm-operator-pair      PENDING               (Priority)
+            65158502       tc_HS_Kn10_fine_relax4      PENDING               (Priority)
+            65158501        tc_HS_Kn1_base_relax4      PENDING               (Priority)
+            65158580            cavity-fm03-build      PENDING               (Priority)
+            65158592         pinn-d5-extract-pair      PENDING               (Priority)
+            65111268           nek-r1000-d5-ws320      PENDING               (Priority)
+       65159039_[12]           curv-sens12-repair      PENDING               (Priority)
+            65159520      pendar-s08-dense-r25-16      PENDING               (Priority)
+        65161690_[1]                article-task1      PENDING               (Priority)
+      65161093_[0-4]         jfm-highmach-moments      PENDING               (Priority)
+            65162580       tc_HS_Kn1_fine_resume2      PENDING               (Priority)
+      65158586_[0-9]                  cavity-fm03      PENDING             (Dependency)
+            65158582            cavity-fm03-smoke      PENDING             (Dependency)
+            64246625              pent-kn005-main      RUNNING                   cpu085
+         65048413_14               article-seed45      RUNNING                   cpu083
+         65048413_10               article-seed45      RUNNING                   cpu084
+          65086309_0              article-recover      RUNNING                   cpu083
+            65143772   fly42-val-n80-dt0.005-full      RUNNING            toltec-cpu001
+          65150396_0             curv-sensitivity      RUNNING                   cpu083
+          65150396_1             curv-sensitivity      RUNNING                   cpu084
+          65150396_2             curv-sensitivity      RUNNING                   cpu084
+          65150396_3             curv-sensitivity      RUNNING                   cpu084
+          65150396_4             curv-sensitivity      RUNNING      gaoseismolab-cpu005
+          65150396_5             curv-sensitivity      RUNNING           zhoulin-cpu006
+          65150396_6             curv-sensitivity      RUNNING           zhoulin-cpu006
+          65150396_7             curv-sensitivity      RUNNING          visterra-cpu001
+          65150396_8             curv-sensitivity      RUNNING          visterra-cpu002
+          65150396_9             curv-sensitivity      RUNNING          visterra-cpu003
+         65150396_10             curv-sensitivity      RUNNING          visterra-cpu004
+         65150396_11             curv-sensitivity      RUNNING          visterra-cpu005
+         65150396_13             curv-sensitivity      RUNNING          visterra-cpu007
+         65150396_17             curv-sensitivity      RUNNING         umd-cscdr-cpu023
+         65150396_18             curv-sensitivity      RUNNING         umd-cscdr-cpu024
+         65150396_19             curv-sensitivity      RUNNING         umd-cscdr-cpu025
+         65150396_20             curv-sensitivity      RUNNING         umd-cscdr-cpu027
+            65136705              jfm1439-dvm-a40      PENDING               (Priority)
+            64792316             pendar-v3-2080ti      PENDING            (JobHeldUser)
+            64792254               pendar-v3-l40s      PENDING            (JobHeldUser)
+JobID|State|ExitCode|Restarts
+65136704|COMPLETED|0:0|0
+65136704.batch|COMPLETED|0:0|
+65136704.extern|COMPLETED|0:0|
+65136705|PENDING|0:0|0
+65161093_[4]|PENDING|0:0|0
+65162524|FAILED|1:0|0
+65162524.batch|FAILED|1:0|
+65162524.extern|COMPLETED|0:0|
+65162525|COMPLETED|0:0|0
+65162525.batch|COMPLETED|0:0|
+65162525.extern|COMPLETED|0:0|
+65162526|FAILED|1:0|0
+65162526.batch|FAILED|1:0|
+65162526.extern|COMPLETED|0:0|
+65162527|COMPLETED|0:0|0
+65162527.batch|COMPLETED|0:0|
+65162527.extern|COMPLETED|0:0|
+65162528|COMPLETED|0:0|0
+65162528.batch|COMPLETED|0:0|
+65162528.extern|COMPLETED|0:0|
+65162529|COMPLETED|0:0|0
+65162529.batch|COMPLETED|0:0|
+65162529.extern|COMPLETED|0:0|
+65162523_0|COMPLETED|0:0|0
+65162523_0.batch|COMPLETED|0:0|
+65162523_0.extern|COMPLETED|0:0|
+65162523_1|COMPLETED|0:0|0
+65162523_1.batch|COMPLETED|0:0|
+65162523_1.extern|COMPLETED|0:0|
+65162523_2|COMPLETED|0:0|0
+65162523_2.batch|COMPLETED|0:0|
+65162523_2.extern|COMPLETED|0:0|
+65162523_3|COMPLETED|0:0|0
+65162523_3.batch|COMPLETED|0:0|
+65162523_3.extern|COMPLETED|0:0|
+65162523_4|COMPLETED|0:0|0
+65162523_4.batch|COMPLETED|0:0|
+65162523_4.extern|COMPLETED|0:0|
+65162523_5|COMPLETED|0:0|0
+65162523_5.batch|COMPLETED|0:0|
+65162523_5.extern|COMPLETED|0:0|
+Filesystem               Size  Used Avail Use% Mounted on
+nas003:/storage/scratch  822T  762T   61T  93% /scratch4
+id: cavity-fm-u03-20261002
+     workspace directory  : /scratch4/workspace/roohie_umass_edu-cavity-fm-u03-20261002
+     remaining time       : 29 days 17 hours
+     creation time        : Fri Oct  2 10:11:08 2026
+     expiration date      : Sun Nov  1 10:11:08 2026
+     filesystem name      : workspace
+     available extensions : 10000
+id: cavity-re1000-d5-20260930
+     workspace directory  : /scratch4/workspace/roohie_umass_edu-cavity-re1000-d5-20260930
+     remaining time       : 12 days 6 hours
+     creation time        : Wed Sep 30 23:36:02 2026
+     expiration date      : Wed Oct 14 23:36:02 2026
+     filesystem name      : workspace
+     available extensions : 10000
+id: curvature-sensitivity-20261002
+     workspace directory  : /scratch4/workspace/roohie_umass_edu-curvature-sensitivity-20261002
+     remaining time       : 29 days 8 hours
+     creation time        : Fri Oct  2 01:48:29 2026
+     expiration date      : Sun Nov  1 01:48:29 2026
+     filesystem name      : workspace
+     available extensions : 10000
+id: curvature-task1-20261002
+     workspace directory  : /scratch4/workspace/roohie_umass_edu-curvature-task1-20261002
+     remaining time       : 29 days 21 hours
+     creation time        : Fri Oct  2 14:45:28 2026
+     expiration date      : Sun Nov  1 14:45:28 2026
+     filesystem name      : workspace
+     available extensions : 10000
+id: curvature-task12-20261001
+     workspace directory  : /scratch4/workspace/roohie_umass_edu-curvature-task12-20261001
+     remaining time       : 29 days 1 hours
+     creation time        : Thu Oct  1 18:25:12 2026
+     expiration date      : Sat Oct 31 18:25:12 2026
+     filesystem name      : workspace
+     available extensions : 10000
+id: jfm1439-dvm-fastgate-20261001
+     workspace directory  : /scratch4/workspace/roohie_umass_edu-jfm1439-dvm-fastgate-20261001
+     remaining time       : 29 days 0 hours
+     creation time        : Thu Oct  1 17:16:02 2026
+     expiration date      : Sat Oct 31 17:16:02 2026
+     filesystem name      : workspace
+     available extensions : 10000
+id: jfm1439-dvm-resume-20261001
+     workspace directory  : /scratch4/workspace/roohie_umass_edu-jfm1439-dvm-resume-20261001
+     remaining time       : 28 days 20 hours
+     creation time        : Thu Oct  1 13:29:50 2026
+     expiration date      : Sat Oct 31 13:29:50 2026
+     filesystem name      : workspace
+     available extensions : 10000
+id: jfm1439-m8-reference-20261002
+     workspace directory  : /scratch4/workspace/roohie_umass_edu-jfm1439-m8-reference-20261002
+     remaining time       : 29 days 22 hours
+     creation time        : Fri Oct  2 15:00:09 2026
+     expiration date      : Sun Nov  1 15:00:09 2026
+     filesystem name      : workspace
+     available extensions : 10000
+id: jfm1439-pairfix-20261001
+     workspace directory  : /scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001
+     remaining time       : 29 days 0 hours
+     creation time        : Thu Oct  1 17:15:14 2026
+     expiration date      : Sat Oct 31 17:15:14 2026
+     filesystem name      : workspace
+     available extensions : 10000
+id: jfm1439-ppc1920-3840-20261001
+     workspace directory  : /scratch4/workspace/roohie_umass_edu-jfm1439-ppc1920-3840-20261001
+     remaining time       : 28 days 17 hours
+     creation time        : Thu Oct  1 10:42:57 2026
+     expiration date      : Sat Oct 31 10:42:57 2026
+     filesystem name      : workspace
+     available extensions : 10000
+id: jfm1439-shakhov-validation-20261001
+     workspace directory  : /scratch4/workspace/roohie_umass_edu-jfm1439-shakhov-validation-20261001
+     remaining time       : 29 days 0 hours
+     creation time        : Thu Oct  1 17:15:25 2026
+     expiration date      : Sat Oct 31 17:15:25 2026
+     filesystem name      : workspace
+     available extensions : 10000
+id: mfc-a40-cv
+     workspace directory  : /scratch4/workspace/roohie_umass_edu-mfc-a40-cv
+     remaining time       : 12 days 6 hours
+     creation time        : Wed Sep 30 23:49:29 2026
+     expiration date      : Wed Oct 14 23:49:29 2026
+     filesystem name      : workspace
+     available extensions : 9999
+id: stage42-openfoam-validation-20260930
+     workspace directory  : /scratch4/workspace/roohie_umass_edu-stage42-openfoam-validation-20260930
+     remaining time       : 12 days 9 hours
+     creation time        : Thu Oct  1 02:15:23 2026
+     expiration date      : Thu Oct 15 02:15:23 2026
+     filesystem name      : workspace
+     available extensions : 10000
+id: thermal-creep-validation-20260930
+     workspace directory  : /scratch4/workspace/roohie_umass_edu-thermal-creep-validation-20260930
+     remaining time       : 12 days 6 hours
+     creation time        : Wed Sep 30 23:31:11 2026
+     expiration date      : Wed Oct 14 23:31:11 2026
+     filesystem name      : workspace
+     available extensions : 10000

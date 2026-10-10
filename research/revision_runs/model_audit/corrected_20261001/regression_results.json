@@ -1,0 +1,11 @@
+{
+  "shakhov_physical_reference": "Delta",
+  "target_only_rejected": true,
+  "ESFP": {
+    "M2": 0.2152643980781824,
+    "M3": 0.2235062247792945,
+    "M5": 0.2197309413382553
+  },
+  "independent_reconstruction_required": "PASS M2/M3/M5; reference fallback rejected",
+  "ambiguous_normalization_cli_rejected": true
+}

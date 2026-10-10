@@ -1,0 +1,33 @@
+{
+  "config": {
+    "M": 3,
+    "N": 15361,
+    "L": 45,
+    "maxiterations": 20,
+    "Pr": 0.6666666666666666,
+    "mu": "T",
+    "tau": "1/rho",
+    "closure": "first-order kinetic projection on Grad26",
+    "collision": "Shakhov",
+    "endpoint_and_phase_weight": 100,
+    "equation_tolerance_strict": 0.01,
+    "boundary_phase_tolerance_strict": 0.0001,
+    "source_hashes": {
+      "physics\\implicit_shakhov.py": "a94a34470d8a0c90a35cf7731bfa02c9de9cb5f46d6f643b16aa0170685ea3ad",
+      "physics\\projected_mixed.py": "b2d42523c54e112ae80dd87e3ca09562a622bb7c33af34424916d81cf1066e74",
+      "physics\\projected_transport.py": "512d3ab10cb7828f4cb8e1245db764a6f473888477980a9284fa4962f0791019",
+      "physics\\r26_shakhov.py": "7e99843a9d4041814aefe0b649698e656071afdd9475878bcbd46896163d280f",
+      "physics\\shock_pilot.py": "52293242155ec452726b2ef5a9b20a9567519990b40cf4b36471e689e724f9f6",
+      "physics\\cavity_source\\r26_bulk_equations.py": "9abe3943ce541e6c5243a61893c1428daea30cf8fae42ab3e90c140eb7ba6a06",
+      "physics\\cavity_source\\r26_state.py": "787583e2bacfd4d694d5eee3488eebaee3b37f2ae86e6c6c54bf63cba5d953ba",
+      "physics\\cavity_source\\r26_tensor_closures.py": "13037256b49de8ce0737136c56ab31fa5b1641545a79a65e77c761c25bcbbbea"
+    }
+  },
+  "seed": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\r26_M3_shakhov_20261009\\projected7681\\profile.npz",
+  "seed_sha": "23af957738d54818bf35e238e6f726b22dfe9d3667995bbb1609f307ad0d41ae",
+  "actual_gate_Jv": 1.9874333600384913e-09,
+  "rows": 122891,
+  "unknowns": 122888,
+  "automatic_acceptance": false,
+  "scientific_validation": false
+}

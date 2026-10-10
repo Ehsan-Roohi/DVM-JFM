@@ -1,0 +1,51 @@
+{
+  "provenance": {
+    "case": {
+      "tag": "M12lite",
+      "profile": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu\\M12lite\\standing_M12lite_hmom_x180_nx3200_v181_31_31_vmax56_fullstate.npz",
+      "distribution": "C:\\Users\\roohie\\OneDrive - University of Massachusetts\\Documents\\ChatGPT\\\u0631\u06cc\u0648\u0627\u06cc\u0632 \u062c\u06cc \u0627\u0641 \u0627\u0645 tail\\revision_runs\\high_mach_inventory\\local_cpu\\M12lite\\standing_M12lite_hmom_x180_nx3200_v181_31_31_vmax56_fullstate_fullstate.npz",
+      "profile_sha256": "1a1d2600ca6d06b320aa30b3058ad4d0ae2fe5cfd3d9be231a9472337d4de3bd",
+      "remote_profile": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep_extra/M12lite/standing_M12lite_hmom_x180_nx3200_v181_31_31_vmax56_fullstate.npz",
+      "remote_distribution": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep_extra/M12lite/standing_M12lite_hmom_x180_nx3200_v181_31_31_vmax56_fullstate_fullstate.npz"
+    },
+    "script_sha256": "ab7d6687534f0c286380b7e6fc09d91a2132b0e5425f2fe9967239145c129398",
+    "solver_sha256": "d7a73766437091d9a376761ebf7ebf358c3b396f69e368069d89b4711e1d33f8",
+    "job": null,
+    "profile_sha256": "1a1d2600ca6d06b320aa30b3058ad4d0ae2fe5cfd3d9be231a9472337d4de3bd",
+    "distribution_sha256": "5d047203f3eb563e23a32e3f107b4fd50050deebbd91a0e49f5547e9314c7ed8",
+    "members": [
+      "x.npy",
+      "x_scaled.npy",
+      "x_mfp.npy",
+      "f.npy",
+      "v.npy",
+      "w.npy",
+      "rho.npy",
+      "ux.npy",
+      "T.npy",
+      "qx.npy",
+      "sig.npy",
+      "states.npy"
+    ]
+  },
+  "audit": {
+    "minimum_f": 1.0000000031710769e-30,
+    "shape": [
+      3200,
+      173941
+    ],
+    "device": "cpu",
+    "dtype": "float64",
+    "reference_iterations": 4,
+    "comparison_iterations": 12,
+    "identity_max_abs": 9.094947017729282e-13,
+    "rho_stored_relative_l2": 3.5914574745104196e-08,
+    "ux_stored_relative_l2": 7.71804504438587e-08,
+    "T_stored_relative_l2": 2.241170819503402e-07,
+    "qx_stored_relative_l2": 7.014192002729231e-07,
+    "sig_stored_relative_l2": 3.984548928471056e-07,
+    "Rxx_closure_stored_relative_l2": 9.85942990141085e-07,
+    "Delta_dvm_iteration_relative_l2": 2.388680241623868e-06,
+    "Rxx_closure_iteration_relative_l2": 2.1729279600026267e-07
+  }
+}

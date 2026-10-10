@@ -1,0 +1,132 @@
+[
+  {
+    "iteration": 0,
+    "cost": 3.1714058527143747,
+    "seconds": 0.01912212371826172,
+    "midpoint_max": 0.4269217378357249,
+    "own_full_nodal_PDE": 0.0663872489337575,
+    "boundary_phase": 1.4284795568642039e-11,
+    "minpressure": 0.9999999999992131,
+    "closure_gap": 0.0
+  },
+  {
+    "iteration": 1,
+    "cost": 1.4632424435046694e-07,
+    "seconds": 0.12997746467590332,
+    "midpoint_max": 7.443292731413493e-05,
+    "own_full_nodal_PDE": 0.016992332656573454,
+    "boundary_phase": 4.0124190425760986e-07,
+    "minpressure": 0.9999999985369463,
+    "closure_gap": 0.0381215274062221
+  },
+  {
+    "iteration": 2,
+    "cost": 4.701167930928005e-09,
+    "seconds": 0.35646915435791016,
+    "midpoint_max": 1.939332073514673e-05,
+    "own_full_nodal_PDE": 0.01657479992280528,
+    "boundary_phase": 1.6053959883688407e-07,
+    "minpressure": 0.9999999973397742,
+    "closure_gap": 0.038382497538233196
+  },
+  {
+    "iteration": 3,
+    "cost": 1.2158479489259612e-10,
+    "seconds": 0.605013370513916,
+    "midpoint_max": 3.7914024854424073e-06,
+    "own_full_nodal_PDE": 0.015611067769012442,
+    "boundary_phase": 3.441979490315106e-08,
+    "minpressure": 0.9999999990910506,
+    "closure_gap": 0.0384728786617341
+  },
+  {
+    "iteration": 4,
+    "cost": 4.285197887845683e-12,
+    "seconds": 0.8494307994842529,
+    "midpoint_max": 1.929215262556442e-06,
+    "own_full_nodal_PDE": 0.015487083465643358,
+    "boundary_phase": 2.8484433700626255e-09,
+    "minpressure": 0.9999999999048921,
+    "closure_gap": 0.038468284279415954
+  },
+  {
+    "iteration": 5,
+    "cost": 3.507387740989721e-12,
+    "seconds": 1.1149601936340332,
+    "midpoint_max": 1.8763779808509775e-06,
+    "own_full_nodal_PDE": 0.015482508961381094,
+    "boundary_phase": 8.480571800362213e-11,
+    "minpressure": 0.999999999996918,
+    "closure_gap": 0.038467492537424874
+  },
+  {
+    "iteration": 6,
+    "cost": 3.5066706464184275e-12,
+    "seconds": 1.3665573596954346,
+    "midpoint_max": 1.875938042209905e-06,
+    "own_full_nodal_PDE": 0.015482454127346655,
+    "boundary_phase": 1.9773960246993738e-11,
+    "minpressure": 0.9999999999999865,
+    "closure_gap": 0.03846746622048691
+  },
+  {
+    "iteration": 7,
+    "cost": 3.506670567573876e-12,
+    "seconds": 1.608750820159912,
+    "midpoint_max": 1.8759445791808694e-06,
+    "own_full_nodal_PDE": 0.015482453896741726,
+    "boundary_phase": 1.9773960246993738e-11,
+    "minpressure": 0.9999999999999294,
+    "closure_gap": 0.038467465943467616
+  },
+  {
+    "iteration": 8,
+    "cost": 3.506670567242957e-12,
+    "seconds": 1.8918039798736572,
+    "midpoint_max": 1.8759445812754902e-06,
+    "own_full_nodal_PDE": 0.015482453898028757,
+    "boundary_phase": 1.9773960246993738e-11,
+    "minpressure": 0.9999999999999294,
+    "closure_gap": 0.03846746594412487
+  },
+  {
+    "iteration": 9,
+    "cost": 3.5066705669055437e-12,
+    "seconds": 2.1451287269592285,
+    "midpoint_max": 1.875944611495761e-06,
+    "own_full_nodal_PDE": 0.015482453898201952,
+    "boundary_phase": 1.9773960246993738e-11,
+    "minpressure": 0.999999999999929,
+    "closure_gap": 0.03846746594261319
+  },
+  {
+    "iteration": 10,
+    "cost": 3.5066705668769074e-12,
+    "seconds": 3.144280195236206,
+    "midpoint_max": 1.8759446128280287e-06,
+    "own_full_nodal_PDE": 0.015482453898449813,
+    "boundary_phase": 1.9773960246993738e-11,
+    "minpressure": 0.999999999999929,
+    "closure_gap": 0.03846746594269668
+  },
+  {
+    "iteration": 11,
+    "cost": 3.50667056656763e-12,
+    "seconds": 3.4312314987182617,
+    "midpoint_max": 1.875944612013865e-06,
+    "own_full_nodal_PDE": 0.015482453898387994,
+    "boundary_phase": 1.9773960246993738e-11,
+    "minpressure": 0.999999999999929,
+    "closure_gap": 0.03846746594263095
+  },
+  {
+    "iteration": 12,
+    "cost": 3.5066705665581525e-12,
+    "seconds": 4.038305759429932,
+    "midpoint_max": 1.8759446122359096e-06,
+    "own_full_nodal_PDE": 0.015482453898387876,
+    "boundary_phase": 1.9773960246993738e-11,
+    "minpressure": 0.999999999999929,
+    "closure_gap": 0.03846746594268602
+  }
+]

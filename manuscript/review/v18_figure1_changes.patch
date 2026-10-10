@@ -1,0 +1,24 @@
+--- v17/main.tex
++++ v18/main.tex
+@@ -274,14 +274,15 @@
+ \end{revision}
+ 
+ \begin{revision}
+-Figure~\ref{fig:dvm_ref} illustrates the constituent moments and their observed combination for the reference shocks. Their growing magnitudes show why separating the two fourth-order contributions matters quantitatively. The profiles illustrate the algebraic distinction; the rank and null space follow from the moment definitions and do not depend on these particular numerical solutions.
+-\end{revision}
+-
+-\begin{figure}
+-  \centerline{\includegraphics[width=0.92\textwidth,trim={0cm 0cm 0cm 1.0cm},clip]{figures/fig1_dvm_reference.pdf}}
+-  \caption{Kinetic standing-shock reference profiles from conservative DVM calculations for upstream Mach numbers $M_1=2$, 3 and 5. The fields are the heat flux $q_x$, tensorial fourth-order closure moment $R^{\cl}_{xx}$, scalar fourth-order excess $\Delta$ and combined channel $S=R^{\cl}_{xx}+\Delta/3$.}
++Figure~\ref{fig:dvm_ref} distinguishes the heat flux from the fourth-order moments entering its transport balance. The heat flux $q_x$ is a third-order moment, whereas $S=R^{\cl}_{xx}+\Delta/3$ contributes to the flux $F_q$ that transports this moment; see \eqref{eq:Bxx_split}. Consequently, $q_x$ and $S$ need not have similar spatial profiles. In these shocks, $q_x$ remains negative within the shock layer, while the fourth-order profiles change sign. The bottom-row overlays show how the scalar contribution $\Delta/3$ modifies the tensorial profile: identifying the observed channel $S$ with $R^{\cl}_{xx}$ would discard this contribution. The profiles illustrate this distinction; verification of the differential budget is presented separately in figure~\ref{fig:budget}.
++\end{revision}
++
++\begin{figure}[p]
++  \centerline{\includegraphics[width=0.98\textwidth]{figures/fig1_dvm_reference.pdf}}
++  \caption{Kinetic normal-shock reference profiles at $M_1=2$, 3 and 5. Rows 1--3 show $q_x$, $R^{\cl}_{xx}$ and $\Delta$. The bottom row overlays $R^{\cl}_{xx}$ (blue dashed), $\Delta/3$ (orange dash-dotted) and $S=R^{\cl}_{xx}+\Delta/3$ (black solid) on a common vertical scale within each panel. Vertical scales differ between panels. The archived continuum-reference moments are shown without additional plateau subtraction or smoothing. For this figure, the original plotting convention places $x_s$ at the maximum absolute density gradient, rather than the density midpoint.}
+   \label{fig:dvm_ref}
+ \end{figure}
++\clearpage
+ 
+ % AUTHOR VERIFICATION: Confirm that the scripts used for figures 2--4 retain the moving-frame term in eq:heatbalance_general and the discrete equilibrium/offset conventions. Numerical results below have been retained, not recomputed in this editorial review.
+ \section{Exact heat-flux balance and numerical recovery of the observed channel}

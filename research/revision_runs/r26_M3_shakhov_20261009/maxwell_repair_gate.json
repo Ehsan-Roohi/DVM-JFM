@@ -1,0 +1,23 @@
+{
+  "scalar_vs_repaired_tensor_max": 5.684341886080802e-14,
+  "random_cases": 300,
+  "axial_STF_factors": {
+    "m_velocity_STF4": 0.5714285714285714,
+    "R_velocity_STF3": 0.6,
+    "q_velocity_STF2": 1.3333333333333335
+  },
+  "expected_factors": [
+    0.5714285714285714,
+    0.6,
+    1.3333333333333333
+  ],
+  "Jv": 1.7295008707503276e-10,
+  "printed_sources": {
+    "Eq20": "R_<ij partial_k u_k> projects rank3 before contraction",
+    "Eq25": "m_<ijk partial_m u_m> projects rank4 before contraction",
+    "Eq26": "both q_j partial_<i u_j> gradients project rank2"
+  },
+  "correction_changes_physics": false,
+  "original_accepted_results_immutable": true,
+  "PASS": true
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS_ARCHIVED_CSV_ONLY",
+  "profile_sha256": "c0fa17cc456bd40b5227fa710a36080fcc8473315f20e7c5002bd58e29971a91",
+  "metrics_sha256": "29b46b616e1ebbc2a6bde3ca42e22a335cac58ddf211f43378cbe197ff00c1f1",
+  "points": 1800,
+  "endpoint_points_each": 144,
+  "active_points": 680,
+  "channel_endpoint_means": {
+    "R": -1.5419764230904951e-18,
+    "Delta": 0.0,
+    "S": 0.0,
+    "S_from_flux": -3.0839528461809902e-18,
+    "Delta_from_source": 6.1679056923619804e-18,
+    "Delta_target": 1.5419764230904951e-18
+  },
+  "reproduced_norms": {
+    "S_flux_relL2_active": 0.0006380703521636445,
+    "Delta_source_relL2_active": 2.07209867912415e-07,
+    "R_delta0_relL2_active": 0.6835512120091848,
+    "R_two_channel_relL2_active": 0.0010385934295889618
+  },
+  "Delta_source_minus_raw_source_offset_mean": 0.0681607720468188,
+  "offset_peak_to_peak": 3.552713678800501e-15,
+  "limitations": "No full-distribution regeneration, stationary-shock or nonnegative-target certification; no new physical numbers."
+}

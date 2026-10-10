@@ -1,0 +1,101 @@
+{
+  "coordinate": "physical R26 length unit, density midpoint translation only; no width fitting",
+  "groups": {
+    "R26": {
+      "state": "differences_computed",
+      "all_numerical_or_stationary_checks_pass": true,
+      "metrics": {
+        "rho": {
+          "coarse_medium_percent": 0.015851216133320047,
+          "medium_fine_percent": 0.00376162673547879,
+          "observed_order": 2.075164927625509
+        },
+        "u": {
+          "coarse_medium_percent": 0.021259812506031886,
+          "medium_fine_percent": 0.005036803260028493,
+          "observed_order": 2.0775485887045284
+        },
+        "T": {
+          "coarse_medium_percent": 0.012307404850847404,
+          "medium_fine_percent": 0.0029311812969591193,
+          "observed_order": 2.0699724778100617
+        },
+        "q": {
+          "coarse_medium_percent": 0.12322585496541832,
+          "medium_fine_percent": 0.03044260554143714,
+          "observed_order": 2.0171412431921683
+        },
+        "sigma": {
+          "coarse_medium_percent": 0.3324652405901344,
+          "medium_fine_percent": 0.08188837894983697,
+          "observed_order": 2.0214728801088917
+        },
+        "R": {
+          "coarse_medium_percent": 0.44634670742575033,
+          "medium_fine_percent": 0.10773061077390396,
+          "observed_order": 2.0507365454586086
+        },
+        "Delta": {
+          "coarse_medium_percent": 0.3533966662405804,
+          "medium_fine_percent": 0.0860632524257748,
+          "observed_order": 2.0378191628478457
+        },
+        "S": {
+          "coarse_medium_percent": 0.4006454624903084,
+          "medium_fine_percent": 0.09696434908247448,
+          "observed_order": 2.0467998238553253
+        }
+      },
+      "grid_independence_claim": false,
+      "note": "Interpret decreasing differences with domain, velocity and time-step tests; no error tolerance chosen automatically."
+    },
+    "DVM_Shakhov": {
+      "state": "differences_computed",
+      "all_numerical_or_stationary_checks_pass": false,
+      "metrics": {
+        "rho": {
+          "coarse_medium_percent": 0.23221710827050962,
+          "medium_fine_percent": 0.11648307719161471,
+          "observed_order": 0.995353891109409
+        },
+        "u": {
+          "coarse_medium_percent": 0.23376994843804633,
+          "medium_fine_percent": 0.11685582049052338,
+          "observed_order": 1.0003598853148457
+        },
+        "T": {
+          "coarse_medium_percent": 0.2099281749031974,
+          "medium_fine_percent": 0.10518872511908779,
+          "observed_order": 0.9969157322392985
+        },
+        "q": {
+          "coarse_medium_percent": 2.2962832738461483,
+          "medium_fine_percent": 1.176557212936801,
+          "observed_order": 0.9647291497803676
+        },
+        "sigma": {
+          "coarse_medium_percent": 2.483953357363899,
+          "medium_fine_percent": 1.2760001849375358,
+          "observed_order": 0.9610095452890112
+        },
+        "R": {
+          "coarse_medium_percent": 3.843417263466606,
+          "medium_fine_percent": 1.9859390048473322,
+          "observed_order": 0.9525682988467854
+        },
+        "Delta": {
+          "coarse_medium_percent": 3.5703552331702473,
+          "medium_fine_percent": 1.8461033978128905,
+          "observed_order": 0.9515842639217795
+        },
+        "S": {
+          "coarse_medium_percent": 3.737310501112879,
+          "medium_fine_percent": 1.931208060608999,
+          "observed_order": 0.9524968270318667
+        }
+      },
+      "grid_independence_claim": false,
+      "note": "Interpret decreasing differences with domain, velocity and time-step tests; no error tolerance chosen automatically."
+    }
+  }
+}

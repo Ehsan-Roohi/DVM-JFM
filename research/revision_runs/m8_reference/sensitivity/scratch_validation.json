@@ -1,0 +1,137 @@
+{
+  "at": "2026-10-02T16:55:59.164575+00:00",
+  "cases": [
+    {
+      "name": "time_extend",
+      "finished": {
+        "step": 685715,
+        "time": 800.0008333333334,
+        "stationary": false,
+        "reason": "time_limit_diagnostic",
+        "source": "d061329431229409b57f7c5188fe4893e76902e07b500cd8e01ede38f2e8d649",
+        "config": "3700766fe4b5c6476f7a44c942ca359c1b0ca5ae89ae6fc7481a16de33d99acf",
+        "checkpoint_sha256": "70bf94533ec52b0818c447dd57f279d478186fe259e296062bf362a1e8d540f7",
+        "final_sha256": "647ae72e1c9104064d31d77a7faf3876a2d7c25131a22cf04740fc70808ed690",
+        "scientific_validation": false
+      },
+      "finite_signature_final_verified": true,
+      "negative_mass_fraction": 0.021473094449875895,
+      "negative_h_fraction": 0.05203322541365831,
+      "face_flux_relative_span": {
+        "mass": 0.0002470640909024071,
+        "momentum": 2.509205506280194e-07,
+        "energy": 0.00012345097373253337
+      }
+    },
+    {
+      "name": "space_refine",
+      "finished": {
+        "step": 685715,
+        "time": 400.0004166666667,
+        "stationary": false,
+        "reason": "time_limit_diagnostic",
+        "source": "d061329431229409b57f7c5188fe4893e76902e07b500cd8e01ede38f2e8d649",
+        "config": "f30c3069a38ffd179917491c7142504917363058f1fdfbfdddc14f58ea606525",
+        "checkpoint_sha256": "ee78318f5128383cbecd0c01dd8d8bd60bc168f6bf31743623e303c5466afccb",
+        "final_sha256": "47e73055447474566ac5c472b01df78114f137e3d1517532be62d5d3af58d7aa",
+        "scientific_validation": false
+      },
+      "finite_signature_final_verified": true,
+      "negative_mass_fraction": 0.02154566077177833,
+      "negative_h_fraction": 0.05216801998378243,
+      "face_flux_relative_span": {
+        "mass": 0.0002548766754363161,
+        "momentum": 1.338418327875496e-07,
+        "energy": 0.00012735113218601977
+      }
+    },
+    {
+      "name": "dt_half",
+      "finished": {
+        "step": 685715,
+        "time": 400.0004166666667,
+        "stationary": false,
+        "reason": "time_limit_diagnostic",
+        "source": "d061329431229409b57f7c5188fe4893e76902e07b500cd8e01ede38f2e8d649",
+        "config": "9a6d5e292229e0219e54cde6399bdb6da7cf6772ea89218ae4893486e6409046",
+        "checkpoint_sha256": "01492e57d0ff3ad40dc5ba2c3cae5b83a404ad7eb079187437655740074407ab",
+        "final_sha256": "9c78ac9bc2b4ae51a37923086f5ecee060209748f088da47ec9e3707b66aa668",
+        "scientific_validation": false
+      },
+      "finite_signature_final_verified": true,
+      "negative_mass_fraction": 0.021470654398039763,
+      "negative_h_fraction": 0.05203105321812504,
+      "face_flux_relative_span": {
+        "mass": 0.0002554589179629134,
+        "momentum": 2.593402684978938e-07,
+        "energy": 0.00012764202701286796
+      }
+    },
+    {
+      "name": "velocity_refine",
+      "finished": {
+        "step": 342858,
+        "time": 400.00100000000003,
+        "stationary": false,
+        "reason": "time_limit_diagnostic",
+        "source": "d061329431229409b57f7c5188fe4893e76902e07b500cd8e01ede38f2e8d649",
+        "config": "6dcb6d280a37433a72a7d46d75d6bbed6d775f5ee85841d77cdf43b81287e0fa",
+        "checkpoint_sha256": "3a02327916beaf205185f3feed9aad1c584d58660be15c724861c2cbb8404f3d",
+        "final_sha256": "d65730e32bad77a57537c86be5cb4be23681f33c7cbeffd29a809498431d09dd",
+        "scientific_validation": false
+      },
+      "finite_signature_final_verified": true,
+      "negative_mass_fraction": 0.02145577732153116,
+      "negative_h_fraction": 0.05217854268910336,
+      "face_flux_relative_span": {
+        "mass": 0.00025511359876487303,
+        "momentum": 2.5931042924719527e-07,
+        "energy": 0.00012746957404323686
+      }
+    },
+    {
+      "name": "velocity_extent",
+      "finished": {
+        "step": 342858,
+        "time": 400.00100000000003,
+        "stationary": false,
+        "reason": "time_limit_diagnostic",
+        "source": "d061329431229409b57f7c5188fe4893e76902e07b500cd8e01ede38f2e8d649",
+        "config": "d4ddde23c8d50b924693e20b30d8e7e65749ca368a77266b78b916396d2c413d",
+        "checkpoint_sha256": "d7b0629e69b060824f3a4d5c07d2ad38f36075d6162a97317f5f34aec66cc7ba",
+        "final_sha256": "fee349a514f8b7befebd39146f647960eac83ebef47103ab8d2101d3cae61dcb",
+        "scientific_validation": false
+      },
+      "finite_signature_final_verified": true,
+      "negative_mass_fraction": 0.021478700553551323,
+      "negative_h_fraction": 0.052049092010681156,
+      "face_flux_relative_span": {
+        "mass": 0.0002551102333517757,
+        "momentum": 2.5923506633561397e-07,
+        "energy": 0.0001274678923984468
+      }
+    },
+    {
+      "name": "space_extent",
+      "finished": {
+        "step": 342858,
+        "time": 400.00100000000003,
+        "stationary": false,
+        "reason": "time_limit_diagnostic",
+        "source": "d061329431229409b57f7c5188fe4893e76902e07b500cd8e01ede38f2e8d649",
+        "config": "122ca98f040b1269f5c0b366e36bc7e693bf24f42ad44bc12c5efeaa43121a05",
+        "checkpoint_sha256": "1f4f56ba6659f6c782d1c80d69e5a14d78dc032f9f95fbf2106323ca12fc17e6",
+        "final_sha256": "96fe3d54b5085e5592b9ad1e3da23904c9601e76a66fdd8ee325575fa27cdcee",
+        "scientific_validation": false
+      },
+      "finite_signature_final_verified": true,
+      "negative_mass_fraction": 0.021286562890806077,
+      "negative_h_fraction": 0.05154295963205814,
+      "face_flux_relative_span": {
+        "mass": 2.3186101010366637e-05,
+        "momentum": 2.3280345423152016e-08,
+        "energy": 1.1591967831669696e-05
+      }
+    }
+  ]
+}

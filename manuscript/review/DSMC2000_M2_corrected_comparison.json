@@ -1,0 +1,71 @@
+{
+  "method": "100*L2(model-DSMC2000)/L2(DSMC2000); common x in [-15,15] lambda1, 1201 uniform interpolation points; Rankine-Hugoniot density midpoint translation only; no width fit or smoothing. Grid points are not independent samples.",
+  "M": 2,
+  "RH_density_midpoint": 1.6428571428571428,
+  "centers": {
+    "DSMC_2000ppc": {
+      "x": -0.0018408517311825287,
+      "crossing_count": 1
+    },
+    "Shakhov_DVM": {
+      "x": -0.039765650270472575,
+      "crossing_count": 1
+    },
+    "Corrected_Shakhov_R26": {
+      "x": -1.863416588941333e-05,
+      "crossing_count": 1
+    }
+  },
+  "relative_L2_percent_DSMC_denominator": {
+    "Shakhov_DVM": {
+      "rho": 0.1410109991776959,
+      "T": 0.18027736729608607,
+      "q": 2.9681224533472648,
+      "R": 16.718436760808242,
+      "Delta": 25.948313401371866,
+      "S": 8.272352019483165
+    },
+    "Corrected_Shakhov_R26": {
+      "rho": 0.46777157857795276,
+      "T": 0.5610157107232302,
+      "q": 6.1653676866819485,
+      "R": 22.883357208145135,
+      "Delta": 25.754861299023677,
+      "S": 11.962931532478429
+    }
+  },
+  "fields": [
+    "rho",
+    "T",
+    "q",
+    "R",
+    "Delta",
+    "S"
+  ],
+  "input_sha256": {
+    "DSMC_2000ppc": "6d9ca62e81cc34668a04b317bcf107e1f137b14539fc9dc46751ae968ca15376",
+    "Shakhov_DVM": "9ec68f5ffe30163a30f30364ab9fcb04c146dbe05c26d82bd9c2975169e7541b",
+    "Corrected_Shakhov_R26": "605a2e660ba39e9bbeb7352c550e47e5b805a6f2917558eca6af51b94485aaa3"
+  },
+  "notes": [
+    "R26 input is corrected consistent Shakhov p4/q8 profile; exclude historical pre-STF Maxwellian R26 profile.",
+    "DVM values use DSMC denominator; older numbers in DSMC_M2_M5_report.json were not suitable for this table because its R26 row referred to the historical profile and its DVM norm denominator differed from the caption.",
+    "Finite-time, single-seed DSMC; DVM is a finite-time snapshot; pairwise differences are descriptive, not certified model error."
+  ],
+  "channel_signed_error_common_DSMC_S_denominator": {
+    "Shakhov_DVM": {
+      "error_R_percent_common_S_denominator": 8.424286194962994,
+      "error_Delta_over_3_percent_common_S_denominator": 13.906492562265592,
+      "error_S_percent_common_S_denominator": 8.272352019483165,
+      "signed_cross_correlation": -0.8362079531391807,
+      "cancellation_ratio": 0.3704461948871963
+    },
+    "Corrected_Shakhov_R26": {
+      "error_R_percent_common_S_denominator": 11.530740163152931,
+      "error_Delta_over_3_percent_common_S_denominator": 13.80281568042565,
+      "error_S_percent_common_S_denominator": 11.962931532478429,
+      "signed_cross_correlation": -0.5666238994355032,
+      "cancellation_ratio": 0.472216833923483
+    }
+  }
+}

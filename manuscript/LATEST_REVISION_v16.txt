@@ -1,0 +1,7 @@
+Current revision: 7 October 2026, based on user ZIP version 16.
+
+Section 3, PDF pages 6-7: replaced ambiguous references to identities with explicit transverse component relations; distinguished spatial dependence from velocity-space symmetry; explained that Delta is not the trace of R; derived the heat-flux transport moment BEFORE introducing the two-component inverse state z. Explained q_x versus F_q and the conditional meaning of observation. Equation labels (3.1) and (3.2) retained.
+
+Compiled PDF: 39 pages. Cross-references stable; revised pages visually checked. No numerical results changed. Prior proof-review files and readmes are historical records from the preceding revision, not a new agent review of this edit. Current diff: review/v16_transition_changes.patch.
+
+Compile main.tex with pdfLaTeX and BibTeX.

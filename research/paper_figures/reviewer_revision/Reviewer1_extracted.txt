@@ -1,0 +1,215 @@
+Peer Review Report
+Fluid Mechanics Journal Manuscript Evaluation
+August 2026
+Journal: Journal of Fluid Mechanics
+Manuscript Title: Closure-channel identifiability and two-channel recovery in monatomic ki-
+netic normal shocks
+Author: Ehsan Roohi
+1 General Evaluation and Significance
+The submission addresses a foundational and highly contemporary bottleneck in computational
+fluid dynamics and kinetic theory: the mathematical unidentifiability and physical unfaithful-
+ness of high-order moment closures, particularly those driven by data-driven frameworks or
+machine learning (ML) optimization strategies.
+Instead of treating the moment closure problem as a standard statistical curve-fitting or
+regression exercise, the author frames it as a rigorous geometric observability problem. I
+find core premise to be both elegant and in some sense alarming. In a steady, one-dimensional
+monatomic normal shock, the classical spatial transport operator acts as an observational sieve.
+That is, it compresses the independent high-order variables—specifically, the trace-free tensorial
+anisotropy (Rcl
+xx) and the isotropic scalar-excess of the high-speed molecular tails (∆)—into a
+single, combined kinematic transport channel ( S = Rcl
+xx + 1
+3∆). Now, this linear observation
+operator possesses a non-trivial one-dimensional null space. Unconstrained optimization mod-
+els (such as Physics-Informed Neural Networks) can therefore end up achieving absolute zero
+macroscopic residuals on fluid profiles while predicting entirely unphysical, distorted phase-space
+distribution tails! The proposed ’Two-Channel Recovery Framework’ resolves this degeneracy
+by introducing an independent, collision-dependent scalar-excess budget derived directly from
+discrete velocity methods (DVM) and stochastically verified via direct simulation Monte Carlo
+(DSMC) binary collision logging.
+This work is original, timely, and has broad implications for the stabilization of AI-driven
+fluid solvers. However, a few physical, mathematical, and algorithmic assumptions must be
+clarified and supported before this manuscript can be accepted for publication in a premier
+journal.
+2 Major Comments (Scientific and Mathematical Rigour)
+2.1 Structural Stability, Realizability, and the Hyperbolic-Elliptic Transition
+The manuscript very well highlights how data-driven models ”cheat” the macroscopic transport
+equations by introducing localized spatial hallucinations ( η(x)) along the null space axis vector
+n = [−1, 3]T . However, I find that the physical consequences would extend far beyond a ”poorly
+determined tail structure.”
+1
+When an unconstrained optimizer over-inflates the high-velocity scalar tail (∆+3η) and com-
+presses the longitudinal direction (Rcl
+xx − η), it violates the underlying realizability boundary
+of the Hermite polynomial expansion. This makes the implied probability distribution function
+dip into negative values. This crossing has implications for stability considerations. The closed
+26-moment flux Jacobian matrix which figures therein suffers a change in its spectrum. (Eigen-
+values instantly change from from real numbers into complex conjugate pairs) The differential
+equations system ceases to be hyperbolic/parabolic and becomes an ill-posed elliptic-temporal
+equation. One then needs to worry about having triggered the infamous Bobylev instability
+(exponential error amplification at high spatial frequencies).
+Suggestion: The author should explicitly comment on connection of the data-driven ’iden-
+tifiability failure.’ to this shift in the nature of the Jacobian matrix spectrum. It would be
+ideal if one could prove that enforcing the secondary collisional budget stabilizes the principal
+symbol of the PDE by keeping its eigenvalues strictly real, thereby mathematically restoring
+H¨ ormander’s hypoelliptic structure. Bringing such into the discussion in the submission would
+better guide the reader.
+2.2 Dimensional Coupling Limits and Multi-Dimensional Expansion
+The algebraic identity that enables zero-tensor-data recovery ( Rcl
+xx = S − 1
+3∆) relies funda-
+mentally on the decoupled, idealized symmetries of a 1-D normal shock. In this specific 1-D
+setting, only the longitudinal element of the fourth-rank composite tensor enters the stream-
+wise heat-flux budget. The observation operator thus turns out to be into a simple row matrix
+H = [1, 1/3].
+In any realistic 3-D configuration or curvilinear aerodynamic mesh (e.g., like in case of a
+hypersonic flow over a blunt body), the observable maps to the full spatial divergence of the
+high-order moment tensors. In such a situation, the null space would change from a simple 1-D
+line into a high-dimensional space. This brings in more difficulty.
+Suggestion: The author must include a dedicated discussion detailing the boundaries of this
+1-D geometric decoupling. The manuscript needs to clarify whether a two-scalar budget system
+remains mathematically sufficient to prevent symbol degeneracy in a fully multi-dimensional
+configuration. Maybe as future work, an approach could be taken using multivariate tensor-loss
+matrices clustered via rotation algebras ( so(3))
+2.3 Non-Linear Collision Dynamics and Molecular Potential Dependencies
+The author shows that the Shakhov collision target modification remains completely source-
+neutral with respect to the scalar-excess budget. Because the Shakhov correction relies on
+an odd-power velocity polynomial, its integration against the strictly even-power weight |c|4
+vanishes identically to zero over a symmetric velocity domain. This is important to note.
+However, core molecular interactions do not obey clean polynomial relaxation models (like BGK
+or Shakhov). In the true Boltzmann limit or inside realistic particle potentials (such as Hard
+Spheres), the collision frequency depends heavily on the relative velocities of the colliding pairs
+(|v − v∗|). Fast-moving tail particles collide at significantly higher rates, introducing non-linear
+structural couplings that do not relax uniformly.
+Suggestion: The author should verify whether the reported near-perfect algebraic recovery
+under the Shakhov model degrades when exposed to the highly non-linear, asymmetric tail-
+cascade physics of a true Boltzmann operator. The manuscript should demonstrate that the
+2.4–4.1% error envelope remains robust against varying molecular collision cross-sections.
+2
+2.4 Thermodynamic Consistency and H-Theorem Guardrails for Anisotropic
+Source Terms
+The author provides an elegant demonstration that both the ES-BGK and ES-FP models align
+structurally with the scalar-excess budget. I find however, that the physical anomaly in Table
+1 requires critical attention. The data reveals that the anisotropic velocity diffusion operator
+within the ES-FP target correction yields an amplitude effect that is exactly five times larger and
+carries the opposite mathematical sign relative to the ES-BGK correction. Would this negative
+sign configuration violate Boltzmann’s H-theorem under extreme, highly localized hypersonic
+non-equilibrium profiles? If the ES-FP diffusion operator accidentally functions as a localized
+energy pump, say, at specific high-speed tail frequencies, then one needs to worry about the
+second law of thermodynamics.
+Suggestion: The manuscript should include a formal mathematical audit of the local entropy
+production rate σS ≥ 0) across the Mach 5 shock core.
+2.5 Operational Sensitivity to High-Order Numerical Boundary Conditions
+The proposed two-channel framework successfully stabilizes and uniquely identifies the interior
+moment tracks of the R26 framework. The practical deployment of this closure remains highly
+academic though, without a clear definition of boundary infrastructure. High-order PDE mo-
+ment closures are notoriously hyper-sensitive to boundary layer artifacts, numerical reflections,
+and slip-wall anomalies.
+Suggestion: The author should explicitly define the structural translation rules for map-
+ping these recovered interior fourth-order closures ( Rcl
+xx, ∆) onto solid wall grids, inlets, and
+free-stream outlets. These regularized closures may be able to ingest standard hydrodynamic
+boundary constraints without triggering local spectrum mutations or numerical edge blow-ups,
+the hypoelliptic stabilization.This meeds to be commented upon. Alternatively, the framework
+remains restricted to idealized, infinite-domain shocks, which if desired by the author, should
+be commented upon in the manuscript.
+2.6 Phase-Space Coupling with Polyatomic Internal Energy Degrees of Free-
+dom
+The mathematical derivation of the two-channel framework is strictly constrained to monatomic
+gases where translation dominates the fourth-order scalar-excess. Applications like say, hyper-
+sonic re-entry configurations would involve polyatomic gases with active rotational and vi-
+brational modes. These internal energy states alter the structure of the Boltzmann collision
+operator through cross-mode relaxation channels.
+Suggestion: The author should provide a theoretical perspective on how the identifiability
+of the scalar budget changes when translational energy balances couple directly with internal
+energy distributions. The manuscript needs to clarify whether this structural decoupling retains
+its one-dimensional null-space characteristics under polyatomic conditions.
+2.7 Asymptotic Hydrodynamic Limits and Continuum Near-Equilibrium Scal-
+ing
+A vital requirement for any high-order moment framework is its asymptotic reduction to Navier-
+Stokes-Fourier equations via Chapman-Enskog expansion as the Knudsen number approaches
+zero. The manuscript demonstrates excellent performance inside the highly non-equilibrium
+shock core, but it lacks verification in the near-equilibrium limit.
+Suggestion: The author should show that the machine-learning-driven closure preserves cor-
+rect scaling transitions without introducing artificial numerical regularization terms. The
+3
+learned closure operator may distort classical Prandtl number or bulk viscosity definitions dur-
+ing scale contractions.
+3 Numerical and Simulation Validation Comments
+3.1 DVM High-Energy Tail Truncation Controls
+The deterministic ground-truth baseline relies on Discrete Velocity Method (DVM) tensor-
+product quadrature grids ranging up to 141 × 27 × 27 points for Mach 5 shocks. Because the
+computation of the scalar-excess (∆ =
+R
+|c|4(f − Md) dv) applies a fourth-power weight to the
+velocity coordinates, even minute sampling or boundary truncation errors in the far fringes of
+velocity space are exponentially amplified.
+Suggestion: The exact velocity-space boundary controls ( vmax) which were used for the DVM
+quadratures would help here. Providing them can help show that the reported curves are
+entirely free from unphysical grid clipping or artificial plateau-corrected truncation artifacts in
+the highly non-equilibrium zone.
+(Furthermore, inside a strong hypersonic shock layer, the molecular velocity distribution
+splits into bimodal populations representing cold upstream beams and hot downstream states.
+Tensor-product velocity grids if they lack adaptive or multi-scale mesh layouts, can misrepresent
+this structural bifurcation. The author should explicitly comment upon how this bimodal
+distribution profile interacts with the fixed DVM grid alignment. Phase space mesh limits may
+be causing localized numerical integration artifactsin training data for the fourth order tail
+metrics)
+3.2 Statistical Variance Filters in DSMC Particle Logging
+In Section III, the paper uses standalone Direct Simulation Monte Carlo (DSMC) particle
+simulations to log the change in energy ( δ∆) during accepted binary collision events. Extreme
+high-speed particle states in individual cell volumes ( Vj) would be rare and averaging windows
+need to be carefully considered. Fourth-order moments are inherently sensitive to stochastic
+noise. Yet the reported collisional source curve ( QDSMC
+∆ ) is of a smooth nature. This is highly
+impressive.
+Suggestion: Provide a rigorous breakdown of the sample size independence. The author
+should show that the reported 0.987 correlation with the local density gradient is a genuine
+physical localization of the collision-production channel. Providing details of sample size in-
+dependence would rule out smoothing artifacts stemming from the temporal or cell-volume
+ensemble-averaging window (∆tsamp).
+(Beyond sample size tracking, the author should address potential subgrid numerical cor-
+relations stemming from low particle-per-cell (PPC) counts. When tracking a fourth-power
+velocity weightacross individual cells, a low PPC count can induce a non-random statistical
+bias. This happens due to the artificial local depletion of high-speed molecular collision pairs
+inside the stochastic simulator. It would be better if the author provides a standalone PPC
+sensitivity audit for the logged collision source term curve. This would clearly demonstrate
+that the smooth behaviour of the profile reflects true physical production rather than subgrid
+particle grouping effects)
+3.3 Resolution Degeneracy and Spatial Sparsity within the Hypersonic Ac-
+tive Core
+In Section IV, the manuscript demonstrates that sampling the continuous ∆ tail field at only 24
+uniform points yields a reconstruction error below 4.5%. This sparse-probe utility is accepted too
+passively in the current text. The active non-equilibrium core of a Mach 5 shock discontinuity is
+4
+mathematically narrow—spanning a spatial envelope of only a few mean free paths. A uniform
+24-point distribution across the entire computational domain means that only 2 or 3 sampling
+probes actually land within the zone of violent spatial gradients. This poses an important
+difficulty.
+Suggestion: The author must challenge the robustness of this interpolation by evaluating how
+the recovery error scales under acute, core-localized sparsity. A way further is by non-uniform
+grid sensitivity analysis. When the core features sudden geometric gaps in data availability,
+that could be used to prove that the radial-basis interpolant does not introduce spurious high-
+frequency oscillations.
+4 Clarity, Notation, and Formatting Comments
+• Symbol Unification: Throughout the fluid budget derivations, the non-dimensionalization
+symbols alternate slightly between general moving-frame relaxation scales (τ) and explicit
+macroscopic Knudsen scales (Kn). These should be unified to preserve clarity for readers
+tracking multi-scale asymptotic expansions.
+• Table 1 Clarification: In Table 1, the manuscript establishes an interestingly strict
+5:1 variance ratio between the Ellipsoidal Statistical Fokker-Planck (ES-FP) and Ellip-
+soidal Statistical BGK (ES-BGK) anisotropic diffusion targets. The accompanying caption
+should include a concise physical explanation as to why the Fokker-Planck drift/diffusion
+mapping scales exactly five times larger in magnitude and opposite in sign for a correct-
+Prandtl calibration ( β = −5/4).
+• Figure Labeling: In Figure 7’s multi-panel layout, please ensure that the spatial deriva-
+tive curves and the stochastically logged binary collision counts are plotted using identical,
+explicitly normalized coordinate axes ( x/λ1) Such would allow for immediate visual audit
+of the closed scalar budget.
+5 Recommendation
+Major Revision. The core concept of this manuscript is very strong and introduces a vital
+mathematical gauge for validating machine learning architectures in non-equilibrium thermody-
+namics. The author should address mainly three points as detailed above, the multi-dimensional
+null-space scaling limitations, the mathematical hyperbolicity limits of the closed symbol, and
+the robustness against non-linear molecular potentials.
+5

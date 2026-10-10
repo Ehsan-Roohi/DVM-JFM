@@ -1,0 +1,48 @@
+{
+  "at": "2026-10-02T19:00:09.498730+00:00",
+  "case": "M6",
+  "independent_finite_hash_archive_checks": true,
+  "rows": 2400,
+  "identity_maxabs": 5.684341886080802e-14,
+  "audit": {
+    "minimum_f": 1.0000000031710769e-30,
+    "shape": [
+      2400,
+      126991
+    ],
+    "device": "cpu",
+    "dtype": "float64",
+    "reference_iterations": 4,
+    "comparison_iterations": 12,
+    "identity_max_abs": 5.684341886080802e-14,
+    "rho_stored_relative_l2": 3.8319753885074447e-08,
+    "ux_stored_relative_l2": 6.642344802299255e-08,
+    "T_stored_relative_l2": 1.915766000027702e-07,
+    "qx_stored_relative_l2": 8.495919157826929e-07,
+    "sig_stored_relative_l2": 3.4865512497498754e-07,
+    "Rxx_closure_stored_relative_l2": 8.626628629399825e-07,
+    "Delta_dvm_iteration_relative_l2": 8.293102588099185e-15,
+    "Rxx_closure_iteration_relative_l2": 2.0743014997639203e-16
+  },
+  "plateau": {
+    "Rxx_closure": {
+      "left_mean": -0.2727439234462493,
+      "right_mean": -0.22089287974159355,
+      "left_fraction_of_peak": -0.0006618256708669927,
+      "right_fraction_of_peak": -0.0005360067292334483
+    },
+    "Delta_dvm": {
+      "left_mean": 0.03934078701902695,
+      "right_mean": -0.526972520935299,
+      "left_fraction_of_peak": 4.45708802414661e-05,
+      "right_fraction_of_peak": -0.0005970299757803787
+    },
+    "S_dvm": {
+      "left_mean": -0.25963032777324035,
+      "right_mean": -0.3965503867200265,
+      "left_fraction_of_peak": -0.000370058401723636,
+      "right_fraction_of_peak": -0.0005652144091605146
+    }
+  },
+  "scientific_acceptance": false
+}

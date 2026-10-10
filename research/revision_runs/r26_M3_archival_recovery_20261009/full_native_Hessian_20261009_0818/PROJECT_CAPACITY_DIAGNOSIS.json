@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-09T08:20:50.631941+00:00",
+  "commands": {
+    "df -hT /project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt": {
+      "code": 0,
+      "stdout": "Filesystem                             Type  Size  Used Avail Use% Mounted on\nnese:/exports/pi_roohie_umass_edu/nese nfs4   10T   10T  1.0M 100% /project/pi_roohie_umass_edu\n",
+      "stderr": ""
+    },
+    "df -i /project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt": {
+      "code": 0,
+      "stdout": "Filesystem                                  Inodes     IUsed       IFree IUse% Mounted on\nnese:/exports/pi_roohie_umass_edu/nese 64424509440 422143463 64002365977    1% /project/pi_roohie_umass_edu\n",
+      "stderr": ""
+    },
+    "df -hT /scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007": {
+      "code": 0,
+      "stdout": "Filesystem      Type  Size  Used Avail Use% Mounted on\nnas002:/scratch nfs4  511T  474T   38T  93% /scratch3\n",
+      "stderr": ""
+    },
+    "quota -s": {
+      "error": "FileNotFoundError(2, 'No such file or directory')"
+    },
+    "lfs quota -u roohie_umass_edu /project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt": {
+      "error": "FileNotFoundError(2, 'No such file or directory')"
+    },
+    "lfs quota -g pi_roohie_umass_edu /project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt": {
+      "error": "FileNotFoundError(2, 'No such file or directory')"
+    }
+  },
+  "scratch_bundle_sha": "0e702f8afa69a6a9aa58fd379722bb2d22ee6bd08cd9bb9880509ecadcc42ef9",
+  "scratch_all_member_SHA_verified": true,
+  "files": 22,
+  "destination_exists": false,
+  "no_files_deleted_or_moved": true,
+  "local_bundle_SHA_verified": true,
+  "archive_failure": "OSError ENOSPC at new project destination mkdir; scratch upload succeeded. Exclusive archive script was stopped and will not be rerun."
+}

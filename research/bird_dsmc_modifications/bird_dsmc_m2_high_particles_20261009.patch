@@ -1,0 +1,379 @@
+--- DSMC1S_original.for
++++ DSMC1S_paper.for
+@@ -1,6 +1,7 @@
+ *   DSMC1S.FOR
+ *
+       PROGRAM DSMC1S
++      USE PAPER_DIAGNOSTICS
+ *
+ *--program for the study of shock wave structure
+ *----flow gradients occur only in the direction of the x axis
+@@ -92,7 +93,7 @@
+ *
+ *-----------------------------------------------------------------------
+ *
+-      PARAMETER (MNM=20000,MNC=300,MNSC=1800,MNSP=1,MNSG=1,IFN=1)
++      PARAMETER (MNM=5000000,MNC=800,MNSC=4800,MNSP=1,MNSG=1,IFN=1)
+ *--IFN the number of locations at which the distribution function is
+ *----sampled, (there is no sampling if IFN=1)
+ *
+@@ -173,6 +174,7 @@
+ *
+ *--variables as defined in DSMC0.FOR
+ *
++      CALL READ_CONFIG
+       WRITE (*,*) ' INPUT 0,1 FOR CONTINUING,NEW CALCULATION:- '
+       READ (*,*) NQL
+       WRITE (*,*) ' INPUT 0,1 FOR CONTINUING,NEW SAMPLE:- '
+@@ -180,6 +182,8 @@
+ *
+       IF (NQL.EQ.1) THEN
+ *
++        DUMMY=RF(-RUN_SEED)
++        ISTAB=1
+         CALL INIT1S
+ *
+       ELSE
+@@ -191,6 +195,8 @@
+      &           IB,IC,IPL,IPS,IR,ISC,ISCG,ISP,ISPR,MOVT,NCDF,NCOL,NIS,
+      &           NM,NPS,NSC,NSMP,NPR,NPT,NSP,PI,PP,PR,PV,SDF,SELT,SEPT,
+      &           SMN,SP,SPI,SPM,SPR,SXB,TIME,TIMI,VNMAX,VPMAX,VPMIN
++        READ (4) NMI,NMM,SDD,ISTAB,MA,INEXT,INEXTP,IFF,NCU,NCD,FSP,P,IG
++        READ (4) RAW_SUM,COLL_SUM,SAMPLE_COUNT,COLL_COUNT,SHIFT_SUM,STAB_SUM
+         CLOSE (4)
+ *
+       END IF
+@@ -205,7 +211,7 @@
+         DO 150 III=1,NIS
+           TIME=TIME+DTM
+ *
+-          WRITE (*,99001) III,JJJ,NIS,NSP,NM,IDINT(NCOL)
++*         Per-step stdout disabled; output-cycle progress retained.
+ 99001     FORMAT (' DSMC1S:- Move',2I5,' of',2I5,I8,' Mols',I14,
+      &            ' Colls')
+ *
+@@ -220,6 +226,7 @@
+           CALL INDEXM
+ *
+           CALL COLLMR
++          IF (NM.GE.MNM-100) STOP 92
+ *
+ 150     CONTINUE
+ *
+@@ -228,27 +235,33 @@
+ 200   CONTINUE
+ *
+       WRITE (*,*) ' WRITING RESTART AND OUTPUT FILES',NPR,'  OF ',NPT
+-      OPEN (4,FILE='DSMC1S.RES',FORM='UNFORMATTED')
++      CALL WRITE_BLOCK(NPR,NPS,TIME,NM,FNUM,CC,CG,DTM,NIS,NSP)
++      OPEN (4,FILE='DSMC1S.RES.tmp',FORM='UNFORMATTED')
+       WRITE (4) BME,BMR,BOLTZ,BT,CC,CCG,CG,COL,CS,CSH,CSR,CT,CWD,CWS,
+      &          UDN,DDN,DTM,DTMP,DVEL,DXB,FCU,FFP,FND,FNUM,FTMP,FVEL,IB,
+      &          IC,IPL,IPS,IR,ISC,ISCG,ISP,ISPR,MOVT,NCDF,NCOL,NIS,NM,
+      &          NPS,NSC,NSMP,NPR,NPT,NSP,PI,PP,PR,PV,SDF,SELT,SEPT,SMN,
+      &          SP,SPI,SPM,SPR,SXB,TIME,TIMI,VNMAX,VPMAX,VPMIN
++      WRITE (4) NMI,NMM,SDD,1,MA,INEXT,INEXTP,IFF,NCU,NCD,FSP,P,IG
++      WRITE (4) RAW_SUM,COLL_SUM,SAMPLE_COUNT,COLL_COUNT,SHIFT_SUM,STAB_SUM
+       CLOSE (4)
++      CALL RENAME('DSMC1S.RES.tmp','DSMC1S.RES')
+ *
+       CALL OUT1S
+ *
+       ISTAB=1
+ *--the subroutine STABIL is enabled
+ *
++      CALL CHECK_STOP(NPR,NPT)
+       IF (NPR.LT.NPT) GO TO 100
+       STOP
+       END
+ *   INIT1S.FOR
+ *
+       SUBROUTINE INIT1S
+-*
+-      PARAMETER (MNM=20000,MNC=300,MNSC=1800,MNSP=1,MNSG=1,IFN=1)
++      USE PAPER_DIAGNOSTICS
++*
++      PARAMETER (MNM=5000000,MNC=800,MNSC=4800,MNSP=1,MNSG=1,IFN=1)
+ *
+       DOUBLE PRECISION COL(MNSP,MNSP),MOVT,NCOL,SELT,SEPT,CS(7,MNC,MNSP)
+       DOUBLE PRECISION CSR(MNC,MNSP)
+@@ -356,6 +369,9 @@
+ *--initialise variables
+ *
+       TIME=0.
++      PR=0.D0
++      PP=0.D0
++      PV=0.D0
+       NM=0
+       NPR=0
+       NCOL=0
+@@ -387,7 +403,7 @@
+         DO 450 L=1,MNSG
+           DO 420 K=1,MNSG
+             CCG(2,M,L,K)=RF(0)
+-            CCG(1,M,L,K)=SPM(1,1,1)*300.*SQRT(FTMP/300.)
++            CCG(1,M,L,K)=SPM(1,1,1)*SQRT(2.D0*BOLTZ*SPM(2,1,1)/SPM(5,1,1))/SPM(6,1,1)
+ 420       CONTINUE
+ 450     CONTINUE
+ *--the maximum value of the (rel. speed)*(cross-section) is set to a
+@@ -406,7 +422,7 @@
+         DO 550 L=1,MNSG
+           DO 520 K=1,MNSG
+             CCG(2,M,L,K)=0.
+-            CCG(1,M,L,K)=SPM(1,1,1)*300.*SQRT(DTMP/300.)
++            CCG(1,M,L,K)=SPM(1,1,1)*SQRT(2.D0*BOLTZ*SPM(2,1,1)/SPM(5,1,1))/SPM(6,1,1)
+ 520       CONTINUE
+ 550     CONTINUE
+ *--the maximum value of the (rel. speed)*(cross-section) is set to a
+@@ -503,7 +519,7 @@
+ *
+ *--the NM molecules are moved over the time interval DTM
+ *
+-      PARAMETER (MNM=20000,MNC=300,MNSC=1800,MNSP=1,MNSG=1,IFN=1)
++      PARAMETER (MNM=5000000,MNC=800,MNSC=4800,MNSP=1,MNSG=1,IFN=1)
+ *
+       DOUBLE PRECISION COL(MNSP,MNSP),MOVT,NCOL,SELT,SEPT,CS(7,MNC,MNSP)
+ *
+@@ -592,7 +608,7 @@
+ *
+ *--new molecules enter at boundaries
+ *
+-      PARAMETER (MNM=20000,MNC=300,MNSC=1800,MNSP=1,MNSG=1,IFN=1)
++      PARAMETER (MNM=5000000,MNC=800,MNSC=4800,MNSP=1,MNSG=1,IFN=1)
+ *
+       DOUBLE PRECISION COL(MNSP,MNSP),MOVT,NCOL,SELT,SEPT,CS(7,MNC,MNSP)
+ *
+@@ -658,7 +674,7 @@
+ *
+ *--remove molecule N and replace it by molecule NM
+ *
+-      PARAMETER (MNM=20000,MNC=300,MNSC=1800,MNSP=1,MNSG=1,IFN=1)
++      PARAMETER (MNM=5000000,MNC=800,MNSC=4800,MNSP=1,MNSG=1,IFN=1)
+ *
+ *
+       COMMON /MOLS  / NM,PP(MNM),PV(3,MNM),IPL(MNM),IPS(MNM),IR(MNM)
+@@ -679,11 +695,12 @@
+  
+ *
+       SUBROUTINE STABIL
++      USE PAPER_DIAGNOSTICS
+ *
+ *--the shock location is stabilised against possible random walk effects
+ *----by not allowing the fluctuation in NM to exceed NMM
+ *
+-      PARAMETER (MNM=20000,MNC=300,MNSC=1800,MNSP=1,MNSG=1,IFN=1)
++      PARAMETER (MNM=5000000,MNC=800,MNSC=4800,MNSP=1,MNSG=1,IFN=1)
+ *
+       DOUBLE PRECISION COL(MNSP,MNSP),MOVT,NCOL,SELT,SEPT,CS(7,MNC,MNSP)
+ *
+@@ -700,7 +717,9 @@
+       COMMON /GEOM1S/ NSC,FCU,SXB,DXB,P(2,MNSP),BME(MNSP),BMR(MNSP),CWS,
+      &                CWD,NCU,NCD
+ *
++      CALL STABILIZATION_PAPER(NM,PP,PV,CG,-1)
+       IF (NM.GT.NMI+NMM) THEN
++        SHIFT_SUM=SHIFT_SUM+SDD
+         WRITE (*,*) ' POSITIVE DISPLACEMENT'
+         N=0
+ 50      N=N+1
+@@ -728,6 +747,7 @@
+           GO TO 50
+         END IF
+       ELSE
++        SHIFT_SUM=SHIFT_SUM-SDD
+         WRITE (*,*) ' NEGATIVE DISPLACEMENT'
+         N=0
+ 100     N=N+1
+@@ -758,6 +778,7 @@
+       DO 200 N=1,NM
+         IF (IPL(N).LT.0) IPL(N)=-IPL(N)
+ 200   CONTINUE
++      CALL STABILIZATION_PAPER(NM,PP,PV,CG,1)
+       RETURN
+       END
+ *   SAMPI1S.FOR
+@@ -766,7 +787,7 @@
+ *
+ *--initialises all the sampling variables
+ *
+-      PARAMETER (MNM=20000,MNC=300,MNSC=1800,MNSP=1,MNSG=1,IFN=1)
++      PARAMETER (MNM=5000000,MNC=800,MNSC=4800,MNSP=1,MNSG=1,IFN=1)
+ *
+       DOUBLE PRECISION COL(MNSP,MNSP),MOVT,NCOL,SELT,SEPT,CS(7,MNC,MNSP)
+       DOUBLE PRECISION CSR(MNC,MNSP)
+@@ -807,10 +828,11 @@
+ *   SAMPLE1S.FOR
+ *
+       SUBROUTINE SAMPLE1S
++      USE PAPER_DIAGNOSTICS
+ *
+ *--sample the molecules in the flow.
+ *
+-      PARAMETER (MNM=20000,MNC=300,MNSC=1800,MNSP=1,MNSG=1,IFN=1)
++      PARAMETER (MNM=5000000,MNC=800,MNSC=4800,MNSP=1,MNSG=1,IFN=1)
+ *
+       DOUBLE PRECISION COL(MNSP,MNSP),MOVT,NCOL,SELT,SEPT,CS(7,MNC,MNSP)
+       DOUBLE PRECISION CSR(MNC,MNSP)
+@@ -829,6 +851,7 @@
+       COMMON /SAMPDF/ SDF(IFN,400,200,MNSP),VPMIN,VPMAX,VNMAX,NCDF(IFN)
+ *
+ *--sample the flow properties in the cells
++      CALL SAMPLE_PAPER(NM,PV,IPL)
+       NSMP=NSMP+1
+       DO 100 NN=1,MNSG
+         DO 50 N=1,MNC
+@@ -886,7 +909,7 @@
+ *
+ *--output a progressive set of results to file DSMC1S.OUT.
+ *
+-      PARAMETER (MNM=20000,MNC=300,MNSC=1800,MNSP=1,MNSG=1,IFN=1)
++      PARAMETER (MNM=5000000,MNC=800,MNSC=4800,MNSP=1,MNSG=1,IFN=1)
+ *
+       DOUBLE PRECISION COL(MNSP,MNSP),MOVT,NCOL,SELT,SEPT,CS(7,MNC,MNSP)
+       DOUBLE PRECISION CSR(MNC,MNSP)
+@@ -961,6 +984,8 @@
+         SMCC=0.
+         SRE=0.
+         SRDF=0.
++        SUU=0.D0
++        TROT=0.D0
+         SUV=0.
+         SCCU=0.
+         SRU=0.
+@@ -1136,7 +1161,7 @@
+ *--and, within the groups, in order of the cells and, within the cells,
+ *--in order of the sub-cells
+ *
+-      PARAMETER (MNM=20000,MNC=300,MNSC=1800,MNSP=1,MNSG=1,IFN=1)
++      PARAMETER (MNM=5000000,MNC=800,MNSC=4800,MNSP=1,MNSG=1,IFN=1)
+ *
+       COMMON /MOLS  / NM,PP(MNM),PV(3,MNM),IPL(MNM),IPS(MNM),IR(MNM)
+       COMMON /CELLS / CC(MNC),CG(3,MNC),IC(2,MNC,MNSG),ISC(MNSC),
+@@ -1201,7 +1226,7 @@
+ *--selects a potential collision pair and calculates the product of the
+ *--collision cross-section and relative speed
+ *
+-      PARAMETER (MNM=20000,MNC=300,MNSC=1800,MNSP=1,MNSG=1,IFN=1)
++      PARAMETER (MNM=5000000,MNC=800,MNSC=4800,MNSP=1,MNSG=1,IFN=1)
+ *
+       COMMON /MOLS  / NM,PP(MNM),PV(3,MNM),IPL(MNM),IPS(MNM),IR(MNM)
+       COMMON /CELLS / CC(MNC),CG(3,MNC),IC(2,MNC,MNSG),ISC(MNSC),
+@@ -1254,7 +1279,7 @@
+ *
+ *--generate the post-collision velocity components.
+ *
+-      PARAMETER (MNM=20000,MNC=300,MNSC=1800,MNSP=1,MNSG=1,IFN=1)
++      PARAMETER (MNM=5000000,MNC=800,MNSC=4800,MNSP=1,MNSG=1,IFN=1)
+ *
+       COMMON /MOLS  / NM,PP(MNM),PV(3,MNM),IPL(MNM),IPS(MNM),IR(MNM)
+       COMMON /GAS   / SP(5,MNSP),SPM(6,MNSP,MNSP),ISP(MNSP)
+@@ -1345,10 +1370,11 @@
+ *   COLLMR.FOR
+ *
+       SUBROUTINE COLLMR
++      USE PAPER_DIAGNOSTICS
+ *
+ *--calculates collisions appropriate to DTM in a gas mixture
+ *
+-      PARAMETER (MNM=20000,MNC=300,MNSC=1800,MNSP=1,MNSG=1,IFN=1)
++      PARAMETER (MNM=5000000,MNC=800,MNSC=4800,MNSP=1,MNSG=1,IFN=1)
+ *
+       DOUBLE PRECISION COL(MNSP,MNSP),MOVT,NCOL,SELT,SEPT,CS(7,MNC,MNSP)
+       DOUBLE PRECISION CSR(MNC,MNSP)
+@@ -1413,7 +1439,9 @@
+                     IF (ISPR(1,LS).GT.0.OR.ISPR(1,MS).GT.0) CALL INELR
+ *--bypass rotational redistribution if both molecules are monatomic
+ *
++                    CALL COLL_PAPER(N,PV(:,L),PV(:,M),-1)
+                     CALL ELASTIC
++                    CALL COLL_PAPER(N,PV(:,L),PV(:,M),1)
+ *
+                   END IF
+ 12              CONTINUE
+@@ -1432,7 +1460,7 @@
+ *
+ *--adjustment of rotational energy in a collision
+ *
+-      PARAMETER (MNM=20000,MNC=300,MNSC=1800,MNSP=1,MNSG=1,IFN=1)
++      PARAMETER (MNM=5000000,MNC=800,MNSC=4800,MNSP=1,MNSG=1,IFN=1)
+ *
+       COMMON /MOLSR / PR(MNM)
+       COMMON /GAS   / SP(5,MNSP),SPM(6,MNSP,MNSP),ISP(MNSP)
+@@ -1540,13 +1568,11 @@
+ *   RF.FOR
+ *
+       FUNCTION RF(IDUM)
++      USE PAPER_DIAGNOSTICS, ONLY: MA,INEXT,INEXTP,IFF
+ *--generates a uniformly distributed random fraction between 0 and 1
+ *----IDUM will generally be 0, but negative values may be used to
+ *------re-initialize the seed
+-      SAVE MA,INEXT,INEXTP
+       PARAMETER (MBIG=1000000000,MSEED=161803398,MZ=0,FAC=1.E-9)
+-      DIMENSION MA(55)
+-      DATA IFF/0/
+       IF (IDUM.LT.0.OR.IFF.EQ.0) THEN
+         IFF=1
+         MJ=MSEED-IABS(IDUM)
+@@ -1583,10 +1609,11 @@
+ *   DATA1S.FOR
+ *
+       SUBROUTINE DATA1S
++      USE PAPER_DIAGNOSTICS
+ *
+ *--defines the data for a particular run of DSMC1S.FOR.
+ *
+-      PARAMETER (MNM=20000,MNC=300,MNSC=1800,MNSP=1,MNSG=1,IFN=1)
++      PARAMETER (MNM=5000000,MNC=800,MNSC=4800,MNSP=1,MNSG=1,IFN=1)
+ *
+       DOUBLE PRECISION COL(MNSP,MNSP),MOVT,NCOL,SELT,SEPT,CS(7,MNC,MNSP)
+ *
+@@ -1606,24 +1633,24 @@
+ *--FTMP is the temperature
+       FND=1.E20
+ *--FND is the number densty
+-      FVEL=446.11
++      FVEL=RUN_MACH*SQRT((5.D0/3.D0)*1.380622D-23*FTMP/6.64D-26)
+ *--FVEL is the upstream speed
+       FSP(1)=1.
+ *--FSP(N) is the number fraction of species N
+-      FNUM=0.4E16
++      FNUM=FND*(30.D0*RUN_MACH*LENGTH_UNIT/800.D0)/RUN_PPC
+ *--FNUM  is the number of real molecules represented by a simulated mol.
+-      DTM=0.75E-6
++      DTM=RUN_DT*TIME_UNIT
+ *--DTM is the time step
+-      SXB=-0.3
+-      DXB=0.3
++      SXB=-15.D0*RUN_MACH*LENGTH_UNIT
++      DXB=15.D0*RUN_MACH*LENGTH_UNIT
+ *--the flowfield is from SXB to DXB
+       FCU=0.5001
+ *--FCU is the fraction of cells in the upstream region
+ *
+       SP(1,1)=4.092E-10
+       SP(2,1)=293.
+-      SP(3,1)=0.81
+-      SP(4,1)=0.6015
++      SP(3,1)=1.0
++      SP(4,1)=1.0
+       SP(5,1)=6.64E-26
+ *--SP(1,N) is the molecular diameter of species N
+ *--SP(2,N) is the reference temperature
+@@ -1639,13 +1666,13 @@
+ *--ISPR(2,N) is 0,1 for constant, polynomial for collision number
+       ISP(1)=1
+       NSC=6
+-      NIS=4
++      NIS=20
+ *--NIS is the number of time steps between samples
+-      NSP=20
++      NSP=5
+ *--NSP is the number of samples between restart and output file updates
+-      NPS=100
++      NPS=RUN_WARM
+ *--NPS is the number of updates to reach assumed steady flow
+-      NPT=10000
++      NPT=RUN_TOTAL
+ *--NPT is the number of file updates to STOP
+ *
+       RETURN

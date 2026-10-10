@@ -1,0 +1,37 @@
+{
+  "source": "Original continuum-reference exact-heatflux-budget profile CSVs",
+  "coordinate": "x-x_s; x is the archived xmfp coordinate, x_s=x[argmax(abs(gradient(rho_file,x)))] as in original plotting script",
+  "processing": "No smoothing, interpolation, amplitude normalization, or plateau subtraction. S uses reference column, not budget reconstruction. Delta/3 is a plotting rescaling.",
+  "cases": {
+    "M2": {
+      "input_sha256": "84b5095c4718145e39d44b7611ae638627296311618a80b9defff85efaea81bc",
+      "rows": 1600,
+      "x_s": -1.0756713151931763,
+      "max_abs_channel_identity_error": 2.220446049250313e-16,
+      "q_min": -1.0406797084029062,
+      "R_peak": 2.0213273057745598,
+      "Delta_peak": 4.278413229034378,
+      "S_peak": 3.417025439432785
+    },
+    "M3": {
+      "input_sha256": "fd497ff998bd2f180af1b0a5b96dce2314764c57a73783fd60e758cb15f2c5b0",
+      "rows": 1800,
+      "x_s": -1.4341322183609009,
+      "max_abs_channel_identity_error": 1.7763568394002505e-15,
+      "q_min": -5.305963796848646,
+      "R_peak": 18.70394379774079,
+      "Delta_peak": 39.58204544670201,
+      "S_peak": 31.653895263179137
+    },
+    "M5": {
+      "input_sha256": "6be12508b8821de214535a3c9f1786eb52665128356cef1d887745e7ac47bd4b",
+      "rows": 2200,
+      "x_s": -2.146432399749756,
+      "max_abs_channel_identity_error": 2.842170943040401e-14,
+      "q_min": -30.135586476063235,
+      "R_peak": 189.93562293331655,
+      "Delta_peak": 405.69133868026404,
+      "S_peak": 322.9324315707416
+    }
+  }
+}

@@ -1,0 +1,488 @@
+{
+  "utc": "2026-10-07T23:22:53.009854+00:00",
+  "all_DVM_final_outputs_verified": true,
+  "DVM_archive_hashes_verified": 49,
+  "DVM_stationary_count": 0,
+  "DVM_finished_count": 7,
+  "DVM_final_diagnostics": {
+    "M2_base": {
+      "signature": "e6802e96fc389bf404e624530d60a8f933f0630de68be326236878a8a9a49c5d",
+      "step": 42667,
+      "time": 400.003125,
+      "dt": 0.009375,
+      "stationary": false,
+      "stable_count": 0,
+      "last_drift": 1.0193896605092324e-05,
+      "negative_fractions": {
+        "g": 1.5474200866179956e-05,
+        "h": 3.444216669484322e-05,
+        "k": 7.306655514024404e-05
+      },
+      "config": {
+        "name": "M2_base",
+        "mach": 2,
+        "nx": 320,
+        "L": 30,
+        "nv": 321,
+        "vmax": 16,
+        "Pr": 0.6666666666666666,
+        "omega": 1,
+        "mu1": 1,
+        "CFL": 0.8,
+        "tmax": 400
+      },
+      "source": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64",
+      "collision_model": "Shakhov; not Maxwell Boltzmann",
+      "face_flux_relative_spans": [
+        4.062881874235317e-06,
+        1.1807510250297129e-08,
+        2.031352875689997e-06
+      ],
+      "max_rss_note": "Measure using /usr/bin/time or Slurm sacct",
+      "finished": true,
+      "sha256": {
+        "checkpoint.npz": "35a47479a8444eef5523a0de67b24684e8ac5208702ebb024ed4218ea45ff9dc",
+        "profiles.npz": "3e827c7b779e4b02be9e088366e7b7d388c6a1a5b1b3e42a052a769dceaf9078"
+      }
+    },
+    "M2_x640": {
+      "signature": "6a1d834bfa707d15e721c75f0df3ecf639c3545fddd575c8f3e96a4f2bfd2522",
+      "step": 85334,
+      "time": 400.003125,
+      "dt": 0.0046875,
+      "stationary": false,
+      "stable_count": 0,
+      "last_drift": 1.0004916065006938e-05,
+      "negative_fractions": {
+        "g": 1.667153135449072e-05,
+        "h": 3.7276382207588956e-05,
+        "k": 7.952333894167435e-05
+      },
+      "config": {
+        "name": "M2_x640",
+        "mach": 2,
+        "nx": 640,
+        "L": 30,
+        "nv": 321,
+        "vmax": 16,
+        "Pr": 0.6666666666666666,
+        "omega": 1,
+        "mu1": 1,
+        "CFL": 0.8,
+        "tmax": 400
+      },
+      "source": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64",
+      "collision_model": "Shakhov; not Maxwell Boltzmann",
+      "face_flux_relative_spans": [
+        3.846804699006806e-06,
+        5.757920995746199e-09,
+        1.9233231303328663e-06
+      ],
+      "max_rss_note": "Measure using /usr/bin/time or Slurm sacct",
+      "finished": true,
+      "sha256": {
+        "checkpoint.npz": "e1f817e795de6f38a5510a985ef6dddb0eaab686bad09b1e89496e2494727263",
+        "profiles.npz": "06d763d04d410e99968cf4e59b5f527472d8f21a46d0dfa11356a27de64e88c9"
+      }
+    },
+    "M2_x1280": {
+      "signature": "b727f393de8bfcbaa1a863b8bda2c9aa25362458652b5448a68ce7c89673725e",
+      "step": 170667,
+      "time": 400.00078125,
+      "dt": 0.00234375,
+      "stationary": false,
+      "stable_count": 0,
+      "last_drift": 9.881298622964006e-06,
+      "negative_fractions": {
+        "g": 1.7329922848299883e-05,
+        "h": 3.872595966060335e-05,
+        "k": 8.271530374979387e-05
+      },
+      "config": {
+        "name": "M2_x1280",
+        "mach": 2,
+        "nx": 1280,
+        "L": 30,
+        "nv": 321,
+        "vmax": 16,
+        "Pr": 0.6666666666666666,
+        "omega": 1,
+        "mu1": 1,
+        "CFL": 0.8,
+        "tmax": 400
+      },
+      "source": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64",
+      "collision_model": "Shakhov; not Maxwell Boltzmann",
+      "face_flux_relative_spans": [
+        3.741381956614299e-06,
+        2.8409951478999734e-09,
+        1.8706164740390533e-06
+      ],
+      "max_rss_note": "Measure using /usr/bin/time or Slurm sacct",
+      "finished": true,
+      "sha256": {
+        "checkpoint.npz": "37052d42c350f4fb6ce318bc1fb66cb0bc7082a9a3282295fac792c33a3e4189",
+        "profiles.npz": "9ec68f5ffe30163a30f30364ab9fcb04c146dbe05c26d82bd9c2975169e7541b"
+      }
+    },
+    "M2_v641": {
+      "signature": "b167aa4c7bdfe4f3ad83cffd942c35db8a648207d99596e871a0e403f565490c",
+      "step": 42667,
+      "time": 400.003125,
+      "dt": 0.009375,
+      "stationary": false,
+      "stable_count": 0,
+      "last_drift": 1.0194296112382413e-05,
+      "negative_fractions": {
+        "g": 1.5466442574429105e-05,
+        "h": 3.428734947963562e-05,
+        "k": 7.317740558381426e-05
+      },
+      "config": {
+        "name": "M2_v641",
+        "mach": 2,
+        "nx": 320,
+        "L": 30,
+        "nv": 641,
+        "vmax": 16,
+        "Pr": 0.6666666666666666,
+        "omega": 1,
+        "mu1": 1,
+        "CFL": 0.8,
+        "tmax": 400
+      },
+      "source": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64",
+      "collision_model": "Shakhov; not Maxwell Boltzmann",
+      "face_flux_relative_spans": [
+        4.063236289289375e-06,
+        1.181705680359568e-08,
+        2.031530330301329e-06
+      ],
+      "max_rss_note": "Measure using /usr/bin/time or Slurm sacct",
+      "finished": true,
+      "sha256": {
+        "checkpoint.npz": "c7ccb5ce90e5e95791e4db2b927a898a76e0962fc5b5d94b19da2c927a6f83eb",
+        "profiles.npz": "4cca8720886120a9b893802fb84ff7174f85fd9b7ee8ecd5a7aa0bd3b089b1d1"
+      }
+    },
+    "M2_vextent": {
+      "signature": "9bd9f08c7a064dfbe47571519a8d656ade39d71efe52e4d8c04d37a625250c8e",
+      "step": 51200,
+      "time": 400.0,
+      "dt": 0.0078125,
+      "stationary": false,
+      "stable_count": 0,
+      "last_drift": 1.025525804983956e-05,
+      "negative_fractions": {
+        "g": 1.542132495591878e-05,
+        "h": 3.4318894917671285e-05,
+        "k": 7.277654710810784e-05
+      },
+      "config": {
+        "name": "M2_vextent",
+        "mach": 2,
+        "nx": 320,
+        "L": 30,
+        "nv": 385,
+        "vmax": 19.2,
+        "Pr": 0.6666666666666666,
+        "omega": 1,
+        "mu1": 1,
+        "CFL": 0.8,
+        "tmax": 400
+      },
+      "source": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64",
+      "collision_model": "Shakhov; not Maxwell Boltzmann",
+      "face_flux_relative_spans": [
+        4.084843595319094e-06,
+        1.1860137657033073e-08,
+        2.0423332795253222e-06
+      ],
+      "max_rss_note": "Measure using /usr/bin/time or Slurm sacct",
+      "finished": true,
+      "sha256": {
+        "checkpoint.npz": "fa5492788e4c73c76a6885464a8338b2a276d0366d76bde371db5df5dcc3b5ce",
+        "profiles.npz": "9dd5576ba301a58ff5c98f3ee4682bdb7f8778514e70c5733e4ca69cfafa8b75"
+      }
+    },
+    "M2_L45": {
+      "signature": "86ebd3c91f41f582d0696df1711e62bd7fc2e4e2a78ffe0a58e1258522067262",
+      "step": 42667,
+      "time": 400.003125,
+      "dt": 0.009375,
+      "stationary": false,
+      "stable_count": 0,
+      "last_drift": 3.053727307607292e-07,
+      "negative_fractions": {
+        "g": 1.547100439727718e-05,
+        "h": 3.443697715806566e-05,
+        "k": 7.303625088472044e-05
+      },
+      "config": {
+        "name": "M2_L45",
+        "mach": 2,
+        "nx": 480,
+        "L": 45,
+        "nv": 321,
+        "vmax": 16,
+        "Pr": 0.6666666666666666,
+        "omega": 1,
+        "mu1": 1,
+        "CFL": 0.8,
+        "tmax": 400
+      },
+      "source": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64",
+      "collision_model": "Shakhov; not Maxwell Boltzmann",
+      "face_flux_relative_spans": [
+        1.4268437331736073e-07,
+        9.452289690437229e-09,
+        6.25682790024658e-08
+      ],
+      "max_rss_note": "Measure using /usr/bin/time or Slurm sacct",
+      "finished": true,
+      "sha256": {
+        "checkpoint.npz": "77f6f1031bb8d898aa7b9400f93e2c14ec96f09ebf07734fa13139f7b4b7bbb5",
+        "profiles.npz": "43d3ad8c1503110ace97f662fa2871125ddc7fc7b5508069e4f1a986f7239c50"
+      }
+    },
+    "M2_dt_half": {
+      "signature": "a0d9c4f9382bec7c2658eeaf6122da6583851f56d78fed3fe095b15d24dc3550",
+      "step": 85334,
+      "time": 400.003125,
+      "dt": 0.0046875,
+      "stationary": false,
+      "stable_count": 0,
+      "last_drift": 1.0354575755843053e-05,
+      "negative_fractions": {
+        "g": 1.5315581402119538e-05,
+        "h": 3.407231156408917e-05,
+        "k": 7.219656125724993e-05
+      },
+      "config": {
+        "name": "M2_dt_half",
+        "mach": 2,
+        "nx": 320,
+        "L": 30,
+        "nv": 321,
+        "vmax": 16,
+        "Pr": 0.6666666666666666,
+        "omega": 1,
+        "mu1": 1,
+        "CFL": 0.4,
+        "tmax": 400
+      },
+      "source": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64",
+      "collision_model": "Shakhov; not Maxwell Boltzmann",
+      "face_flux_relative_spans": [
+        4.128996551790854e-06,
+        1.1965324926106724e-08,
+        2.0644081400143957e-06
+      ],
+      "max_rss_note": "Measure using /usr/bin/time or Slurm sacct",
+      "finished": true,
+      "sha256": {
+        "checkpoint.npz": "b5ac904dc0ea6707e42e7e2c901da9b072f544172463d467b06d6bf25faadc86",
+        "profiles.npz": "ace9c55e33b6cb0a93d3a2a44f610e45db5e8c5905a559f9cc0620c14dd05c95"
+      }
+    }
+  },
+  "three_grid": {
+    "coordinate": "physical R26 length unit, density midpoint translation only; no width fitting",
+    "groups": {
+      "R26": {
+        "state": "differences_computed",
+        "all_numerical_or_stationary_checks_pass": true,
+        "metrics": {
+          "rho": {
+            "coarse_medium_percent": 0.015851216133320047,
+            "medium_fine_percent": 0.00376162673547879,
+            "observed_order": 2.075164927625509
+          },
+          "u": {
+            "coarse_medium_percent": 0.021259812506031886,
+            "medium_fine_percent": 0.005036803260028493,
+            "observed_order": 2.0775485887045284
+          },
+          "T": {
+            "coarse_medium_percent": 0.012307404850847404,
+            "medium_fine_percent": 0.0029311812969591193,
+            "observed_order": 2.0699724778100617
+          },
+          "q": {
+            "coarse_medium_percent": 0.12322585496541832,
+            "medium_fine_percent": 0.03044260554143714,
+            "observed_order": 2.0171412431921683
+          },
+          "sigma": {
+            "coarse_medium_percent": 0.3324652405901344,
+            "medium_fine_percent": 0.08188837894983697,
+            "observed_order": 2.0214728801088917
+          },
+          "R": {
+            "coarse_medium_percent": 0.44634670742575033,
+            "medium_fine_percent": 0.10773061077390396,
+            "observed_order": 2.0507365454586086
+          },
+          "Delta": {
+            "coarse_medium_percent": 0.3533966662405804,
+            "medium_fine_percent": 0.0860632524257748,
+            "observed_order": 2.0378191628478457
+          },
+          "S": {
+            "coarse_medium_percent": 0.4006454624903084,
+            "medium_fine_percent": 0.09696434908247448,
+            "observed_order": 2.0467998238553253
+          }
+        },
+        "grid_independence_claim": false,
+        "note": "Interpret decreasing differences with domain, velocity and time-step tests; no error tolerance chosen automatically."
+      },
+      "DVM_Shakhov": {
+        "state": "differences_computed",
+        "all_numerical_or_stationary_checks_pass": false,
+        "metrics": {
+          "rho": {
+            "coarse_medium_percent": 0.23221710827050962,
+            "medium_fine_percent": 0.11648307719161471,
+            "observed_order": 0.995353891109409
+          },
+          "u": {
+            "coarse_medium_percent": 0.23376994843804633,
+            "medium_fine_percent": 0.11685582049052338,
+            "observed_order": 1.0003598853148457
+          },
+          "T": {
+            "coarse_medium_percent": 0.2099281749031974,
+            "medium_fine_percent": 0.10518872511908779,
+            "observed_order": 0.9969157322392985
+          },
+          "q": {
+            "coarse_medium_percent": 2.2962832738461483,
+            "medium_fine_percent": 1.176557212936801,
+            "observed_order": 0.9647291497803676
+          },
+          "sigma": {
+            "coarse_medium_percent": 2.483953357363899,
+            "medium_fine_percent": 1.2760001849375358,
+            "observed_order": 0.9610095452890112
+          },
+          "R": {
+            "coarse_medium_percent": 3.843417263466606,
+            "medium_fine_percent": 1.9859390048473322,
+            "observed_order": 0.9525682988467854
+          },
+          "Delta": {
+            "coarse_medium_percent": 3.5703552331702473,
+            "medium_fine_percent": 1.8461033978128905,
+            "observed_order": 0.9515842639217795
+          },
+          "S": {
+            "coarse_medium_percent": 3.737310501112879,
+            "medium_fine_percent": 1.931208060608999,
+            "observed_order": 0.9524968270318667
+          }
+        },
+        "grid_independence_claim": false,
+        "note": "Interpret decreasing differences with domain, velocity and time-step tests; no error tolerance chosen automatically."
+      }
+    }
+  },
+  "terminal_time_sensitivity_percent": {
+    "M2_v641": {
+      "rho": 0.00020932551750546007,
+      "u": 0.0002002849145746625,
+      "T": 0.00017246944105283162,
+      "q": 0.001998249791781543,
+      "sigma": 0.0016574329883487836,
+      "R": 0.0048391402921693135,
+      "Delta": 0.003869024947407224,
+      "S": 0.004500639629223716
+    },
+    "M2_vextent": {
+      "rho": 0.00809679472631021,
+      "u": 0.008227538695570526,
+      "T": 0.007843696633796611,
+      "q": 0.0655395135040052,
+      "sigma": 0.09215270643139838,
+      "R": 0.11130019776017744,
+      "Delta": 0.09673679601884917,
+      "S": 0.10595796790923448
+    },
+    "M2_L45": {
+      "rho": 0.0005265217025134385,
+      "u": 0.0006515781218790033,
+      "T": 0.0007784030958621682,
+      "q": 0.003123058415914121,
+      "sigma": 0.002701201726283245,
+      "R": 0.0063395240904638534,
+      "Delta": 0.005721081717012746,
+      "S": 0.006073804509497991
+    },
+    "M2_dt_half": {
+      "rho": 0.02429465648493957,
+      "u": 0.024686389585518758,
+      "T": 0.023533723717272362,
+      "q": 0.1966198204923161,
+      "sigma": 0.2765523926725354,
+      "R": 0.3339709110824597,
+      "Delta": 0.2902473504689461,
+      "S": 0.31793012436057355
+    }
+  },
+  "R26_vs_Shakhov_DVM": {
+    "R26_nodes": 641,
+    "DVM_cells": 1280,
+    "mach": 2,
+    "comparison_coordinate": "common physical length unit; density-midpoint translation only; x in[-15,15],1201samples; no width fitting",
+    "R26_midpoint": 1.4821197268436759e-06,
+    "DVM_midpoint": -0.039765650270472575,
+    "metrics": {
+      "rho": {
+        "relative_L2_percent_using_DVM_norm": 0.5198296191585472,
+        "relative_Linf_percent_using_DVM_max": 1.043797972352531
+      },
+      "u": {
+        "relative_L2_percent_using_DVM_norm": 0.6242516627295557,
+        "relative_Linf_percent_using_DVM_max": 1.4462829769100252
+      },
+      "T": {
+        "relative_L2_percent_using_DVM_norm": 0.8812662957484388,
+        "relative_Linf_percent_using_DVM_max": 2.306433901495599
+      },
+      "q": {
+        "relative_L2_percent_using_DVM_norm": 10.39157970396706,
+        "relative_Linf_percent_using_DVM_max": 10.040035877348434
+      },
+      "sigma": {
+        "relative_L2_percent_using_DVM_norm": 5.531347751421012,
+        "relative_Linf_percent_using_DVM_max": 5.602499975210242
+      },
+      "R": {
+        "relative_L2_percent_using_DVM_norm": 20.41610988567529,
+        "relative_Linf_percent_using_DVM_max": 15.881842424123006
+      },
+      "Delta": {
+        "relative_L2_percent_using_DVM_norm": 47.05682884635507,
+        "relative_Linf_percent_using_DVM_max": 50.010991396930756
+      },
+      "S": {
+        "relative_L2_percent_using_DVM_norm": 21.911309619816336,
+        "relative_Linf_percent_using_DVM_max": 27.24069579218068
+      }
+    },
+    "same_collision_operator": false,
+    "validation_claim": false
+  },
+  "limitations": [
+    "All DVM profiles reached final time400 without unchanged stationarity<1e-7 for5samples.",
+    "DVM spatial grids also change CFL time step; use separate half-step sensitivity.",
+    "Shakhov and Maxwell R26 share Mach2,Pr2/3,mu=theta,farfields and length unit; complete collision operators differ.",
+    "Observed grid orders and finite-time differences are diagnostics, not certified solution error or full physical acceptance.",
+    "Signed reduced distributions have small negative fractions; nonnegative distribution not validated."
+  ],
+  "source_hashes": {
+    "DVM_solver": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64",
+    "DVM_manifest": "7156227a829d6fa142d32adf52ad9e0c7cb2016e33a586179d28cbb85c31f456",
+    "R26_fine_profile": "3c02dd401481f2fa7bf5cd15dbf351b8c4206b155dd7cc5e83873b03fb815438"
+  }
+}

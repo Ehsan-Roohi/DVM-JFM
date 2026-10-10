@@ -1,0 +1,17 @@
+[
+  {
+    "file": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep/standing_M2_hmom_x40_nx1600_v97_19_19_vmax12_fullstate.npz",
+    "minimum_diffusion_eigenvalue": 0.9605926275253296,
+    "nonpositive_cells": 0
+  },
+  {
+    "file": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep/standing_M3_hmom_x60_nx1800_v121_23_23_vmax16_fullstate.npz",
+    "minimum_diffusion_eigenvalue": 0.8369274139404297,
+    "nonpositive_cells": 0
+  },
+  {
+    "file": "/project/pi_roohie_umass_edu/BGK_shock/ref/mach_sweep/standing_M5_hmom_x80_nx2200_v141_27_27_vmax22_fullstate.npz",
+    "minimum_diffusion_eigenvalue": 0.4808347225189209,
+    "nonpositive_cells": 0
+  }
+]

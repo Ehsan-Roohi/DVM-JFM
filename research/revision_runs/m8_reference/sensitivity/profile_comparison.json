@@ -1,0 +1,79 @@
+{
+  "at": "2026-10-02T16:54:32.896588+00:00",
+  "baseline_centre": 0.7896820345247219,
+  "method": "Density midpoint alignment using each profile endpoint density midpoint; linear interpolation on common baseline points. Linf difference normalized by baseline max absolute field, including common plateau region. Diagnostic sensitivity, not error bound or convergence order.",
+  "cases": {
+    "time_extend": {
+      "centre": 1.1571286114893269,
+      "centre_shift_from_baseline": 0.36744657696460503,
+      "aligned_relative_Linf_percent": {
+        "rho": 0.0028763851759809537,
+        "u": 0.001660384414883758,
+        "T": 0.0030982163894194862,
+        "q": 0.010558792890979754,
+        "sig": 0.010673888061212028
+      },
+      "stationary": false
+    },
+    "space_refine": {
+      "centre": 0.8008184024877546,
+      "centre_shift_from_baseline": 0.011136367963032745,
+      "aligned_relative_Linf_percent": {
+        "rho": 0.13958258973497803,
+        "u": 0.08799942049372755,
+        "T": 0.16511095064395395,
+        "q": 0.6864058759176141,
+        "sig": 0.7814206623879432
+      },
+      "stationary": false
+    },
+    "dt_half": {
+      "centre": 0.7894526769390549,
+      "centre_shift_from_baseline": -0.00022935758566700049,
+      "aligned_relative_Linf_percent": {
+        "rho": 0.019829261657651635,
+        "u": 0.01327585264513675,
+        "T": 0.026043529192457386,
+        "q": 0.03857635628553814,
+        "sig": 0.06832704816961586
+      },
+      "stationary": false
+    },
+    "velocity_refine": {
+      "centre": 0.7896836248874596,
+      "centre_shift_from_baseline": 1.5903627377245044e-06,
+      "aligned_relative_Linf_percent": {
+        "rho": 5.711140992592462e-05,
+        "u": 4.742349193698188e-05,
+        "T": 9.8313683977784e-05,
+        "q": 0.0002544054637137205,
+        "sig": 0.00018187909055333677
+      },
+      "stationary": false
+    },
+    "velocity_extent": {
+      "centre": 0.7896820348792079,
+      "centre_shift_from_baseline": 3.5448599611243026e-10,
+      "aligned_relative_Linf_percent": {
+        "rho": 8.57218057146768e-11,
+        "u": 3.9934243278821955e-11,
+        "T": 1.0205658074049432e-10,
+        "q": 2.915267155983236e-10,
+        "sig": 2.924580406167651e-10
+      },
+      "stationary": false
+    },
+    "space_extent": {
+      "centre": 0.448996837685748,
+      "centre_shift_from_baseline": -0.34068519683897386,
+      "aligned_relative_Linf_percent": {
+        "rho": 0.022211931435790908,
+        "u": 0.030458523579940687,
+        "T": 0.07516293798653213,
+        "q": 0.0672696874718539,
+        "sig": 0.0476760702339668
+      },
+      "stationary": false
+    }
+  }
+}

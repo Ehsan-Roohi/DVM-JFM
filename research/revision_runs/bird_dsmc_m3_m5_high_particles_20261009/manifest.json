@@ -1,0 +1,70 @@
+{
+  "campaign": "bird_dsmc_m3_m5_high_particles_20261009",
+  "scratch": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/bird_dsmc_m3_m5_high_particles_20261009",
+  "archive": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/bird_dsmc_m3_m5_high_particles_20261009",
+  "purpose": "Independent high-particle-count Bird DSMC Mach 3, 4, and 5 runs at 2000 upstream particles/cell; same method and sampling as the M2 high-particle case.",
+  "cases": [
+    {
+      "task": 0,
+      "Mach": 3,
+      "seed": 202610093,
+      "nx": 800,
+      "upstream_ppc": 2000,
+      "dt": 0.005,
+      "L": 45,
+      "warmup_time": 200,
+      "final_time": 400,
+      "sample_interval_steps": 20,
+      "block_steps": 100,
+      "warmup_blocks": 400,
+      "total_blocks": 800
+    },
+    {
+      "task": 1,
+      "Mach": 4,
+      "seed": 202610094,
+      "nx": 800,
+      "upstream_ppc": 2000,
+      "dt": 0.005,
+      "L": 60,
+      "warmup_time": 200,
+      "final_time": 400,
+      "sample_interval_steps": 20,
+      "block_steps": 100,
+      "warmup_blocks": 400,
+      "total_blocks": 800
+    },
+    {
+      "task": 2,
+      "Mach": 5,
+      "seed": 202610095,
+      "nx": 800,
+      "upstream_ppc": 2000,
+      "dt": 0.005,
+      "L": 75,
+      "warmup_time": 200,
+      "final_time": 400,
+      "sample_interval_steps": 20,
+      "block_steps": 100,
+      "warmup_blocks": 400,
+      "total_blocks": 800
+    }
+  ],
+  "collision": "Bird VHS, omega=1, inverse VSS alpha=1 (isotropic); unchanged from original campaign",
+  "transport": "mu*=T*, tau*=1/rho*; same physical transport and boundary method",
+  "particle_capacity": 5000000,
+  "particle_capacity_change_only": "All 15 MNM declarations 500000 -> 5000000; replacing back yields byte-identical old DSMC1S_paper.for source",
+  "comparison_baseline": "bird_dsmc_m2_m5_20261008: original 100-ppc runs at M3/M4/M5, same 800 cells, dt=.005, t=400",
+  "limits": "One independent seed per Mach; finite-time and particle-count sensitivity, not confidence intervals or physical model validation",
+  "sources": {
+    "DSMC1S_original.for": "159f0f8c8aeb14ba1e99acf5fed07f74700934d5cdaad0e7953f40bfde4fb2ee",
+    "DSMC1S_paper.for": "30fedcc04641694a43a8727d523f9a96b18a70b49346fbd8f4f4f193a0da5c8e",
+    "paper_diagnostics.f90": "b414fa7487f721c37e19d2a5995f5b46e15d020bcfd332891a608d92eab7170b",
+    "postprocess.py": "9b0fe9c25a2a899dc2b2045fa1cea495c745c078a8ae51c9364fbf6b0cd3246a",
+    "preflight.py": "d439b1f3fcf5dcf3ba9a76b040f9fd779ac2d612f31cb28268cf70690b37fa2f",
+    "chain.py": "04ed2386255261f0741eaa241df6d8f82dfd7c939b67742534a957b441feca8e",
+    "plot.py": "00e476ae4b5f15cabf58bed9b3fe3d56d07bc6010e60220afd41e03d2e12b5f5",
+    "run.sbatch": "6bf1635eaa3fa441cf8383740a772a1a97907865fdab08ae3b39e5e1ac974f69",
+    "gate.sbatch": "5dd52422bed822511b0a28ccf38143645b59334b3e750b1a0db8239683dc0830"
+  }
+}

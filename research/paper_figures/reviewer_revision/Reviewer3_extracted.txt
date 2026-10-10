@@ -1,0 +1,122 @@
+Manuscript Review: JFM-2026-1439 
+E. Roohi, “Closure-channel identiﬁability and two-channel recovery in monatomic kinetic normal 
+shocks,” Journal of Fluid Mechanics, 2026. 
+Summary and Recommendation 
+The author investigates the identiﬁability of fourth-order closure information associated with the R26 
+moment hierarchy in monatomic normal shocks. Speciﬁcally, the author shows that the fourth-order 
+information in the heat-ﬂux budget depends a on combined channel based on the tensorial closure 
+moment and the scalar-excess. The author identiﬁes the null space of this mapping, which indicates 
+that agreement with the heat-ﬂux budget does not guarantee accurate recovery of the individual 
+fourth-order closure variables. 
+With this context in mind, the author uses a series of discrete-velocity-method (DVM) reference 
+solutions along with a two-budget reconstruction technique to recover the tensorial closure moment 
+from the combined channel and a scalar-excess budget. The manuscript then examines a hierarchy 
+of kinetic collision models and DSMC diagnostics to distinguish the collision-independent 
+observation channel from the model-dependent production of the scalar-excess component. This 
+evaluation framework may provide a useful way of assessing whether kinetic closures, moment 
+models, and reduced-order solvers recover the higher-order information they are intended to 
+represent. 
+While I found this work intriguing, I have a number of questions regarding the methodology, the 
+deﬁnition and presentation of several quantities, and the level of detail provided for readers who are 
+not specialists in kinetic theory or high-order moment methods. I also found the overall organization 
+of the manuscript difﬁcult to follow in several places. As such, I recommend major revision before 
+the manuscript can be considered for publication. 
+General Comments 
+*For the general ﬂuid-mechanics reader, I would highly recommend a adding table or brief outline 
+in section 2 that summarizes the principal moments used in the analysis, their mathematical 
+deﬁnitions, their physical interpretations, and perhaps their role in the moment hierarchy. As 
+written, a considerable baseline knowledge is assumed, including familiarity with the  R26 
+formulation, the meaning of the  subscript, scalar fourth-order excess, active zones, source 
+neutrality, ES-FP drift/diffusion parameters, etc. Providing a slightly more background would make 
+the manuscript much more accessible. 
+*The coupling of the tensorial fourth-order moment and scalar fourth-order moment in the heat-
+ﬂux equation appears to be part of the established R26 formulation. I did not think this historical 
+context was sufﬁciently clear in the manuscript. The author should explain more explicitly which 
+mathematical structure is already established and which aspect constitutes the present 
+contribution. As I understand the manuscript, the important new element is not simply the 
+appearance of both moments in the heat-ﬂux equation, but the interpretation of that relationship 
+as an identiﬁability/observation map, identiﬁcation of its null space, and the subsequent 
+framework for assessing kinetic models. Clarifying this distinction would help establish the novelty 
+and signiﬁcance of the work. 
+cl
+*The manuscript should more clearly distinguish between full kinetic-model shock calculations and 
+source-level/post-processing diagnostics performed using an existing reference solution. This 
+distinction was not always apparent to me when reading the model hierarchy. In line with this 
+comment, please also clarify whether the two-budget procedure is intended primarily as an 
+identiﬁability diagnostic or as a practical reconstruction strategy. If its role differs among the 
+models or analyses considered here, please make those distinctions explicit and expand the 
+discussion accordingly. 
+*The description regarding the numerical methodology should be expanded considerably to 
+include details like quadrature details, spatial discretization, steady-state procedure, convergence 
+criterion, boundary treatment, details regarding  and , etc. Currently, the provided numerical 
+details are not sufﬁcient for detailed interpretation of the results by the reader. Furthermore, some 
+methodologies appear to be missing from the manuscript. For example, the manuscript describes 
+the removal of the plateau offset from both  and , but this procedure is not included and a 
+historical reference is not provided. These details are relevant for a general audience.  
+*A number of notation and presentation issues should be addressed. In general though, 
+parameters, deﬁnitions, correlations, etc. should be explicitly deﬁned and described within the 
+text. For example: 
+*The  number as used in (2.1) should be deﬁned and include its precise scaling deﬁnition. 
+*The superscript  in  should be deﬁned.  
+*The various error measures should be deﬁned in the text rather in the ﬁgure 
+*The “active zone” is deﬁned using , but it is unclear whether the same domain is used 
+consistently throughout the paper. 
+*Please check the manuscript for reused notation. For instance,  and  refer to the trace-free 
+ES-BGK covariance correction and the fourth-order ﬂux quantity, respectively; I found this to be 
+somewhat confusing.  
+*Finally, the coordinate labels also switch between  and  across ﬁgures — please 
+justify or make consistent. 
+*Several ﬁgure legends and annotations are too small, some tables are cramped, and the ﬁgure 
+placement should be more intentional. 
+Speciﬁc Comments 
+*Section 2, line 115: Fix broken section reference. 
+*Section 2, lines 122—134: The DSMC parameters are introduced at the end of section 2, then 
+largely repeated when the DSMC calculation is presented in section 8. Please justify this choice or 
+combine the descriptions in one location (likely at the start of section 8). Similarly, the discussion 
+of DSMC in section 5.2 might be better suited for section 8. 
+*Section 2, lines 135—140: Figure 1 and its subsequent discussion appear to be out of place at the 
+end of section 2. The ﬁgure/discussion analyzes  before it introduced in section 3. The ﬁgure and 
+its description should be placed after (3.1), giving the reader a chance to ﬁrst understand the 
+physical quantities before interpreting the proﬁles. 
+Kn λ1
+Rcl
+xx Δ
+Kn
+cl Rcl
+xx
+S
+B Bxx
+x/λ1 (x−xs)/λ1
+S
+*Section 2, line 141: Fix typographical error. 
+*Section 2–3: The equation for  and  are given in section 2, equations (2.3) and (2.4), but these 
+quantities are not deﬁned as the tensorial closure moment and scalar fourth-order excess until 
+section 3. Furthermore, the physical descriptions/interpretation of the  and  are not provided 
+until section 3. Please move the equation, deﬁnition, and physical description of these values 
+more closely to one another in the text. This will help for readers not deeply familiar with the R26 
+hierarchy. 
+*Section 3: Is  in (3.1) an explicit deﬁnition (i.e., should the equation have ). Additionally, 
+the inclusion of (3.3) appears to make (3.1) redundant — with (3.1) acting as a preview of sorts for 
+(3.3). The same equation is then again presented later in section 3 between lines 161 and 162 as 
+an unnumbered equation. Please clarify the text and streamline this discussion to avoid repeating 
+the same equation three times. For example, remove (3.1) and the surrounding paragraph, 
+formally deﬁne  via the (3.3) relation, and then place ﬁgure 1 after that. Later in the text, reference 
+(3.3) rather than writing out the equation again. 
+*Section 5 and 6: I recommend substantial reorganization of these two sections. Section 5 includes 
+the scalar-budget derivation, the Shakhov interpretation, the ES-BGK derivation, the ES-FP 
+derivation, and source comparisons. Separating the theory from the numerical analyses is 
+advised. Sections 5.1 and 5.2 also feel somewhat disconnected from the preceding material; it is 
+not obvious why these sections naturally follow. Conversely, section 6 is only a single paragraph 
+plus an equation (which itself is a repeat of (3.1) and (3.3)) and a reference to Figure 5. It does not 
+merit a standalone top-level section, and could likely be combined with another, broader results 
+section. 
+*Table 1: The manuscript states that the ES-FP/ES-BGK correction values in table 1 are “an 
+analytical consequence of the ES-BGK Gaussian covariance and ES-FP anisotropic diffusion 
+coefﬁcients.” Please clarify what additional information is conveyed by reporting this value in Table 
+1. As currently presented, I am not sure that this column is necessary.
+Rcl
+xx Δ
+Rcl
+xx Δ
+S S(x)≡…
+S

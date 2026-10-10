@@ -1,0 +1,7 @@
+{
+  "torch": "2.14.1+cpu",
+  "device": "cpu",
+  "threads": 2,
+  "discrete_maxwellian_moment_error": 4.440892098500626e-16,
+  "scope": "local CPU execution smoke test, not scientific convergence"
+}

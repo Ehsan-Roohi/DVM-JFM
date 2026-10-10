@@ -1,0 +1,40 @@
+{
+  "signature": "e6802e96fc389bf404e624530d60a8f933f0630de68be326236878a8a9a49c5d",
+  "step": 42667,
+  "time": 400.003125,
+  "dt": 0.009375,
+  "stationary": false,
+  "stable_count": 0,
+  "last_drift": 1.0193896605092324e-05,
+  "negative_fractions": {
+    "g": 1.5474200866179956e-05,
+    "h": 3.444216669484322e-05,
+    "k": 7.306655514024404e-05
+  },
+  "config": {
+    "name": "M2_base",
+    "mach": 2,
+    "nx": 320,
+    "L": 30,
+    "nv": 321,
+    "vmax": 16,
+    "Pr": 0.6666666666666666,
+    "omega": 1,
+    "mu1": 1,
+    "CFL": 0.8,
+    "tmax": 400
+  },
+  "source": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64",
+  "collision_model": "Shakhov; not Maxwell Boltzmann",
+  "face_flux_relative_spans": [
+    4.062881874235317e-06,
+    1.1807510250297129e-08,
+    2.031352875689997e-06
+  ],
+  "max_rss_note": "Measure using /usr/bin/time or Slurm sacct",
+  "finished": true,
+  "sha256": {
+    "checkpoint.npz": "35a47479a8444eef5523a0de67b24684e8ac5208702ebb024ed4218ea45ff9dc",
+    "profiles.npz": "3e827c7b779e4b02be9e088366e7b7d388c6a1a5b1b3e42a052a769dceaf9078"
+  }
+}

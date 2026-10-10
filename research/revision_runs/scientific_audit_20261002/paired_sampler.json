@@ -1,0 +1,89 @@
+{
+  "method": "Same seed labels; linear density-midpoint alignment, |x-xs|<=15; two seeds only. RNG trajectories diverge after algorithm change; paired labels do not guarantee variance reduction. No significance or convergence claim.",
+  "results": {
+    "120": {
+      "Rxx_closure": {
+        "mean_difference_L2_percent": 2.890016296802971,
+        "paired_seed_difference_percent": [
+          5.311172828937455,
+          3.883495699193112
+        ],
+        "original_between_seed_L2_percent": 5.029864579223822,
+        "corrected_between_seed_L2_percent": 4.691521757244889,
+        "paired_effect_direction_cosine": -0.2379286449199284
+      },
+      "Delta": {
+        "mean_difference_L2_percent": 2.856248633862248,
+        "paired_seed_difference_percent": [
+          4.641142224382181,
+          4.174024965557725
+        ],
+        "original_between_seed_L2_percent": 4.4780700142330545,
+        "corrected_between_seed_L2_percent": 5.015074610796871,
+        "paired_effect_direction_cosine": -0.16362458534954427
+      },
+      "S": {
+        "mean_difference_L2_percent": 2.135783743145833,
+        "paired_seed_difference_percent": [
+          3.9629410894208013,
+          3.4639738220284526
+        ],
+        "original_between_seed_L2_percent": 3.150628595933391,
+        "corrected_between_seed_L2_percent": 4.560079689508781,
+        "paired_effect_direction_cosine": -0.34393722943163224
+      },
+      "QDelta_collision": {
+        "mean_difference_L2_percent": 6.438464782267793,
+        "paired_seed_difference_percent": [
+          9.940112518209006,
+          8.854572642701703
+        ],
+        "original_between_seed_L2_percent": 11.426774633673713,
+        "corrected_between_seed_L2_percent": 8.650884157703056,
+        "paired_effect_direction_cosine": -0.06726822776862701
+      }
+    },
+    "960": {
+      "Rxx_closure": {
+        "mean_difference_L2_percent": 1.0129684434497253,
+        "paired_seed_difference_percent": [
+          1.4696199245302175,
+          1.4774842833990458
+        ],
+        "original_between_seed_L2_percent": 1.0559547693050886,
+        "corrected_between_seed_L2_percent": 1.416748779850028,
+        "paired_effect_direction_cosine": -0.054908311234247754
+      },
+      "Delta": {
+        "mean_difference_L2_percent": 0.885945084725857,
+        "paired_seed_difference_percent": [
+          1.2465194989194948,
+          1.218597747949605
+        ],
+        "original_between_seed_L2_percent": 1.0191910300213827,
+        "corrected_between_seed_L2_percent": 1.219853676305413,
+        "paired_effect_direction_cosine": 0.033145685561638535
+      },
+      "S": {
+        "mean_difference_L2_percent": 0.7716208821517387,
+        "paired_seed_difference_percent": [
+          0.9502198907368286,
+          1.1781704806785918
+        ],
+        "original_between_seed_L2_percent": 0.71652575520046,
+        "corrected_between_seed_L2_percent": 0.9914000904940078,
+        "paired_effect_direction_cosine": 0.04028255735264057
+      },
+      "QDelta_collision": {
+        "mean_difference_L2_percent": 2.048727788177527,
+        "paired_seed_difference_percent": [
+          3.150994805385688,
+          2.687895416204391
+        ],
+        "original_between_seed_L2_percent": 3.1865339934261763,
+        "corrected_between_seed_L2_percent": 2.4326738470631906,
+        "paired_effect_direction_cosine": -0.02214023557008713
+      }
+    }
+  }
+}

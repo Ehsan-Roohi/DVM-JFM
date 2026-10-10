@@ -1,0 +1,78 @@
+[
+  {
+    "iteration": 0,
+    "seconds": 0.01699090003967285,
+    "cost": 853.1295446806715,
+    "lambda_value": 1e-06,
+    "native_PDE": 2.410513802320996,
+    "boundary_phase": 0.0,
+    "off_Gauss": 2.410595060487459,
+    "pressure": 0.9999999999999982,
+    "finite": true,
+    "alpha": 1,
+    "linear_backward": 4.9147343384233456e-14
+  },
+  {
+    "iteration": 1,
+    "seconds": 0.43782472610473633,
+    "cost": 35.233475915131024,
+    "lambda_value": 3.333333333333333e-07,
+    "native_PDE": 61.15349031188819,
+    "boundary_phase": 0.006221841157186381,
+    "off_Gauss": 1.6186778328204146,
+    "pressure": 0.9999649594915647,
+    "finite": true,
+    "alpha": 1,
+    "linear_backward": 1.3938827667896454e-13
+  },
+  {
+    "iteration": 2,
+    "seconds": 1.7922494411468506,
+    "cost": 4.479535830430837,
+    "lambda_value": 1.111111111111111e-07,
+    "native_PDE": 9.600648460775899,
+    "boundary_phase": 0.0050096059804999316,
+    "off_Gauss": 0.5429974934661881,
+    "pressure": 0.9999821120949299,
+    "finite": true,
+    "alpha": 1,
+    "linear_backward": 3.23030663362934e-13
+  },
+  {
+    "iteration": 3,
+    "seconds": 3.4965150356292725,
+    "cost": 1.791208469082438,
+    "lambda_value": 3.703703703703703e-08,
+    "native_PDE": 9.249687161822429,
+    "boundary_phase": 0.001187732587088819,
+    "off_Gauss": 0.4337198597803397,
+    "pressure": 0.9999957665466894,
+    "finite": true,
+    "alpha": 1,
+    "linear_backward": 1.451163698686715e-13
+  },
+  {
+    "iteration": 4,
+    "seconds": 5.023027658462524,
+    "cost": 0.020616999210581258,
+    "lambda_value": 1.2345679012345676e-08,
+    "native_PDE": 0.6174437649975572,
+    "boundary_phase": 8.449147179157013e-05,
+    "off_Gauss": 0.028027136293447587,
+    "pressure": 0.9999996571145555,
+    "finite": true,
+    "alpha": 1,
+    "linear_backward": 1.274859217366804e-13
+  },
+  {
+    "iteration": 5,
+    "seconds": 6.842587232589722,
+    "cost": 3.5231411906639683e-06,
+    "lambda_value": 4.115226337448558e-09,
+    "native_PDE": 0.004731067850473326,
+    "boundary_phase": 2.5005430954738728e-06,
+    "off_Gauss": 0.0002779074392559866,
+    "pressure": 0.9999999900305889,
+    "finite": true
+  }
+]

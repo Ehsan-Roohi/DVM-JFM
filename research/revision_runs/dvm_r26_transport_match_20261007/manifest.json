@@ -1,0 +1,99 @@
+{
+  "cases": [
+    {
+      "name": "M2_base",
+      "mach": 2,
+      "nx": 320,
+      "L": 30,
+      "nv": 321,
+      "vmax": 16,
+      "Pr": 0.6666666666666666,
+      "omega": 1,
+      "mu1": 1,
+      "CFL": 0.8,
+      "tmax": 400
+    },
+    {
+      "name": "M2_x640",
+      "mach": 2,
+      "nx": 640,
+      "L": 30,
+      "nv": 321,
+      "vmax": 16,
+      "Pr": 0.6666666666666666,
+      "omega": 1,
+      "mu1": 1,
+      "CFL": 0.8,
+      "tmax": 400
+    },
+    {
+      "name": "M2_x1280",
+      "mach": 2,
+      "nx": 1280,
+      "L": 30,
+      "nv": 321,
+      "vmax": 16,
+      "Pr": 0.6666666666666666,
+      "omega": 1,
+      "mu1": 1,
+      "CFL": 0.8,
+      "tmax": 400
+    },
+    {
+      "name": "M2_v641",
+      "mach": 2,
+      "nx": 320,
+      "L": 30,
+      "nv": 641,
+      "vmax": 16,
+      "Pr": 0.6666666666666666,
+      "omega": 1,
+      "mu1": 1,
+      "CFL": 0.8,
+      "tmax": 400
+    },
+    {
+      "name": "M2_vextent",
+      "mach": 2,
+      "nx": 320,
+      "L": 30,
+      "nv": 385,
+      "vmax": 19.2,
+      "Pr": 0.6666666666666666,
+      "omega": 1,
+      "mu1": 1,
+      "CFL": 0.8,
+      "tmax": 400
+    },
+    {
+      "name": "M2_L45",
+      "mach": 2,
+      "nx": 480,
+      "L": 45,
+      "nv": 321,
+      "vmax": 16,
+      "Pr": 0.6666666666666666,
+      "omega": 1,
+      "mu1": 1,
+      "CFL": 0.8,
+      "tmax": 400
+    },
+    {
+      "name": "M2_dt_half",
+      "mach": 2,
+      "nx": 320,
+      "L": 30,
+      "nv": 321,
+      "vmax": 16,
+      "Pr": 0.6666666666666666,
+      "omega": 1,
+      "mu1": 1,
+      "CFL": 0.4,
+      "tmax": 400
+    }
+  ],
+  "scope": "Transport and boundary matched Shakhov DVM, NOT identical Maxwell Boltzmann collision operator",
+  "length_unit": "mu1/(rho1 sqrt(theta1))",
+  "scratch": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/dvm_transport_match",
+  "archive": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/dvm_r26_transport_match_20261007"
+}

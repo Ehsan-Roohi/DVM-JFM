@@ -1,0 +1,217 @@
+{
+  "audits": {
+    "M6": {
+      "minimum_f": 1.0000000031710769e-30,
+      "shape": [
+        2400,
+        126991
+      ],
+      "device": "cpu",
+      "dtype": "float64",
+      "reference_iterations": 4,
+      "comparison_iterations": 12,
+      "identity_max_abs": 5.684341886080802e-14,
+      "rho_stored_relative_l2": 3.8319753885074447e-08,
+      "ux_stored_relative_l2": 6.642344802299255e-08,
+      "T_stored_relative_l2": 1.915766000027702e-07,
+      "qx_stored_relative_l2": 8.495919157826929e-07,
+      "sig_stored_relative_l2": 3.4865512497498754e-07,
+      "Rxx_closure_stored_relative_l2": 8.626628629399825e-07,
+      "Delta_dvm_iteration_relative_l2": 8.293102588099185e-15,
+      "Rxx_closure_iteration_relative_l2": 2.0743014997639203e-16,
+      "plateau_diagnostics": {
+        "Rxx_closure": {
+          "left_mean": -0.2727439234462493,
+          "right_mean": -0.22089287974159355,
+          "left_relative_to_peak": -0.0006618256708669927,
+          "right_relative_to_peak": -0.0005360067292334483
+        },
+        "Delta_dvm": {
+          "left_mean": 0.03934078701902695,
+          "right_mean": -0.526972520935299,
+          "left_relative_to_peak": 4.45708802414661e-05,
+          "right_relative_to_peak": -0.0005970299757803787
+        },
+        "S_dvm": {
+          "left_mean": -0.25963032777324035,
+          "right_mean": -0.3965503867200265,
+          "left_relative_to_peak": -0.000370058401723636,
+          "right_relative_to_peak": -0.0005652144091605146
+        }
+      }
+    },
+    "M8": {
+      "minimum_f": 1.0000000031710769e-30,
+      "shape": [
+        2800,
+        164331
+      ],
+      "device": "cpu",
+      "dtype": "float64",
+      "reference_iterations": 4,
+      "comparison_iterations": 12,
+      "identity_max_abs": 2.2737367544323206e-13,
+      "rho_stored_relative_l2": 4.224428879506178e-08,
+      "ux_stored_relative_l2": 7.822980595872864e-08,
+      "T_stored_relative_l2": 2.3806240761906962e-07,
+      "qx_stored_relative_l2": 8.969615245435733e-07,
+      "sig_stored_relative_l2": 2.7785567360714925e-07,
+      "Rxx_closure_stored_relative_l2": 7.184250325896372e-07,
+      "Delta_dvm_iteration_relative_l2": 1.0879123900714867e-14,
+      "Rxx_closure_iteration_relative_l2": 2.1159802968687883e-16,
+      "plateau_diagnostics": {
+        "Rxx_closure": {
+          "left_mean": -0.6815740026884488,
+          "right_mean": -0.9804557055463907,
+          "left_relative_to_peak": -0.00050043919715851,
+          "right_relative_to_peak": -0.0007198902308446745
+        },
+        "Delta_dvm": {
+          "left_mean": 0.18233625756410085,
+          "right_mean": -2.3519639178626703,
+          "left_relative_to_peak": 6.233632585979232e-05,
+          "right_relative_to_peak": -0.0008040791839923505
+        },
+        "S_dvm": {
+          "left_mean": -0.6207952501670819,
+          "right_mean": -1.764443678167281,
+          "left_relative_to_peak": -0.000267420469203809,
+          "right_relative_to_peak": -0.0007600708223398853
+        }
+      }
+    },
+    "M12": {
+      "minimum_f": 1.0000000031710769e-30,
+      "shape": [
+        4200,
+        270725
+      ],
+      "device": "cpu",
+      "dtype": "float64",
+      "reference_iterations": 4,
+      "comparison_iterations": 12,
+      "identity_max_abs": 9.094947017729282e-13,
+      "rho_stored_relative_l2": 4.430582526201395e-08,
+      "ux_stored_relative_l2": 7.33715307972274e-08,
+      "T_stored_relative_l2": 2.2997014244888776e-07,
+      "qx_stored_relative_l2": 9.046091121736842e-07,
+      "sig_stored_relative_l2": 4.354575730449164e-07,
+      "Rxx_closure_stored_relative_l2": 8.273725010199098e-07,
+      "Delta_dvm_iteration_relative_l2": 4.700022589588174e-06,
+      "Rxx_closure_iteration_relative_l2": 4.22296312385314e-07,
+      "plateau_diagnostics": {
+        "Rxx_closure": {
+          "left_mean": -5.852926756621103,
+          "right_mean": -12.572397742341131,
+          "left_relative_to_peak": -0.0008223069074322921,
+          "right_relative_to_peak": -0.0017663589408184585
+        },
+        "Delta_dvm": {
+          "left_mean": 0.03697569753628937,
+          "right_mean": -30.675210800568337,
+          "left_relative_to_peak": 2.4052636396338792e-06,
+          "right_relative_to_peak": -0.0019954179121110297
+        },
+        "S_dvm": {
+          "left_mean": -5.840601524109006,
+          "right_mean": -22.797468009197242,
+          "left_relative_to_peak": -0.0004802817321206743,
+          "right_relative_to_peak": -0.0018746711923808622
+        }
+      }
+    },
+    "M8lite": {
+      "minimum_f": 1.0000000031710769e-30,
+      "shape": [
+        2400,
+        126991
+      ],
+      "device": "cpu",
+      "dtype": "float64",
+      "reference_iterations": 4,
+      "comparison_iterations": 12,
+      "identity_max_abs": 2.2737367544323206e-13,
+      "rho_stored_relative_l2": 3.892169090509893e-08,
+      "ux_stored_relative_l2": 7.798374682537867e-08,
+      "T_stored_relative_l2": 2.3311768458117445e-07,
+      "qx_stored_relative_l2": 8.940602513385737e-07,
+      "sig_stored_relative_l2": 3.264616143799829e-07,
+      "Rxx_closure_stored_relative_l2": 1.0371887308057145e-06,
+      "Delta_dvm_iteration_relative_l2": 1.0098944267958625e-14,
+      "Rxx_closure_iteration_relative_l2": 2.233123458164156e-16,
+      "plateau_diagnostics": {
+        "Rxx_closure": {
+          "left_mean": -1.0380411511632657,
+          "right_mean": -1.2965828585268546,
+          "left_relative_to_peak": -0.0007628689076919825,
+          "right_relative_to_peak": -0.0009528743132274515
+        },
+        "Delta_dvm": {
+          "left_mean": 0.18319186784163138,
+          "right_mean": -3.1399097717862667,
+          "left_relative_to_peak": 6.264952358130405e-05,
+          "right_relative_to_peak": -0.0010738132298577197
+        },
+        "S_dvm": {
+          "left_mean": -0.9769771952160551,
+          "right_mean": -2.343219449122277,
+          "left_relative_to_peak": -0.00042114215296690905,
+          "right_relative_to_peak": -0.0010100834374737445
+        }
+      }
+    },
+    "M12lite": {
+      "minimum_f": 1.0000000031710769e-30,
+      "shape": [
+        3200,
+        173941
+      ],
+      "device": "cpu",
+      "dtype": "float64",
+      "reference_iterations": 4,
+      "comparison_iterations": 12,
+      "identity_max_abs": 9.094947017729282e-13,
+      "rho_stored_relative_l2": 3.5914574745104196e-08,
+      "ux_stored_relative_l2": 7.71804504438587e-08,
+      "T_stored_relative_l2": 2.241170819503402e-07,
+      "qx_stored_relative_l2": 7.014192002729231e-07,
+      "sig_stored_relative_l2": 3.984548928471056e-07,
+      "Rxx_closure_stored_relative_l2": 9.85942990141085e-07,
+      "Delta_dvm_iteration_relative_l2": 2.388680241623868e-06,
+      "Rxx_closure_iteration_relative_l2": 2.1729279600026267e-07,
+      "plateau_diagnostics": {
+        "Rxx_closure": {
+          "left_mean": -5.24887951158413,
+          "right_mean": -13.558669702069025,
+          "left_relative_to_peak": -0.0007373361949246243,
+          "right_relative_to_peak": -0.001904653727390695
+        },
+        "Delta_dvm": {
+          "left_mean": 0.8696085995467984,
+          "right_mean": -33.14060443049855,
+          "left_relative_to_peak": 5.656706543641086e-05,
+          "right_relative_to_peak": -0.0021557592006325754
+        },
+        "S_dvm": {
+          "left_mean": -4.959009978401864,
+          "right_mean": -24.60553784556854,
+          "left_relative_to_peak": -0.00040775837540428566,
+          "right_relative_to_peak": -0.00202320910455015
+        }
+      }
+    }
+  },
+  "full_lite_relative_l2_on_stored_x_mfp": {
+    "M8": {
+      "Rxx_closure": 0.0027384349158138216,
+      "Delta_dvm": 0.00234252103590392,
+      "S_dvm": 0.0025303071110519965
+    },
+    "M12": {
+      "Rxx_closure": 0.002299451185269908,
+      "Delta_dvm": 0.0027191326455675287,
+      "S_dvm": 0.002527365162186499
+    }
+  },
+  "interpretation": "Historical BGK data. Discrete-reference Delta/S and raw continuum Delta remain distinct. No plateau correction applied. Full/lite changes multiple parameters, so differences are sensitivity diagnostics, not isolated convergence. Source association is based on preserved submitters/current hashes, not immutable execution-time source manifest."
+}

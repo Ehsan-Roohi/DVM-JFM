@@ -1,0 +1,11 @@
+{
+  "reason": "INDEPENDENT_CHECK_REQUIRED",
+  "iterations": 5,
+  "accepted": false,
+  "independent_check_required": true,
+  "native_PDE": 0.004731067850473326,
+  "boundary_phase": 2.5005430954738728e-06,
+  "off_Gauss": 0.0002779074392559866,
+  "pressure": 0.9999999900305889,
+  "finite": true
+}

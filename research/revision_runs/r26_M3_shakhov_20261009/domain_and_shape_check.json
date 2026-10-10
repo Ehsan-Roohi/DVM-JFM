@@ -1,0 +1,251 @@
+{
+  "domain_cases": {
+    "maxwell_domain60": {
+      "model": "maxwell",
+      "N": 10241,
+      "L": 60,
+      "profile_sha": "0c8da3e5970c3bf0b21c3edcdb877e8ce8ad4eefb072ad1a502baaf3e90b5f1e",
+      "source_hashes_match": true,
+      "finite": true,
+      "coordinates_match": true,
+      "nine_field_reconstruction": 0.0,
+      "independent_full_tensor_PDE": 0.003958931762627671,
+      "boundary_phase": 3.086420008457935e-14,
+      "minpressure": 0.9999999999999982,
+      "domain_field_max_difference": {
+        "rho": 5.765454780259915e-10,
+        "u": 2.481055361158724e-10,
+        "theta": 4.677707110545271e-10,
+        "sigma": 2.502211771115981e-10,
+        "q": 5.4466723397718725e-09,
+        "m": 6.071857775327848e-10,
+        "R": 2.079375374935321e-08,
+        "Delta": 1.0176115158480235e-07,
+        "S": 5.471413761095399e-08
+      },
+      "independent_numerical_pass": true
+    },
+    "shakhov_domain60": {
+      "model": "shakhov",
+      "N": 20481,
+      "L": 60,
+      "profile_sha": "f8fe5783d312d3b74c2d7381e5bed3858a6d25bd4ed7d88cfd35a06f3c81d133",
+      "source_hashes_match": true,
+      "finite": true,
+      "coordinates_match": true,
+      "nine_field_reconstruction": 0.0,
+      "independent_full_tensor_PDE": 0.006937311910444658,
+      "boundary_phase": 1.6986412276764895e-14,
+      "minpressure": 0.9999999999999982,
+      "domain_field_max_difference": {
+        "rho": 2.1537482908229322e-10,
+        "u": 9.268252831873269e-11,
+        "theta": 1.7387780104627382e-10,
+        "sigma": 1.5331380609495682e-10,
+        "q": 1.9038303190733677e-09,
+        "m": 1.1807178934059624e-09,
+        "R": 1.331929488670863e-08,
+        "Delta": 2.2830028170812627e-08,
+        "S": 2.0929304276979505e-08
+      },
+      "independent_numerical_pass": true
+    }
+  },
+  "shape": {
+    "maxwell": {
+      "temperature_slope_peaks": [
+        {
+          "x": -6.445312499999969,
+          "slope": 0.4557853066091771,
+          "field": 1.4999621804830092
+        },
+        {
+          "x": -2.144531249999969,
+          "slope": 0.3407061789176282,
+          "field": 2.8552220372785997
+        },
+        {
+          "x": 0.5625000000000313,
+          "slope": 0.12786544407434045,
+          "field": 3.4684984957365383
+        }
+      ],
+      "density_slope_peaks": [
+        {
+          "x": -6.457031249999969,
+          "slope": 0.08536072109280705,
+          "field": 1.0885870174825565
+        },
+        {
+          "x": 0.1289062500000313,
+          "slope": 0.494765973624889,
+          "field": 2.0632631536123647
+        }
+      ]
+    },
+    "shakhov": {
+      "temperature_slope_peaks": [
+        {
+          "x": -6.562500000000066,
+          "slope": 0.3373775845678324,
+          "field": 1.4791919351776244
+        },
+        {
+          "x": -1.9570312500000657,
+          "slope": 0.3898869925261579,
+          "field": 2.86183930653007
+        },
+        {
+          "x": 0.4394531249999343,
+          "slope": 0.13879813981316147,
+          "field": 3.4772364109275284
+        }
+      ],
+      "density_slope_peaks": [
+        {
+          "x": -6.580078125000066,
+          "slope": 0.062032924399261447,
+          "field": 1.0866380422215842
+        },
+        {
+          "x": 0.11132812499993427,
+          "slope": 0.5218702811809711,
+          "field": 2.057609113299944
+        }
+      ]
+    },
+    "previous_Maxwell": {
+      "temperature_slope_peaks": [
+        {
+          "x": -6.527343740782438,
+          "slope": 0.37002518718979144,
+          "field": 1.4899477642159198
+        },
+        {
+          "x": -1.8164062407824382,
+          "slope": 0.3466357231396273,
+          "field": 2.9065685527021654
+        },
+        {
+          "x": 0.41015625921756194,
+          "slope": 0.15398245611610642,
+          "field": 3.432145826176263
+        }
+      ],
+      "density_slope_peaks": [
+        {
+          "x": -6.550781240782438,
+          "slope": 0.06704748436162807,
+          "field": 1.0836260739834542
+        },
+        {
+          "x": 9.21756193247858e-09,
+          "slope": 0.49762741531137067,
+          "field": 2.0000000045873416
+        }
+      ]
+    }
+  },
+  "implicit_matrix": {
+    "maxwell": {
+      "upstream_positive_real_eigenvalues": [
+        0.9851074308620517,
+        3.3745043713560916,
+        5.196916503685858
+      ],
+      "sign_change_brackets": [
+        [
+          -6.128906249999969,
+          -6.117187499999969
+        ],
+        [
+          0.5156250000000313,
+          0.5273437500000313
+        ]
+      ],
+      "dimensionless_scaling": {
+        "columns": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          15.000000000000002,
+          58.09475019311126,
+          58.09475019311126
+        ],
+        "rows": [
+          1.0,
+          3.872983346207417,
+          15.000000000000002,
+          58.09475019311126,
+          58.09475019311126,
+          3.872983346207417,
+          15.000000000000002,
+          15.000000000000002
+        ]
+      }
+    },
+    "shakhov": {
+      "upstream_positive_real_eigenvalues": [
+        0.8897080162654598,
+        1.7581271834967704,
+        3.508638141721506
+      ],
+      "sign_change_brackets": [
+        [
+          -6.152343750000066,
+          -6.146484375000066
+        ],
+        [
+          0.3749999999999343,
+          0.3808593749999343
+        ]
+      ],
+      "dimensionless_scaling": {
+        "columns": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          15.000000000000002,
+          58.09475019311126,
+          58.09475019311126
+        ],
+        "rows": [
+          1.0,
+          3.872983346207417,
+          15.000000000000002,
+          58.09475019311126,
+          58.09475019311126,
+          3.872983346207417,
+          15.000000000000002,
+          15.000000000000002
+        ]
+      }
+    }
+  },
+  "interpretation": "Descriptive source/domain/grid diagnostics; determinant sign change alone does not prove a subshock, nonexistence, uniqueness, or the cause of profile shoulders.",
+  "independent_tensor_source_hashes": {
+    "stf_repaired_tensor\\implicit_repaired.py": "9fbe8859ac6877c597111e44acba4fd706e41108003d02c37b3816594b6a9485",
+    "stf_repaired_tensor\\shock_pilot.py": "52293242155ec452726b2ef5a9b20a9567519990b40cf4b36471e689e724f9f6",
+    "stf_repaired_tensor\\cavity_source\\r26_bulk_equations.py": "778d7c27935fce664034f2f3d1ef6885a6698227df65adf69bc22aac9bca7329",
+    "stf_repaired_tensor\\cavity_source\\r26_state.py": "787583e2bacfd4d694d5eee3488eebaee3b37f2ae86e6c6c54bf63cba5d953ba",
+    "stf_repaired_tensor\\cavity_source\\r26_tensor_closures.py": "768e3eaaa1559a7a42c1ae31370ce26719853cf538e265674db88bad7f0d12a9",
+    "stf_repaired_tensor/r26_shakhov_tensor.py": "a2302a9a03699fcca9539b1df0359ee195c2f7d3a9effce7c41f55f0b84e5adc"
+  },
+  "Maxwell_upstream_vs_previous": {
+    "previous_positive": [
+      0.9851074308620509,
+      3.3745043713560943,
+      5.196916503685857
+    ],
+    "corrected_positive": [
+      0.9851074308620517,
+      3.3745043713560916,
+      5.196916503685858
+    ],
+    "note": "Finite-difference eigenvalues: nonlinear STF repairs do not change equilibrium linearization; compare numerically, not bitwise across different evaluators."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "utc": "2026-10-07T23:22:53.009854+00:00",
+  "files_verified": 28,
+  "archive": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/dvm_r26_transport_match_completed_analysis_20261007",
+  "bundle": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/dvm_transport_match/completed_analysis_20261007/bundle.tar.gz",
+  "bundle_sha256": "150df14d8776de06e9f74868ea2163e8a5dcb731d3ffa5d50fe4d1e4304fc59b",
+  "DVM_archive_hashes": 49,
+  "comparison": {
+    "rho": {
+      "relative_L2_percent_using_DVM_norm": 0.5198296191585472,
+      "relative_Linf_percent_using_DVM_max": 1.043797972352531
+    },
+    "u": {
+      "relative_L2_percent_using_DVM_norm": 0.6242516627295557,
+      "relative_Linf_percent_using_DVM_max": 1.4462829769100252
+    },
+    "T": {
+      "relative_L2_percent_using_DVM_norm": 0.8812662957484388,
+      "relative_Linf_percent_using_DVM_max": 2.306433901495599
+    },
+    "q": {
+      "relative_L2_percent_using_DVM_norm": 10.39157970396706,
+      "relative_Linf_percent_using_DVM_max": 10.040035877348434
+    },
+    "sigma": {
+      "relative_L2_percent_using_DVM_norm": 5.531347751421012,
+      "relative_Linf_percent_using_DVM_max": 5.602499975210242
+    },
+    "R": {
+      "relative_L2_percent_using_DVM_norm": 20.41610988567529,
+      "relative_Linf_percent_using_DVM_max": 15.881842424123006
+    },
+    "Delta": {
+      "relative_L2_percent_using_DVM_norm": 47.05682884635507,
+      "relative_Linf_percent_using_DVM_max": 50.010991396930756
+    },
+    "S": {
+      "relative_L2_percent_using_DVM_norm": 21.911309619816336,
+      "relative_Linf_percent_using_DVM_max": 27.24069579218068
+    }
+  },
+  "DVM_stationary_count": 0
+}

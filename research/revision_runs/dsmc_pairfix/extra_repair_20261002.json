@@ -1,0 +1,130 @@
+{
+  "job_id": "65158941",
+  "submitted_utc": "2026-10-02T11:16:22.926058+00:00",
+  "scratch": "/scratch4/workspace/roohie_umass_edu-jfm1439-pairfix-20261001",
+  "archive": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/dsmc_pairfix_20261001",
+  "gate": "65158940",
+  "gate_id": "65158940",
+  "original_gate": "65136724",
+  "tasks": {
+    "0": {
+      "seed": 3,
+      "ppc": [
+        120,
+        960
+      ],
+      "mode": "corrected"
+    },
+    "1": {
+      "seed": 4,
+      "ppc": [
+        120,
+        960
+      ],
+      "mode": "corrected"
+    },
+    "2": {
+      "seed": 5,
+      "ppc": [
+        120,
+        960
+      ],
+      "mode": "corrected"
+    },
+    "3": {
+      "seed": 6,
+      "ppc": [
+        120,
+        960
+      ],
+      "mode": "corrected"
+    },
+    "4": {
+      "seed": 7,
+      "ppc": [
+        120,
+        960
+      ],
+      "mode": "corrected"
+    },
+    "5": {
+      "seed": 8,
+      "ppc": [
+        120,
+        960
+      ],
+      "mode": "corrected"
+    }
+  },
+  "physics": "existing gated corrected.cpp and binary unchanged; fresh version-specific checkpoints",
+  "original_controls_reused": {
+    "120_1": {
+      "path": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/outputs/dsmc/ppc120_seed1/M3_final.csv",
+      "sha256": "e877554f22a77d8f68a460fba0178d05a4995779f91b1f2bf8a112540eec56d2"
+    },
+    "120_2": {
+      "path": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/outputs/dsmc/ppc120_seed2/M3_final.csv",
+      "sha256": "613284ff62ca5b4b1198986c7216580c8f973e253e4ba6e032427f75114c05be"
+    },
+    "120_3": {
+      "path": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/outputs/dsmc/ppc120_seed3/M3_final.csv",
+      "sha256": "1ace9cfc8756d9ccd9a5e571bfea1582f3cc807d094f6182c009c5ecb0b7b092"
+    },
+    "120_4": {
+      "path": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/outputs/dsmc/ppc120_seed4/M3_final.csv",
+      "sha256": "fd8c0f4a1b99997da40c46344d6e74745124da86c0b82d3b9f0c55cb1d191563"
+    },
+    "120_5": {
+      "path": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/outputs/dsmc/ppc120_seed5/M3_final.csv",
+      "sha256": "296909721c05b6411c57a91d8d865d5e3258111589142bd9f714d8c0fd687c10"
+    },
+    "120_6": {
+      "path": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/outputs/dsmc/ppc120_seed6/M3_final.csv",
+      "sha256": "b302e69b8b563a9e8b26e2ac8d9c7111a7295b50872227a2a12763859facc7d5"
+    },
+    "120_7": {
+      "path": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/outputs/dsmc/ppc120_seed7/M3_final.csv",
+      "sha256": "e8081fd424f28fdcf6073af8b13fc7f521444897bb98ff7d9fc0d0e1ed7f504e"
+    },
+    "120_8": {
+      "path": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/outputs/dsmc/ppc120_seed8/M3_final.csv",
+      "sha256": "e1a5eee1216b54d7a9f0f2b0df3042fcaddc2171008c14911d73a64a51c4f368"
+    },
+    "960_1": {
+      "path": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/outputs/dsmc/ppc960_seed1/M3_final.csv",
+      "sha256": "10495bdc57dfa899d5a80e09c750cd8baf81b021779c2c065ff25e8b690b17f2"
+    },
+    "960_2": {
+      "path": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/outputs/dsmc/ppc960_seed2/M3_final.csv",
+      "sha256": "a7aa319f9b74c6b2739dd3c893f8d329f2da6b4d94a214686a34d8a5ece4f540"
+    },
+    "960_3": {
+      "path": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/outputs/dsmc/ppc960_seed3/M3_final.csv",
+      "sha256": "a49944abbfa58f512d2c19849d8da762a43a92c9b807ac783e00c7862beb52c6"
+    },
+    "960_4": {
+      "path": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/outputs/dsmc/ppc960_seed4/M3_final.csv",
+      "sha256": "01766afc3f2f49360848d8d1935637842ffed6243cc588b633859cc9d915b16c"
+    },
+    "960_5": {
+      "path": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/outputs/dsmc/ppc960_seed5/M3_final.csv",
+      "sha256": "3b8d8aeafcf164f5a0bc876532b973aae1b552aa1d42ec78c8e430b6be46ce9b"
+    },
+    "960_6": {
+      "path": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/outputs/dsmc/ppc960_seed6/M3_final.csv",
+      "sha256": "bb6c31c2e243d0383b5dc4a7dbec55c873ffcc389606c87b2dccd8906a3cf30c"
+    },
+    "960_7": {
+      "path": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/outputs/dsmc/ppc960_seed7/M3_final.csv",
+      "sha256": "0c7a0cd3657cf73df0a107ded57d9f90ffca42c6530dd4742a7fb77b2189fe0a"
+    },
+    "960_8": {
+      "path": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/outputs/dsmc/ppc960_seed8/M3_final.csv",
+      "sha256": "2eef6a9b293d6203c5c90326a27245fdb00640f24a93f27b71655fa6b1764302"
+    }
+  },
+  "runner_sha256": "d0f0d001f825756c97e639341eefff7428feed2f1952b8476cf239194bc94558",
+  "sbatch_sha256": "b5adc3a2cfbc46197e50c562d69aa572319e6889aa3cd86bba7cfc9fe6ffd65a",
+  "resources": "gpu-preempt,1GPU,2CPU,8GB,4h; exclude015/021/057; no array throttle",
+  "queue_before": "64934378_12|article-gate|COMPLETING\n64934378_8|article-gate|COMPLETING\n64934378_6|article-gate|COMPLETING\n65007587_[3-4,6-7,9-23]|article-extend|PENDING\n64934378_46|article-gate|RUNNING\n64934378_47|article-gate|RUNNING\n64934378_45|article-gate|RUNNING\n64934378_42|article-gate|RUNNING\n65007284_5|article-extend|RUNNING\n65007284_1|article-extend|RUNNING\n65007284_0|article-extend|RUNNING\n65150396_[21-53]|curv-sensitivity|PENDING\n65158825|jfm-operator-pair|PENDING\n65158502|tc_HS_Kn10_fine_relax4|PENDING\n65158501|tc_HS_Kn1_base_relax4|PENDING\n65158580|cavity-fm03-build|PENDING\n65111268|nek-r1000-d5-ws320|PENDING\n65158592|pinn-d5-extract-pair|PENDING\n65158586_[0-9]|cavity-fm03|PENDING\n65158582|cavity-fm03-smoke|PENDING\n64246625|pent-kn005-main|RUNNING\n65048413_14|article-seed45|RUNNING\n65048413_10|article-seed45|RUNNING\n65086309_0|article-recover|RUNNING\n65086309_1|article-recover|RUNNING\n65125561|tc_HS_Kn1_fine_resume1|RUNNING\n65143772|fly42-val-n80-dt0.005-full|RUNNING\n65150548|pendar-s08-dense-r24-16|RUNNING\n65150396_0|curv-sensitivity|RUNNING\n65150396_1|curv-sensitivity|RUNNING\n65150396_2|curv-sensitivity|RUNNING\n65150396_3|curv-sensitivity|RUNNING\n65150396_4|curv-sensitivity|RUNNING\n65150396_5|curv-sensitivity|RUNNING\n65150396_6|curv-sensitivity|RUNNING\n65150396_7|curv-sensitivity|RUNNING\n65150396_8|curv-sensitivity|RUNNING\n65150396_9|curv-sensitivity|RUNNING\n65150396_10|curv-sensitivity|RUNNING\n65150396_11|curv-sensitivity|RUNNING\n65150396_13|curv-sensitivity|RUNNING\n65150396_14|curv-sensitivity|RUNNING\n65150396_15|curv-sensitivity|RUNNING\n65150396_16|curv-sensitivity|RUNNING\n65150396_17|curv-sensitivity|RUNNING\n65150396_18|curv-sensitivity|RUNNING\n65150396_19|curv-sensitivity|RUNNING\n65150396_20|curv-sensitivity|RUNNING\n65136705|jfm1439-dvm-a40|PENDING\n65136704|jfm1439-dvm-a10040|PENDING\n65157835_2|jfm1439-dvm-resume|PENDING\n64792316|pendar-v3-2080ti|PENDING\n64792254|pendar-v3-l40s|PENDING\n"
+}

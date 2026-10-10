@@ -1,0 +1,43 @@
+{
+  "job": "65434271",
+  "block": 800,
+  "time": 399.99999999950563,
+  "finished": true,
+  "analysis": {
+    "sampled_blocks": 400,
+    "total_blocks": 800,
+    "stationarity_certified": false,
+    "uncertainty": "Block standard deviation only, not autocorrelation-corrected confidence interval. Higher moment central estimates have finite sample bias.",
+    "finite": true,
+    "min_rho": 0.9947600000000004,
+    "min_theta": 0.994630161390289,
+    "net_stabilization_displacement": 0.8562666666666665,
+    "half_window_relative_l2": {
+      "rho": 0.00497302249930398,
+      "u": 0.0037758802510711024,
+      "uy": 1.4576729701910753,
+      "uz": 1.497234073426188,
+      "theta": 0.006221218176659,
+      "pxx": 0.006321759012021625,
+      "pyy": 0.007120753871623775,
+      "pzz": 0.007353563152970975,
+      "sigma": 0.06526410821666581,
+      "q": 0.05209771186568597,
+      "m": 0.21605428991064357,
+      "R": 0.10137178624571451,
+      "Delta": 0.07895158673315121,
+      "S": 0.07095411735141798,
+      "phi": 0.2710167888216649,
+      "C4": 0.0075470157133649615,
+      "C5x": 0.05978056437028668,
+      "Fq": 0.008146789376163784,
+      "JDelta": 0.015000727179957797,
+      "KDelta": 0.008146789376163784,
+      "Qq": 0.19992251461463315,
+      "QDelta": 0.37417653595381395,
+      "Qsigma": 0.21518345793517268
+    }
+  },
+  "checkpoint": "a7bf20c21d7085cc0c8fcc9d0b68acd86c498202bf73feeebd03a8d636c9508f",
+  "manifest": "d3fbba232ab0ab93f61fc719ec3a4eb18aa266252fd1f23df81fec10c02bbf29"
+}

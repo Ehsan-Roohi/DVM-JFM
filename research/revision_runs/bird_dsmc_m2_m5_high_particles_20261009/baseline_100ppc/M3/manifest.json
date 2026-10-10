@@ -1,0 +1,106 @@
+{
+  "campaign": "bird_dsmc_m2_m5_20261008",
+  "scratch": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/bird_dsmc_m2_m5_20261008",
+  "archive": "/project/pi_roohie_umass_edu/BGK_shock/revision_20260929_gpu_preempt/bird_dsmc_m2_m5_20261008",
+  "cases": [
+    {
+      "task": 0,
+      "Mach": 2,
+      "seed": 202610082,
+      "nx": 800,
+      "upstream_ppc": 100,
+      "dt": 0.005,
+      "L": 30,
+      "warmup_time": 200,
+      "final_time": 400,
+      "sample_interval_steps": 20,
+      "block_steps": 100,
+      "warmup_blocks": 400,
+      "total_blocks": 800
+    },
+    {
+      "task": 1,
+      "Mach": 3,
+      "seed": 202610083,
+      "nx": 800,
+      "upstream_ppc": 100,
+      "dt": 0.005,
+      "L": 45,
+      "warmup_time": 200,
+      "final_time": 400,
+      "sample_interval_steps": 20,
+      "block_steps": 100,
+      "warmup_blocks": 400,
+      "total_blocks": 800
+    },
+    {
+      "task": 2,
+      "Mach": 4,
+      "seed": 202610084,
+      "nx": 800,
+      "upstream_ppc": 100,
+      "dt": 0.005,
+      "L": 60,
+      "warmup_time": 200,
+      "final_time": 400,
+      "sample_interval_steps": 20,
+      "block_steps": 100,
+      "warmup_blocks": 400,
+      "total_blocks": 800
+    },
+    {
+      "task": 3,
+      "Mach": 5,
+      "seed": 202610085,
+      "nx": 800,
+      "upstream_ppc": 100,
+      "dt": 0.005,
+      "L": 75,
+      "warmup_time": 200,
+      "final_time": 400,
+      "sample_interval_steps": 20,
+      "block_steps": 100,
+      "warmup_blocks": 400,
+      "total_blocks": 800
+    }
+  ],
+  "collision": "Bird VHS, omega=1, inverse VSS alpha=1 (isotropic)",
+  "transport": "mu*=T*, relaxation transport scale tau*=mu*/p*=1/rho*; physical monatomic Pr near 2/3, not adjustable BGK parameter",
+  "velocity_reference": "sqrt(kB*T1/m), T1=293K n1=1e20 m=6.64e-26 kB=1.380622e-23",
+  "viscosity_formula": "15 sqrt(m kB Tref/pi)/(2 (5-2omega)(7-2omega) dref^2), dref=4.092e-10; L0=mu1/(rho1*c0)",
+  "sampling": "all 56 Cartesian raw monomials degree<=5 and all 35 collision increments degree<=4 per block; source frame translated in postprocess; block means and temporal convergence required, final_time not stationarity; plus 35 per-cell raw moment increments due to shock stabilization, separately from collisions",
+  "boundary": "original Bird upstream injection/downstream moving-reflection; original shock stabilization retained, net shift recorded. Different from DVM reservoir boundaries.",
+  "limitations": [
+    "initial 800-cell 100 upstream-particles/cell campaign, not grid/particle/time convergence certification",
+    "single independent seed per Mach initially; block confidence requires autocorrelation assessment",
+    "stabilization can add frame transport effects to local budgets; record and assess before budget closure claims"
+  ],
+  "compiler_flags": [
+    "-O2",
+    "-std=legacy",
+    "-ffixed-line-length-none",
+    "-fdefault-real-8",
+    "-fdefault-double-8",
+    "-fno-align-commons",
+    "-fcheck=bounds"
+  ],
+  "sources": {
+    "DSMC1S_original.for": "159f0f8c8aeb14ba1e99acf5fed07f74700934d5cdaad0e7953f40bfde4fb2ee",
+    "DSMC1S_paper.for": "46bbdddbba4bfa64705070ff9ef2c76dad02b0a32e6334540f8a244857580b10",
+    "paper_diagnostics.f90": "b414fa7487f721c37e19d2a5995f5b46e15d020bcfd332891a608d92eab7170b",
+    "postprocess.py": "9b0fe9c25a2a899dc2b2045fa1cea495c745c078a8ae51c9364fbf6b0cd3246a",
+    "preflight.py": "37f34e4b4f1ac80c0d60857cccc399d9079becc95a1fb86a8e07a03933382230",
+    "gate.sbatch": "44afe44040c31ea137fc504772666de6ba22f443788091217f0bdfae90eca759",
+    "chain.py": "04ed2386255261f0741eaa241df6d8f82dfd7c939b67742534a957b441feca8e",
+    "plot.py": "00e476ae4b5f15cabf58bed9b3fe3d56d07bc6010e60220afd41e03d2e12b5f5",
+    "run.sbatch": "4fdf70aaa1fa4f329879a63f562731b6eb726693e0637b6a800b8d59ae9e2340"
+  },
+  "repairs": [
+    "checkpoint all geometry and RNG state, bitwise block restart test",
+    "reset uninitialized SUU and monatomic TROT in legacy output",
+    "double precision legacy REAL throughout",
+    "exact constant VHS omega=1 g*sigma initialized to avoid initial under-bound",
+    "new independent full Cartesian raw moments and accepted-collision increments; no changes to collision scattering/selection except exact initial upper bound"
+  ],
+  "transport_reference": "https://jlupub.ub.uni-giessen.de/bitstreams/9a15ac80-ca95-437d-a1ce-bae8f4f81c52/download"
+}

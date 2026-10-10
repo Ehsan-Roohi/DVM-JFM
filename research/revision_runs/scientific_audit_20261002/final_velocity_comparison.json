@@ -1,0 +1,13 @@
+{
+  "relative_L2_percent": {
+    "rho": 0.028592235372561316,
+    "T": 0.06958778577862898,
+    "qx": 0.08853345363685912,
+    "Rxx_closure": 0.13337467451507154,
+    "Delta_dvm": 0.2057092711485404,
+    "S_dvm": 0.14021982528319443
+  },
+  "denominator": "refined final profile",
+  "steps": 52000,
+  "sha256": "33ce17629b5ecbedc909c7e7fd465b927959bf6fe31e614b6bb71d932419a2bb"
+}

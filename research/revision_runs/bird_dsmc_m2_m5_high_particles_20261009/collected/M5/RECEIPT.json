@@ -1,0 +1,12 @@
+{
+  "DSMC1S.RES": "03d332b79df39b74fcfcfe37f6c0c6fdcc0a7bde838868ed0c87c39306881f96",
+  "status.json": "5ee27bae1f5d6ab56ae524c9f863e4fcc8727f6cdd7ef27fcaf91329a80f7e91",
+  "case.in": "8b85fcf51a75520954c0895385473f1124a3c22e65f0a886651a403f1eb50b2a",
+  "progress.txt": "a04b9723ea3c169016924419d93ea78acccbed419ed0a741bd4fa39f9c8bceaa",
+  "profiles.npz": "de05a9fa9db0b9226bfcb34de852527589f11131463917bdcf5341da90583fb0",
+  "profiles.csv": "314f910ccea807dd53ff5cc943ccc420dbec4d4451d440be17d40b493101101f",
+  "analysis.json": "8d9f7a93cf8137788836b7dad16ff55179e9f66555c14aeedd0cb48e37f6bce1",
+  "chunk_65493675.log": "8427f9d71742f88eccd58fdada60b8cb3f170ff2c33b3d3ecd715311a8f0f0fb",
+  "manifest.json": "85953cea28738120e51a5a371fb1451ff9bb3b8abf5c29de666e8cc786d7effd",
+  "PASS.json": "6b97614ae5b3614a57a716c38da013b4fe5aa973b4329b17d7cc274baa8315fc"
+}

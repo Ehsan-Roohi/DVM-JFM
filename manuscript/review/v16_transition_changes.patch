@@ -1,0 +1,57 @@
+--- v16/main.tex
++++ revised/main.tex
+@@ -178,32 +178,40 @@
+ 
+ The choice of unknowns follows the moment hierarchy, rather than an assumed closure relation. In the usual R26 organization, a total of 13 equations for density (continuity equation), velocity (momentum equations in 3 directions), temperature (energy equation), stress (5 independent equations), and heat-flux (3 equations) are supplemented by seven components of the symmetric trace-free third-order moment $m_{ijk}$, five of the contracted trace-free fourth-order moment $R^{\cl}_{ij}$, and the scalar fourth-order excess $\Delta$ \citep{GuEmerson2009R26}. The last two describe different aspects of the fourth-order content: directional anisotropy and scalar excess relative to equilibrium.
+ 
+-For the normal-shock branch considered here, the distribution is invariant under transverse reflections and interchange of the two transverse velocity coordinates. Reflection makes every off-diagonal moment integrand odd, so those components vanish; interchange gives $R^{\cl}_{yy}=R^{\cl}_{zz}$. The tensor is trace-free by its defining kernel, hence $R^{\cl}_{xx}+2R^{\cl}_{yy}=0$ and $R^{\cl}_{yy}=R^{\cl}_{zz}=-R^{\cl}_{xx}/2$. Appendix~\ref{app:symmetry_proof} gives the componentwise proof, the underlying symmetry assumptions and their discrete-grid counterpart. Spatial one-dimensionality alone would not imply these identities. Nor does the trace condition connect this tensor to the separate scalar excess $\Delta$. We therefore collect the two components relevant to the streamwise heat-flux observation as
+-\begin{equation}
+-  \boldsymbol z(x)=\begin{pmatrix}R^{\cl}_{xx}(x)\\ \Delta(x)\end{pmatrix} .
+-  \label{eq:z_state}
+-\end{equation}
+-This vector is neither the full R26 state nor a representation of every fourth-order moment. It selects the sector whose recovery is at issue.
+-\end{revision}
+-
+-\begin{revision}
+-To see how these two components enter the measured channel, define $B_{xx}[f]=\int |\boldsymbol c|^2c_x^2f\,\dd\boldsymbol v$. The streamwise heat-flux flux is $F_q=u_xq_x+B_{xx}[f]/2$, since $v_x=u_x+c_x$. Its fourth-order kernel separates into trace-free and scalar parts:
++For the normal-shock branch considered here, the distribution is invariant under transverse reflections and interchange of the two transverse velocity coordinates. Reflection makes every off-diagonal moment integrand odd, so those components vanish; interchange gives $R^{\cl}_{yy}=R^{\cl}_{zz}$. The tensor is trace-free by its defining kernel, hence $R^{\cl}_{xx}+2R^{\cl}_{yy}=0$ and $R^{\cl}_{yy}=R^{\cl}_{zz}=-R^{\cl}_{xx}/2$. Appendix~\ref{app:symmetry_proof} gives the componentwise proof and its discrete-grid conditions.
++
++These reductions use symmetries in \emph{velocity space}, not merely dependence on one spatial coordinate. A distribution $f(x,c_x,c_y,c_z)$ can vary only with $x$ while having different transverse velocity populations. Dependence on $x$ alone imposes neither $R^{\cl}_{yy}=R^{\cl}_{zz}$ nor vanishing off-diagonal components. Under the stated normal-shock symmetries, one scalar function, $R^{\cl}_{xx}(x)$, therefore specifies this tensor. The condition $R^{\cl}_{xx}+R^{\cl}_{yy}+R^{\cl}_{zz}=0$ relates its three diagonal components only: it contains no $\Delta$ and supplies no equation for that separate scalar moment. In particular, $\Delta$ is the excess of the scalar moment $\int|\boldsymbol c|^4f\,\dd\boldsymbol v$, not the trace of $R^{\cl}_{ij}$. The isotropic-mixture example in appendix~\ref{app:symmetry_proof} explicitly shows that a zero tensorial moment can coexist with a non-zero scalar excess.
++\end{revision}
++
++\begin{revision}
++The connection to the heat-flux observation follows from the transport term in the heat-flux balance. The heat flux $q_x$ is a third-order moment with kernel $\psi_q=|\boldsymbol c|^2c_x/2$. The flux transporting this moment in the $x$ direction is
++\[
++ F_q=\int v_x\psi_q f\,\dd\boldsymbol v
++     =u_xq_x+\frac12 B_{xx}[f],
++ \qquad B_{xx}[f]=\int |\boldsymbol c|^2c_x^2f\,\dd\boldsymbol v,
++\]
++since $v_x=u_x+c_x$. Thus $F_q$, rather than $q_x$ itself, contains a fourth-order moment. Its kernel has the exact decomposition
+ \[
+  |\boldsymbol c|^2c_x^2
+  =|\boldsymbol c|^2\left(c_x^2-\frac{|\boldsymbol c|^2}{3}\right)
+    +\frac{|\boldsymbol c|^4}{3} .
+ \]
+-The factor $1/3$ comes from taking the trace in three-dimensional velocity space; it is unchanged by the one-dimensional spatial geometry. Substitution of the moment definitions \eqref{eq:Rdef} and \eqref{eq:Deltadef} gives
++The first term selects the tensorial part and the second selects the scalar part; the factor $1/3$ comes from the three-dimensional velocity-space trace. Using \eqref{eq:Rdef} and \eqref{eq:Deltadef} therefore gives
+ \[
+- B_{xx}[f]-B_{xx}[M_d]-7T\sigma_{xx}
++ 2(F_q-u_xq_x)-B_{xx}[M_d]-7T\sigma_{xx}
+  =R^{\cl}_{xx}+\frac{\Delta_d}{3} .
+ \]
+-Thus, after subtracting the known equilibrium and lower-order contributions and removing the factor $1/2$ in $F_q$, the heat-flux observation is
++This identity selects the inverse unknowns: once the equilibrium and lower-order contributions on the left are supplied, the remaining fourth-order information consists of a weighted sum of $R^{\cl}_{xx}$ and $\Delta_d$. To ask whether those two contributions can be recovered separately, we collect them as
++\begin{equation}
++  \boldsymbol z(x)=\begin{pmatrix}R^{\cl}_{xx}(x)\\ \Delta(x)\end{pmatrix} .
++  \label{eq:z_state}
++\end{equation}
++Here $\Delta=\Delta_d$ for the discrete-reference identity above; other reference conventions must be applied consistently to both moments and the subtracted terms. The vector $\boldsymbol z$ denotes the two unknown contributions to this flux, not the full R26 state. Their combination is the scalar observation
+ \begin{equation}
+   \mathcal H\boldsymbol z = R^{\cl}_{xx}+\Delta/3 \equiv S .
+   \label{eq:obs_operator}
+ \end{equation}
+-Here and below $\Delta$ denotes the excess in the chosen, consistently applied reference convention. For the uncorrected discrete-reference moments, $S=2(F_q-u_xq_x)-B_{xx}[M_d]-7T\sigma_{xx}$ and $\Delta=\Delta_d$. With continuum-reference moments, $B_{xx}[M]=5\rho T^2$ replaces the discrete equilibrium contribution. Known display offsets must likewise be carried through the reconstruction. These choices change the subtracted terms, not the coefficients of $\mathcal H$.
++By observation we mean the combination accessible from the heat-flux balance when its source, lower-order terms and an anchor flux are supplied (\S\ref{sec:heatflux}); knowing $q_x$ alone is not a measurement of $S$. With continuum-reference moments, $B_{xx}[M]=5\rho T^2$ replaces the discrete equilibrium contribution. Known display offsets must likewise be carried through the reconstruction. These choices change the subtracted terms, not the coefficients of $\mathcal H$.
+ \end{revision}
+ 
+ \begin{revision}
