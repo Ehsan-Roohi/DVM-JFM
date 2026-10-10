@@ -1,0 +1,137 @@
+{
+  "status": "FULLSTATE_CHUNK_REDUCTION_NO_EVOLUTION",
+  "Mach": 3,
+  "input_sha256": "b564ef786a7a5d4c6a7643ebdcc8a6dc053a1cacbd8fe66a8deeb1a1173bdf2b",
+  "f_npy_sha256": "4fe42c86e6c0136b13ea2ec32f6613e55413a952c988aaa0df0a4ac3671d56bc",
+  "nx": 1800,
+  "nv": 64009,
+  "chunk": 4,
+  "estimated_chunk_bytes": 61448640,
+  "target": "actual stored grid/weights; double four-iteration reconstructed Md",
+  "tau": 1,
+  "coordinate": "x_mfp",
+  "heat_original_CSV_reproduction": {
+    "qx": {
+      "max_abs": 9.05699126807491e-15,
+      "relative_L2": 1.4703687789034126e-15
+    },
+    "sigma_xx": {
+      "max_abs": 1.3421203167926499e-15,
+      "relative_L2": 6.82872090350218e-16
+    },
+    "mxxx": {
+      "max_abs": 3.1086244689504383e-15,
+      "relative_L2": 1.3167696513290904e-15
+    },
+    "Delta": {
+      "max_abs": 3.410605131648481e-13,
+      "relative_L2": 8.365621095964335e-15
+    },
+    "Rxx_closure": {
+      "max_abs": 4.154662724964453e-14,
+      "relative_L2": 2.569733520859626e-15
+    },
+    "Fq_direct": {
+      "max_abs": 2.842170943040401e-14,
+      "relative_L2": 1.2821884742925885e-16
+    },
+    "S_R_plus_Delta3_rec": {
+      "max_abs": 1.624256285026604e-13,
+      "relative_L2": 9.379277036917382e-15
+    }
+  },
+  "scalar_original_CSV_reproduction": {
+    "C4": 2.2737367544323206e-13,
+    "J_Delta": 5.684341886080801e-13,
+    "K_geom": 5.684341886080802e-14,
+    "Delta_rec_from_budget_max": 0.2514942919240042,
+    "Delta_original_reference_max": 2.2937207688755734e-13
+  },
+  "original_table_mask_metrics": {
+    "active_points": 536,
+    "Delta_budget_relL2": 0.03435460523708488,
+    "R_delta0_relL2": 0.6322612929620656,
+    "R_fullDelta_relL2": 0.03102114071203542,
+    "R_budgetDelta_relL2": 0.03536826561353822,
+    "Delta_budget_correlation": 0.9998778310551396,
+    "R_budgetDelta_correlation": 0.9995442949961308
+  },
+  "corrected_outcomes": {
+    "stored_centre": {
+      "S_raw_active5_relL2": 0.028326088398319575,
+      "S_plateau_active2_on_reconstructedS_relL2": 0.019675814887508192,
+      "R_given_directDelta_plateau_relL2": 0.031008287362574476,
+      "R_two_budget_plateau_relL2": 0.03682143865771085,
+      "Delta_budget_plateau_relL2": 0.031211464261218867,
+      "qMd_max": 4.810070898031427e-06,
+      "DeltaMd_max": 0.12208921550830709,
+      "target_mass_error_max": 3.7388752138767245e-07,
+      "target_mean_error_max": 2.6645352591003757e-15,
+      "table_metrics_by_mask": {
+        "fixed_legacy": {
+          "active_points": 536,
+          "Delta_budget_relL2": 0.031211464261218867,
+          "R_delta0_relL2": 0.6322464665977613,
+          "R_fullDelta_relL2": 0.031008287362574476,
+          "R_budgetDelta_relL2": 0.03682143865771085,
+          "Delta_budget_correlation": 0.9999378622071826,
+          "R_budgetDelta_correlation": 0.9995015699439866
+        },
+        "corrected_reconstructed_S": {
+          "active_points": 536,
+          "Delta_budget_relL2": 0.031211464261218867,
+          "R_delta0_relL2": 0.6322464665977613,
+          "R_fullDelta_relL2": 0.031008287362574476,
+          "R_budgetDelta_relL2": 0.03682143865771085,
+          "Delta_budget_correlation": 0.9999378622071826,
+          "R_budgetDelta_correlation": 0.9995015699439866
+        }
+      },
+      "anchor_Fq_actual": 2.507698148600171,
+      "anchor_actual_minus_original": 0.007689960403562068,
+      "anchor_actual_over_upstream_equilibrium_flux": 1.003077346220951,
+      "source_integrated_S_max": 0.000566825955176665,
+      "source_integrated_S_relative_norm": 3.76034522132812e-05,
+      "source_integrated_S_plateau_relative_norm": 3.53248464330392e-05
+    },
+    "recomputed_macros": {
+      "S_raw_active5_relL2": 0.02832646170833019,
+      "S_plateau_active2_on_reconstructedS_relL2": 0.019676012729152675,
+      "R_given_directDelta_plateau_relL2": 0.031008596851009013,
+      "R_two_budget_plateau_relL2": 0.036821745293947244,
+      "Delta_budget_plateau_relL2": 0.031211399289766833,
+      "qMd_max": 4.81007024433211e-06,
+      "DeltaMd_max": 0.12208882820009492,
+      "target_mass_error_max": 1.3322676295501878e-15,
+      "target_mean_error_max": 3.1086244689504383e-15,
+      "table_metrics_by_mask": {
+        "fixed_legacy": {
+          "active_points": 536,
+          "Delta_budget_relL2": 0.031211399289766833,
+          "R_delta0_relL2": 0.6322465261468939,
+          "R_fullDelta_relL2": 0.031008596851009013,
+          "R_budgetDelta_relL2": 0.036821745293947244,
+          "Delta_budget_correlation": 0.9999378613865311,
+          "R_budgetDelta_correlation": 0.9995015612911535
+        },
+        "corrected_reconstructed_S": {
+          "active_points": 536,
+          "Delta_budget_relL2": 0.031211399289766833,
+          "R_delta0_relL2": 0.6322465261468939,
+          "R_fullDelta_relL2": 0.031008596851009013,
+          "R_budgetDelta_relL2": 0.036821745293947244,
+          "Delta_budget_correlation": 0.9999378613865311,
+          "R_budgetDelta_correlation": 0.9995015612911535
+        }
+      },
+      "anchor_Fq_actual": 2.5076969539174256,
+      "anchor_actual_minus_original": 0.0076887657208168925,
+      "anchor_actual_over_upstream_equilibrium_flux": 1.0030781606436803,
+      "source_integrated_S_max": 0.0005668259435643467,
+      "source_integrated_S_relative_norm": 3.7603447398803944e-05,
+      "source_integrated_S_plateau_relative_norm": 3.532484680293831e-05
+    }
+  },
+  "elapsed_s": 258.98500000001513,
+  "limitations": "Finite-time steady differential budgets; no evolution or stationarity certification. Reconstructed double target is not original float32/CUDA history. Masks and moment centre explicitly distinguished."
+}

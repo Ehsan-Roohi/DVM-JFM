@@ -1,0 +1,139 @@
+{
+  "status": "FULLSTATE_ARCHIVED_CONTRACT_RECONCILED_WINDOW7",
+  "Mach": 2,
+  "input_sha256": "8959d23bfe7643d0010bedd65516c6985103b50e3f15c1cc862893180c770a02",
+  "distribution_npy_sha256": "5a91cb52d58693c83b60861e3c6f8c6231061b13f50db280205ae6cb8dbfef7e",
+  "heat_CSV_reproduction": {
+    "qx": {
+      "max_abs": 3.0196656806980027e-15,
+      "relative_L2": 2.615643068263567e-15
+    },
+    "sigma_xx": {
+      "max_abs": 7.28583859910259e-16,
+      "relative_L2": 9.616147784478858e-16
+    },
+    "mxxx": {
+      "max_abs": 8.881784197001252e-16,
+      "relative_L2": 1.8446291674642345e-15
+    },
+    "Delta": {
+      "max_abs": 5.684341886080802e-14,
+      "relative_L2": 1.6012229370524874e-14
+    },
+    "Rxx_closure": {
+      "max_abs": 1.3433698597964394e-14,
+      "relative_L2": 5.442024378854053e-15
+    },
+    "Fq_direct": {
+      "max_abs": 1.0658141036401503e-14,
+      "relative_L2": 1.4085320945700645e-16
+    },
+    "S_R_plus_Delta3_rec": {
+      "max_abs": 2.752312266984802e-14,
+      "relative_L2": 1.0834773142873802e-14
+    }
+  },
+  "scalar_CSV_reproduction": {
+    "forcing_max_abs": 9.094947017729282e-13,
+    "Delta_rec_max_abs": 9.15045816896054e-13,
+    "Delta_ref_max_abs": 5.639932965095795e-14
+  },
+  "legacy_table_exact_mask_metrics": {
+    "active_points": 622,
+    "Delta_budget_relL2": 0.038335798859773264,
+    "R_delta0_relL2": 0.6436199610572408,
+    "R_fullDelta_relL2": 0.0335646578473875,
+    "R_budgetDelta_relL2": 0.04089891559332955,
+    "Delta_budget_correlation": 0.9998541758092613,
+    "R_budgetDelta_correlation": 0.9995988852990364
+  },
+  "corrected_table_metrics_window7": {
+    "stored_centre": {
+      "fixed_legacy": {
+        "active_points": 622,
+        "Delta_budget_relL2": 0.037576248384944035,
+        "R_delta0_relL2": 0.6436200605570501,
+        "R_fullDelta_relL2": 0.03356470623725403,
+        "R_budgetDelta_relL2": 0.04426941773680928,
+        "Delta_budget_correlation": 0.9998806661990217,
+        "R_budgetDelta_correlation": 0.9995006569277919
+      },
+      "corrected_reconstructed_S": {
+        "active_points": 622,
+        "Delta_budget_relL2": 0.037576248384944035,
+        "R_delta0_relL2": 0.6436200605570501,
+        "R_fullDelta_relL2": 0.03356470623725403,
+        "R_budgetDelta_relL2": 0.04426941773680928,
+        "Delta_budget_correlation": 0.9998806661990217,
+        "R_budgetDelta_correlation": 0.9995006569277919
+      }
+    },
+    "recomputed_macros": {
+      "fixed_legacy": {
+        "active_points": 622,
+        "Delta_budget_relL2": 0.03757489796070437,
+        "R_delta0_relL2": 0.6436186766042536,
+        "R_fullDelta_relL2": 0.033564286069839064,
+        "R_budgetDelta_relL2": 0.04426869842611469,
+        "Delta_budget_correlation": 0.9998806426387271,
+        "R_budgetDelta_correlation": 0.999500656706239
+      },
+      "corrected_reconstructed_S": {
+        "active_points": 622,
+        "Delta_budget_relL2": 0.03757489796070437,
+        "R_delta0_relL2": 0.6436186766042536,
+        "R_fullDelta_relL2": 0.033564286069839064,
+        "R_budgetDelta_relL2": 0.04426869842611469,
+        "Delta_budget_correlation": 0.9998806426387271,
+        "R_budgetDelta_correlation": 0.999500656706239
+      }
+    }
+  },
+  "target_moment_errors_vs_requested_macros": {
+    "stored_centre": {
+      "mass_max_abs": 8.881784197001252e-16,
+      "mean_max_abs": 1.7763568394002505e-15,
+      "temperature_max_abs": 2.220446049250313e-15,
+      "target_arithmetic": "float64 four-iteration on actual stored grid/weights; not original GPU identity"
+    },
+    "recomputed_macros": {
+      "mass_max_abs": 8.881784197001252e-16,
+      "mean_max_abs": 1.7763568394002505e-15,
+      "temperature_max_abs": 2.220446049250313e-15,
+      "target_arithmetic": "float64 four-iteration on actual stored grid/weights; not original GPU identity"
+    }
+  },
+  "source_and_anchor_diagnostics": {
+    "stored_centre": {
+      "qMd_max": 3.909406132152071e-11,
+      "DeltaMd_max": 0.029614553921655684,
+      "anchor_Fq_actual": 2.501557576502094,
+      "anchor_actual_minus_original": 0.0015521530386402027,
+      "anchor_actual_over_upstream_equilibrium_flux": 1.0006217184830506,
+      "source_integrated_S_max": 2.8230904142326902e-09,
+      "source_integrated_S_relative_norm": 1.4159846287207204e-09,
+      "source_integrated_S_plateau_relative_norm": 1.4094287137357578e-09
+    },
+    "recomputed_macros": {
+      "qMd_max": 3.909494949994041e-11,
+      "DeltaMd_max": 0.029614591015374003,
+      "anchor_Fq_actual": 2.501557544470549,
+      "anchor_actual_minus_original": 0.0015521210070952307,
+      "anchor_actual_over_upstream_equilibrium_flux": 1.000622083438667,
+      "source_integrated_S_max": 2.8230839390264096e-09,
+      "source_integrated_S_relative_norm": 1.4159793189282001e-09,
+      "source_integrated_S_plateau_relative_norm": 1.4094298566234444e-09
+    }
+  },
+  "contract": {
+    "heat_derivative_smoothing": "one binomial1,4,6,4,1 pass on u only",
+    "scalar_derivative_smoothing": "boxcar7 on J,u,K",
+    "coordinate": "x_mfp",
+    "tau": 1,
+    "plateau": "mean first/last8% removed",
+    "fixed_legacy_mask": "abs(plateau(originalSrec))>=.02peak",
+    "corrected_mask": "abs(plateau(correctedSrec))>=.02peak"
+  },
+  "supersedes": "Original RESULT.json scalar-window1 table outputs are unqualified historical diagnostics; use this contract and scalar_window7_reconciliation.npz",
+  "limitations": "Actual finite-time profile; differential-budget derivative7 and plateau2% convention retained; double target reconstruction, no evolution/stationarity."
+}

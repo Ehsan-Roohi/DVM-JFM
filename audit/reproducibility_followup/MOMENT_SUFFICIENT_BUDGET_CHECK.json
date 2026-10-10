@@ -1,0 +1,128 @@
+[
+  {
+    "Mach": 2,
+    "input_sha256": "84b5095c4718145e39d44b7611ae638627296311618a80b9defff85efaea81bc",
+    "status": "MOMENT_SUFFICIENT_CONDITIONAL_TARGET_NOT_FULLSTATE_REGENERATION",
+    "nx": 1600,
+    "velocity_grid": [
+      97,
+      19,
+      19
+    ],
+    "vmax": 12.0,
+    "tau_in_stored_x": 1,
+    "anchor_Fq_actual_minus_old": 0.0015521530386402027,
+    "metrics": {
+      "archived": {
+        "S_raw_active5_relL2": 0.025516034135743885,
+        "S_plateau_active2_relL2": 0.021290959374557838,
+        "R_given_archived_Delta_plateau_active2_relL2": 0.03371022686699688
+      },
+      "actual_anchor": {
+        "S_raw_active5_relL2": 0.02731569264330011,
+        "S_plateau_active2_relL2": 0.021290959374557838,
+        "R_given_archived_Delta_plateau_active2_relL2": 0.03371022686699688
+      },
+      "anchor_and_qMd": {
+        "S_raw_active5_relL2": 0.027315692556415326,
+        "S_plateau_active2_relL2": 0.021290959872502704,
+        "R_given_archived_Delta_plateau_active2_relL2": 0.03371022765934791
+      },
+      "anchor_qMd_and_geometry": {
+        "S_raw_active5_relL2": 0.027494258927427684,
+        "S_plateau_active2_relL2": 0.021391204409684846,
+        "R_given_archived_Delta_plateau_active2_relL2": 0.03386680449797379
+      }
+    },
+    "qMd_max": 3.9093794008235866e-11,
+    "qMd_4_vs_12_max": 9.914396309615305e-15,
+    "qMd_float32_vs64_max": 3.3211024862725284e-06,
+    "target4_mean_error_max": 1.3322676295501878e-15,
+    "target4_temperature_error_max": 1.9984014443252818e-15,
+    "plateau_removed_anchor_effect_max": 1.3877787807814457e-17
+  },
+  {
+    "Mach": 3,
+    "input_sha256": "fd497ff998bd2f180af1b0a5b96dce2314764c57a73783fd60e758cb15f2c5b0",
+    "status": "MOMENT_SUFFICIENT_CONDITIONAL_TARGET_NOT_FULLSTATE_REGENERATION",
+    "nx": 1800,
+    "velocity_grid": [
+      121,
+      23,
+      23
+    ],
+    "vmax": 16.0,
+    "tau_in_stored_x": 1,
+    "anchor_Fq_actual_minus_old": 0.0076899604035629565,
+    "metrics": {
+      "archived": {
+        "S_raw_active5_relL2": 0.027302775487453378,
+        "S_plateau_active2_relL2": 0.020032661886694704,
+        "R_given_archived_Delta_plateau_active2_relL2": 0.03163050572759381
+      },
+      "actual_anchor": {
+        "S_raw_active5_relL2": 0.028323798269760902,
+        "S_plateau_active2_relL2": 0.020032661886694697,
+        "R_given_archived_Delta_plateau_active2_relL2": 0.03163050572759382
+      },
+      "anchor_and_qMd": {
+        "S_raw_active5_relL2": 0.028323798254507048,
+        "S_plateau_active2_relL2": 0.02003266195384236,
+        "R_given_archived_Delta_plateau_active2_relL2": 0.031630505833232056
+      },
+      "anchor_qMd_and_geometry": {
+        "S_raw_active5_relL2": 0.02869401801164894,
+        "S_plateau_active2_relL2": 0.020286546364782033,
+        "R_given_archived_Delta_plateau_active2_relL2": 0.032030803880334524
+      }
+    },
+    "qMd_max": 4.170483274314763e-11,
+    "qMd_4_vs_12_max": 3.2624837130569225e-14,
+    "qMd_float32_vs64_max": 8.82606204535734e-06,
+    "target4_mean_error_max": 1.7763568394002505e-15,
+    "target4_temperature_error_max": 3.552713678800501e-15,
+    "plateau_removed_anchor_effect_max": 3.552713678800501e-15
+  },
+  {
+    "Mach": 5,
+    "input_sha256": "6be12508b8821de214535a3c9f1786eb52665128356cef1d887745e7ac47bd4b",
+    "status": "MOMENT_SUFFICIENT_CONDITIONAL_TARGET_NOT_FULLSTATE_REGENERATION",
+    "nx": 2200,
+    "velocity_grid": [
+      141,
+      27,
+      27
+    ],
+    "vmax": 22.0,
+    "tau_in_stored_x": 1,
+    "anchor_Fq_actual_minus_old": 0.06339758380640292,
+    "metrics": {
+      "archived": {
+        "S_raw_active5_relL2": 0.019296864264506226,
+        "S_plateau_active2_relL2": 0.014359428127892518,
+        "R_given_archived_Delta_plateau_active2_relL2": 0.022816995303250594
+      },
+      "actual_anchor": {
+        "S_raw_active5_relL2": 0.020106381357166594,
+        "S_plateau_active2_relL2": 0.014359428127892525,
+        "R_given_archived_Delta_plateau_active2_relL2": 0.02281699530325061
+      },
+      "anchor_and_qMd": {
+        "S_raw_active5_relL2": 0.020106377322358558,
+        "S_plateau_active2_relL2": 0.014359436566113382,
+        "R_given_archived_Delta_plateau_active2_relL2": 0.022817008539810148
+      },
+      "anchor_qMd_and_geometry": {
+        "S_raw_active5_relL2": 0.020349708333979175,
+        "S_plateau_active2_relL2": 0.014537913934981744,
+        "R_given_archived_Delta_plateau_active2_relL2": 0.02310130399420832
+      }
+    },
+    "qMd_max": 5.641033269774537e-08,
+    "qMd_4_vs_12_max": 1.334296677586222e-13,
+    "qMd_float32_vs64_max": 3.8537928729270837e-05,
+    "target4_mean_error_max": 2.6645352591003757e-15,
+    "target4_temperature_error_max": 1.176836406102666e-14,
+    "plateau_removed_anchor_effect_max": 5.684341886080802e-14
+  }
+]

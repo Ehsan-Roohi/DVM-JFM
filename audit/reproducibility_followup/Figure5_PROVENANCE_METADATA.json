@@ -1,0 +1,100 @@
+{
+  "audit": "read-only source/log/archive provenance; no solver execution",
+  "files": [
+    {
+      "local": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\followup\\frozen_figure5_source\\M3_shakhov_cons_channel_consistency_sourcefixed_latest.log",
+      "bytes": 1359,
+      "sha256": "c7b13d91712e7aa3e1347cd13b492a22908550af85345b4b074ba0d72d2dc6b2"
+    },
+    {
+      "local": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\followup\\frozen_figure5_source\\M3_shakhov_cons_RH_Pr23_seg5.log",
+      "bytes": 1703,
+      "sha256": "7e634deed800dd05fc4d0eb67cf3299671867ddc2a8b4df3e72b5470befa32ae"
+    },
+    {
+      "local": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\followup\\frozen_figure5_source\\postprocess_shakhov_channel_consistency.py",
+      "bytes": 9013,
+      "sha256": "7a5c89202baf85b577812da799a7a9c485147ec3cf131ad82695858ee4e2bc3e"
+    },
+    {
+      "local": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\followup\\frozen_figure5_source\\run_shakhov_conservative_sweep.py",
+      "bytes": 15163,
+      "sha256": "b16244133c3674304a31cca716c7829dcc846f05c36485bf94f5b08aee7913ff"
+    },
+    {
+      "local": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\followup\\M2_delta_budget.profiles.csv",
+      "bytes": 446865,
+      "sha256": "34898d1db6276fe290694f1f3af82d1f37790239d10d878d36e7595560c5f7a2"
+    },
+    {
+      "local": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\followup\\M3_delta_budget.profiles.csv",
+      "bytes": 495986,
+      "sha256": "665c9fa4a391e571886858fefbdd27dc5da2ca1308c49cb4871254c0b0016a2d"
+    },
+    {
+      "local": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\followup\\M5_delta_budget.profiles.csv",
+      "bytes": 598417,
+      "sha256": "b50194576a433054c33cfcb0e50e1df3433b205495bae9f63e838c979e2ec90d"
+    }
+  ],
+  "figure5_candidate": {
+    "archive": "/project/pi_roohie_umass_edu/BGK_shock/ref/shakhov_m3_cons/M3_shakhov_cons_RH_Pr23_fullstate.npz",
+    "bytes": 95780214,
+    "sha256": "9077c010ac9169e573e8b47c55864496f220ea9f5c5f517b08ac90603fb45011",
+    "duplicate": "M3_shakhov_cons_RH_Pr23_seg5.npz",
+    "exact_fullstate_to_CSV_binding": "CPU_frozen_source_reproduced_profiles_within_declared_float32_backend_tolerance_not_byteidentity"
+  },
+  "figure5_outputs": {
+    "metrics": "29b46b616e1ebbc2a6bde3ca42e22a335cac58ddf211f43378cbe197ff00c1f1",
+    "profiles": "c0fa17cc456bd40b5227fa710a36080fcc8473315f20e7c5002bd58e29971a91"
+  },
+  "closure_review": {
+    "status": "PASS_INDEPENDENT_FIGURE5_CLOSURE_READBACK",
+    "hashes_verified": [
+      {
+        "path": "EXECUTION_RECEIPT.json",
+        "bytes": 693,
+        "sha256": "d2b5bf829bd6c80835eec9b0c11c46df6487681e3c6ff6a4c5b21e63a16af1da"
+      },
+      {
+        "path": "stdout.log",
+        "bytes": 1143,
+        "sha256": "0348747333dc7f0c06c3b9ad367d225265db873579206d704e520f7befa44818"
+      },
+      {
+        "path": "stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "output/M3_sourcefixed_frozen_cpu_regenerated/M3_sourcefixed_frozen_cpu_regenerated.metrics.csv",
+        "bytes": 726,
+        "sha256": "a7833bba409b9f339701c4aaf8f7bfcd5462da13c9d06972759cba044a252dcd"
+      },
+      {
+        "path": "output/M3_sourcefixed_frozen_cpu_regenerated/M3_sourcefixed_frozen_cpu_regenerated.pdf",
+        "bytes": 25424,
+        "sha256": "0acf22ba76a3b29cad3f9e38248649670875aa7b7dc99a20bae79e0f83dac622"
+      },
+      {
+        "path": "output/M3_sourcefixed_frozen_cpu_regenerated/M3_sourcefixed_frozen_cpu_regenerated.png",
+        "bytes": 251999,
+        "sha256": "c8bb798ff2088f86e446ac263a4f320cf5b0d9ee08c90306eda8cad987c08a34"
+      },
+      {
+        "path": "output/M3_sourcefixed_frozen_cpu_regenerated/M3_sourcefixed_frozen_cpu_regenerated.profiles.csv",
+        "bytes": 485992,
+        "sha256": "f7867ba511848c6166b881a0e0f6e1e0f708fca2d6cb445b2aca1e477de55c21"
+      }
+    ],
+    "rows": 1800,
+    "profile_columns": 17,
+    "principal_max_relative_L2": 1.6821232181986074e-05,
+    "principal_max_peak_scaled_difference": 1.3593699824872806e-05,
+    "x_and_mask_exact": true,
+    "metric_CSV_internal_consistency": true,
+    "elapsed_s": 272.2381080139894,
+    "minRAMGiB": 4.7778167724609375,
+    "scientific_limits": "CPU float32 agrees within explicitly declared bands, not byte identity; original signedtarget negativity and finite-time state retained; no shock evolution/stationarity evidence."
+  }
+}

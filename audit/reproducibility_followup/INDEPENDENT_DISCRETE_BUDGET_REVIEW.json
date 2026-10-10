@@ -1,0 +1,69 @@
+{
+  "status": "PASS_BOUNDED_INDEPENDENT_CONTROLS",
+  "reviewed_source_sha256": "4d8195899928ce329353ea60543576419a09c3d95b7ec43aee9011efd5d15d7f",
+  "separable_vs_dense_smallgrid": [
+    {
+      "iterations": 4,
+      "errors": {
+        "q": 1.0269562977782698e-15,
+        "delta": 5.329070518200751e-15
+      }
+    },
+    {
+      "iterations": 12,
+      "errors": {
+        "q": 8.743006318923108e-16,
+        "delta": 8.881784197001252e-15
+      }
+    }
+  ],
+  "fixture_controls": [
+    "continuum decomposition",
+    "discrete decomposition",
+    "same-centre geometry integral; mixed field moments rejected",
+    "bad Bxx target rejected",
+    "f=Md old-source rejected",
+    "wrong sign rejected",
+    "wrong anchor rejected",
+    "coordinate scaling and mixed-scale rejection"
+  ],
+  "integrated_target_sensitivity": [
+    {
+      "Mach": 2,
+      "input_sha256": "84b5095c4718145e39d44b7611ae638627296311618a80b9defff85efaea81bc",
+      "float4_vs_double4_integrated_S_max": 1.7829550164015495e-06,
+      "float4_vs_double4_integrated_S_plateau_max": 1.2143942316536482e-06,
+      "double12_vs_double4_integrated_S_max": 3.2010527041548276e-15,
+      "S_plateau_active2_relL2_by_target": {
+        "double4": 0.021290959872502704,
+        "double12": 0.021290959872501736,
+        "float4": 0.021290835301444568
+      }
+    },
+    {
+      "Mach": 3,
+      "input_sha256": "fd497ff998bd2f180af1b0a5b96dce2314764c57a73783fd60e758cb15f2c5b0",
+      "float4_vs_double4_integrated_S_max": 2.2722997187807348e-05,
+      "float4_vs_double4_integrated_S_plateau_max": 1.5550629285598916e-05,
+      "double12_vs_double4_integrated_S_max": 1.5154544286133387e-14,
+      "S_plateau_active2_relL2_by_target": {
+        "double4": 0.02003266195384236,
+        "double12": 0.020032661953842262,
+        "float4": 0.020032224494877827
+      }
+    },
+    {
+      "Mach": 5,
+      "input_sha256": "6be12508b8821de214535a3c9f1786eb52665128356cef1d887745e7ac47bd4b",
+      "float4_vs_double4_integrated_S_max": 9.569581240187475e-05,
+      "float4_vs_double4_integrated_S_plateau_max": 7.561986287818456e-05,
+      "double12_vs_double4_integrated_S_max": 2.1405099914773018e-13,
+      "S_plateau_active2_relL2_by_target": {
+        "double4": 0.014359436566113382,
+        "double12": 0.014359436566113727,
+        "float4": 0.014359326376590134
+      }
+    }
+  ],
+  "limitations": "Factorized float32 arithmetic is not bitwise Torch/CUDA target reproduction; fullstate lineage remains distinct."
+}

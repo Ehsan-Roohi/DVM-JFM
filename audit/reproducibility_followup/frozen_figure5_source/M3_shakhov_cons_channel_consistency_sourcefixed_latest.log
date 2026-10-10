@@ -1,0 +1,26 @@
+
+=== metrics ===
+case                            : M3_shakhov_cons_channel_consistency_sourcefixed_latest
+Pr                              : 0.666667
+Kn                              : 1
+S_flux_relL2_active             : 0.00063807
+S_flux_corr_active              : 1
+Delta_source_relL2_active       : 2.0721e-07
+Delta_source_corr_active        : 1
+R_delta0_relL2_active           : 0.683551
+R_two_channel_relL2_active      : 0.00103859
+R_two_channel_corr_active       : 1
+mean_qS_over_q_active           : 0.333323
+mean_Qq_over_q_active           : -0.666677
+Delta_target_over_Delta_active  : 2.0721e-07
+Delta_target_peak               : 1.29836e-05
+max_cons_mass                   : 1.43051e-06
+max_cons_momx                   : 5.72205e-06
+max_cons_energy                 : 2.86102e-05
+min_f                           : 1e-30
+min_fS                          : -9.95668e-05
+
+[saved]
+figures/week2_jfm_upgrade_shakhov_cons/M3_shakhov_cons_channel_consistency_sourcefixed_latest/M3_shakhov_cons_channel_consistency_sourcefixed_latest.metrics.csv
+figures/week2_jfm_upgrade_shakhov_cons/M3_shakhov_cons_channel_consistency_sourcefixed_latest/M3_shakhov_cons_channel_consistency_sourcefixed_latest.profiles.csv
+figures/week2_jfm_upgrade_shakhov_cons/M3_shakhov_cons_channel_consistency_sourcefixed_latest/M3_shakhov_cons_channel_consistency_sourcefixed_latest.png

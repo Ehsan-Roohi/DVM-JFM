@@ -1,0 +1,26 @@
+
+=== metrics ===
+case                            : M3_sourcefixed_frozen_cpu_regenerated
+Pr                              : 0.666667
+Kn                              : 1
+S_flux_relL2_active             : 0.000638114
+S_flux_corr_active              : 1
+Delta_source_relL2_active       : 2.3997e-07
+Delta_source_corr_active        : 1
+R_delta0_relL2_active           : 0.68355
+R_two_channel_relL2_active      : 0.00103867
+R_two_channel_corr_active       : 1
+mean_qS_over_q_active           : 0.333322
+mean_Qq_over_q_active           : -0.666678
+Delta_target_over_Delta_active  : 2.3997e-07
+Delta_target_peak               : 1.91225e-05
+max_cons_mass                   : 1.54972e-06
+max_cons_momx                   : 5.96046e-06
+max_cons_energy                 : 2.86102e-05
+min_f                           : 1e-30
+min_fS                          : -9.9567e-05
+
+[saved]
+output/M3_sourcefixed_frozen_cpu_regenerated/M3_sourcefixed_frozen_cpu_regenerated.metrics.csv
+output/M3_sourcefixed_frozen_cpu_regenerated/M3_sourcefixed_frozen_cpu_regenerated.profiles.csv
+output/M3_sourcefixed_frozen_cpu_regenerated/M3_sourcefixed_frozen_cpu_regenerated.png

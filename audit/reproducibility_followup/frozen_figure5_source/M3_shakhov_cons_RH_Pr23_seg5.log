@@ -1,0 +1,22 @@
+[override] using exact RH boundary states
+[RH left ] 1.0 3.872983346207417 1.0
+[RH right] 3.0 1.2909944487358056 3.6666666666666665
+========================================================================================
+[Conservative discrete Shakhov sweep]
+init: ref/shakhov_m3_cons/M3_shakhov_cons_RH_Pr23_seg4.npz
+out : ref/shakhov_m3_cons/M3_shakhov_cons_RH_Pr23_seg5.npz
+device: cuda
+nx,nv: 1800 64009
+dx: 0.06670372188091278 Kn: 1.0 Pr: 0.6666666666666666
+states L: 1.0 3.872983346207417 1.0
+states R: 3.0 1.2909944487358056 3.6666666666666665
+max_iter: 500 omega: 0.04
+target_chunk: 32
+========================================================================================
+[iter 000001] max|drho|=5.603e-06 rhoL=1 rhoR=2.99345 q_peak=6.49404 Tmin=1 qS/q=0.332742 target=0.333333 max_cons=(1.4e-06,5.7e-06,2.9e-05) min_fS=-9.957e-05
+[iter 000100] max|drho|=5.424e-04 rhoL=1 rhoR=2.99351 q_peak=6.49405 Tmin=1 qS/q=0.332319 target=0.333333 max_cons=(1.4e-06,5.7e-06,2.9e-05) min_fS=-9.957e-05
+[iter 000200] max|drho|=5.457e-04 rhoL=1 rhoR=2.99357 q_peak=6.49408 Tmin=1 qS/q=0.332274 target=0.333333 max_cons=(1.4e-06,5.7e-06,2.9e-05) min_fS=-9.957e-05
+[iter 000300] max|drho|=5.417e-04 rhoL=1 rhoR=2.99361 q_peak=6.49411 Tmin=1 qS/q=0.338298 target=0.333333 max_cons=(1.4e-06,5.7e-06,2.9e-05) min_fS=-9.957e-05
+[iter 000400] max|drho|=5.363e-04 rhoL=1 rhoR=2.99366 q_peak=6.49414 Tmin=1 qS/q=0.247779 target=0.333333 max_cons=(1.4e-06,5.7e-06,2.9e-05) min_fS=-9.957e-05
+[iter 000500] max|drho|=5.296e-04 rhoL=1 rhoR=2.99369 q_peak=6.49418 Tmin=1 qS/q=0.331954 target=0.333333 max_cons=(1.4e-06,5.7e-06,2.9e-05) min_fS=-9.957e-05
+[done] wrote ref/shakhov_m3_cons/M3_shakhov_cons_RH_Pr23_seg5.npz

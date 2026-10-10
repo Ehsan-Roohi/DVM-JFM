@@ -1,0 +1,30 @@
+{
+  "kind": "FROZEN_SOURCE_POSTPROCESS_ONLY",
+  "exit_code": 0,
+  "failure": null,
+  "elapsed_s": 272.2381080139894,
+  "initial_available_GiB": 7.894691467285156,
+  "minimum_available_GiB": 4.7778167724609375,
+  "cpu_count": 1,
+  "command": [
+    "/project/pi_roohie_umass_edu/roohie_umass_edu/.conda/envs/dde-tf/bin/python",
+    "sources/postprocess_shakhov_channel_consistency.py",
+    "--fullstate",
+    "input.npz",
+    "--case",
+    "M3_sourcefixed_frozen_cpu_regenerated",
+    "--outdir",
+    "output",
+    "--Pr",
+    "0.6666666666666666",
+    "--Kn",
+    "1",
+    "--device",
+    "cpu",
+    "--target-chunk",
+    "32",
+    "--moment-chunk",
+    "32"
+  ],
+  "no_shock_evolution": true
+}

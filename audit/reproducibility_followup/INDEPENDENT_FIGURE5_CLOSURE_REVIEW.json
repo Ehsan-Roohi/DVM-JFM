@@ -1,0 +1,49 @@
+{
+  "status": "PASS_INDEPENDENT_FIGURE5_CLOSURE_READBACK",
+  "hashes_verified": [
+    {
+      "path": "EXECUTION_RECEIPT.json",
+      "bytes": 693,
+      "sha256": "d2b5bf829bd6c80835eec9b0c11c46df6487681e3c6ff6a4c5b21e63a16af1da"
+    },
+    {
+      "path": "stdout.log",
+      "bytes": 1143,
+      "sha256": "0348747333dc7f0c06c3b9ad367d225265db873579206d704e520f7befa44818"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "output/M3_sourcefixed_frozen_cpu_regenerated/M3_sourcefixed_frozen_cpu_regenerated.metrics.csv",
+      "bytes": 726,
+      "sha256": "a7833bba409b9f339701c4aaf8f7bfcd5462da13c9d06972759cba044a252dcd"
+    },
+    {
+      "path": "output/M3_sourcefixed_frozen_cpu_regenerated/M3_sourcefixed_frozen_cpu_regenerated.pdf",
+      "bytes": 25424,
+      "sha256": "0acf22ba76a3b29cad3f9e38248649670875aa7b7dc99a20bae79e0f83dac622"
+    },
+    {
+      "path": "output/M3_sourcefixed_frozen_cpu_regenerated/M3_sourcefixed_frozen_cpu_regenerated.png",
+      "bytes": 251999,
+      "sha256": "c8bb798ff2088f86e446ac263a4f320cf5b0d9ee08c90306eda8cad987c08a34"
+    },
+    {
+      "path": "output/M3_sourcefixed_frozen_cpu_regenerated/M3_sourcefixed_frozen_cpu_regenerated.profiles.csv",
+      "bytes": 485992,
+      "sha256": "f7867ba511848c6166b881a0e0f6e1e0f708fca2d6cb445b2aca1e477de55c21"
+    }
+  ],
+  "rows": 1800,
+  "profile_columns": 17,
+  "principal_max_relative_L2": 1.6821232181986074e-05,
+  "principal_max_peak_scaled_difference": 1.3593699824872806e-05,
+  "x_and_mask_exact": true,
+  "metric_CSV_internal_consistency": true,
+  "elapsed_s": 272.2381080139894,
+  "minRAMGiB": 4.7778167724609375,
+  "scientific_limits": "CPU float32 agrees within explicitly declared bands, not byte identity; original signedtarget negativity and finite-time state retained; no shock evolution/stationarity evidence."
+}

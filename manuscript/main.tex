@@ -400,7 +400,7 @@ where in the DVM implementation $M\to M_d$. The identity is exact for the uncorr
   \Delta_{d,\rm bud}=-\Kn\left[\partial_xJ_\Delta+4(\partial_xu_x)K_\Delta\right].
   \label{eq:delta_rec}
 \end{equation}
-The derivative is evaluated after a short centred smoothing over seven grid points; the same choice is used for the Mach-2, Mach-3 and Mach-5 budget reconstructions.  For the Mach-3 case, increasing the smoothing window from 7 to 9, 11 and 15 points changes the active-zone $\Delta$-budget error from $3.41\%$ to $3.66\%$, $3.99\%$ and $4.89\%$, with correlations remaining above 0.9994.  The reconstruction is therefore not qualitatively tuned to a single derivative window.
+The scalar-budget derivative uses a centred seven-point boxcar on the moment inputs, with the same convention for the Mach-2, Mach-3 and Mach-5 reconstructions. The deposited postprocessing specifies the discrete source, derivative and active-mask conventions.
 \end{revision}
 
 \begin{revision}
@@ -551,7 +551,7 @@ This check is deliberately not another spatial budget reconstruction.  It evalua
 \end{figure}
 
 \begin{revision}
-The archived metrics for this check record $Pr=2/3$, a unit computational source scale, a distribution minimum near $10^{-30}$ and a signed target minimum of approximately $-9.96\times10^{-5}$. Thus the collision-projection check does not certify a nonnegative Shakhov target or a stationary positive-distribution Shakhov shock. The source-fixed profile and metric files establish the displayed plateau convention: each reference and reconstructed channel has the mean of the first and last $8\%$ of points removed, and the active mask is $|S|>0.02\max|S|$. Re-evaluation of the four reported norms from those archived profiles reproduces the retained metrics. In particular, the displayed $\Delta_{\rm source}$ differs from the raw $-\Kn Q_\Delta$ by a constant offset, approximately $0.06816$ in computational units; the reported agreement is therefore a plateau-corrected channel diagnostic, not an uncorrected raw-source neutrality test. Regeneration of these inputs from their original full distribution remains a separate provenance requirement.
+The check uses $Pr=2/3$ and a unit computational source scale. The distribution minimum is near $10^{-30}$, while the signed target minimum is approximately $-9.96\times10^{-5}$; the collision projection therefore does not certify a nonnegative Shakhov target or a stationary shock. Each displayed reference and reconstructed channel has the mean of the first and last $8\%$ of points removed, with active mask $|S|>0.02\max|S|$. The agreement in the scalar channel is plateau-corrected: $\Delta_{\rm source}+\Kn Q_\Delta$ is a constant offset, approximately $0.06816$. The flux-side subtraction uses $5\rho T^2$, whereas the directly evaluated closure moments use $f-M_d$, so the small flux-channel discrepancy also contains the discrete Maxwellian reference defect. The numerical curves have been regenerated from the archived full distribution; the input, code, profiles and provenance are deposited with the article.
 \end{revision}
 
 
@@ -599,7 +599,14 @@ The closure recovery now follows directly.  The heat-flux budget gives $S$, the 
   R^{\cl}_{xx,\rm bud}=S_{\rm bud}-\Delta_{\rm bud}/3 .
   \label{eq:two_budget_R}
 \end{equation}
-No direct $R^{\cl}_{xx}$ anchoring or supervised $R$ data enter this reconstruction.  Figure~\ref{fig:two_budget} shows the result.  The first column verifies the scalar-excess budget.  The middle column shows the rank-deficient heat-flux interpretation obtained by setting $\Delta=0$, which gives $R$ errors of about $63$--$64\%$.  The third column shows the two-budget reconstruction.  The errors drop to $4.09\%$, $3.54\%$ and $2.43\%$, close to the reference error obtained when the full DVM $\Delta$ field is used.  The correlations exceed 0.9995.
+
+The numerical budgets use the actual discrete velocity weights and retain the Maxwellian target moments in the collision contractions. In particular, $Q_q=(q[M_d]-q[f])/\tau$ and the scalar reconstruction is
+\begin{equation}
+\Delta_{\rm bud}=\sum_k w_k|\boldsymbol c_k|^4M_{d,k}-15\rho T^2-\tau\left(\frac{\mathrm dJ_\Delta}{\mathrm dx}+4\frac{\mathrm du}{\mathrm dx}K\right).
+\end{equation}
+Macroscopic fields are recomputed consistently from the stored distribution, and the conservative discrete target is evaluated in double precision with four matching iterations. The heat-flux integral is anchored by its directly evaluated value at the first grid point. With the stored \texttt{x\_mfp} coordinate, computational $\tau=1$ is used. Derivatives employ one $(1,4,6,4,1)/16$ pass on $u$ for the heat budget and a seven-point boxcar on $J_\Delta,u,K$ for the scalar budget. Both channels retain the first/last $8\%$ plateau subtraction; errors use the documented $2\%$ active mask. These budget checks do not establish stationarity or independent grid convergence.
+
+No direct $R^{\cl}_{xx}$ anchoring or supervised $R$ data enter this reconstruction.  Figure~\ref{fig:two_budget} shows the result.  The first column verifies the scalar-excess budget.  The middle column shows the rank-deficient heat-flux interpretation obtained by setting $\Delta=0$, which gives $R$ errors of about $63$--$64\%$.  The third column shows the two-budget reconstruction.  The errors drop to $4.43\%$, $3.73\%$ and $2.54\%$, close to the reference error obtained when the full DVM $\Delta$ field is used.  The correlations range from 0.99949 to 0.99974.
 \end{revision}
 
 \begin{figure}
@@ -616,9 +623,9 @@ No direct $R^{\cl}_{xx}$ anchoring or supervised $R$ data enter this reconstruct
   \toprule
   Mach & $\epsilon_\Delta$ & $\epsilon_R(\Delta=0)$ & $\epsilon_R(\Delta_{\rm full})$ & $\epsilon_R(\Delta_{\rm bud})$ & $\rho_R(\Delta_{\rm bud})$\\
   \midrule
-  M2 & 3.834 & 64.362 & 3.356 & 4.090 & 0.99960\\
-  M3 & 3.435 & 63.226 & 3.102 & 3.537 & 0.99954\\
-  M5 & 2.151 & 63.113 & 2.219 & 2.428 & 0.99975\\
+  M2 & 3.757 & 64.362 & 3.356 & 4.427 & 0.99950\\
+  M3 & 3.457 & 63.225 & 3.101 & 3.735 & 0.99949\\
+  M5 & 2.182 & 63.112 & 2.219 & 2.544 & 0.99974\\
   \bottomrule
   \end{tabular}
   \end{center}
@@ -837,7 +844,7 @@ ChatGPT (OpenAI) was used for language editing and for assistance in debugging n
 The author reports no conflict of interest.
 
 \section*{Data availability statement}
-Manuscript sources, figure and table files, recoverable solver and analysis source snapshots, compact numerical profiles and run/check records are deposited in the public repository \url{https://github.com/Ehsan-Roohi/DVM-JFM}; the scientific deposit is identified by commit \texttt{d6a8be3} \citep{RoohiShockArchive2026}. Its publication manifest records file sizes and SHA-256 hashes, while its solver-specification and coverage audits distinguish the collision-model campaigns, historical and corrected calculations, and unresolved provenance gaps. The bundled Mach-2 and Mach-3 raw-profile comparison scripts reproduce the deposited comparison tables. This deposit does not contain all multi-gigabyte velocity-distribution/restart files, and some archived drivers require adaptation of machine-specific paths. The Bird DSMC original remains an external dependency; the repository supplies the documented modifications and original-source identification. A complete raw-distribution deposit and regeneration of the legacy budget/source-fixed inputs remain outstanding. No DOI has yet been assigned.
+Manuscript sources, figure and table files, recoverable solver and analysis source snapshots, compact numerical profiles and run/check records are deposited in the public repository \url{https://github.com/Ehsan-Roohi/DVM-JFM}; the scientific deposit is identified by commit \texttt{d6a8be3} \citep{RoohiShockArchive2026}. Its publication manifest records file sizes and SHA-256 hashes, while its solver-specification and coverage audits distinguish the collision-model campaigns, historical and corrected calculations, and unresolved provenance gaps. The bundled Mach-2 and Mach-3 raw-profile comparison scripts reproduce the deposited comparison tables. This deposit does not contain all multi-gigabyte velocity-distribution/restart files, and some archived drivers require adaptation of machine-specific paths. The Bird DSMC original remains an external dependency; the repository supplies the documented modifications and original-source identification. The archived budgets have been regenerated with their documented discrete-source contracts. The full distribution used for Figure~\ref{fig:shakhov_check} is included in the public repository with its hash; a complete public deposit of the larger BGK raw distributions remains outstanding. No DOI has yet been assigned.
 
 
 \clearpage

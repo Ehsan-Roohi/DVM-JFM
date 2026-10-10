@@ -1,0 +1,26 @@
+[
+  {
+    "Mach": 2,
+    "exit_code": 0,
+    "failure": null,
+    "elapsed_s": 129.17199999999139,
+    "initial_available_GiB": 7.932701110839844,
+    "kind": "POSTPROCESS_ONLY"
+  },
+  {
+    "Mach": 3,
+    "exit_code": 0,
+    "failure": null,
+    "elapsed_s": 260.6720000000205,
+    "initial_available_GiB": 8.791332244873047,
+    "kind": "POSTPROCESS_ONLY"
+  },
+  {
+    "Mach": 5,
+    "exit_code": 0,
+    "failure": null,
+    "elapsed_s": 461.18799999999464,
+    "initial_available_GiB": 8.644439697265625,
+    "kind": "POSTPROCESS_ONLY"
+  }
+]

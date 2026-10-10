@@ -1,0 +1,46 @@
+{
+  "status": "PASS_INDEPENDENT_SMALL_ARRAY_CONTRACT_REVIEW",
+  "Mach": 5,
+  "source_review": "Geometry A and scalar forcing signs correct; exact archived smoothing uses boxcar7(J,u,K), heat binomial(u), plateau8% andfixed2%mask.",
+  "baseline": {
+    "R_budgetDelta_relL2": 0.02427902388955308,
+    "Delta_budget_relL2": 0.021510077939257476
+  },
+  "scalar_original_forcing_max_abs": 2.1827872842550278e-11,
+  "scalar_original_Delta_max_abs": 2.1934454252914293e-11,
+  "branches": {
+    "stored_centre": {
+      "independently_computed": {
+        "R_budgetDelta_relL2": 0.025435106436852307,
+        "Delta_budget_relL2": 0.021822407444461213
+      },
+      "fixed_mask_points": 725,
+      "corrected_mask_identical": true,
+      "Md_scalar_excess_max": 0.7296779410063543,
+      "Md_excess_plateau_max": 0.3648582919606518,
+      "R_error_without_Md_excess_same_corrected_heat": 0.02427523389950848,
+      "Md_constraint_errors": {
+        "mass": 1.3322676295501878e-15,
+        "mean": 5.329070518200751e-15,
+        "temperature": 1.4432899320127035e-14
+      }
+    },
+    "recomputed_macros": {
+      "independently_computed": {
+        "R_budgetDelta_relL2": 0.025435262423357845,
+        "Delta_budget_relL2": 0.021822102194378037
+      },
+      "fixed_mask_points": 725,
+      "corrected_mask_identical": true,
+      "Md_scalar_excess_max": 0.7296745163381662,
+      "Md_excess_plateau_max": 0.3648575805092244,
+      "R_error_without_Md_excess_same_corrected_heat": 0.024275388041307626,
+      "Md_constraint_errors": {
+        "mass": 1.7763568394002505e-15,
+        "mean": 5.329070518200751e-15,
+        "temperature": 1.2434497875801753e-14
+      }
+    }
+  },
+  "scope": "Independent arithmetic from preserved compact full-f reductions; no distribution/target rerun and no steady/convergence claim."
+}

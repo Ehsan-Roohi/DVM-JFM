@@ -1,0 +1,80 @@
+{
+  "status": "PASS_FULLSTATE_SCALAR_WINDOW7_REPRODUCTION",
+  "Mach": 3,
+  "actual_archived_smoothing_window": 7,
+  "window_tests": {
+    "1": {
+      "dJdx_max": 0.5480651720126052,
+      "dudx_max": 0.0014036764663281076
+    },
+    "3": {
+      "dJdx_max": 0.3026666112974681,
+      "dudx_max": 0.0011695601859358362
+    },
+    "5": {
+      "dJdx_max": 0.18102366670802894,
+      "dudx_max": 0.0007013276149336889
+    },
+    "7": {
+      "dJdx_max": 3.637978807091713e-12,
+      "dudx_max": 0.0
+    },
+    "9": {
+      "dJdx_max": 0.23996679285085065,
+      "dudx_max": 0.000926564910194827
+    },
+    "11": {
+      "dJdx_max": 0.5380789666899091,
+      "dudx_max": 0.0020728122406623584
+    }
+  },
+  "original_scalar_reproduction": {
+    "forcing_max_abs": 3.637978807091713e-12,
+    "Delta_rec_max_abs": 3.6405600756239664e-12,
+    "Delta_ref_max_abs": 2.2937207688755734e-13
+  },
+  "corrected_window7_table_metrics": {
+    "stored_centre": {
+      "fixed_legacy": {
+        "active_points": 536,
+        "Delta_budget_relL2": 0.0345675579187176,
+        "R_delta0_relL2": 0.6322464665977613,
+        "R_fullDelta_relL2": 0.031008287362574476,
+        "R_budgetDelta_relL2": 0.03734781135588838,
+        "Delta_budget_correlation": 0.9998841554166198,
+        "R_budgetDelta_correlation": 0.9994949935276786
+      },
+      "corrected_reconstructed_S": {
+        "active_points": 536,
+        "Delta_budget_relL2": 0.0345675579187176,
+        "R_delta0_relL2": 0.6322464665977613,
+        "R_fullDelta_relL2": 0.031008287362574476,
+        "R_budgetDelta_relL2": 0.03734781135588838,
+        "Delta_budget_correlation": 0.9998841554166198,
+        "R_budgetDelta_correlation": 0.9994949935276786
+      }
+    },
+    "recomputed_macros": {
+      "fixed_legacy": {
+        "active_points": 536,
+        "Delta_budget_relL2": 0.03456749908187964,
+        "R_delta0_relL2": 0.6322465261468939,
+        "R_fullDelta_relL2": 0.031008596851009013,
+        "R_budgetDelta_relL2": 0.03734811350849054,
+        "Delta_budget_correlation": 0.9998841550937695,
+        "R_budgetDelta_correlation": 0.999494984690695
+      },
+      "corrected_reconstructed_S": {
+        "active_points": 536,
+        "Delta_budget_relL2": 0.03456749908187964,
+        "R_delta0_relL2": 0.6322465261468939,
+        "R_fullDelta_relL2": 0.031008596851009013,
+        "R_budgetDelta_relL2": 0.03734811350849054,
+        "Delta_budget_correlation": 0.9998841550937695,
+        "R_budgetDelta_correlation": 0.999494984690695
+      }
+    }
+  },
+  "supersedes": "RESULT.json scalar window1 mismatch/table entries only; full-f reductions unchanged",
+  "limitations": "Actual finite-time profile; differential-budget derivative7 and plateau2% convention retained; double target reconstruction, no evolution/stationarity."
+}

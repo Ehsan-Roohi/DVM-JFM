@@ -6245,5 +6245,14 @@
     "groups": [
       "corrected_R26_M2_M3"
     ]
+  },
+  {
+    "path": "research/raw_inputs/Figure5_M3_Shakhov.npz",
+    "bytes": 95780214,
+    "sha256": "9077c010ac9169e573e8b47c55864496f220ea9f5c5f517b08ac90603fb45011",
+    "source_relative": "followup/fullstates/Figure5_M3_Shakhov.npz",
+    "groups": [
+      "figure5_full_distribution_verified"
+    ]
   }
 ]
