@@ -2,12 +2,19 @@
 \RequirePackage{amsmath}
 \documentclass[lineno,paper]{JFM-FLM_Au}
 
-% Yellow revision markup: remove the revision environment styling for a clean copy.
+% Reader-facing clean copy by default. Define ShowRevisionMarkup for a highlighted copy.
 \usepackage{xcolor}
 \usepackage{framed}
 \definecolor{revisionyellow}{rgb}{1,1,0.55}
+\ifdefined\ShowRevisionMarkup
 \newenvironment{revision}{\begingroup\colorlet{shadecolor}{revisionyellow}\begin{shaded}}{\end{shaded}\endgroup}
 \DeclareRobustCommand{\revisionheading}[1]{\colorbox{revisionyellow}{\strut #1}}
+\newcommand{\revisionbox}[1]{\colorbox{revisionyellow}{#1}}
+\else
+\newenvironment{revision}{}{}
+\DeclareRobustCommand{\revisionheading}[1]{#1}
+\newcommand{\revisionbox}[1]{#1}
+\fi
 \newtheorem{lemma}{Lemma}
 \newtheorem{proposition}{Proposition}
 \newtheorem{remark}{Remark}
@@ -68,6 +75,10 @@ We separate two questions: which fourth-order projection appears in the heat-flu
 \end{revision}
 
 \begin{revision}
+Data-driven moment reduction also addresses the closure problem directly. \citet{Han2019MomentClosure} learn generalized moments and their dynamics from kinetic solutions, while \citet{Huang2023HyperbolicClosure} enforce global hyperbolicity in a learned radiative-transfer closure. These approaches concern reduced dynamics and structural constraints. Our question is complementary: given the specific heat-flux observation map of a normal shock, which fourth-order components can its residual identify? The rank test below addresses that map, rather than establishing a limitation of every data-driven closure or replacing their realizability and stability constraints.
+\end{revision}
+
+\begin{revision}
 The gap addressed here is between validation of an observable and identification of its underlying closure variables. Agreement in a projected budget tests that projection; it does not determine components in the observation map's null space. Consequently, comparisons of shock profiles and collision-model source laws, while necessary, do not alone answer the identifiability question posed here. We separate three tasks: identifying the observable channel, supplying independent scalar information, and testing the numerical reliability of the resulting reconstruction. This distinction makes the contribution complementary to established moment hierarchies and kinetic shock benchmarks rather than a replacement for them.
 \end{revision}
 
@@ -82,7 +93,7 @@ We first derive the heat-flux observation operator and its null space, then cons
 The calculations comprise several distinct solver campaigns. The Prandtl number is selected by the collision model and its parameters, not by the Mach number. In particular, the BGK budget references at $M_1=2,3,5$ and the BGK moment extension at $M_1=6,8,12$ have $Pr=1$. The separate transport-matched Shakhov DVM profiles at $M_1=2,3,4,5$ have $Pr=2/3$, as do the corrected-Shakhov R26 profiles reported at $M_1=2,3$. The separate published-profile Mach-8 Shakhov benchmark also uses $Pr=2/3$, but has a different viscosity law. Table~\ref{tab:solver_campaigns} identifies these campaigns before their results are compared. The monatomic value $2/3$ corrects heat-flux relaxation relative to viscous relaxation; it does not make Shakhov, R26 and DSMC collision production identical.
 \end{revision}
 
-\begin{table}[htbp]
+\begin{table}
 \centering
 \begin{revision}
 \caption{Collision model, transport parameters and numerical scope of the separate campaigns. BGK and Shakhov rows are evolved kinetic calculations; ES rows are source evaluations on BGK distributions. The DSMC Prandtl number is a transport consequence of the collision model, rather than an input relaxation-target parameter. Finite-time snapshots and completed prescribed step counts do not certify stationarity.}
@@ -100,7 +111,7 @@ Corrected Shakhov R26 & $2,3$ & $2/3$ & $\mu=T$, $\tau=1/\rho$ & Steady residual
 Shakhov published-profile benchmark & $8$ & $2/3$ & $\mu=\mu_{\rm ref}T^{0.81}$ & Reduced-velocity upwind DVM; positivity/stationarity limitations\\
 ES-BGK / ES-FP source diagnostics & $2,3,5$ & $2/3$ & $\alpha_{\rm ES}=-1/2$, $\beta=-5/4$ & Post-processing only; no ES shock evolution\\
 DSMC collision-production ensemble & $3$ & Model-derived & Hard-sphere collisions & Eight-seed original/corrected sampler comparisons\\
-DSMC high-particle profiles & $2,3,4,5$ & Model-derived & VHS $\omega=1$, isotropic scattering & One seed per Mach; finite-time sampling\\
+DSMC high-particle profiles & $2,3,4,5$ & Model-derived & variable hard sphere (VHS) $\omega=1$, isotropic scattering & One seed per Mach; finite-time sampling\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -111,7 +122,7 @@ We begin with the steady one-dimensional BGK model \citep{Bhatnagar1954},
   v_x\partial_x f = \frac{1}{\Kn}\{M[f]-f\},
   \label{eq:bgk}
 \end{equation}
-Here $\Kn=\tau v_0/L_0$ is the dimensionless relaxation coefficient for reference speed $v_0$ and coordinate scale $L_0$; it is constant for the present BGK model. In the archived BGK driver the relaxation update is $\exp(-\Delta t)$, and the stored \texttt{x\_mfp} uses the unit upstream relaxation length $\lambda_{\rm rel,1}=v_0\tau_1$. For a domain of half-length $H$ in that coordinate, \texttt{x\_scaled}=\texttt{x\_mfp}/(2H)$ and \texttt{kn\_eff}=1/(2H)$. The former coordinate therefore uses computational $\tau=1$, whereas the latter rescales the collision coefficient. The label $x/\lambda_1$ on these BGK budget plots denotes this upstream relaxation-length convention; it is not an additional claim that every collision model has the same hard-sphere mean-free-path conversion. The distinct transport and spatial conventions of the Shakhov and DSMC campaigns are specified with those calculations.
+Here $\Kn=\tau v_0/L_0$ is the dimensionless relaxation coefficient. We choose $v_0=\sqrt{RT_1}$ and, for the BGK budget profiles, $L_0=\lambda_{\rm rel,1}=v_0\tau_1$, the upstream relaxation length. With constant $\tau=\tau_1$, this gives $\Kn=1$ and the collision update $\exp(-\Delta t)$ in computational units. The label $x/\lambda_1$ on these BGK plots denotes $x/\lambda_{\rm rel,1}$; it does not identify this length with a hard-sphere mean free path. A domain-scaled coordinate, $\texttt{x\_scaled}=\texttt{x\_mfp}/(2H)$, and coefficient $\texttt{kn\_eff}=1/(2H)$ are also stored by the driver, where $H$ is the half-domain length in relaxation units. The reported BGK budgets use the unscaled relaxation-length coordinate and unit source rate. The Shakhov and DSMC campaigns specify their distinct transport and spatial conventions below.
 
 Here $f(x,\boldsymbol v)$ is the distribution and $M[f]$ is the local Maxwellian with the same density $\rho$, streamwise velocity $u_x$ and temperature $T$ as $f$.  The peculiar velocity is $\boldsymbol c=\boldsymbol v-u_x\boldsymbol e_x$.  The heat flux and normal stress are
 \begin{equation}
@@ -140,7 +151,7 @@ The continuum-reference excess is $\Delta_c=\int |\boldsymbol c|^4 f\,\dd\boldsy
 
 \begin{table}
 \centering
-\colorbox{revisionyellow}{\begin{minipage}{0.94\textwidth}
+\revisionbox{\begin{minipage}{0.94\textwidth}
 \caption{Guide to the moments and their roles in the present analysis.}
 \label{tab:revision_moment_guide}
 \small
@@ -157,13 +168,13 @@ $Q_\Delta$ & Collision production of the scalar fourth-order moment; its source 
 \end{table}
 
 \begin{revision}
-The upstream state is normalised by $\rho_1=T_1=1$ and $u_1=M_1\sqrt{\gamma T_1}$ with $\gamma=5/3$.  The downstream state is set by the monatomic Rankine--Hugoniot relations.  Coordinates are reported in upstream mean-free-path units, $(x-x_s)/\lambda_1$, where $x_s$ is the density-midpoint shock location.  The Mach-2, Mach-3 and Mach-5 DVM references, generated with deterministic velocity-space quadrature in the spirit of discrete-velocity kinetic solvers \citep{Mieussens2000,FilbetJin2010,DimarcoPareschi2014}, use domains $[-40,40]$, $[-60,60]$ and $[-80,80]$, with $N_x=1600,1800,2200$ spatial points and tensor-product velocity grids $97\times19\times19$, $121\times23\times23$ and $141\times27\times27$ for $M_1=2,3,5$, respectively.  Full distributions are stored for the budget evaluations. The separate high-Mach BGK extension uses $M_1=6,8,12$, with the full and lightweight configurations listed in table~\ref{tab:high_mach_grids}; its direct moment comparisons are reported in \S\ref{sec:high_mach}.  The spatial budget reconstructions in \S\ref{sec:heatflux}--\ref{sec:two_budget} use the Mach-2, Mach-3 and Mach-5 BGK DVM references because they provide a clean relaxation source for both the heat-flux and scalar-excess budgets.  Collision-model robustness is then examined at the source and channel level: the Shakhov target changes the heat-flux relaxation but leaves the scalar-excess source neutral, while the ES-BGK and ES-FP targets produce stress-dependent scalar-excess corrections through, respectively, an anisotropic Gaussian covariance and anisotropic Fokker--Planck diffusion.
+The upstream state is normalised by $\rho_1=T_1=1$ and $u_1=M_1\sqrt{\gamma T_1}$ with $\gamma=5/3$.  The downstream state is set by the monatomic Rankine--Hugoniot relations.  The spatial origin is test-specific: aligned ensemble and cross-method comparisons use $(x-x_s)/\lambda_1$, with $x_s$ the density-midpoint location; archived single-run budget profiles retain their stored $x/\lambda_1$ coordinate. The overview of the closure moments retains its maximum-density-gradient centring. The captions distinguish these conventions.  The Mach-2, Mach-3 and Mach-5 DVM references, generated with deterministic velocity-space quadrature in the spirit of discrete-velocity kinetic solvers \citep{Mieussens2000,FilbetJin2010,DimarcoPareschi2014}, use domains $[-40,40]$, $[-60,60]$ and $[-80,80]$, with $N_x=1600,1800,2200$ spatial points and tensor-product velocity grids $97\times19\times19$, $121\times23\times23$ and $141\times27\times27$ for $M_1=2,3,5$, respectively. Their symmetric velocity-box bounds are $v_{\max}=12,16,22$ in units of $\sqrt{RT_1}$, with composite-trapezoidal quadrature. The archived solver family uses first-order upwind streaming and $\Delta t=C_{\rm CFL}\Delta x/v_{\max}$, with a default $C_{\rm CFL}=0.75$, a conservative discrete-Maxwellian target, exponential relaxation, incoming Rankine--Hugoniot Maxwellian reservoirs, periodic recentering and a $10^{-30}$ floor. The available reference files do not retain their completed step counts or a residual-based stopping record; we therefore do not assign the later Mach-5 sensitivity campaign's 52000-step count to these references or identify the two Mach-5 inputs as the same run. Full distributions are stored for the budget evaluations. A fixed laboratory-frame velocity box must cover the upstream and downstream populations, but does not adaptively resolve bimodality. Appendix~\ref{app:numerical_sensitivity} reports separate Mach-5 extent and refinement tests; resolved outer-box moments do not measure the omitted tails. The separate high-Mach BGK extension uses $M_1=6,8,12$, with the full and lightweight configurations listed in table~\ref{tab:high_mach_grids}; its direct moment comparisons are reported in \S\ref{sec:high_mach}.  The spatial budget reconstructions in \S\ref{sec:heatflux}--\ref{sec:two_budget} use the Mach-2, Mach-3 and Mach-5 BGK DVM references because they provide a clean relaxation source for both the heat-flux and scalar-excess budgets.  Collision-model robustness is then examined at the source and channel level: the Shakhov target changes the heat-flux relaxation but leaves the scalar-excess source neutral, while the ES-BGK and ES-FP targets produce stress-dependent scalar-excess corrections through, respectively, an anisotropic Gaussian covariance and anisotropic Fokker--Planck diffusion.
 \end{revision}
 
 \begin{table}
 \centering
 \begingroup\setlength{\fboxsep}{5pt}
-\colorbox{revisionyellow}{\begin{minipage}{0.95\textwidth}
+\revisionbox{\begin{minipage}{0.95\textwidth}
 \caption{High-Mach constant-relaxation BGK configurations. The stored spatial coordinate spans $[-L,L]$ in the upstream mean-free-path coordinate convention used in the figures; velocities are in units of $\sqrt{RT_1}$, with $R=T_1=1$. Each velocity component spans $[-v_{\max},v_{\max}]$. Counts include the endpoints. ``Full'' and ``lightweight'' identify the two stored configurations, rather than a convergence ranking.}
 \label{tab:high_mach_grids}
 \centering\small\setlength{\tabcolsep}{3.5pt}
@@ -313,7 +324,7 @@ For a planar normal shock, the streamwise equation contains $\partial_x A_{xx}/2
 Figure~\ref{fig:dvm_ref} distinguishes the heat flux from the fourth-order moments entering its transport balance. The heat flux $q_x$ is a third-order moment, whereas $S=R^{\cl}_{xx}+\Delta/3$ contributes to the flux $F_q$ that transports this moment; see \eqref{eq:Bxx_split}. Consequently, $q_x$ and $S$ need not have similar spatial profiles. In these shocks, $q_x$ remains negative within the shock layer, while the fourth-order profiles change sign. The bottom-row overlays show how the scalar contribution $\Delta/3$ modifies the tensorial profile: identifying the observed channel $S$ with $R^{\cl}_{xx}$ would discard this contribution. The profiles illustrate this distinction; verification of the differential budget is presented separately in figure~\ref{fig:budget}.
 \end{revision}
 
-\begin{figure}[p]
+\begin{figure}
   \centerline{\includegraphics[width=0.98\textwidth]{figures/fig1_dvm_reference.pdf}}
   \caption{Kinetic normal-shock reference profiles at $M_1=2$, 3 and 5. Rows 1--3 show $q_x$, $R^{\cl}_{xx}$ and $\Delta$. The bottom row overlays $R^{\cl}_{xx}$ (blue dashed), $\Delta/3$ (orange dash-dotted) and $S=R^{\cl}_{xx}+\Delta/3$ (black solid) on a common vertical scale within each panel. Vertical scales differ between panels. The archived continuum-reference moments are shown without additional plateau subtraction or smoothing. For this figure, the original plotting convention places $x_s$ at the maximum absolute density gradient, rather than the density midpoint.}
   \label{fig:dvm_ref}
@@ -424,7 +435,7 @@ Unlike Shakhov, ES-BGK uses an anisotropic Gaussian target \citep{Holway1966ESBG
   \exp\left[-\frac12 c_i(\Theta^{-1})_{ij}c_j\right],
   \label{eq:es_gaussian}
 \end{equation}
-with covariance tensor $\Theta$.  In the conventional monatomic ES-BGK construction, $\Theta=T I+A_{\rm ES}$, where $A_{\rm ES}$ is a trace-free tensor proportional to the stress; in the notation used here one may write $A_{\rm ES}=\alpha_{\rm ES}\sigma/\rho$, up to the sign convention used for the stress tensor.  The heat-flux observation channel does not change, because it is determined by the left-hand-side flux.  The scalar-excess source does change, because the target distribution no longer has the Maxwellian fourth scalar moment.
+with covariance tensor $\Theta$.  In the conventional monatomic ES-BGK construction, $\Theta=T I+\Lambda_{\rm ES}$, where $\Lambda_{\rm ES}$ is a trace-free tensor proportional to the stress; in the notation used here one may write $\Lambda_{\rm ES}=\alpha_{\rm ES}\sigma/\rho$, up to the sign convention used for the stress tensor.  The heat-flux observation channel does not change, because it is determined by the left-hand-side flux.  The scalar-excess source does change, because the target distribution no longer has the Maxwellian fourth scalar moment.
 \end{revision}
 
 \begin{revision}
@@ -434,11 +445,11 @@ For any zero-mean Gaussian with covariance $\Theta$,
   =\rho\left[(\tr\Theta)^2+2\tr(\Theta^2)\right].
   \label{eq:es_fourth}
 \end{equation}
-This identity follows from Wick's theorem: $\langle c_i c_i c_j c_j\rangle=(\tr\Theta)^2+2\tr(\Theta^2)$.  For a Maxwellian, $\Theta=T I$, so $(\tr\Theta)^2=9T^2$ and $2\tr(\Theta^2)=6T^2$, giving $15T^2$.  For ES-BGK, however, the trace-free part $A_{\rm ES}$ gives
+This identity follows from Wick's theorem: $\langle c_i c_i c_j c_j\rangle=(\tr\Theta)^2+2\tr(\Theta^2)$.  For a Maxwellian, $\Theta=T I$, so $(\tr\Theta)^2=9T^2$ and $2\tr(\Theta^2)=6T^2$, giving $15T^2$.  For ES-BGK, however, the trace-free part $\Lambda_{\rm ES}$ gives
 \begin{equation}
   \Delta_G^{\rm ES}
   =\rho\left[(\tr\Theta)^2+2\tr(\Theta^2)-15T^2\right]
-  =2\rho\,\tr(A_{\rm ES}^2)
+  =2\rho\,\tr(\Lambda_{\rm ES}^2)
   =\frac{2\alpha_{\rm ES}^2}{\rho}\tr(\sigma^2).
   \label{eq:es_delta_target}
 \end{equation}
@@ -453,11 +464,11 @@ In a one-dimensional normal shock, $\sigma_{yy}=\sigma_{zz}=-\sigma_{xx}/2$, so 
   \Delta_G^{\rm ES}=\frac{3\alpha_{\rm ES}^2}{\rho}\sigma_{xx}^2 .
   \label{eq:es_1d_delta_target}
 \end{equation}
-This term is positive definite: the ES-BGK target carries a non-zero scalar fourth-order excess whenever the covariance is anisotropic.  Shakhov changes the odd heat-flux channel and leaves the even $|\boldsymbol c|^4$ channel neutral; ES-BGK changes the even scalar-excess target through a stress-squared covariance effect.
+This term is nonnegative: the ES-BGK target carries a non-zero scalar fourth-order excess whenever the covariance is anisotropic.  Shakhov changes the odd heat-flux channel and leaves the even $|\boldsymbol c|^4$ channel neutral; ES-BGK changes the even scalar-excess target through a stress-squared covariance effect.
 \end{revision}
 
 
-To estimate the size of this correction in the present shocks, we post-process the Mach 2, 3 and 5 DVM profiles using \eqref{eq:es_1d_delta_target} with $Pr=2/3$ and $\alpha_{\rm ES}=1-1/Pr=-1/2$.  The resulting ES-BGK correction is reported in table~\ref{tab:model_source_corrections}.  The ratio $\|\Delta_G^{\rm ES}\|/\|\Delta\|$ in the active shock layer is approximately $4.3$--$4.5\%$ for all three Mach numbers, and the ES-BGK scalar-excess source remains almost collinear with the BGK/Shakhov source, with correlations exceeding $0.999$.  The correction is therefore modest for these monatomic shocks, but it is systematically non-zero and grows in absolute magnitude with Mach number: the peak value of $\Delta_G^{\rm ES}$ increases from $0.196$ at $M_1=2$ to $20.25$ at $M_1=5$.  This source-level diagnostic supports the analytical distinction without requiring a full ES-BGK shock solve: the observation channel is unchanged, whereas the scalar-excess production law depends on the target covariance.
+To estimate the size of this correction in the present shocks, we post-process the Mach 2, 3 and 5 DVM profiles using \eqref{eq:es_1d_delta_target} with $Pr=2/3$ and $\alpha_{\rm ES}=1-1/Pr=-1/2$.  The resulting ES-BGK correction is reported in table~\ref{tab:model_source_corrections}.  The ratio $\|\Delta_G^{\rm ES}\|/\|\Delta\|$ in the active shock layer is approximately $4.3$--$4.5\%$ for all three Mach numbers, and the ES-BGK scalar-excess source remains almost collinear with the BGK/Shakhov source, with correlations exceeding $0.999$.  The correction is therefore modest on these evaluated BGK profiles, but it is systematically non-zero and grows in absolute magnitude with Mach number: the peak value of $\Delta_G^{\rm ES}$ increases from $0.196$ at $M_1=2$ to $20.25$ at $M_1=5$.  This source-level diagnostic supports the analytical distinction without requiring a full ES-BGK shock solve: the observation channel is unchanged, whereas the scalar-excess production law depends on the target covariance.
 
 \begin{revision}
 Fokker--Planck models provide a complementary example because their sources are generated by drift and diffusion rather than by relaxation to a target distribution.  For a velocity-space Fokker--Planck operator
@@ -485,7 +496,7 @@ For the correct-Prandtl choice $\beta=-5/4$, the ES-FP correction is therefore p
  =-4(\Delta+15\rho T^2)+24\rho T^2+36\rho T^2
    +\frac{8\beta}{\rho}\tr(\sigma^2).
 \]
-The equilibrium terms cancel, yielding \eqref{eq:esfp_delta_source} before any normal-shock symmetry reduction. On a finite velocity box the discarded boundary terms require a separate check. This formal source identity presupposes an admissible diffusion tensor. With $\Theta=\rho^{-1}\int\boldsymbol c\boldsymbol c f\,\dd\boldsymbol v$, its normalised form is $D/(2\nu)=(1-\beta)TI+\beta\Theta$. At $\beta=-5/4$, positive definiteness requires every eigenvalue of $\Theta$ to be smaller than $9T/5$. A fixed correct-Prandtl coefficient does not guarantee this condition for arbitrary nonequilibrium states.  This is the scalar-excess analogue of the high-order-moment production differences emphasised in shock-wave benchmark studies of BGK, Shakhov, ES-BGK, ES-FP and Cubic-FP models \citep{FeiLiuLiuZhang2020ShockBenchmark}.  It also explains why equal Prandtl number does not imply equal fourth-order closure production: the heat-flux relaxation rate is a lower-order transport constraint, whereas $Q_\Delta$ samples an even fourth-order kernel.
+The equilibrium terms cancel, yielding \eqref{eq:esfp_delta_source} before any normal-shock symmetry reduction. On a finite velocity box the discarded boundary terms require a separate check. This formal source identity presupposes an admissible diffusion tensor. With $\Theta=\rho^{-1}\int\boldsymbol c\boldsymbol c f\,\dd\boldsymbol v$, its normalised form is $D/(2\nu)=(1-\beta)TI+\beta\Theta$. At $\beta=-5/4$, positive definiteness requires every eigenvalue of $\Theta$ to be smaller than $9T/5$. A fixed correct-Prandtl coefficient does not guarantee this condition for arbitrary nonequilibrium states.  Entropy inequalities for Gaussian ES-BGK and admissible ES-FP models are established in the literature \citep{Andries2000GaussianBGK,MathiaudMieussens2016ESFP}. In particular, the latter allows a state-dependent anisotropy parameter to maintain admissible diffusion; a fixed $\beta=-5/4$ cannot be extended to arbitrary far-from-equilibrium states. Those results are distinct from our sampled finite-grid entropy diagnostic. This is the scalar-excess analogue of the high-order-moment production differences emphasised in shock-wave benchmark studies of BGK, Shakhov, ES-BGK, ES-FP and Cubic-FP models \citep{FeiLiuLiuZhang2020ShockBenchmark}.  It also explains why equal Prandtl number does not imply equal fourth-order closure production: the heat-flux relaxation rate is a lower-order transport constraint, whereas $Q_\Delta$ samples an even fourth-order kernel.
 \end{revision}
 
 \begin{revision}
@@ -512,8 +523,8 @@ Table~\ref{tab:model_source_corrections} and figure~\ref{fig:esfp_esbgk_sources}
 
 \begin{table}
   \centering
-\colorbox{revisionyellow}{\begin{minipage}{0.96\textwidth}
-  \caption{Source-level ES-BGK and ES-FP scalar-excess corrections evaluated on the DVM shock profiles.  The ratios are active-zone norms relative to $\|\Delta\|$.  The ES-FP source is the scaled source $Q_\Delta^{\rm ES-FP}/(4\nu)$ in \eqref{eq:esfp_delta_source}; the correlation compares the full ES-FP scaled source with the BGK/Shakhov baseline $-\Delta$.}
+\revisionbox{\begin{minipage}{0.96\textwidth}
+  \caption{Source-level ES-BGK and ES-FP scalar-excess corrections evaluated on the DVM shock profiles.  The ratios are active-zone norms relative to $\|\Delta\|$.  The opposite signs reflect different mechanisms: anisotropy raises the fourth scalar moment of the ES-BGK Gaussian target, whereas the ES-FP correction contracts the stress with anisotropic diffusion. At $Pr=2/3$, $\beta/\alpha_{\rm ES}^2=-5$; this is a source coefficient ratio, not an entropy-production sign. The ES-FP source is the scaled source $Q_\Delta^{\rm ES-FP}/(4\nu)$ in \eqref{eq:esfp_delta_source}; the correlation compares the full ES-FP scaled source with the BGK/Shakhov baseline $-\Delta$.}
   \label{tab:model_source_corrections}
   \begin{tabular}{lrrr}
   \toprule
@@ -606,7 +617,14 @@ The numerical budgets use the actual discrete velocity weights and retain the Ma
 \begin{equation}
 \Delta_{\rm bud}=\sum_k w_k|\boldsymbol c_k|^4M_{d,k}-15\rho T^2-\tau\left(\frac{\mathrm dJ_\Delta}{\mathrm dx}+4\frac{\mathrm du}{\mathrm dx}K\right).
 \end{equation}
-Macroscopic fields are recomputed consistently from the stored distribution, and the conservative discrete target is evaluated in double precision with four matching iterations. The heat-flux integral is anchored by its directly evaluated value at the first grid point. With the stored \texttt{x\_mfp} coordinate, computational $\tau=1$ is used. Derivatives employ one $(1,4,6,4,1)/16$ pass on $u$ for the heat budget and a seven-point boxcar on $J_\Delta,u,K$ for the scalar budget. Both channels retain the first/last $8\%$ plateau subtraction; errors use the documented $2\%$ active mask. These budget checks do not establish stationarity or independent grid convergence.
+Macroscopic fields are recomputed consistently from the stored distribution, and the conservative discrete target is evaluated in double precision with four matching iterations. The heat-flux integral is anchored by its directly evaluated value at the first grid point. With the stored \texttt{x\_mfp} coordinate, computational $\tau=1$ is used. Derivatives employ one $(1,4,6,4,1)/16$ pass on $u$ for the heat budget and a seven-point boxcar on $J_\Delta,u,K$ for the scalar budget. Both channels retain the first/last $8\%$ plateau subtraction; errors use the documented $2\%$ active mask. The discrete scalar budget reconstructs $\Delta_d$. Adding the local offset $\sum_k w_k|\boldsymbol c_k|^4M_{d,k}-15\rho T^2$ converts it to $\Delta_c$ before the stated plateau subtraction. The heat-flux channel subtracts the continuum term $5\rho T^2$; it retains the directly evaluated $q_x[M_d]$ in the source and the measured first-point flux anchor. The tensorial reference likewise omits the discrete-Maxwellian fourth-moment subtraction. These choices put both reconstructed channels and their reference on the same continuum-reference convention. These budget checks do not establish stationarity or independent grid convergence.
+
+\textbf{Error measures and comparison sets.} For a reconstruction $g_{\rm rec}$ and reference $g_{\rm ref}$ on a set $\mathcal A$, we report
+\[
+ \epsilon_g=100\frac{\|g_{\rm rec}-g_{\rm ref}\|_{2,\mathcal A}}{\|g_{\rm ref}\|_{2,\mathcal A}},\qquad
+ \rho_g=\frac{\sum_{i\in\mathcal A}(g_{{\rm rec},i}-\bar g_{\rm rec})(g_{{\rm ref},i}-\bar g_{\rm ref})}{\sqrt{\sum_{i\in\mathcal A}(g_{{\rm rec},i}-\bar g_{\rm rec})^2\sum_{i\in\mathcal A}(g_{{\rm ref},i}-\bar g_{\rm ref})^2}}.
+\]
+Here the bars are means on the same set; $\rho_g$ is the Pearson correlation. The budget masks in figure~\ref{fig:two_budget} and table~\ref{tab:two_budget} are the frozen sets $|S_{\rm bud}|\geq0.02\max|S_{\rm bud}|$ after plateau subtraction, containing 622, 536 and 725 points for Mach 2, 3 and 5. The masks from the archived and regenerated heat-budget channels coincide. The Shakhov channel check uses $|S|>0.02\max|S|$ on its own plateau-corrected reference; the core-gap probe test uses $|\Delta|\geq0.02\max|\Delta|$. The deposited DSMC postprocessor defines its default comparison mask as the union of points with $|\Delta|>0.02\max|\Delta|$ or $|Q_\Delta|>0.02\max|Q_\Delta|$, retaining cells with at least one logged collision (with a whole-domain fallback if fewer than ten points remain); its relative budget error uses measured collisional production as denominator and is quoted as a fraction rather than percent. The historical summary does not retain the mask arguments or its point count, so exact mask-command provenance for that diagnostic remains incomplete. The sensitivity and cross-method comparisons use the fixed aligned interval $|(x-x_s)/\lambda_1|\leq15$, with the stated reference profile as denominator. Thus ``active zone'' denotes a specified comparison set, not one universal mask across experiments.
 
 No direct $R^{\cl}_{xx}$ anchoring or supervised $R$ data enter this reconstruction.  Figure~\ref{fig:two_budget} shows the result.  The first column verifies the scalar-excess budget.  The middle column shows the rank-deficient heat-flux interpretation obtained by setting $\Delta=0$, which gives $R$ errors of about $63$--$64\%$.  The third column shows the two-budget reconstruction.  The errors drop to $4.43\%$, $3.73\%$ and $2.54\%$, close to the reference error obtained when the full DVM $\Delta$ field is used.  The correlations range from 0.99949 to 0.99974.
 \end{revision}
@@ -645,7 +663,7 @@ The high-Mach integrations use first-order upwind streaming and the frozen-local
 
 \begin{table}
 \centering
-\colorbox{revisionyellow}{\begin{minipage}{0.94\textwidth}
+\revisionbox{\begin{minipage}{0.94\textwidth}
 \caption{Logged high-Mach BGK run parameters and upstream reservoir quadrature checks. Time steps are rounded as in the original logs; every run reaches the stated $N_t$. The final column is the stress of the fitted upstream discrete Maxwellian, normalised by $\rho_1T_1=1$; its continuum equilibrium value is zero. It is a grid diagnostic, not physical upstream stress.}
 \label{tab:high_mach_run_audit}
 \centering\small
@@ -670,10 +688,10 @@ Within this scope, the higher-Mach profiles show that the scalar complement rema
 
 For Mach 8, full/lightweight relative $L_2$ differences in $(R^{\cl}_{xx},\Delta_d,S_d)$ are $(0.274,0.234,0.253)\%$; at Mach 12 they are $(0.230,0.272,0.253)\%$. The comparison uses the common stored $x/\lambda_1$ interval, linear interpolation and the full-profile norm as denominator, without further alignment or plateau subtraction. Table~\ref{tab:high_mach_grids} makes the differences between the paired configurations explicit. At Mach 8, the spatial and velocity point counts change at fixed domain extents. At Mach 12, both extents and point counts change; the full configuration even has a slightly larger $\Delta x$ than the lightweight one. These comparisons therefore measure combined numerical sensitivity rather than isolated convergence. A separate matched-parameter Shakhov comparison with a published Mach-8 benchmark is given in appendix~\ref{app:m8_reference}.
 \end{revision}
-\begin{figure}[htbp]
+\begin{figure}
 \centering
 \begingroup\setlength{\fboxsep}{6pt}
-\colorbox{revisionyellow}{\begin{minipage}{0.94\textwidth}
+\revisionbox{\begin{minipage}{0.94\textwidth}
 \centering
 \includegraphics[width=0.84\linewidth,height=0.60\textheight,keepaspectratio]{figures/high_mach_moments.pdf}
 \caption{BGK fourth-order moments at Mach 6, 8 and 12 for the full configurations in table~\ref{tab:high_mach_grids}. Dashed curves show the lightweight Mach-8 and Mach-12 variants in the same table. The discrete-reference scalar excess is retained separately from the continuum-reference excess. The plotted fields use the stored upstream mean-free-path coordinate without plateau subtraction. Full/lightweight agreement measures combined numerical sensitivity and does not establish independent velocity-tail, spatial-grid or temporal convergence; the upstream equilibrium-quadrature defects are reported in table~\ref{tab:high_mach_run_audit}.}
@@ -685,7 +703,7 @@ For Mach 8, full/lightweight relative $L_2$ differences in $(R^{\cl}_{xx},\Delta
 \section{Sparse scalar-excess information}
 \label{sec:sparse_delta}
 
-The budget reconstruction above uses full DVM moments to establish the physical channel.  To test whether this channel represents reduced information rather than disguised direct access to $R^{\cl}_{xx}$, we replace the full $\Delta$ field by a sparse scalar-excess probe.  The DVM $\Delta$ profile is sampled at 24 shock-local interior points with two endpoint anchors and reconstructed with a smooth radial-basis representation; no values of $R^{\cl}_{xx}$ are used.  The tensorial closure is then computed from $R^{\cl}_{xx}=S-\Delta_{\rm sparse}/3$.
+The budget reconstruction above uses full DVM moments to establish the physical channel.  To test whether this channel represents reduced information rather than disguised direct access to $R^{\cl}_{xx}$, we replace the full $\Delta$ field by a sparse scalar-excess probe.  The DVM $\Delta$ profile is sampled at 24 shock-local interior points with two endpoint anchors and reconstructed with a smooth radial-basis-function (RBF) representation; no values of $R^{\cl}_{xx}$ are used.  The tensorial closure is then computed from $R^{\cl}_{xx}=S-\Delta_{\rm sparse}/3$.
 
 \begin{revision}
 Figure~\ref{fig:sparse_delta} reports a separate interpolation test using its archived, fixed heat-budget channel. With 24 shock-local interior samples of $\Delta$ and two endpoint anchors, the tensorial errors are $4.33\%$, $4.49\%$ and $3.77\%$ for $M_1=2,3,5$; adding $1\%$ probe noise keeps the error below $4.7\%$ under that same contract. These results test scalar information reduction within the archived channel; they are not a new sparse-probe evaluation of the regenerated discrete-source budget in table~\ref{tab:two_budget}. The full-field reference curves in this interpolation study belong to the same archived contract.
@@ -710,13 +728,13 @@ The structural statement is instead that the missing information has the type of
 \textbf{Sensitivity to probe placement.} The small errors above apply to the specified shock-local sampling layouts, not arbitrary sets of 24 points. Figure~\ref{fig:revision_sparse_gap} tests this distinction on the completed Mach-5 baseline. With the same 24 interior probes and two boundary anchors, an active-uniform layout gives a $3.107\%$ active-zone error in $R^{\cl}_{xx}$, whereas a gap of width $25\%$ of the active interval, centred at the largest scalar-excess magnitude, raises that error to $33.014\%$. The existing full-domain-uniform layout, with 24 total probes including endpoints, gives $17.385\%$ and is not an exactly equal-count comparison. These controlled tests supply $S=R^{\cl}_{xx}+\Delta/3$ exactly to isolate scalar interpolation error; they do not revalidate the budget-derived channel or replace the earlier Mach-sweep errors. The active interval is chosen using the reference field, so the experiment also does not demonstrate blind sensor placement. A low leave-one-out error on observed probes does not guarantee accuracy within an unobserved core gap. The practical sparse-recovery claim therefore requires adequate core coverage.
 \end{revision}
 
-\begin{figure}[htbp]
+\begin{figure}
 \centering
 \begingroup\setlength{\fboxsep}{6pt}
-\colorbox{revisionyellow}{\begin{minipage}{0.94\textwidth}
+\revisionbox{\begin{minipage}{0.94\textwidth}
 \centering
 \includegraphics[width=\linewidth]{figures/A4_sparse_core_gap.pdf}
-\caption{Controlled probe-placement sensitivity for the Mach-5 scalar channel. Left: reference and Gaussian-RBF reconstructions, with probe locations marked. Right: relative $L_2$ errors over $|\Delta|\geq0.02\max|\Delta|$. Active-uniform and core-gap layouts have 26 total probes (16 and 14 in the active interval); full-domain uniform has 24 total (seven active). The active span is padded by $25\%$ on either side; the gap width is $25\%$ of the unpadded active span. The mean of the outermost $8\%$ at each end is subtracted following the existing interpolation procedure. Gaussian-RBF parameters are selected from sparse data by leave-one-out validation: 28/32/48 centres, width multipliers 0.5/0.6/0.8/1/1.2/1.5 and ridge parameters $10^{-10}/10^{-8}/10^{-6}/10^{-4}/10^{-2}$. No noise is added; $S$ is exact. This is a controlled interpolation stress test, not full two-budget validation.}
+\caption{Controlled probe-placement sensitivity for the Mach-5 scalar channel. Left: reference and Gaussian RBF reconstructions, with probe locations marked. Right: relative $L_2$ errors over $|\Delta|\geq0.02\max|\Delta|$. Active-uniform and core-gap layouts have 26 total probes (16 and 14 in the active interval); full-domain uniform has 24 total (seven active). The active span is padded by $25\%$ on either side; the gap width is $25\%$ of the unpadded active span. The mean of the outermost $8\%$ at each end is subtracted following the existing interpolation procedure. Gaussian-RBF parameters are selected from sparse data by leave-one-out validation: 28/32/48 centres, width multipliers 0.5/0.6/0.8/1/1.2/1.5 and ridge parameters $10^{-10}/10^{-8}/10^{-6}/10^{-4}/10^{-2}$. No noise is added; $S$ is exact. This is a controlled interpolation stress test, not full two-budget validation.}
 \label{fig:revision_sparse_gap}
 \end{minipage}}
 \endgroup
@@ -755,7 +773,7 @@ Panel (d) compares the normalised collision production with the normalised $-\De
 
 \begin{figure}
   \centerline{\includegraphics[width=0.95\textwidth]{figures/fig6_dsmc_delta_budget.pdf}}
-  \caption{Direct DSMC scalar-excess production in a Mach-3 monatomic hard-sphere shock.  (a) Normalised heat flux and normal stress identify the nonequilibrium shock layer.  (b) Scalar fourth-order excess $\Delta$.  (c) Direct collisional production $Q_\Delta^{\rm DSMC}$, accumulated from pre- and post-collision changes of $|\boldsymbol c|^4$, compared with the spatial budget $\partial_xJ_\Delta+4u_x'K_\Delta$.  The active-zone relative error is 0.170 and the correlation is 0.987.  (d) Normalised $Q_\Delta^{\rm DSMC}$ and $-\Delta$ have correlation 0.968, indicating strong relaxation-like alignment without assuming a BGK relaxation rate.}
+  \caption{Direct DSMC scalar-excess production in a Mach-3 monatomic hard-sphere shock.  (a) Normalised heat flux and normal stress identify the nonequilibrium shock layer.  (b) Scalar fourth-order excess $\Delta$.  (c) Direct collisional production $Q_\Delta^{\rm DSMC}$, accumulated from pre- and post-collision changes of $|\boldsymbol c|^4$, compared with the spatial budget $\partial_xJ_\Delta+4u_x'K_\Delta$.  Realisations are aligned at their density midpoints before averaging; the plotted $x/\lambda_1$ is this aligned coordinate, $(x-x_s)/\lambda_1$. The active-zone relative error is 0.170 and the correlation is 0.987.  (d) Normalised $Q_\Delta^{\rm DSMC}$ and $-\Delta$ have correlation 0.968, indicating strong relaxation-like alignment without assuming a BGK relaxation rate.}
   \label{fig:dsmc_budget}
 \end{figure}
 
@@ -765,15 +783,15 @@ The DSMC calculation extends the source diagnostics to directly sampled binary c
 
 
 \begin{revision}
-\textbf{Particle-number audit and interpretation.} The original PPC120 ensemble is supplemented by PPC60, 240, 480, 960, 1920 and 3840, each with eight seeds and the same grid, time step and sampling schedule, giving 56 runs. Figure~\ref{fig:revision_dsmc_moments} shows the high-PPC moment profiles; appendix~\ref{app:particle_sensitivity} reports the directly logged collision-source audit. Between PPC1920 and PPC3840, aligned ensemble-mean $R^{\cl}_{xx}$, $\Delta$ and $S$ differences are approximately $0.385\%$, $0.391\%$ and $0.309\%$, and the collision-source difference is $0.668\%$. These finite-sample differences do not establish statistical equivalence or independence from the sampling window. 
+\textbf{Particle-number audit and interpretation.} The original ensemble with 120 particles per cell (PPC120) is supplemented by PPC60, 240, 480, 960, 1920 and 3840, each with eight seeds and the same grid, time step and sampling schedule, giving 56 runs. Figure~\ref{fig:revision_dsmc_moments} shows the high-PPC moment profiles; appendix~\ref{app:particle_sensitivity} reports the directly logged collision-source audit. Between PPC1920 and PPC3840, aligned ensemble-mean $R^{\cl}_{xx}$, $\Delta$ and $S$ differences are approximately $0.385\%$, $0.391\%$ and $0.309\%$, and the collision-source difference is $0.668\%$. These finite-sample differences do not establish statistical equivalence or independence from the sampling window. 
 
 Moreover, an audit identified a pair-selection bias in the original DSMC sampler; corrected-sampler pilots are separate and have not been mixed into this ensemble. Consequently, the original-source budget correlations remain diagnostics of that implementation, not a bias-free validation of the Boltzmann collision operator. Between-seed intervals do not account for this systematic error.
 \end{revision}
 
-\begin{figure}[htbp]
+\begin{figure}
 \centering
 \begingroup\setlength{\fboxsep}{6pt}
-\colorbox{revisionyellow}{\begin{minipage}{0.94\textwidth}
+\revisionbox{\begin{minipage}{0.94\textwidth}
 \centering
 \includegraphics[width=\linewidth]{figures/Main_DSMC_high_moments.pdf}
 \caption{Mach-3 hard-sphere DSMC high-order moments at PPC960, 1920 and 3840. Lines show eight-seed means and bands pointwise $95\%$ Student-$t$ intervals with seven degrees of freedom. Each time-averaged profile is aligned at its $n=2$ crossing by linear interpolation, without smoothing; $\lambda_1=1$ in the DSMC units. The bands exclude systematic sampler error and are not simultaneous confidence bands. These are original-sampler results; the identified pair-selection bias remains unresolved. Alignment does not remove temporal shock wandering. The Mach-3 DSMC fields are not a direct same-case validation of the Mach-5 DVM comparisons.}
@@ -807,6 +825,10 @@ In multidimensional flows, the observed heat-flux quantity is the divergence of 
 
 
 \begin{revision}
+\textbf{Relation to realizability and closed-system stability.} The family in the displayed null-space family describes an unobserved direction in one balance law, not a family of admissible solutions of a closed R26 system. A residual that observes only $S$ does not penalise changes along that direction or test their moment realizability. The scalar complement removes this observational freedom; positivity and realizability constraints must still be imposed independently. Hyperbolicity additionally depends on the constitutive flux laws for $m_{ijk}$, $R_{ij}$ and $\Delta$. No closed-system principal symbol is evaluated here, so removing the null direction does not prove a real spectrum, removal of the Bobylev instability or hypoellipticity. In multiple dimensions, complementary observations would need to resolve the irreducible rotational components, for example in an $\mathfrak{so}(3)$ representation, rather than append only one scalar observation.
+
+The two-budget procedure is primarily an identifiability diagnostic. It is constructive when an invertible scalar source law, the required fluxes and an anchor are supplied, as for these BGK references. For general Boltzmann production, a measured source does not alone determine $\Delta$ algebraically.
+
 \textbf{Scope of the channel result.} Invertibility of the two-observation map does not imply positivity of an underlying distribution, hyperbolicity of a closed moment system, or an entropy inequality. No closed flux Jacobian is constructed here, and no restoration of a real spectrum or hypoellipticity is claimed. In multiple dimensions, observing a tensor divergence does not identify all tensor components: adding a scalar channel is not generally sufficient. The present reservoir-boundary shock calculation supplies no solid-wall moment boundary law. Polyatomic internal energies would enlarge the moment state and introduce additional exchange channels; the one-dimensional monatomic rank calculation cannot be transferred unchanged. Finally, this work does not train a constitutive closure or establish its Chapman--Enskog limit. Varying a mean-free-path coordinate alone is not an independent macroscopic hydrodynamic-limit test. The reported $2.54$--$4.43\%$ recovery range concerns the tested BGK references, not arbitrary molecular cross-sections.
 \end{revision}
 
@@ -840,13 +862,13 @@ As a separate profile-level benchmark, appendix~\ref{app:dsmc_cross_method} comp
 This research received no specific grant from any funding agency, commercial or not-for-profit sectors.
 
 \section*{Declaration of AI-assisted tools}
-ChatGPT (OpenAI) was used for language editing and for assistance in debugging numerical scripts.  The author verified all numerical results, figures, equations and scientific conclusions.
+ChatGPT (OpenAI) and Claude (Anthropic) assisted with language editing, numerical-script debugging and critical review of the manuscript and response letters. The author is responsible for verifying the numerical results, figures, equations, references and scientific conclusions; AI suggestions were not treated as independent scientific evidence.
 
 \section*{Declaration of interests}
 The author reports no conflict of interest.
 
 \section*{Data availability statement}
-Manuscript sources, figure and table files, recoverable solver and analysis source snapshots, compact numerical profiles and run/check records are deposited in the public repository \url{https://github.com/Ehsan-Roohi/DVM-JFM}; the scientific deposit is identified by commit \texttt{4c3d311} \citep{RoohiShockArchive2026}. Its publication manifest records file sizes and SHA-256 hashes, while its solver-specification and coverage audits distinguish the collision-model campaigns, historical and corrected calculations, and unresolved provenance gaps. The bundled Mach-2 and Mach-3 raw-profile comparison scripts reproduce the deposited comparison tables. This deposit does not contain all multi-gigabyte velocity-distribution/restart files, and some archived drivers require adaptation of machine-specific paths. The Bird DSMC original remains an external dependency; the repository supplies the documented modifications and original-source identification. The archived budgets have been regenerated with their documented discrete-source contracts. The full distribution used for Figure~\ref{fig:shakhov_check} is included in the public repository with its hash; a complete public deposit of the larger BGK raw distributions remains outstanding. No DOI has yet been assigned.
+Manuscript sources, figure and table files, recoverable solver and analysis source snapshots, compact numerical profiles and run/check records are deposited in the public repository \url{https://github.com/Ehsan-Roohi/DVM-JFM}; the scientific deposit is identified by commit \texttt{4c3d311}, and the accompanying reader-facing revision is identified by tag \texttt{reviewer-revision-20261010} \citep{RoohiShockArchive2026}. Its publication manifest records file sizes and SHA-256 hashes, while its solver-specification and coverage audits distinguish the collision-model campaigns, historical and corrected calculations, and unresolved provenance gaps. The bundled Mach-2 and Mach-3 raw-profile comparison scripts reproduce the deposited comparison tables. This deposit does not contain all multi-gigabyte velocity-distribution/restart files, and some archived drivers require adaptation of machine-specific paths. The Bird DSMC original remains an external dependency; the repository supplies the documented modifications and original-source identification. The archived budgets have been regenerated with their documented discrete-source contracts. The full distribution used for Figure~\ref{fig:shakhov_check} is included in the public repository with its hash; a complete public deposit of the larger BGK raw distributions remains outstanding. No DOI has yet been assigned.
 
 
 \clearpage
@@ -866,10 +888,10 @@ For each field $g\in\{\rho,T,q_x,R^{\cl}_{xx},\Delta_d,S\}$, the comparison uses
 The baseline has $N_x=2200$, half-domain $80\lambda_1$, velocity grid $141\times27\times27$ and $v_{\max}=22$. The enlarged velocity domain uses $169\times33\times33$ points with longitudinal bound 26.4 and transverse bound 27.076923. Velocity refinement uses $211\times40\times40$ points at the baseline extent. Spatial refinement uses 3299 points; the enlarged spatial half-domain is $120\lambda_1$ with 3300 points. The time-step test halves the baseline CFL coefficient from 0.75 to 0.375. Prescribed step counts for baseline, velocity extent, velocity refinement, spatial refinement, half time step and spatial extent are 52000, 62400, 52000, 78000, 104000 and 52000, respectively. All six integrations reached their prescribed end steps; final profiles, matching checkpoints and archive checksums were verified.
 \end{revision}
 
-\begin{figure}[htbp]
+\begin{figure}
 \centering
 \begingroup\setlength{\fboxsep}{6pt}
-\colorbox{revisionyellow}{\begin{minipage}{0.94\textwidth}
+\revisionbox{\begin{minipage}{0.94\textwidth}
 \centering
 \includegraphics[width=\linewidth]{figures/A1_DVM_sensitivity_summary.pdf}
 \caption{Mach-5 BGK DVM sensitivity summary. Left: relative $L_2$ differences defined in the text. Right: relative changes between the last two saved profiles, at step pairs 50000--52000, 62000--62400, 50000--52000, 76000--78000, 102000--104000 and 50000--52000 in the displayed case order. Unequal intervals are not comparable time derivatives. Two levels do not establish asymptotic convergence order; spatial refinement also changes the time step. These diagnostics introduce no new stopping threshold.}
@@ -878,10 +900,10 @@ The baseline has $N_x=2200$, half-domain $80\lambda_1$, velocity grid $141\times
 \endgroup
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}
 \centering
 \begingroup\setlength{\fboxsep}{6pt}
-\colorbox{revisionyellow}{\begin{minipage}{0.94\textwidth}
+\revisionbox{\begin{minipage}{0.94\textwidth}
 \centering
 \includegraphics[width=\linewidth]{figures/A2_DVM_profile_differences.pdf}
 \caption{Aligned DVM profile differences for the same tests as figure~\ref{fig:revision_dvm_summary}. Each ordinate is $100(g_{\rm test}-g_{\rm base})/\max|g_{\rm base}|$, with the maximum taken over the plotted interval. Peak normalisation avoids division by zero-crossing values. $\Delta_d$ uses the discrete-Maxwellian reference and is not the raw DSMC fourth-moment excess. This comparison does not directly measure omitted velocity-tail integrals or resolve distribution bimodality.}
@@ -898,10 +920,10 @@ The baseline has $N_x=2200$, half-domain $80\lambda_1$, velocity grid $141\times
 The seven PPC levels retain 400 spatial cells, time step 0.005 and 180000 steps, with sampling after step 70000 every tenth step. All eight seeds at each level use the original sampler. Figure~\ref{fig:revision_dsmc_source} holds this sampling schedule fixed and therefore does not establish averaging-window independence or reconfirm the historical collision-source/spatial-budget correlation of 0.987. Adjacent-PPC source differences are $10.870\%$, $3.589\%$, $4.963\%$, $2.275\%$, $1.268\%$ and $0.668\%$ for the successive pairs from 60--120 through 1920--3840. The trend need not be monotone because finite-seed noise and systematic effects remain. Collision counts are accumulated event counts, not independent sample counts or effective sample sizes.
 \end{revision}
 
-\begin{figure}[htbp]
+\begin{figure}
 \centering
 \begingroup\setlength{\fboxsep}{6pt}
-\colorbox{revisionyellow}{\begin{minipage}{0.94\textwidth}
+\revisionbox{\begin{minipage}{0.94\textwidth}
 \centering
 \includegraphics[width=\linewidth]{figures/A3_DSMC_collision_source.pdf}
 \caption{Directly logged scalar collision-source sensitivity. (a) Eight-seed mean and pointwise $95\%$ Student-$t$ intervals for the three highest PPC levels. (b) Adjacent-PPC relative $L_2$ differences of aligned mean source profiles, normalised by the higher-PPC profile over $|(x-x_s)/\lambda_1|\leq15$. (c) Mean accumulated accepted-collision counts per cell, interpolated to the same aligned coordinate. No spatial smoothing is applied. Systematic pair-selection error is not included in the uncertainty bands.}
@@ -959,14 +981,14 @@ For this campaign, stationarity requires five consecutive checks with the maximu
 The corrected-Shakhov R26 comparison uses the same $Pr=2/3$ and $\mu=T$, $\tau=1/\rho$ transport parameters, but solves a steady moment boundary-value problem. For the archived Mach-3 result, a piecewise degree-four representation on 4012 elements gives 16049 native points over $[-45,45]$, with an eight-point Gauss residual objective and a sparse augmented Levenberg--Marquardt solve. Independent qualification evaluates the full corrected tensor PDE on the native points, finite profiles and positive pressure, with scaled PDE and boundary/phase tolerances $0.01$ and $10^{-4}$. The measured native PDE residual is $0.0046433$ and the boundary/phase residual $1.51\times10^{-11}$. The runner stopped at its 30-iteration limit with automatic acceptance disabled; the separate independent checker subsequently passed the stated numerical criteria. Thus ``accepted'' here denotes this finite-tolerance independent qualification, not a zero residual, uniqueness, or agreement with a kinetic collision operator. The Mach-2 corrected profile has 3841 native points. Only these two corrected R26 profiles enter the present cross-method comparison; no corrected Mach-4 or Mach-5 R26 solution is included.
 \end{revision}
 \begin{revision}
-We add a separate Bird DSMC profile set at $M_1=2,3,4,5$, with 2000 upstream particles per cell, 800 spatial cells, $\Delta t=0.005$, and sampling through $t=400$ after a warm-up to $t=200$ \citep{Bird1994}. The collision model is VHS with $\omega=1$ and inverse-VSS $\alpha=1$ (isotropic scattering); the transport law is $\mu^*=T^*$ and $\tau^*=1/\rho^*$. Each Mach number has one independent seed, 800 total blocks, and 400 sampled blocks after warm-up. The high-particle runs use the original Bird sampler, so the pair-selection limitation described in appendix~\ref{app:additional_audits} remains applicable.
+We add a separate Bird DSMC profile set at $M_1=2,3,4,5$, with 2000 upstream particles per cell, 800 spatial cells, $\Delta t=0.005$, and sampling through $t=400$ after a warm-up to $t=200$ \citep{Bird1994}. The collision model is VHS with $\omega=1$ and inverse scattering parameter $\alpha=1$ in the variable soft sphere (VSS) notation (isotropic scattering); the transport law is $\mu^*=T^*$ and $\tau^*=1/\rho^*$. Each Mach number has one independent seed, 800 total blocks, and 400 sampled blocks after warm-up. The high-particle runs use the original Bird sampler, so the pair-selection limitation described in appendix~\ref{app:additional_audits} remains applicable.
 
 For the Mach-2 quantitative comparison, profiles are aligned by a density-midpoint translation only and evaluated on the common interval $[-15,15]\lambda_1$, without fitting the shock width. Table~\ref{tab:dsmc2000_m2} reports raw-profile relative $L^2$ differences with the DSMC norm in the denominator. The comparison is descriptive: the DSMC samples are finite-time, one-seed estimates, stationarity is not certified, and higher central moments retain finite-sample bias. The DVM is a Shakhov calculation and the R26 curve is the corrected consistent Shakhov solution; equal transport coefficients do not make these collision descriptions identical.
 
 Figures~\ref{fig:dsmc2000_m2} and~\ref{fig:dsmc2000_m3m5} show the profiles. The Mach-2 figure uses raw DSMC data; the Mach-3--5 figure also shows local quadratic smoothing as a visual guide. All tabulated errors use unsmoothed profiles. The DVM curves are finite-time snapshots, not stationary references. Corrected-Shakhov R26 profiles are available and numerically accepted here at Mach 2 and 3 only; no corrected R26 result is supplied at Mach 4 or 5. Table~\ref{tab:dsmc2000_channel} resolves the signed errors in $S=R^{\cl}_{xx}+\Delta/3$. The Mach-3 R26 row was recomputed from the accepted corrected-Shakhov profile, rather than read from a figure annotation. With the same raw-data alignment, its relative $L^2$ differences against 2000-ppc DSMC are $1.328\%$, $2.613\%$, $15.267\%$, $38.376\%$, $26.390\%$ and $26.449\%$ for $\rho,T,q_x,R^{\cl}_{xx},\Delta,S$, respectively. These comparisons provide a reusable cross-method profile benchmark, not a validation of the collision-production measurement, a statistical confidence interval, or a test of the two-channel identifiability result.
 \end{revision}
 
-\begin{table}[htbp]
+\begin{table}
 \centering
 \begin{revision}
 \caption{Mach-2 raw-profile relative $L^2$ differences against the 2000-particle-per-cell Bird DSMC result. Entries are $100\|g_{\rm model}-g_{\rm DSMC}\|_2/\|g_{\rm DSMC}\|_2$ on the common $[-15,15]\lambda_1$ interval after density-midpoint translation only; no shock-width fit or smoothing is used in the metric. The DVM is a finite-time Shakhov snapshot and the R26 result is the corrected Shakhov profile.}
@@ -983,7 +1005,7 @@ Corrected Shakhov R26 & 0.468 & 0.561 & 6.165 & 22.883 & 25.755 & 11.963\\
 \end{tabular}
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}
 \centering
 \begin{revision}
 \caption{Signed-error decomposition against raw 2000-ppc DSMC profiles at Mach 2 and 3. The three error columns are $100\|e\|_2/\|S_{\rm DSMC}\|_2$ on $[-15,15]\lambda_1$ after density-midpoint translation only; $c=\langle e_R,e_{\Delta/3}\rangle/(\|e_R\|_2\|e_{\Delta/3}\|_2)$. Thus $e_S=e_R+e_{\Delta/3}$ pointwise. The Mach-3 DVM row uses the saved transient snapshot at $t=238.125$. The R26 Mach-3 row comes from the accepted corrected-Shakhov profile (SHA-256 beginning \texttt{1b870043}); the calculations use unsmoothed profiles and are descriptive finite-time comparisons.}
@@ -1002,14 +1024,14 @@ $M_1$ & Model & $\|e_R\|$ (\%) & $\|e_{\Delta/3}\|$ (\%) & $\|e_S\|$ (\%) & $c$\
 \end{tabular}
 \end{table}
 
-\begin{figure}[htbp]
+\begin{figure}
 \centering
 \includegraphics[width=\linewidth]{figures/M2_DSMC2000_cross_method.png}
-\caption{Mach-2 raw profiles from 2000-ppc Bird DSMC, a Shakhov DVM snapshot, and corrected-Shakhov R26. Density-midpoint translation is the only spatial alignment; the historical pre-STF R26 curve is excluded.}
+\caption{Mach-2 raw profiles from 2000-ppc Bird DSMC, a Shakhov DVM snapshot, and corrected-Shakhov R26. Density-midpoint translation is the only spatial alignment; the historical R26 curve preceding the symmetric trace-free (STF) corrections is excluded.}
 \label{fig:dsmc2000_m2}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}
 \centering
 \includegraphics[width=\linewidth]{figures/M3_M5_DSMC2000_DVM_R26.png}
 \caption{Mach-3--5 profile comparison using 2000-ppc Bird DSMC and Shakhov DVM snapshots, with the corrected-Shakhov R26 profile shown only where available (Mach 3). Raw DSMC data and display-only local smoothing are both shown. The DVM fields are transient snapshots; neither the DSMC stationarity nor model-specific convergence is certified.}
@@ -1043,10 +1065,10 @@ Spatial refinement, $N_x=2400$, $t=400$ & 0.78 & 0.99\\
 \end{tabular}
 \end{minipage}
 \end{revision}
-\begin{figure}[htbp]
+\begin{figure}
 \centering
 \begingroup\setlength{\fboxsep}{6pt}
-\colorbox{revisionyellow}{\begin{minipage}{0.94\textwidth}
+\revisionbox{\begin{minipage}{0.94\textwidth}
 \centering
 \includegraphics[width=\linewidth]{figures/m8_paper_comparison.png}
 \caption{Matched-parameter Mach-8 Shakhov benchmark comparison. Black curves are the vector-extracted S-model results from figure~1 of \citet{ChenXuCai2013}; coloured curves are the present baseline, time-extended and spatially refined calculations. Lower panels show discrepancies in percentage points of the normalised jump. Density and temperature use the same spatial translation for each calculation.}

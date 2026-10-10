@@ -14,7 +14,7 @@ for i,m in enumerate((2,3,5)):
     for j,(truth,recovered,title) in enumerate(panels):
         ax=axes[i,j];ax.plot(x,truth,'k-',label='full distribution');ax.plot(x,recovered,'C1--',label='budget')
         
-        if j==2:ax.plot(x,S-D/3,'C0:',label='full Delta reference')
+        if j==2:ax.plot(x,S-D/3,'C0:',label=r'full-$\Delta$ reference')
         ax.set_xlim(-{2:20,3:30,5:40}[m],{2:20,3:30,5:40}[m]);ax.grid(alpha=.2);ax.set_xlabel(r'$x/\lambda_1$');ax.set_title(f'M{m}: {title}')
         if i==0:ax.legend(fontsize=8)
 figplot.savefig(F/'corrected_two_budget_audit.pdf');figplot.savefig(F/'corrected_two_budget_audit.png',dpi=180);plt.close(figplot)

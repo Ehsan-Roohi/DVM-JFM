@@ -1,0 +1,185 @@
+\begin{thebibliography}{32}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\def\au#1{#1} \def\ed#1{#1} \def\yr#1{#1}\def\at#1{#1}\def\jt#1{\textit{#1}}
+  \def\bt#1{#1}\def\bvol#1{\textbf{#1}} \def\vol#1{#1} \def\pg#1{#1}
+  \def\publ#1{#1}\def\arxiv#1{#1}\def\org#1{#1}\def\st#1{\textit{#1}}
+
+\bibitem[Alsmeyer(1976)]{Alsmeyer1976Shock}
+{\sc \au{Alsmeyer, H.}} \yr{1976}  \at{Density profiles in argon and nitrogen
+  shock waves measured by the absorption of an electron beam}.  \jt{Journal of
+  Fluid Mechanics}  \bvol{74}~(3),  \pg{497--513}.
+
+\bibitem[Andries {\em et~al.\/}(2000)Andries, Le~Tallec, Perlat \&
+  Perthame]{Andries2000GaussianBGK}
+{\sc \au{Andries, Pierre}, \au{Le~Tallec, Patrick}, \au{Perlat, Jean-Philippe}
+  \& \au{Perthame, Benoit}} \yr{2000}  \at{The gaussian-{BGK} model of
+  boltzmann equation with small prandtl number}.  \jt{European Journal of
+  Mechanics B/Fluids}  \bvol{19}~(6),  \pg{813--830}.
+
+\bibitem[Bhatnagar {\em et~al.\/}(1954)Bhatnagar, Gross \&
+  Krook]{Bhatnagar1954}
+{\sc \au{Bhatnagar, P.~L.}, \au{Gross, E.~P.} \& \au{Krook, M.}} \yr{1954}
+  \at{A model for collision processes in gases. i. small amplitude processes in
+  charged and neutral one-component systems}.  \jt{Physical Review}
+  \bvol{94}~(3),  \pg{511--525}.
+
+\bibitem[Bird(1994)]{Bird1994}
+{\sc \au{Bird, Graeme~A.}} \yr{1994} {\em Molecular Gas Dynamics and the Direct
+  Simulation of Gas Flows\/}.  \publ{Oxford: Clarendon Press}.
+
+\bibitem[Cercignani(1988)]{Cercignani1988}
+{\sc \au{Cercignani, Carlo}} \yr{1988} {\em The {Boltzmann} Equation and Its
+  Applications\/}.  \publ{Springer}.
+
+\bibitem[Chen {\em et~al.\/}(2013)Chen, Xu \& Cai]{ChenXuCai2013}
+{\sc \au{Chen, Songze}, \au{Xu, Kun} \& \au{Cai, Qingdong}} \yr{2013} A
+  comparison and unification of ellipsoidal statistical and shakhov {BGK}
+  models. ArXiv:1304.0865.
+
+\bibitem[Dimarco \& Pareschi(2014)]{DimarcoPareschi2014}
+{\sc \au{Dimarco, Giacomo} \& \au{Pareschi, Lorenzo}} \yr{2014}  \at{Numerical
+  methods for kinetic equations}.  \jt{Acta Numerica}  \bvol{23},
+  \pg{369--520}.
+
+\bibitem[Fei {\em et~al.\/}(2020)Fei, Liu, Liu \&
+  Zhang]{FeiLiuLiuZhang2020ShockBenchmark}
+{\sc \au{Fei, Fei}, \au{Liu, Haihong}, \au{Liu, Zhaohui} \& \au{Zhang, Jun}}
+  \yr{2020}  \at{A benchmark study of kinetic models for shock waves}.
+  \jt{AIAA Journal}  \bvol{58}~(6),  \pg{2596--2608}.
+
+\bibitem[Filbet \& Jin(2010)]{FilbetJin2010}
+{\sc \au{Filbet, Francis} \& \au{Jin, Shi}} \yr{2010}  \at{A class of
+  asymptotic-preserving schemes for kinetic equations and related problems with
+  stiff sources}.  \jt{Journal of Computational Physics}  \bvol{229}~(20),
+  \pg{7625--7648}.
+
+\bibitem[Grad(1949)]{Grad1949}
+{\sc \au{Grad, Harold}} \yr{1949}  \at{On the kinetic theory of rarefied
+  gases}.  \jt{Communications on Pure and Applied Mathematics}  \bvol{2}~(4),
+  \pg{331--407}.
+
+\bibitem[Gu \& Emerson(2009)]{GuEmerson2009R26}
+{\sc \au{Gu, Xiao-Jun} \& \au{Emerson, David~R.}} \yr{2009}  \at{A high-order
+  moment approach for capturing non-equilibrium phenomena in the transition
+  regime}.  \jt{Journal of Fluid Mechanics}  \bvol{636},  \pg{177--216}.
+
+\bibitem[Han {\em et~al.\/}(2019)Han, Ma, Ma \& E]{Han2019MomentClosure}
+{\sc \au{Han, Jiequn}, \au{Ma, Chao}, \au{Ma, Zheng} \& \au{E, Weinan}}
+  \yr{2019}  \at{Uniformly accurate machine learning-based hydrodynamic models
+  for kinetic equations}.  \jt{Proceedings of the National Academy of Sciences}
+   \bvol{116}~(44),  \pg{21983--21991}.
+
+\bibitem[Holway(1966)]{Holway1966ESBGK}
+{\sc \au{Holway, Lowell~H.}} \yr{1966}  \at{New statistical models for kinetic
+  theory: methods of construction}.  \jt{Physics of Fluids}  \bvol{9}~(9),
+  \pg{1658--1673}.
+
+\bibitem[Huang {\em et~al.\/}(2023)Huang, Cheng, Christlieb, Roberts \&
+  Yong]{Huang2023HyperbolicClosure}
+{\sc \au{Huang, Juntao}, \au{Cheng, Yingda}, \au{Christlieb, Andrew~J.},
+  \au{Roberts, Luke~F.} \& \au{Yong, Wen-An}} \yr{2023}  \at{Machine learning
+  moment closure models for the radiative transfer equation {II}: enforcing
+  global hyperbolicity in gradient-based closures}.  \jt{Multiscale Modeling \&
+  Simulation}  \bvol{21}~(2),  \pg{489--512}.
+
+\bibitem[Ivanov \& Gimelshein(1998)]{IvanovGimelshein1998Hypersonic}
+{\sc \au{Ivanov, M.~S.} \& \au{Gimelshein, S.~F.}} \yr{1998}  \at{Computational
+  hypersonic rarefied flows}.  \jt{Annual Review of Fluid Mechanics}
+  \bvol{30},  \pg{469--505}.
+
+\bibitem[Karniadakis {\em et~al.\/}(2021)Karniadakis, Kevrekidis, Lu,
+  Perdikaris, Wang \& Yang]{Karniadakis2021PINNs}
+{\sc \au{Karniadakis, George~Em}, \au{Kevrekidis, Ioannis~G.}, \au{Lu, Lu},
+  \au{Perdikaris, Paris}, \au{Wang, Sifan} \& \au{Yang, Liu}} \yr{2021}
+  \at{Physics-informed machine learning}.  \jt{Nature Reviews Physics}
+  \bvol{3},  \pg{422--440}.
+
+\bibitem[Levermore(1996)]{Levermore1996}
+{\sc \au{Levermore, C.~David}} \yr{1996}  \at{Moment closure hierarchies for
+  kinetic theories}.  \jt{Journal of Statistical Physics}  \bvol{83},
+  \pg{1021--1065}.
+
+\bibitem[Lou {\em et~al.\/}(2021)Lou, Meng \&
+  Karniadakis]{LouMengKarniadakis2021PINNBGK}
+{\sc \au{Lou, Qin}, \au{Meng, Xuhui} \& \au{Karniadakis, George~Em}} \yr{2021}
+  \at{Physics-informed neural networks for solving forward and inverse flow
+  problems via the {Boltzmann--BGK} formulation}.  \jt{Journal of Computational
+  Physics}  \bvol{447},  \pg{110676}.
+
+\bibitem[Mathiaud \& Mieussens(2016)]{MathiaudMieussens2016ESFP}
+{\sc \au{Mathiaud, Julien} \& \au{Mieussens, Luc}} \yr{2016}  \at{A
+  fokker--planck model of the boltzmann equation with correct prandtl number}.
+  \jt{Journal of Statistical Physics}  \bvol{162},  \pg{397--414}.
+
+\bibitem[Mieussens(2000)]{Mieussens2000}
+{\sc \au{Mieussens, Luc}} \yr{2000}  \at{Discrete velocity model and implicit
+  scheme for the {BGK} equation of rarefied gas dynamics}.  \jt{Mathematical
+  Models and Methods in Applied Sciences}  \bvol{10}~(8),  \pg{1121--1149}.
+
+\bibitem[Mott-Smith(1951)]{MottSmith1951Shock}
+{\sc \au{Mott-Smith, Harold~M.}} \yr{1951}  \at{The solution of the {Boltzmann}
+  equation for a shock wave}.  \jt{Physical Review}  \bvol{82}~(6),
+  \pg{885--892}.
+
+\bibitem[Oh {\em et~al.\/}(2025)Oh, Cho, Yun, Park \& Hong]{Oh2025SPINNBGK}
+{\sc \au{Oh, Jaemin}, \au{Cho, Seung~Yeon}, \au{Yun, Seok-Bae}, \au{Park,
+  Eunbyung} \& \au{Hong, Youngjoon}} \yr{2025}  \at{Separable physics-informed
+  neural networks for solving the {BGK} model of the {Boltzmann} equation}.
+  \jt{SIAM Journal on Scientific Computing}  \bvol{47}~(2),  \pg{C451--C474}.
+
+\bibitem[Raissi {\em et~al.\/}(2019)Raissi, Perdikaris \&
+  Karniadakis]{Raissi2019PINN}
+{\sc \au{Raissi, Maziar}, \au{Perdikaris, Paris} \& \au{Karniadakis,
+  George~Em}} \yr{2019}  \at{Physics-informed neural networks: A deep learning
+  framework for solving forward and inverse problems involving nonlinear
+  partial differential equations}.  \jt{Journal of Computational Physics}
+  \bvol{378},  \pg{686--707}.
+
+\bibitem[Roohi(2026{\natexlab{{\em a\/}}})]{Roohi2026NeuralShock}
+{\sc \au{Roohi, Ehsan}} \yr{2026{\natexlab{{\em a\/}}}} Closure-level
+  observability in neural kinetic shock solvers. ArXiv:2605.29211,
+  \arxiv{arXiv: 2605.29211}.
+
+\bibitem[Roohi(2026{\natexlab{{\em b\/}}})]{RoohiShockArchive2026}
+{\sc \au{Roohi, Ehsan}} \yr{2026{\natexlab{{\em b\/}}}} {DVM-JFM}: archived
+  solvers, compact profiles and provenance for closure-channel recovery in
+  kinetic normal shocks. \url{https://github.com/Ehsan-Roohi/DVM-JFM},
+  scientific deposit, commit 4c3d3118cd77a780049f04e80ef5f05f216aa2e4;
+  accompanying manuscript revision, tag reviewer-revision-20261010, 10 October
+  2026. Raw-distribution exclusions and reproducibility limitations are
+  documented in the repository.
+
+\bibitem[Shakhov(1968)]{Shakhov1968}
+{\sc \au{Shakhov, E.~M.}} \yr{1968}  \at{Generalization of the {Krook} kinetic
+  relaxation equation}.  \jt{Fluid Dynamics}  \bvol{3}~(5),  \pg{95--96}.
+
+\bibitem[Sone(2007)]{Sone2007}
+{\sc \au{Sone, Yoshio}} \yr{2007} {\em Molecular Gas Dynamics: Theory,
+  Techniques, and Applications\/}.  \publ{Birkh\"auser}.
+
+\bibitem[Struchtrup(2005)]{Struchtrup2005}
+{\sc \au{Struchtrup, Henning}} \yr{2005} {\em Macroscopic Transport Equations
+  for Rarefied Gas Flows\/}.  \publ{Springer}.
+
+\bibitem[Struchtrup \& Torrilhon(2003)]{StruchtrupTorrilhon2003}
+{\sc \au{Struchtrup, Henning} \& \au{Torrilhon, Manuel}} \yr{2003}
+  \at{Regularization of {Grad}'s 13 moment equations: Derivation and linear
+  analysis}.  \jt{Physics of Fluids}  \bvol{15}~(9),  \pg{2668--2680}.
+
+\bibitem[Struchtrup \& Torrilhon(2007)]{StruchtrupTorrilhon2007PRL}
+{\sc \au{Struchtrup, Henning} \& \au{Torrilhon, Manuel}} \yr{2007}  \at{{H}
+  theorem, regularization, and boundary conditions for linearized 13 moment
+  equations}.  \jt{Physical Review Letters}  \bvol{99},  \pg{014502}.
+
+\bibitem[Torrilhon(2016)]{Torrilhon2016}
+{\sc \au{Torrilhon, Manuel}} \yr{2016}  \at{Modeling nonequilibrium gas flow
+  based on moment equations}.  \jt{Annual Review of Fluid Mechanics}
+  \bvol{48},  \pg{429--458}.
+
+\bibitem[Torrilhon \& Struchtrup(2004)]{TorrilhonStruchtrup2004}
+{\sc \au{Torrilhon, Manuel} \& \au{Struchtrup, Henning}} \yr{2004}
+  \at{Regularized 13-moment equations: shock structure calculations and
+  comparison to {Burnett} models}.  \jt{Journal of Fluid Mechanics}
+  \bvol{513},  \pg{171--198}.
+
+\end{thebibliography}

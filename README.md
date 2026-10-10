@@ -46,3 +46,7 @@ The hash-matched full Figure 5 distribution is deposited at `research/raw_inputs
 The subsequent full-distribution audit is in `audit/reproducibility_followup/FOLLOWUP_REPORT.md`. It reproduces the archived BGK budgets, identifies their actual derivative/anchor/mask contracts, and separates historical numbers from newly corrected discrete-source numbers. Figure 5 was regenerated with the archived full distribution and unchanged source code on a Unity CPU; its numerical curves agree with the archived CUDA output within explicit backend tolerances. These checks establish numerical lineage and postprocessing reproducibility, not shock stationarity or positivity of the signed Shakhov target. The earlier audit reports are retained as dated history and are superseded on these two questions by the follow-up receipts. The Figure 5 full input is public; the larger BGK full inputs remain an explicit deposit limitation. Do not infer corrected R26 Mach-4/5 results from this manuscript's Mach-2/3 curves.
 
 No global convergence, uniqueness, nonexistence or validated high-Mach accuracy is implied by depositing an archived result. Cite a specific commit, not only a moving branch URL.
+
+## Clean reader revision
+
+The current [manuscript](manuscript/main.pdf) and source are frozen at `reviewer-revision-20261010`. See [revision notes](audit/READER_REVISION_20261010.md) for scientific scope and remaining provenance gaps. Historical Figure-5 filenames refer to the Shakhov consistency plot, now Figure 4 in this manuscript.
