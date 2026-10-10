@@ -170,26 +170,6 @@
     "sha256": "d2b5bf829bd6c80835eec9b0c11c46df6487681e3c6ff6a4c5b21e63a16af1da"
   },
   {
-    "path": "figure5_regenerated/output/M3_sourcefixed_frozen_cpu_regenerated/M3_sourcefixed_frozen_cpu_regenerated.metrics.csv",
-    "bytes": 726,
-    "sha256": "a7833bba409b9f339701c4aaf8f7bfcd5462da13c9d06972759cba044a252dcd"
-  },
-  {
-    "path": "figure5_regenerated/output/M3_sourcefixed_frozen_cpu_regenerated/M3_sourcefixed_frozen_cpu_regenerated.pdf",
-    "bytes": 25424,
-    "sha256": "0acf22ba76a3b29cad3f9e38248649670875aa7b7dc99a20bae79e0f83dac622"
-  },
-  {
-    "path": "figure5_regenerated/output/M3_sourcefixed_frozen_cpu_regenerated/M3_sourcefixed_frozen_cpu_regenerated.png",
-    "bytes": 251999,
-    "sha256": "c8bb798ff2088f86e446ac263a4f320cf5b0d9ee08c90306eda8cad987c08a34"
-  },
-  {
-    "path": "figure5_regenerated/output/M3_sourcefixed_frozen_cpu_regenerated/M3_sourcefixed_frozen_cpu_regenerated.profiles.csv",
-    "bytes": 485992,
-    "sha256": "f7867ba511848c6166b881a0e0f6e1e0f708fca2d6cb445b2aca1e477de55c21"
-  },
-  {
     "path": "figure5_regenerated/OUTPUT_SHA256SUMS",
     "bytes": 872,
     "sha256": "56ad9a0288e30dd6f39ffc04c43ef6b638721788d50b4610b14ba1746aa1ba1c"
@@ -268,6 +248,11 @@
     "path": "MOMENT_SUFFICIENT_BUDGET_CHECK.json",
     "bytes": 4905,
     "sha256": "fffb2a975d2132d8fc53650ff62fc4e84a9cbd1cb5210f38fc837fb592a34703"
+  },
+  {
+    "path": "plot_corrected_figure3.py",
+    "bytes": 1253,
+    "sha256": "6fa7dc598dc2bf9dd9e3d93ab047bfdb2e55708c5d6171d2a6c6a9e4ef160e25"
   },
   {
     "path": "reconcile_scalar_window.py",
