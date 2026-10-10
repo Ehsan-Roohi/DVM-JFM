@@ -1,0 +1,38 @@
+{
+  "figures/week2_jfm_upgrade_shakhov_cons/M3_shakhov_cons_channel_consistency_latest/M3_shakhov_cons_channel_consistency_latest.metrics.csv": {
+    "sha256": "b1281d7ebcdca673c063a8d184bdac28699daf1ca5350f0f1701c2605302568b",
+    "local": "revision_runs\\model_audit\\evidence\\0.csv"
+  },
+  "figures/week2_jfm_upgrade_shakhov_cons/M3_shakhov_cons_channel_consistency_latest/M3_shakhov_cons_channel_consistency_latest.profiles.csv": {
+    "sha256": "4fe2b7293931e09977557e3f21f7334e14c84e7521c4b3055edd0bc4d0240ffb",
+    "local": "revision_runs\\model_audit\\evidence\\1.csv"
+  },
+  "figures/week2_jfm_upgrade_shakhov_cons/M3_shakhov_cons_channel_consistency_sourcefixed_latest/M3_shakhov_cons_channel_consistency_sourcefixed_latest.metrics.csv": {
+    "sha256": "29b46b616e1ebbc2a6bde3ca42e22a335cac58ddf211f43378cbe197ff00c1f1",
+    "local": "revision_runs\\model_audit\\evidence\\2.csv"
+  },
+  "figures/week2_jfm_upgrade_shakhov_cons/M3_shakhov_cons_channel_consistency_sourcefixed_latest/M3_shakhov_cons_channel_consistency_sourcefixed_latest.profiles.csv": {
+    "sha256": "c0fa17cc456bd40b5227fa710a36080fcc8473315f20e7c5002bd58e29971a91",
+    "local": "revision_runs\\model_audit\\evidence\\3.csv"
+  },
+  "revision_20260929_gpu_preempt/outputs/existing_data_audit/ESFP_admissibility.json": {
+    "sha256": "d8549ad2a1b9c29d9fc6f1fe499a9c6c757d75a59fa9617f740a2eee6ff73665",
+    "local": "revision_runs\\model_audit\\evidence\\4.json"
+  },
+  "appendix_validation_dvm/exact_heatflux_budget/M2_exact_budget_xmfp_exact_heatflux_budget_profiles.csv": {
+    "sha256": "84b5095c4718145e39d44b7611ae638627296311618a80b9defff85efaea81bc",
+    "local": "revision_runs\\model_audit\\evidence\\5.csv"
+  },
+  "appendix_validation_dvm/exact_heatflux_budget/M3_exact_budget_xmfp_exact_heatflux_budget_profiles.csv": {
+    "sha256": "fd497ff998bd2f180af1b0a5b96dce2314764c57a73783fd60e758cb15f2c5b0",
+    "local": "revision_runs\\model_audit\\evidence\\6.csv"
+  },
+  "appendix_validation_dvm/exact_heatflux_budget/M5_exact_budget_xmfp_exact_heatflux_budget_profiles.csv": {
+    "sha256": "6be12508b8821de214535a3c9f1786eb52665128356cef1d887745e7ac47bd4b",
+    "local": "revision_runs\\model_audit\\evidence\\7.csv"
+  },
+  "src/week2_jfm_upgrade/plot_shakhov_channel_consistency_3panel.py": {
+    "sha256": "fd8c423ee0c80d3e301d29f9f0726380d736f245faaac7ee87dacf5815111077",
+    "local": "revision_runs\\model_audit\\evidence\\8.py"
+  }
+}
