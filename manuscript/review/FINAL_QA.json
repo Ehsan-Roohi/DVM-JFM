@@ -1,0 +1,21 @@
+{
+  "input_zip_sha256": "06d8fd21743e85155db7881e607a72330357f2667690805d2c474ccd43cafd71",
+  "compiled_pages": {
+    "main.pdf": 53,
+    "main_clean.pdf": 48
+  },
+  "unresolved_references_or_citations": false,
+  "fatal_compile_errors": false,
+  "visual_review": "All highlighted and clean pages reviewed in contact sheets; figures reviewed individually; Eq5.19 blank-space regression and highlighted-block pagination fixed. Figures7/13 log tick overlaps removed.",
+  "yellow_markup_preserved": true,
+  "notation_review": "One independent agent reviewed the manuscript and proposed definitions/consistency corrections; findings incorporated.",
+  "figure_count": 16,
+  "scientific_scope": "No new solver results or convergence claims added. Existing archived curves retained, with corrected accepted M2/M3 R26 sources.",
+  "provenance_limitations": [
+    "Figure7 and Figure9 use preserved original PDF vector traces because final raw plotting contracts were not recovered.",
+    "Figure11 temporal-change panel retains original vector data."
+  ],
+  "template_warnings": "JFM first-page banner/footer and subpoint paragraph warnings remain; no visually clipped content detected.",
+  "line_numbering": "Disabled inside highlighted boxes to avoid lineno/tcolorbox pagination conflict; clean manuscript retains template line numbering.",
+  "portable_figure_reproduction": "Both deposited scripts executed successfully from an extracted ZIP using deposited inputs"
+}

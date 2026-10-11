@@ -1,0 +1,1 @@
+The complete executable reproduction script and all six checkpoints are in the GitHub ES-BGK deposit. This copy records its exact plotting and reconstruction logic; use it in that deposited directory with its esbgk.py, runs/ and comparison_inputs/. The Overleaf project is not a replacement for the full numerical deposit.

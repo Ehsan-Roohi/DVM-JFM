@@ -1,0 +1,19 @@
+{
+  "pid": 653418,
+  "config": {
+    "wall_budget": 21000,
+    "tmax": 400,
+    "name": "M3_v2",
+    "mach": 3,
+    "CFL": 0.8,
+    "omega": 1,
+    "nx": 960,
+    "vmax": 40,
+    "mu1": 1,
+    "L": 45,
+    "Pr": 0.6666666666666666,
+    "nv": 801
+  },
+  "signature": "a19facfc7d4b6ee57ed2f128644f42da2bd983fe2988826bb5b34af5d9e65188",
+  "dt": 0.001875
+}

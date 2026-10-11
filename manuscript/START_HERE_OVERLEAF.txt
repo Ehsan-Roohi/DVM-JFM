@@ -1,0 +1,1 @@
+Upload this ZIP as a new Overleaf project. Set main.tex as the main document for YELLOW markup, main_clean.tex for clean output. Edit article.tex, the canonical manuscript. Selecting an editor file alone does not change the main document. See README.txt for current scientific scope; historical development notes do not supersede it.

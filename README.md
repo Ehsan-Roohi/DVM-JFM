@@ -14,7 +14,8 @@ This repository deposits the recoverable scientific sources, compact numerical p
 | Transport-matched cross-method DVM | 2, 3, 4, 5 | Shakhov, Pr=2/3, mu=T, tau=1/rho |
 | Corrected R26 profiles in manuscript | 2, 3 | Shakhov production law, Pr=2/3; finite residual qualification |
 | Separate published-curve benchmark | 8 | Shakhov, Pr=2/3, omega=.81; reduced g/h representation |
-| ES-BGK and ES-FP diagnostics | BGK fields at 2, 3, 5 | Collision-source postprocessing; not independently evolved ES shocks |
+| ES-BGK and ES-FP source diagnostics | BGK fields at 2, 3, 5 | Collision-source postprocessing on common BGK fields |
+| Independent ES-BGK evolution | 2, 3 | Pr=2/3, mu=T, tau_ES=3/(2 rho); six finite-time t=400 cases, not stationary |
 | DSMC | Campaign-specific | Hard-sphere source ensemble or VHS omega=1 high-particle profiles; no imposed Shakhov Pr parameter |
 
 Prandtl number belongs to the collision-model/transport specification, not to Mach number alone. Different models occur at the same Mach.
@@ -37,7 +38,7 @@ python manuscript/review/recompute_dsmc2000_m2.py
 python manuscript/review/recompute_dsmc2000_m3.py
 ```
 
-These small postprocessing commands were rerun during the audit. Both resulting CSVs exactly matched the submitted CSV SHA-256 values. They do not certify DSMC stationarity, DVM stationarity or model error. Build the full LaTeX project from `manuscript/main.tex` with its bundled class, bibliography and figures; the audit machine had no TeX installation, so this revision has not been compiled there.
+These small postprocessing commands were rerun during the audit. Both resulting CSVs exactly matched the submitted CSV SHA-256 values. They do not certify DSMC stationarity, DVM stationarity or model error. Build `manuscript/main.tex` for yellow revision markup, or `manuscript/main_clean.tex` for the clean version. Both input the canonical `manuscript/article.tex`. The latest revision is compiled and visually checked on Unity with the bundled class, bibliography and figures.
 
 ## Limits of this deposit
 
@@ -47,10 +48,10 @@ The subsequent full-distribution audit is in `audit/reproducibility_followup/FOL
 
 No global convergence, uniqueness, nonexistence or validated high-Mach accuracy is implied by depositing an archived result. Cite a specific commit, not only a moving branch URL.
 
-## Clean reader revision
+## Latest ES-BGK reader revision
 
-The current [manuscript](manuscript/main.pdf) and source are frozen at `reviewer-revision-20261010`. See [revision notes](audit/READER_REVISION_20261010.md) for scientific scope and remaining provenance gaps. Historical Figure-5 filenames refer to the Shakhov consistency plot, now Figure 4 in this manuscript.
+[Yellow marked PDF](manuscript/main_highlighted.pdf) and [clean PDF](manuscript/main_clean.pdf) preserve the article structure and add a separate appendix for independently evolved ES-BGK Mach-2/3 shocks. Existing source-only diagnostics are retained with their original scope. The notation and large-font figure corrections from the latest reader revision are included.
 
-## Marked revision and Table11 caption correction
+Tag: `esbgk-m2-m3-t400-20261011`. See [the frozen ES-BGK deposit](research/revision_runs/esbgk_m2_m3_t400_20261011/README.md) for exact sources, six full reduced-distribution checkpoints, recomputed budgets, comparison inputs and plotting scripts. Later continuations are outside these finite-time results. No deposited ES-BGK case has passed the stated stationarity criterion.
 
-[Yellow marked PDF](manuscript/main_highlighted.pdf), 48 pages; [clean PDF](manuscript/main.pdf), 43 pages. The same content is typeset with/without existing revision markup. Table11 caption now fits the local column width in both versions. No numerical values changed. Tag: `reviewer-highlighted-20261010`.
+Earlier scientific and reader revisions remain available through their historical commits and tags; their scope is unchanged by the new deposit.

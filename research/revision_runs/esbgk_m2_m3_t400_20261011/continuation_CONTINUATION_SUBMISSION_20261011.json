@@ -1,0 +1,13 @@
+{
+  "checked_utc": "2026-10-11T11:31:17.649277+00:00",
+  "job_id": "65553455",
+  "state": "PENDING Priority",
+  "stage": "continuation_t2000_v1",
+  "machs": [
+    2,
+    3
+  ],
+  "actual_physical_steps_in_stage": 0,
+  "preserved_seeds": "closed_t400/runs/M2_base,M3_base",
+  "next": "Inspect actual process/progress/terminal STATUS; no stationarity claim from submission; continue toward strict stationarity only on checked decay; no automatic tolerance changes."
+}

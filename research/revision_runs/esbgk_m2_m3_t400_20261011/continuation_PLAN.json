@@ -1,0 +1,7 @@
+{
+  "authorization": "User explicitly requested continuation to stationarity on 2026-10-11.",
+  "stage": "Bounded continuation from t400 to t2000, stop earlier if unchanged stationarity gates pass; otherwise diagnose decay before another stage.",
+  "physics": "Original ES-BGK Pr2/3, mu=T, tau1.5/rho, unchanged grids, original collision/transport, no clipping or recentering.",
+  "checks": "Source identity, seed signature/checkpoint SHA, positive finite moments, five consecutive drift/RHS<1e-7 plus independent final-post RHS.",
+  "comparison": "Interim t400 figure explicitly nonstationary; publish final acceptance only after final report."
+}

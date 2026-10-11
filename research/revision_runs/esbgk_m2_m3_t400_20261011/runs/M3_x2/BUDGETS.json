@@ -1,0 +1,11 @@
+{
+  "active_mask": "abs(S_direct)>0.02*max(abs(S_direct)); no shock re-alignment",
+  "S_relative_L2": 0.042155337810417574,
+  "Delta_relative_L2": 0.06150297652636135,
+  "R_relative_L2": 0.08705626980562582,
+  "heat_differential_relative_L2": 0.009877616771074026,
+  "scalar_differential_relative_L2": 0.015424988950133788,
+  "finite_target_q_max": 1.4210854715202004e-14,
+  "finite_target_Delta_error": 8.818694170692649e-12,
+  "note": "Steady-form reconstruction: transient and discretization residuals remain; not a stationarity certificate."
+}

@@ -1,0 +1,76 @@
+{
+  "original_fig4_sparse_delta_robustness.pdf": {
+    "original_zip_member": "figures/fig4_sparse_delta_robustness.pdf",
+    "sha256": "fb919a44d4f9a983055c0558ec8323cc27857702f2166804577f80d0940573aa",
+    "method": "Original vector vertices preserved; typography only. Not a raw-data regeneration."
+  },
+  "original_fig6_dsmc_delta_budget.pdf": {
+    "original_zip_member": "figures/fig6_dsmc_delta_budget.pdf",
+    "sha256": "19502e2ff3fa849e4efe80c10f00f3e9097c60c75b09683908930c48edd0981e",
+    "method": "Original vector vertices preserved; typography only. Not a raw-data regeneration."
+  },
+  "raw_DSMC_M2.npz": {
+    "original_path": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\v22_review\\source\\review\\M2_raw\\DSMC_2000ppc_M2.npz",
+    "sha256": "6d9ca62e81cc34668a04b317bcf107e1f137b14539fc9dc46751ae968ca15376"
+  },
+  "raw_DVM_M2.npz": {
+    "original_path": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\v22_review\\source\\review\\M2_raw\\DVM_Shakhov_M2.npz",
+    "sha256": "9ec68f5ffe30163a30f30364ab9fcb04c146dbe05c26d82bd9c2975169e7541b"
+  },
+  "raw_R26_M2.npz": {
+    "original_path": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\v22_review\\source\\review\\M2_raw\\R26_accepted_Shakhov_M2.npz",
+    "sha256": "605a2e660ba39e9bbeb7352c550e47e5b805a6f2917558eca6af51b94485aaa3"
+  },
+  "raw_DSMC_M3.npz": {
+    "original_path": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\v22_review\\source\\review\\M3_raw\\DSMC_2000ppc_M3.npz",
+    "sha256": "33026b0c3f90410a1f59dc1cafef27cf324cb8a50840ebc3c9350f83c3c16d69"
+  },
+  "raw_DVM_M3.npz": {
+    "original_path": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\v22_review\\source\\review\\M3_raw\\DVM_Shakhov_M3.npz",
+    "sha256": "efc855adc73e6e4d93672b48d043af1f8aa717308574fed65e8a488716742220"
+  },
+  "raw_R26_M3.npz": {
+    "original_path": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\v22_review\\source\\review\\M3_raw\\R26_accepted_Shakhov_M3.npz",
+    "sha256": "1b87004303b2d3a5e9c2fc377b2e7eca46e2151a24570b4119237337306b8768"
+  },
+  "raw_DSMC_M4.npz": {
+    "original_path": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\publication\\research\\revision_runs\\bird_dsmc_m2_m5_high_particles_20261009\\collected\\M4\\profiles.npz",
+    "sha256": "231d9d961472fc40c2aba3dba448dd65b9ce051464e58c68ab09c1666f9226c8"
+  },
+  "raw_DVM_M4.npz": {
+    "original_path": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\publication\\research\\revision_runs\\dvm_m3_m5_transport_match_20261008\\live_profiles_20261009T212610Z\\M4_x2560.npz",
+    "sha256": "884484b23f7e5feea84861533eeeef77457f5328a5d0f6fb23c9a04da3817f26"
+  },
+  "raw_DSMC_M5.npz": {
+    "original_path": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\publication\\research\\revision_runs\\bird_dsmc_m2_m5_high_particles_20261009\\collected\\M5\\profiles.npz",
+    "sha256": "de05a9fa9db0b9226bfcb34de852527589f11131463917bdcf5341da90583fb0"
+  },
+  "raw_DVM_M5.npz": {
+    "original_path": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\publication\\research\\revision_runs\\dvm_m3_m5_transport_match_20261008\\live_profiles_20261009T212610Z\\M5_x3200.npz",
+    "sha256": "d40fd178f5e3a222fda4a8c0257b32746852bb933994b1a9d053d58d9bd78225"
+  },
+  "m8_baseline_rho.csv": {
+    "original_path": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\publication\\research\\revision_runs\\m8_reference\\paper_comparison\\baseline_rho_comparison.csv",
+    "sha256": "d0f95c905d40a757d7737650f7f8c8e44417dc7a2f9d0d555a4610ebe5f4008e"
+  },
+  "m8_time_extend_rho.csv": {
+    "original_path": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\publication\\research\\revision_runs\\m8_reference\\paper_comparison\\time_extend_rho_comparison.csv",
+    "sha256": "7b349c56d21b927ef8b0d4d1bd2f913b170c1bdde1581d348d229d60c3af51ff"
+  },
+  "m8_space_refine_rho.csv": {
+    "original_path": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\publication\\research\\revision_runs\\m8_reference\\paper_comparison\\space_refine_rho_comparison.csv",
+    "sha256": "403f204ef4c4dc329c21163f344884f64605379aa55a7d1e03ff55475aec8bde"
+  },
+  "m8_baseline_T.csv": {
+    "original_path": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\publication\\research\\revision_runs\\m8_reference\\paper_comparison\\baseline_T_comparison.csv",
+    "sha256": "b66e74a74dbe2c7c5e47d9de4d8a2b47c457edd39fa9b8b06e9a535bf39e936a"
+  },
+  "m8_time_extend_T.csv": {
+    "original_path": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\publication\\research\\revision_runs\\m8_reference\\paper_comparison\\time_extend_T_comparison.csv",
+    "sha256": "d6f1b7eb9114320a8d52d4fc0acf28f55c2eb02afbb5c08010d62c9cb44aed50"
+  },
+  "m8_space_refine_T.csv": {
+    "original_path": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\shock_manuscript_audit_v19_20261010\\publication\\research\\revision_runs\\m8_reference\\paper_comparison\\space_refine_T_comparison.csv",
+    "sha256": "efa88aea3b847e321a01ceb04de8d82a689d8ba1412fa351a6c6c327ab759fb8"
+  }
+}

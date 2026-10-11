@@ -1,0 +1,50 @@
+{
+  "config": {
+    "wall_budget": 21000,
+    "tmax": 400,
+    "name": "M2_v2",
+    "mach": 2,
+    "CFL": 0.8,
+    "omega": 1,
+    "nx": 640,
+    "vmax": 40,
+    "mu1": 1,
+    "L": 30,
+    "Pr": 0.6666666666666666,
+    "nv": 801
+  },
+  "signature": "175a74a690dbf56ac64dff72e8b32f2b3a16eb3ec70653bd8f55a8e4612929ed",
+  "step": 213334,
+  "time": 400.00124999999997,
+  "dt": 0.001875,
+  "reason": "physical_time_limit",
+  "stationary": false,
+  "stable": 0,
+  "final_rhs": 6.146845289038614e-05,
+  "last_drift": 0.00012298323010064455,
+  "seconds": 11405.129646157962,
+  "min_reduced": 3.7275557920439215e-305,
+  "min_rho": 1.0000149378017116,
+  "min_T": 1.0001382930733367,
+  "face_flux_relative_spans": [
+    4.3559616157005735e-05,
+    6.953914328334723e-08,
+    2.1774116757969617e-05
+  ],
+  "budgets": {
+    "active_mask": "abs(S_direct)>0.02*max(abs(S_direct)); no shock re-alignment",
+    "S_relative_L2": 0.0681539888035508,
+    "Delta_relative_L2": 0.08467036021213176,
+    "R_relative_L2": 0.1326501616882769,
+    "heat_differential_relative_L2": 0.007776572022737156,
+    "scalar_differential_relative_L2": 0.014704843083496271,
+    "finite_target_q_max": 4.440892098500626e-15,
+    "finite_target_Delta_error": 2.171096987345336e-12,
+    "note": "Steady-form reconstruction: transient and discretization residuals remain; not a stationarity certificate."
+  },
+  "sha256": {
+    "checkpoint.npz": "6fcbf39bf33473eb8e01f913be071d173d15c9edb298183596964f6fd853964d",
+    "profiles.npz": "d7c64ab3c26bc1b85bcaf2de97141f38b9a1dfff1d47ce1a5c0e3826014e6c80",
+    "budgets.npz": "f0e799e76a1d09155bae72ae2e0db82173a7917b092405db45a3dc3ce79d9d2d"
+  }
+}

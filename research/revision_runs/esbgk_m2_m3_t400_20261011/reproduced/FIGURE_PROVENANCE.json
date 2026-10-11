@@ -1,0 +1,72 @@
+[
+  {
+    "mach": 2,
+    "path": "runs/M2_base/profiles.npz",
+    "sha256": "9dfc0183101ec96caa9d45e1374ab9bff45a89febd3afd7ac779a63764f8e819",
+    "density_midpoint_shift": -0.10818555310687725,
+    "crossings": 1
+  },
+  {
+    "mach": 2,
+    "path": "runs/M2_v2/profiles.npz",
+    "sha256": "d7c64ab3c26bc1b85bcaf2de97141f38b9a1dfff1d47ce1a5c0e3826014e6c80",
+    "density_midpoint_shift": -0.07915186067796341,
+    "crossings": 1
+  },
+  {
+    "mach": 2,
+    "path": "comparison_inputs/M2/DSMC_2000ppc_M2.npz",
+    "sha256": "6d9ca62e81cc34668a04b317bcf107e1f137b14539fc9dc46751ae968ca15376",
+    "density_midpoint_shift": -0.0018408517311825287,
+    "crossings": 1
+  },
+  {
+    "mach": 2,
+    "path": "comparison_inputs/M2/DVM_Shakhov_M2.npz",
+    "sha256": "9ec68f5ffe30163a30f30364ab9fcb04c146dbe05c26d82bd9c2975169e7541b",
+    "density_midpoint_shift": -0.039765650270472575,
+    "crossings": 1
+  },
+  {
+    "mach": 2,
+    "path": "comparison_inputs/M2/R26_accepted_Shakhov_M2.npz",
+    "sha256": "605a2e660ba39e9bbeb7352c550e47e5b805a6f2917558eca6af51b94485aaa3",
+    "density_midpoint_shift": -1.863416588941333e-05,
+    "crossings": 1
+  },
+  {
+    "mach": 3,
+    "path": "runs/M3_base/profiles.npz",
+    "sha256": "816debc8df77a86381c22eb04c4a22e363147fae40525305365e8cf943bcef29",
+    "density_midpoint_shift": -0.02351346787993537,
+    "crossings": 1
+  },
+  {
+    "mach": 3,
+    "path": "runs/M3_v2/profiles.npz",
+    "sha256": "116101b76eed70e5c4652e38092964aa712d9740fb34d420f0c1bf67d37ec00d",
+    "density_midpoint_shift": 0.006002395778612925,
+    "crossings": 1
+  },
+  {
+    "mach": 3,
+    "path": "comparison_inputs/M3/DSMC_2000ppc_M3.npz",
+    "sha256": "33026b0c3f90410a1f59dc1cafef27cf324cb8a50840ebc3c9350f83c3c16d69",
+    "density_midpoint_shift": 0.12440924126889558,
+    "crossings": 1
+  },
+  {
+    "mach": 3,
+    "path": "comparison_inputs/M3/DVM_Shakhov_M3.npz",
+    "sha256": "efc855adc73e6e4d93672b48d043af1f8aa717308574fed65e8a488716742220",
+    "density_midpoint_shift": 0.09774294022686404,
+    "crossings": 1
+  },
+  {
+    "mach": 3,
+    "path": "comparison_inputs/M3/R26_accepted_Shakhov_M3.npz",
+    "sha256": "1b87004303b2d3a5e9c2fc377b2e7eca46e2151a24570b4119237337306b8768",
+    "density_midpoint_shift": 1.741231524310331e-14,
+    "crossings": 1
+  }
+]

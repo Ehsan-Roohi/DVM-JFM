@@ -1,0 +1,19 @@
+{
+  "pid": 561451,
+  "config": {
+    "wall_budget": 21000,
+    "tmax": 400,
+    "name": "M2_base",
+    "mach": 2,
+    "CFL": 0.8,
+    "omega": 1,
+    "nx": 320,
+    "vmax": 40,
+    "mu1": 1,
+    "L": 30,
+    "Pr": 0.6666666666666666,
+    "nv": 401
+  },
+  "signature": "114d66e38a264a87c5246036840ed0ef20226c3d93f885fa27edf614d167fe2b",
+  "dt": 0.00375
+}
