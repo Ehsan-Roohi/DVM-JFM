@@ -1,0 +1,4 @@
+layout,total_probes,active_probes,Delta_error_percent,R_error_percent
+Active uniform,26,16,4.879596806242261,3.106770719673395
+Core gap 25%,26,14,51.85352097787501,33.0144081740417
+Full-domain uniform,24,7,27.305163007086893,17.38481360136276

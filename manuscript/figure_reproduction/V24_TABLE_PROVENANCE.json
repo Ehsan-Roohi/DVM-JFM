@@ -1,0 +1,41 @@
+{
+  "figure7": "Original vector curve retained; bar heights transcribed at two-decimal precision using original tick calibration; no invented raw data.",
+  "figure7_input_sha256": "fb919a44d4f9a983055c0558ec8323cc27857702f2166804577f80d0940573aa",
+  "figure7_noise_unrounded": [
+    [
+      4.325783481490534,
+      4.421744279369415,
+      4.51770511937611
+    ],
+    [
+      4.489665352236757,
+      4.586540323668833,
+      4.68341529510091
+    ],
+    [
+      3.772409458587242,
+      3.905138906565017,
+      4.03786835454279
+    ]
+  ],
+  "figure7_rank_unrounded": [
+    [
+      64.36199677971327,
+      3.356465685900718,
+      4.325783212438798
+    ],
+    [
+      63.22613095485903,
+      3.10211393093991,
+      4.489665126606269
+    ],
+    [
+      63.11259219064875,
+      2.2193715465042057,
+      3.7724092729580856
+    ]
+  ],
+  "figure8": "Original profile vector panel cropped, no numerical modification; table values from archived reviewer_metrics.json.",
+  "figure8_input_sha256": "18162b2c378cb26908a050608535a130d7b4de32f07828ccfdda92a59689749a",
+  "yellow": "Default on in canonical article.tex; explicit opt-out only in main_clean.tex; colour intensified."
+}

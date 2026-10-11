@@ -2,10 +2,11 @@
 \RequirePackage{amsmath}
 \documentclass[lineno,paper]{JFM-FLM_Au}
 
-% Canonical manuscript; main.tex selects the yellow revision copy.
+% Canonical manuscript defaults to yellow markup, including direct Overleaf compilation.
+\ifdefined\HideRevisionMarkup\else\def\ShowRevisionMarkup{1}\fi
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
-\definecolor{revisionyellow}{rgb}{1,1,0.55}
+\definecolor{revisionyellow}{rgb}{1,1,0.25}
 \ifdefined\ShowRevisionMarkup
 \newenvironment{revision}{\nolinenumbers\begin{tcolorbox}[breakable,colback=revisionyellow,colframe=revisionyellow,boxrule=0pt,arc=0pt,left=5pt,right=5pt,top=5pt,bottom=5pt,before skip=6pt,after skip=6pt]\captionsetup{width=\linewidth}}{\end{tcolorbox}\linenumbers}
 \DeclareRobustCommand{\revisionheading}[1]{\colorbox{revisionyellow}{\strut #1}}
@@ -887,7 +888,7 @@ For Mach 8, full/lightweight relative $L_2$ differences in $(R^{\cl}_{xx},\Delta
 The budget reconstruction above uses full DVM moments to establish the physical channel.  To test whether this channel represents reduced information rather than disguised direct access to $R^{\cl}_{xx}$, we replace the full $\Delta$ field by a sparse scalar-excess probe.  The DVM $\Delta$ profile is sampled at 24 shock-local interior points with two endpoint anchors and reconstructed with a smooth radial-basis-function (RBF) representation; no values of $R^{\cl}_{xx}$ are used.  The tensorial closure is then computed from $R^{\cl}_{xx}=S-\Delta_{\rm sparse}/3$.
 
 \begin{revision}
-Figure~\ref{fig:sparse_delta} reports a separate interpolation test using its archived, fixed heat-budget channel. With 24 shock-local interior samples of $\Delta$ and two endpoint anchors, the tensorial errors are $4.33\%$, $4.49\%$ and $3.77\%$ for $M_1=2,3,5$; adding $1\%$ probe noise keeps the error below $4.7\%$ under that same contract. These results test scalar information reduction within the archived channel; they are not a new sparse-probe evaluation of the regenerated discrete-source budget in table~\ref{tab:two_budget}. The full-field reference curves in this interpolation study belong to the same archived contract.
+Figure~\ref{fig:sparse_delta} reports a separate interpolation test using its archived, fixed heat-budget channel. With 24 shock-local interior samples of $\Delta$ and two endpoint anchors, the tensorial errors are $4.33\%$, $4.49\%$ and $3.77\%$ for $M_1=2,3,5$; adding $1\%$ probe noise keeps the error below $4.7\%$ under that same contract (table~\ref{tab:sparse_noise_rank}). These results test scalar information reduction within the archived channel; they are not a new sparse-probe evaluation of the regenerated discrete-source budget in table~\ref{tab:two_budget}. The full-field reference curves in this interpolation study belong to the same archived contract.
 \end{revision}
 
 \begin{revision}
@@ -895,18 +896,32 @@ This is an interpolation and information-reduction experiment, not a theorem tha
 \end{revision}
 
 \begin{revision}
-The structural statement is instead that the missing information has the type of one scalar fourth-order field; the number of probes required to interpolate that field depends on smoothness, shock thickness, noise level and probe placement.  The convergence curve in figure~\ref{fig:sparse_delta}(a) should therefore be read as an operating study for the present shock family.  Small numbers of probes already remove the order-unity ambiguity, and the 24-interior-probe case is a tested operating point within the fixed-channel interpolation experiment, not a certified sensor minimum or a comparison with the newly regenerated full-field budget.  Thus the information needed to resolve the heat-flux ambiguity is not a dense $R^{\cl}_{xx}$ field; it is an independent scalar measure of isotropic fourth-order tail intensity.  This distinction matters for experiments and reduced solvers: a scalar diagnostic, surrogate or auxiliary equation for tail intensity can close the heat-flux null space without supervising the whole tensorial closure field.
+The structural statement is instead that the missing information has the type of one scalar fourth-order field; the number of probes required to interpolate that field depends on smoothness, shock thickness, noise level and probe placement.  The convergence curve in figure~\ref{fig:sparse_delta} should therefore be read as an operating study for the present shock family.  Small numbers of probes already remove the order-unity ambiguity, and the 24-interior-probe case is a tested operating point within the fixed-channel interpolation experiment, not a certified sensor minimum or a comparison with the newly regenerated full-field budget.  Thus the information needed to resolve the heat-flux ambiguity is not a dense $R^{\cl}_{xx}$ field; it is an independent scalar measure of isotropic fourth-order tail intensity.  This distinction matters for experiments and reduced solvers: a scalar diagnostic, surrogate or auxiliary equation for tail intensity can close the heat-flux null space without supervising the whole tensorial closure field.
 \end{revision}
 
 \begin{figure}
   \centerline{\includegraphics[width=0.96\linewidth]{figures/fig4_sparse_delta_robustness.pdf}}
-  \caption{Sparse scalar-excess information tested with the archived fixed heat-budget channel, separate from the regenerated budget in table~\ref{tab:two_budget}. (a) Convergence of the $R^{\cl}_{xx}$ reconstruction error as the number of shock-local $\Delta$ probes increases; dotted lines denote the full-$\Delta$ reference errors and the 24-interior-probe case, supplemented by two endpoint anchors, is a representative operating point for this interpolation test in (b,c). (b) Robustness of the 24-probe reconstruction to $0.5\%$ and $1\%$ noise in the $\Delta$ probes. (c) Comparison between the rank-deficient heat-flux reconstruction $(\Delta=0)$, the full-$\Delta$ reference reconstruction and the 24-probe sparse-$\Delta$ reconstruction.}
+  \caption{Convergence of the sparse scalar-excess reconstruction using the archived fixed heat-budget channel, separate from the regenerated budget in table~\ref{tab:two_budget}. The error in $R^{\cl}_{xx}$ decreases as the number of shock-local interior $\Delta$ probes increases; two endpoint anchors supplement these probes. Dotted lines denote the full-$\Delta$ reference errors. The 24-interior-probe case is a tested operating point, not a certified sensor minimum. Its noise sensitivity and comparison with full-$\Delta$ and $\Delta=0$ reconstructions are tabulated in table~\ref{tab:sparse_noise_rank}.}
   \label{fig:sparse_delta}
 \end{figure}
+\par\medskip\noindent\begin{minipage}{\linewidth}\makeatletter\def\@captype{table}\makeatother
+\revisionbox{\begin{minipage}{0.96\linewidth}\captionsetup{width=\linewidth}
+\caption{Sparse scalar-excess reconstruction errors in the archived fixed-channel interpolation experiment of figure~\ref{fig:sparse_delta}. All entries are $\varepsilon_R$ in percent. The first three columns vary the noise in 24 interior $\Delta$ probes, supplemented by two endpoint anchors. The last three compare the heat-flux-only reconstruction ($\Delta=0$), the full-$\Delta$ reference and the noise-free sparse reconstruction. Values are transcribed from the archived plot and rounded to two decimal places; this presentation does not supply missing raw-data provenance or constitute a new budget regeneration.}
+\label{tab:sparse_noise_rank}
+\centering\small\setlength{\tabcolsep}{5pt}
+\begin{tabular}{crrrrrr}\toprule
+ & \multicolumn{3}{c}{Probe noise} & \multicolumn{3}{c}{Scalar information}\\
+$M_1$ & $0\%$ & $0.5\%$ & $1\%$ & $\Delta=0$ & Full $\Delta$ & Sparse $\Delta$\\\midrule
+2 & 4.33 & 4.42 & 4.52 & 64.36 & 3.36 & 4.33\\
+3 & 4.49 & 4.59 & 4.68 & 63.23 & 3.10 & 4.49\\
+5 & 3.77 & 3.91 & 4.04 & 63.11 & 2.22 & 3.77\\
+\bottomrule\end{tabular}\par
+\end{minipage}}\par\end{minipage}\par\medskip
+
 
 
 \begin{revision}
-\textbf{Sensitivity to probe placement.} The small errors above apply to the specified shock-local sampling layouts, not arbitrary sets of 24 points. Figure~\ref{fig:revision_sparse_gap} tests this distinction on the completed Mach-5 baseline. With the same 24 interior probes and two boundary anchors, an active-uniform layout gives a $3.107\%$ active-zone error in $R^{\cl}_{xx}$, whereas a gap of width $25\%$ of the active interval, centred at the largest scalar-excess magnitude, raises that error to $33.014\%$. The existing full-domain-uniform layout, with 24 total probes including endpoints, gives $17.385\%$ and is not an exactly equal-count comparison. These controlled tests supply $S=R^{\cl}_{xx}+\Delta/3$ exactly to isolate scalar interpolation error; they do not revalidate the budget-derived channel or replace the earlier Mach-sweep errors. The active interval is chosen using the reference field, so the experiment also does not demonstrate blind sensor placement. A low leave-one-out error on observed probes does not guarantee accuracy within an unobserved core gap. The practical sparse-recovery claim therefore requires adequate core coverage.
+\textbf{Sensitivity to probe placement.} The small errors above apply to the specified shock-local sampling layouts, not arbitrary sets of 24 points. Figure~\ref{fig:revision_sparse_gap} and table~\ref{tab:sparse_placement} test this distinction on the completed Mach-5 baseline. With the same 24 interior probes and two boundary anchors, an active-uniform layout gives a $3.107\%$ active-zone error in $R^{\cl}_{xx}$, whereas a gap of width $25\%$ of the active interval, centred at the largest scalar-excess magnitude, raises that error to $33.014\%$. The existing full-domain-uniform layout, with 24 total probes including endpoints, gives $17.385\%$ and is not an exactly equal-count comparison. These controlled tests supply $S=R^{\cl}_{xx}+\Delta/3$ exactly to isolate scalar interpolation error; they do not revalidate the budget-derived channel or replace the earlier Mach-sweep errors. The active interval is chosen using the reference field, so the experiment also does not demonstrate blind sensor placement. A low leave-one-out error on observed probes does not guarantee accuracy within an unobserved core gap. The practical sparse-recovery claim therefore requires adequate core coverage.
 \end{revision}
 
 \begin{figure}
@@ -915,11 +930,24 @@ The structural statement is instead that the missing information has the type of
 \revisionbox{\begin{minipage}{0.92\textwidth}\captionsetup{width=\linewidth}
 \centering
 \includegraphics[width=\linewidth]{figures/A4_sparse_core_gap.pdf}
-\caption{Controlled probe-placement sensitivity for the Mach-5 scalar channel. Left: reference and Gaussian RBF reconstructions, with probe locations marked. Right: relative $L_2$ errors over $|\Delta|\geq0.02\max|\Delta|$. Active-uniform and core-gap layouts have 26 total probes (16 and 14 in the active interval); full-domain uniform has 24 total (seven active). The active span is padded by $25\%$ on either side; the gap width is $25\%$ of the unpadded active span. The mean of the outermost $8\%$ at each end is subtracted following the existing interpolation procedure. Gaussian-RBF parameters are selected from sparse data by leave-one-out validation: 28/32/48 centres, width multipliers 0.5/0.6/0.8/1/1.2/1.5 and ridge parameters $10^{-10}/10^{-8}/10^{-6}/10^{-4}/10^{-2}$. No noise is added; $S$ is exact. This is a controlled interpolation stress test, not full two-budget validation.}
+\caption{Controlled probe-placement sensitivity for the Mach-5 scalar channel. Reference and Gaussian RBF reconstructions, with probe locations marked. Relative $L_2$ errors over $|\Delta|\geq0.02\max|\Delta|$ are reported in table~\ref{tab:sparse_placement}. Active-uniform and core-gap layouts have 26 total probes (16 and 14 in the active interval); full-domain uniform has 24 total (seven active). The active span is padded by $25\%$ on either side; the gap width is $25\%$ of the unpadded active span. The mean of the outermost $8\%$ at each end is subtracted following the existing interpolation procedure. Gaussian-RBF parameters are selected from sparse data by leave-one-out validation: 28/32/48 centres, width multipliers 0.5/0.6/0.8/1/1.2/1.5 and ridge parameters $10^{-10}/10^{-8}/10^{-6}/10^{-4}/10^{-2}$. No noise is added; $S$ is exact. This is a controlled interpolation stress test, not full two-budget validation.}
 \label{fig:revision_sparse_gap}
 \end{minipage}}
 \endgroup
 \end{figure}
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\makeatletter\def\@captype{table}\makeatother
+\revisionbox{\begin{minipage}{0.96\linewidth}\captionsetup{width=\linewidth}
+\caption{Mach-5 probe-placement sensitivity corresponding to figure~\ref{fig:revision_sparse_gap}. The final two columns are relative $L_2$ errors in percent on the active interval $|\Delta|\geq0.02\max|\Delta|$. Counts distinguish all probes from probes within that interval. The channel $S$ is supplied exactly and no noise is added, so the test isolates scalar interpolation error. Full-domain uniform has fewer total probes and is not an equal-count comparison.}
+\label{tab:sparse_placement}
+\centering\small\setlength{\tabcolsep}{7pt}
+\begin{tabular}{lrrrr}\toprule
+Layout & Total probes & Active probes & $\varepsilon_\Delta$ & $\varepsilon_R$\\\midrule
+Active uniform & 26 & 16 & 4.880 & 3.107\\
+Core gap $25\%$ & 26 & 14 & 51.854 & 33.014\\
+Full-domain uniform & 24 & 7 & 27.305 & 17.385\\
+\bottomrule\end{tabular}\par
+\end{minipage}}\par\end{minipage}\par\medskip
 
 \section{Direct DSMC collision production of the scalar-excess source}
 \label{sec:dsmc}

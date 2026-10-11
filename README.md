@@ -55,3 +55,7 @@ No global convergence, uniqueness, nonexistence or validated high-Mach accuracy 
 Tag: `esbgk-m2-m3-t400-20261011`. See [the frozen ES-BGK deposit](research/revision_runs/esbgk_m2_m3_t400_20261011/README.md) for exact sources, six full reduced-distribution checkpoints, recomputed budgets, comparison inputs and plotting scripts. Later continuations are outside these finite-time results. No deposited ES-BGK case has passed the stated stationarity criterion.
 
 Earlier scientific and reader revisions remain available through their historical commits and tags; their scope is unchanged by the new deposit.
+
+## V24 yellow markup and sparse-information tables
+
+The canonical article.tex now defaults to yellow markup, including direct Overleaf compilation; main_clean.tex explicitly disables it. The bar panels of Figures 7 and 8 are replaced by Tables 8 and 9. The convergence and profile curves remain. Table numbers and cross-references update automatically. The scientific ES-BGK deposit is unchanged. See audit/V24_YELLOW_TABLES_20261011.json and manuscript/figure_reproduction/V24_TABLE_PROVENANCE.json.
