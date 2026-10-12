@@ -20,17 +20,16 @@ for m in data:
   assert np.allclose(z['S'],z['R']+z['Delta']/3,rtol=1e-10,atol=1e-9)
   data[m][model]=(z['x_density_midpoint'],{k:z[k] for k in keys})
 plt.rcParams.update({'font.family':'DejaVu Serif','mathtext.fontset':'stix','font.size':20,'axes.labelsize':24,'axes.titlesize':25,'legend.fontsize':17,'xtick.labelsize':18,'ytick.labelsize':18,'pdf.fonttype':42})
-fig,ax=plt.subplots(3,2,figsize=(12.6,12.7));fig.subplots_adjust(left=.105,right=.98,bottom=.10,top=.79,wspace=.30,hspace=.39)
+fig,ax=plt.subplots(3,2,figsize=(12.6,12.7));fig.subplots_adjust(left=.105,right=.98,bottom=.10,top=.86,wspace=.30,hspace=.39)
 for j,(a,k,l) in enumerate(zip(ax.flat,keys,labels)):
  for model in models:
   x,d=data[2][model];color,ls,lw=palette[model];label=names[model]
   a.plot(x,d[k],label=label,color=color,ls=ls,lw=lw)
  a.set_xlim(-15,15);a.grid(alpha=.20);a.set_axisbelow(True);a.set_ylabel(l);a.set_xlabel(r'$(x-x_s)/\lambda_1$');a.text(.015,1.035,'('+chr(97+j)+')',transform=a.transAxes,va='bottom',fontsize=21)
-fig.suptitle(r'Mach 2: transport-matched shock profiles ($\mu=T$)',y=.99,fontsize=25)
-fig.legend(*ax[0,0].get_legend_handles_labels(),loc='upper center',bbox_to_anchor=(.5,.955),ncol=2,frameon=False,columnspacing=1.45,handlelength=3.1,labelspacing=.7)
+fig.legend(*ax[0,0].get_legend_handles_labels(),loc='upper center',bbox_to_anchor=(.5,.985),ncol=2,frameon=False,columnspacing=1.45,handlelength=3.1,labelspacing=.7)
 fig.savefig(P/'Figure14_clean_labels.pdf',bbox_inches='tight');fig.savefig(P/'Figure14_clean_labels.png',dpi=160,bbox_inches='tight');plt.close(fig)
 plt.rcParams.update({'font.size':22,'axes.labelsize':28,'axes.titlesize':28,'legend.fontsize':22,'xtick.labelsize':21,'ytick.labelsize':21})
-fig,ax=plt.subplots(6,3,figsize=(17.5,20));fig.subplots_adjust(left=.09,right=.985,top=.84,bottom=.125,wspace=.29,hspace=.32)
+fig,ax=plt.subplots(6,3,figsize=(17.5,18.5));fig.subplots_adjust(left=.078,right=.995,top=.91,bottom=.048,wspace=.22,hspace=.20)
 for j,m in enumerate([3,4,5]):
  for i,(key,label) in enumerate(zip(keys,labels)):
   a=ax[i,j]
@@ -42,6 +41,5 @@ for j,m in enumerate([3,4,5]):
   if i==0:a.set_title(rf'$M_1={m}$',pad=18)
   if i==5:a.set_xlabel(r'$(x-x_s)/\lambda_1$')
   else:a.tick_params(labelbottom=False)
-fig.suptitle(r'Transport-matched shock profiles ($\mu=T$)',y=.992,fontsize=32)
-fig.legend(*ax[0,0].get_legend_handles_labels(),loc='upper center',bbox_to_anchor=(.5,.962),ncol=3,frameon=False,handlelength=3.2,columnspacing=1.4,labelspacing=.8)
+fig.legend(*ax[0,0].get_legend_handles_labels(),loc='upper center',bbox_to_anchor=(.5,.998),ncol=3,frameon=False,handlelength=2.5,columnspacing=1.0,labelspacing=.6)
 fig.savefig(P/'Figure15_clean_labels.pdf',bbox_inches='tight');fig.savefig(P/'Figure15_clean_labels.png',dpi=150,bbox_inches='tight');plt.close(fig)

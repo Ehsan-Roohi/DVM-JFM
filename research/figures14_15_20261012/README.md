@@ -1,9 +1,9 @@
 # Numerical methods and reproduction of Figures 14 and 15
 
 Run `python plot_figures.py` (NumPy, Matplotlib) in this directory to reproduce
-the two PDF figures from the supplied CSV profiles. The figure titles identify
-physical methods and parameters; numerical evaluation times and diagnostics are
-recorded in PROVENANCE.json. ES-FP Mach-4/5 profiles correspond to t=29.0625
+the two PDF figures from the supplied CSV profiles. Internal descriptive titles are omitted; methods and parameters are identified
+in the legends and manuscript captions. Numerical evaluation times and diagnostics
+are recorded in PROVENANCE.json. ES-FP Mach-4/5 profiles correspond to t=29.0625
 and 12.1774475098, respectively. Their runs continue separately.
 
 ## Common kinetic discretization
@@ -73,3 +73,8 @@ Gu & Emerson, JFM 636, 177--216 (2009), for the R26 tensor framework.
 The current manuscript spells out the Shakhov specialization and tensor repairs.
 
 The retained original owners are also supplied explicitly in solvers/bgk_fei_m2_wide_v1, solvers/bgk_fei_m3_m5_native_v1, solvers/esfp_m2_matched_v1 and solvers/shock_longtime_20261011/matched_matrix_v1. Their manifests and source gates distinguish the earlier native trajectories from the general matrix driver.
+
+The 12 October presentation update removes internal titles from Figures 14/15
+and enlarges Figure 15 panels without changing profile data. Run
+`python appendix_esbgk/plot_esbgk_appendix.py` to reproduce the title-free
+ES-BGK refinement Figures 17/18 from the supplied NPZ inputs.
