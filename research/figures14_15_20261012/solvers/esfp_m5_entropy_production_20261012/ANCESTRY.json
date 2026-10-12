@@ -1,0 +1,11 @@
+{
+  "parent_checkpoint_sha": "d4adfaa16ac2cd1b492e47ede67656689ee61d8c7500259b1b1c1173f5235e74",
+  "parent_validation": {
+    "fp_kernel.c": "a0b97ba3b28014580efc89b41bcdd8c581f4a9bcc44d7d638c9e70e1d0d893e9",
+    "fp_kernel.so": "5bf0b62517ccb8c38f4a0644c933f38c4e2a61c036bb88dc3665367803e55d38",
+    "fp.py": "de829b1bab7de6bcb315f93ee987ab26962f0bcdf0a95386e5c4fcbb3cdd1cac",
+    "validate.py": "436b79d098114383f2de151b8aa6a68472822a14e4fc8c540ccc272994bd3291",
+    "shakhov_reference.py": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64"
+  },
+  "change": "fixed physical drift/diffusion plus positive entropy projection <=2pct of density and axial second moment; unchanged positivity/global/local conservation; added conditional transverse fourth-moment realizability hard stop; no time or velocity refinement retries"
+}

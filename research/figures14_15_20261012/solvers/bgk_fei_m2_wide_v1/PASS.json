@@ -1,0 +1,39 @@
+{
+  "PASS": true,
+  "source": "ef7109eddb49baa785bb023fc39c7382a4c5440d051374d8aec14b06041e16bb",
+  "reference": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64",
+  "manifest": "5993adeb5760b6a48168bc022aaf77aaf0963452d14d47fc2f65a072859faf87",
+  "cases": {
+    "M2_domain": {
+      "collision_invariants": 1.3759600911837427e-15,
+      "all_higher_moment_decay": 1.1095033552576205e-13,
+      "global_balance": 1.1368594954319633e-13,
+      "positive": true
+    },
+    "M2_space": {
+      "collision_invariants": 1.3759600911837427e-15,
+      "all_higher_moment_decay": 1.1095033552576205e-13,
+      "global_balance": 1.1368594954319633e-13,
+      "positive": true
+    },
+    "M2_velocity": {
+      "collision_invariants": 4.857225732936232e-15,
+      "all_higher_moment_decay": 1.3293532941105468e-13,
+      "global_balance": 5.684430703922772e-14,
+      "positive": true
+    },
+    "M2_halfdt": {
+      "collision_invariants": 1.3759600911837427e-15,
+      "all_higher_moment_decay": 1.1095033552576205e-13,
+      "global_balance": 1.1368594954319633e-13,
+      "positive": true
+    },
+    "M2_domain90": {
+      "collision_invariants": 1.375960091183743e-15,
+      "all_higher_moment_decay": 9.934172314913698e-14,
+      "global_balance": 2.2737367544323206e-13,
+      "positive": true
+    }
+  },
+  "restart_bitwise": true
+}

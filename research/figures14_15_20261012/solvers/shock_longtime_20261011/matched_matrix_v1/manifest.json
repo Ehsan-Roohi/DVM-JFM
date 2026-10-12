@@ -1,0 +1,89 @@
+{
+  "cases": [
+    {
+      "mach": 2,
+      "name": "BGK_M2_base",
+      "nx": 320,
+      "L": 30,
+      "nv": 401,
+      "vmax": 40,
+      "Pr": 1.0,
+      "mu1": 1,
+      "omega": 1,
+      "CFL": 0.8,
+      "tmax": 2000,
+      "wall_budget": 21000
+    },
+    {
+      "mach": 3,
+      "name": "BGK_M3_base",
+      "nx": 480,
+      "L": 45,
+      "nv": 401,
+      "vmax": 40,
+      "Pr": 1.0,
+      "mu1": 1,
+      "omega": 1,
+      "CFL": 0.8,
+      "tmax": 2000,
+      "wall_budget": 21000
+    },
+    {
+      "mach": 4,
+      "name": "BGK_M4_base",
+      "nx": 640,
+      "L": 60,
+      "nv": 401,
+      "vmax": 40,
+      "Pr": 1.0,
+      "mu1": 1,
+      "omega": 1,
+      "CFL": 0.8,
+      "tmax": 2000,
+      "wall_budget": 21000
+    },
+    {
+      "mach": 5,
+      "name": "BGK_M5_base",
+      "nx": 800,
+      "L": 75,
+      "nv": 401,
+      "vmax": 40,
+      "Pr": 1.0,
+      "mu1": 1,
+      "omega": 1,
+      "CFL": 0.8,
+      "tmax": 2000,
+      "wall_budget": 21000
+    },
+    {
+      "mach": 4,
+      "name": "ESBGK_M4_base",
+      "nx": 640,
+      "L": 60,
+      "nv": 401,
+      "vmax": 40,
+      "Pr": 0.6666666666666666,
+      "mu1": 1,
+      "omega": 1,
+      "CFL": 0.8,
+      "tmax": 2000,
+      "wall_budget": 21000
+    },
+    {
+      "mach": 5,
+      "name": "ESBGK_M5_base",
+      "nx": 800,
+      "L": 75,
+      "nv": 401,
+      "vmax": 40,
+      "Pr": 0.6666666666666666,
+      "mu1": 1,
+      "omega": 1,
+      "CFL": 0.8,
+      "tmax": 2000,
+      "wall_budget": 21000
+    }
+  ],
+  "scope": "Actual BGK Pr1 or ES-BGK Pr2/3, same mu=T, physical reservoir mixture, bounded t2000, stop earlier on original stationarity gates. Baseline is not grid-converged."
+}

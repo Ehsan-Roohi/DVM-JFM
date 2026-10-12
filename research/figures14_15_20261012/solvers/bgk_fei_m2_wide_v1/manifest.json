@@ -1,0 +1,96 @@
+{
+  "cases": [
+    {
+      "mach": 2,
+      "nx": 640,
+      "L": 60,
+      "nv": 801,
+      "vmax": 40,
+      "Pr": 1.0,
+      "mu1": 1.0,
+      "omega": 1.0,
+      "CFL": 0.5,
+      "tmax": 2000,
+      "wall_budget": 21000,
+      "name": "M2_domain"
+    },
+    {
+      "mach": 2,
+      "nx": 1280,
+      "L": 60,
+      "nv": 801,
+      "vmax": 40,
+      "Pr": 1.0,
+      "mu1": 1.0,
+      "omega": 1.0,
+      "CFL": 0.5,
+      "tmax": 2000,
+      "wall_budget": 21000,
+      "name": "M2_space"
+    },
+    {
+      "mach": 2,
+      "nx": 640,
+      "L": 60,
+      "nv": 1601,
+      "vmax": 40,
+      "Pr": 1.0,
+      "mu1": 1.0,
+      "omega": 1.0,
+      "CFL": 0.5,
+      "tmax": 2000,
+      "wall_budget": 21000,
+      "name": "M2_velocity"
+    },
+    {
+      "mach": 2,
+      "nx": 640,
+      "L": 60,
+      "nv": 801,
+      "vmax": 40,
+      "Pr": 1.0,
+      "mu1": 1.0,
+      "omega": 1.0,
+      "CFL": 0.25,
+      "tmax": 2000,
+      "wall_budget": 21000,
+      "name": "M2_halfdt"
+    },
+    {
+      "mach": 2,
+      "nx": 960,
+      "L": 90,
+      "nv": 801,
+      "vmax": 40,
+      "Pr": 1.0,
+      "mu1": 1.0,
+      "omega": 1.0,
+      "CFL": 0.5,
+      "tmax": 2000,
+      "wall_budget": 21000,
+      "name": "M2_domain90"
+    }
+  ],
+  "physical_reference": {
+    "T1_K": 300,
+    "n1_m3": 1.6095e+21,
+    "argon_molar_mass_kg_mol": 0.039948,
+    "mu273_Pas": 2.117e-05,
+    "Tref_K": 273,
+    "omega": 1,
+    "lambda_Fei_m": 0.001114,
+    "CFL_Fei": 0.5,
+    "Fei_cell_lambda_range": [
+      0.25,
+      0.5
+    ],
+    "mu300_Pas": 2.3263736263736262e-05,
+    "p1_Pa": 6.666463696500001,
+    "thermal_speed_m_s": 249.87925317975055,
+    "relaxation_length_m": 0.0008719953049178202,
+    "lambda_Fei_in_our_length_units": 1.2775298143434237
+  },
+  "model": "original BGK Pr=1; not ES-BGK/Shakhov",
+  "method": "deterministic DVM; Fei used particles",
+  "reason": "L30 late density evolution is 99.89% translation, matching boundary mass-flux imbalance; no global stationarity credit. L60 and L90 remove finite-domain influence without changing model or guards."
+}

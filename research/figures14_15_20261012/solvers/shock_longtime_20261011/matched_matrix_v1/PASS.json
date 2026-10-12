@@ -1,0 +1,22 @@
+{
+  "PASS": true,
+  "source": "e85c89c21d4e8cda80842e4e25d9f73fd47c6c1e1b4b05daa18bd5813b94c836",
+  "reference": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64",
+  "manifest": "2bb1db17a08a231d0c972e16e71f9906619d72333da5fd0a44706177875ef2f8",
+  "collision_invariants": 1.1842379127576194e-15,
+  "stress_BE_error": 4.6074255521944e-15,
+  "heat_BE_error": 1.1657341758564144e-14,
+  "scalar_BE_error": 5.710987238671805e-13,
+  "equilibrium_error": 4.440892098500626e-16,
+  "independent_transverse_error": 4.618527782440651e-14,
+  "viscosity_match_error": 0.0,
+  "all_case_collision_invariants": {
+    "BGK_M2_base": 5.159850341939037e-16,
+    "BGK_M3_base": 6.879800455918718e-16,
+    "BGK_M4_base": 6.591949476508351e-16,
+    "BGK_M5_base": 7.46071874393439e-16,
+    "ESBGK_M4_base": 6.471739260269172e-16,
+    "ESBGK_M5_base": 5.430899891160596e-16
+  },
+  "restart_bitwise": true
+}

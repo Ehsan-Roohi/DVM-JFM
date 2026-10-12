@@ -1,0 +1,10 @@
+{
+  "cases": [
+    {"name":"BGK_M3_base","mach":3,"nx":640,"L":60,"nv":801,"vmax":40,"Pr":1,"mu1":1,"omega":1,"CFL":0.5,"tmax":2000,"wall_budget":6900},
+    {"name":"BGK_M4_base","mach":4,"nx":960,"L":90,"nv":801,"vmax":40,"Pr":1,"mu1":1,"omega":1,"CFL":0.5,"tmax":2000,"wall_budget":6900},
+    {"name":"BGK_M5_base","mach":5,"nx":1280,"L":120,"nv":801,"vmax":40,"Pr":1,"mu1":1,"omega":1,"CFL":0.5,"tmax":2000,"wall_budget":6900}
+  ],
+  "scope":"Human-authorized original BGK Mach3-5, Pr1, mu proportional T, tau=1/rho. Same native map as the verified Mach2 solver. Cold RH mixtures, no borrowed stationarity credit. Baseline profiles require measured stationarity and later sensitivity checks; successful exit or tmax alone does not qualify a result.",
+  "reference":"Fei et al. 2020, DOI 10.2514/1.J059029, upstream T300K and omega1, standard BGK Pr1. Dimensionless rho1=T1=mu1=1. Compare density in the physical mean-free-path convention, not by identifying it with the thermal relaxation length.",
+  "storage":{"live":"/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/bgk_fei_m3_m5_native_v1","durable_final_intended":"/project/pi_roohie_umass_edu/JFM1439_shock_final_archives/bgk_fei_m3_m5_native_v1","archival_status":"NOT_ARCHIVED"}
+}

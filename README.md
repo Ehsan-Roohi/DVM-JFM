@@ -59,3 +59,8 @@ Earlier scientific and reader revisions remain available through their historica
 ## V24 yellow markup and sparse-information tables
 
 The canonical article.tex now defaults to yellow markup, including direct Overleaf compilation; main_clean.tex explicitly disables it. The bar panels of Figures 7 and 8 are replaced by Tables 8 and 9. The convergence and profile curves remain. Table numbers and cross-references update automatically. The scientific ES-BGK deposit is unchanged. See audit/V24_YELLOW_TABLES_20261011.json and manuscript/figure_reproduction/V24_TABLE_PROVENANCE.json.
+
+
+## Figures 14 and 15: numerical methods, code and data
+
+[Reproduction package](research/figures14_15_20261012/README.md) supplies the six-field CSVs, portable plotting program, PDF figures, actual BGK/ES-BGK/ES-FP sources, parameter/source provenance and links to the Shakhov R26 and Bird DSMC implementations. The README distinguishes each collision discretization and its viscosity/Prandtl convention.

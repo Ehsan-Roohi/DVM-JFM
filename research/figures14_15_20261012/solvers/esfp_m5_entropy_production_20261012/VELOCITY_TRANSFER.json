@@ -1,0 +1,16 @@
+{
+  "from_nv": 51200,
+  "to_nv": 12800,
+  "relative_eight_field_changes": [
+    3.7303493627403306e-16,
+    4.127880273551131e-16,
+    1.591321759795623e-15,
+    4.596385814565868e-07,
+    4.163954731848972e-15,
+    1.4858660902323503e-06,
+    9.23388778548851e-07,
+    1.2597397113518907e-06
+  ],
+  "invariants_preserved": true,
+  "scope": "checkpoint transfer only; velocity accuracy remains to qualify"
+}

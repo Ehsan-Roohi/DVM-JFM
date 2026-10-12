@@ -1,0 +1,62 @@
+{
+  "PASS": true,
+  "tests": [
+    {
+      "nv": 400,
+      "invariants": 4.041029589646192e-14,
+      "stress_BE_error": 3.853774938056276e-13,
+      "heat_BE_discretization_error": 6.720842260943615e-05,
+      "scalar_BE_discretization_error": 7.484008514310998e-05,
+      "equilibrium_error": 8.881784197001252e-16,
+      "diagnostics": [
+        1.2244018055731539e-13,
+        8.105897964405528e-06,
+        0.0053934761700934475,
+        1.0000000005846204,
+        3.3832461951045486e-14
+      ],
+      "minimum_realizability": 0.0
+    },
+    {
+      "nv": 800,
+      "invariants": 2.842170945489025e-14,
+      "stress_BE_error": 2.7310040132755617e-13,
+      "heat_BE_discretization_error": 1.689126621783172e-05,
+      "scalar_BE_discretization_error": 1.8834179459259647e-05,
+      "equilibrium_error": 2.220446049250313e-15,
+      "diagnostics": [
+        8.451718916097618e-14,
+        5.057590670709544e-07,
+        0.0013438831723123768,
+        1.0000000005846146,
+        2.27649615455108e-14
+      ],
+      "minimum_realizability": 0.0
+    },
+    {
+      "nv": 1600,
+      "invariants": 7.693094288541729e-15,
+      "stress_BE_error": 6.447771051233551e-14,
+      "heat_BE_discretization_error": 4.228431759169895e-06,
+      "scalar_BE_discretization_error": 4.716397413185384e-06,
+      "equilibrium_error": 4.440892098500626e-15,
+      "diagnostics": [
+        2.094231235847197e-14,
+        3.159583616962891e-08,
+        0.0003356943130393697,
+        1.0000000005846308,
+        6.6225342677849606e-15
+      ],
+      "minimum_realizability": 0.0
+    }
+  ],
+  "restart_bitwise": true,
+  "binding": {
+    "esfp.py": "892c2b51e5916b88fc7e211e5744d1d4feb7911975c29e2242514beb140cd883",
+    "kernel.c": "86f971528c6dda7ac1378c06764485dbffffd63251ac090e9995a7a046eb8aaf",
+    "kernel.so": "90e9aa3011fc90f3dd1fa0d168b1d3b6293ab89920a8c7f00bd52d3db3848a71",
+    "shakhov_reference.py": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64",
+    "manifest.json": "11445b06f223197b5ec8726dff124b033dbab1a08590ec14d86267b3eb0b94e9"
+  },
+  "scope": "Pure collision/transport fixtures only; no shock stationarity or spatial qualification"
+}

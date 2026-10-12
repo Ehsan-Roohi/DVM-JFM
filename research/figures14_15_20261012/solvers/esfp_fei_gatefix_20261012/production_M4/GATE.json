@@ -1,0 +1,50 @@
+{
+  "PASS": true,
+  "binding": {
+    "continue.py": "068c8203216e04f02df3a2d4fde2771f854e377c66a9faab03bf61f02ed5dc19",
+    "fp.py": "de829b1bab7de6bcb315f93ee987ab26962f0bcdf0a95386e5c4fcbb3cdd1cac",
+    "fp_kernel.c": "559c51cc17ba500f0f3fde41fab5d094ef6ca68ec3f278d77be3cea06d625b74",
+    "fp_kernel.so": "e946e2eaf64e4269f8870f3cf993dad999c61bec9c36408588642f9455a96084",
+    "shakhov_reference.py": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64",
+    "resource_watchdog.py": "14d9f33b7d7743575e9b595aa67bcfdc73b2fa36d6e99b2ecfe681870c58269c"
+  },
+  "oracle_sha": "9c0edb8a02d7dd0fbcf1e8278b99f3021c73db207b5bcf3542c75c815d072f2d",
+  "results": [
+    {
+      "fixture": "refined checkpoint",
+      "outputs_bitwise": true,
+      "diagnostics_bitwise": true,
+      "serial_seconds": 1.3943522230256349,
+      "parallel_seconds": 0.8886267358902842
+    },
+    {
+      "fixture": "equilibrium",
+      "outputs_bitwise": true,
+      "diagnostics_bitwise": true,
+      "serial_seconds": 0.006169170141220093,
+      "parallel_seconds": 0.009237956022843719
+    },
+    {
+      "fixture": "adaptive beta branch",
+      "attempts": [
+        {
+          "nv": 6400,
+          "error": "ESFP collision guard code 2000; no clipping or retry"
+        },
+        {
+          "nv": 12800,
+          "fit": 0.011157942285248579,
+          "PASS": true
+        }
+      ],
+      "beta": -0.5882352941170588,
+      "effective_Pr": 0.9444444444447943,
+      "invariants": 1.9243865760169363e-15,
+      "minimum_diffusion": 9.999778782798785e-13,
+      "stress_source_pass": true
+    }
+  ],
+  "hard_stop_preserved": true,
+  "full_step_balance": 3.3707692445514185e-15,
+  "scope": "Exact kernel equality and one physical map; no convergence"
+}

@@ -1,0 +1,66 @@
+{
+  "PASS": true,
+  "rows": [
+    {
+      "nv": 800,
+      "eqerr": 8.881784197001252e-16,
+      "invariant": 4.870655873038572e-14,
+      "stress": 3.000334791337521e-12,
+      "qerror": 3.167527684596055e-07,
+      "Deltaerror": 1.5684724263628505e-06,
+      "realizability": 3.9436687288773504e-102,
+      "projection": 1.7620019846543052e-06
+    },
+    {
+      "nv": 1600,
+      "eqerr": 1.3322676295501878e-15,
+      "invariant": 3.674239973497834e-14,
+      "stress": 7.834414557660084e-13,
+      "qerror": 8.008285393237709e-08,
+      "Deltaerror": 3.9522873830943654e-07,
+      "realizability": 2.6313751256969882e-102,
+      "projection": 4.4186391449087796e-07
+    },
+    {
+      "nv": 3200,
+      "eqerr": 3.1086244689504383e-15,
+      "invariant": 1.6431291235370147e-14,
+      "stress": 1.7948013036992328e-13,
+      "qerror": 2.0077274237287664e-08,
+      "Deltaerror": 9.90038833112169e-08,
+      "realizability": 1.8432668626027307e-102,
+      "projection": 1.1055270413477394e-07
+    },
+    {
+      "failed_seed_step": 0,
+      "time": 0.7610412597656236,
+      "balance": 4.793357265947839e-14,
+      "projection": 2.104820021369185e-06,
+      "minimum_diffusion": 3.282707439211663e-12,
+      "RHS": 1.7287711217233785,
+      "realizability": 0.0
+    },
+    {
+      "failed_seed_step": 1,
+      "time": 0.7633850097656236,
+      "balance": 3.3542457939939223e-15,
+      "projection": 2.1073002331703985e-06,
+      "minimum_diffusion": 3.2862601528904634e-12,
+      "RHS": 1.7189567030394297,
+      "realizability": 0.0
+    },
+    {
+      "bad_energy_hard_stop": true
+    }
+  ],
+  "binding": {
+    "continue.py": "b401ae2076c71d030a47bbc313bad74ec310a6e8dd64116a208485ed86969760",
+    "fp.py": "de829b1bab7de6bcb315f93ee987ab26962f0bcdf0a95386e5c4fcbb3cdd1cac",
+    "fp_kernel.c": "faf06002602c87c34eac8b457f924d094581f41aac45c5d2bfc4a2c8d82cf6b6",
+    "fp_kernel.so": "c7381f1c33cbf04f18a7a17e5f777c0f185545107140fd4c9fdc2c2d0965fd02",
+    "shakhov_reference.py": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64",
+    "resource_watchdog.py": "14d9f33b7d7743575e9b595aa67bcfdc73b2fa36d6e99b2ecfe681870c58269c"
+  },
+  "validator_sha": "0e23b8ed83ead2ba4e5eb70d4424b5f71b3b03e75ed0784f0381282d82ea32ad",
+  "scope": "Positive entropy moment projection, unchanged physical diffusion; seed continuation only, not convergence"
+}

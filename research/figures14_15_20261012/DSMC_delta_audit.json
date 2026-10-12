@@ -1,0 +1,16 @@
+{
+  "2": {
+    "Delta_definition_max_abs_error": 2.842170943040401e-14,
+    "S_identity_max_abs_error": 2.220446049250313e-16,
+    "Delta_peak": 5.737132531704205,
+    "stored_Delta_block_sd_at_peak": 0.5604203013285982,
+    "statistics_scope": "block SD is not an autocorrelation-corrected confidence interval; 2000 PPC alone does not establish stationarity"
+  },
+  "4": {
+    "Delta_definition_max_abs_error": 4.547473508864641e-13,
+    "S_identity_max_abs_error": 7.105427357601002e-15,
+    "Delta_peak": 188.4139488216746,
+    "stored_Delta_block_sd_at_peak": 7.6177752023158565,
+    "statistics_scope": "block SD is not an autocorrelation-corrected confidence interval; 2000 PPC alone does not establish stationarity"
+  }
+}

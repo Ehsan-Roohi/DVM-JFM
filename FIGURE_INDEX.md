@@ -20,3 +20,8 @@ Every figure referenced by main.tex is deposited below. Scientific sources and c
 | [ figures/M2_DSMC2000_cross_method.png ](manuscript/figures/M2_DSMC2000_cross_method.png) | See provenance/source_inventory.json and research/ figure/source bundles; exact filename binding not independently established here. |
 | [ figures/M3_M5_DSMC2000_DVM_R26.png ](manuscript/figures/M3_M5_DSMC2000_DVM_R26.png) | See provenance/source_inventory.json and research/ figure/source bundles; exact filename binding not independently established here. |
 | [ figures/m8_paper_comparison.png ](manuscript/figures/m8_paper_comparison.png) | research/revision_runs/m8_reference/paper_comparison/compare.py |
+
+
+## Figures 14 and 15: numerical methods, code and data
+
+[Reproduction package](research/figures14_15_20261012/README.md) supplies the six-field CSVs, portable plotting program, PDF figures, actual BGK/ES-BGK/ES-FP sources, parameter/source provenance and links to the Shakhov R26 and Bird DSMC implementations. The README distinguishes each collision discretization and its viscosity/Prandtl convention.

@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "name": "M2_base",
+      "mach": 2,
+      "nx": 320,
+      "nv": 800,
+      "L": 30,
+      "vmax": 40,
+      "CFL": 0.8,
+      "tmax": 2000,
+      "wall_budget": 21000,
+      "Pr": 0.6666666666666666,
+      "mu1": 1,
+      "omega": 1,
+      "beta": -1.25,
+      "collision": "ES-FP fixed beta, fail on nonpositive diffusion"
+    },
+    {
+      "name": "M2_x2",
+      "mach": 2,
+      "nx": 640,
+      "nv": 800,
+      "L": 30,
+      "vmax": 40,
+      "CFL": 0.8,
+      "tmax": 2000,
+      "wall_budget": 21000,
+      "Pr": 0.6666666666666666,
+      "mu1": 1,
+      "omega": 1,
+      "beta": -1.25,
+      "collision": "ES-FP fixed beta, fail on nonpositive diffusion"
+    },
+    {
+      "name": "M2_v2",
+      "mach": 2,
+      "nx": 320,
+      "nv": 1600,
+      "L": 30,
+      "vmax": 40,
+      "CFL": 0.8,
+      "tmax": 2000,
+      "wall_budget": 21000,
+      "Pr": 0.6666666666666666,
+      "mu1": 1,
+      "omega": 1,
+      "beta": -1.25,
+      "collision": "ES-FP fixed beta, fail on nonpositive diffusion"
+    }
+  ],
+  "scope": "Only baseline launch initially; sensitivity cases require baseline guards and exact package gates. No certified accuracy or stationarity from elapsed time."
+}

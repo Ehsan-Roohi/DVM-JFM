@@ -1,0 +1,102 @@
+{
+  "PASS": true,
+  "cold_twenty_step_oracles": {
+    "M2_domain": {
+      "distribution_scaled_max": 3.5003896590065095e-15,
+      "eight_moment_scaled_max": 1.4210854715202004e-13,
+      "old_seconds_20": 1.3556876390357502,
+      "native_seconds_20": 0.19208868994610384,
+      "speedup": 7.057613019361673
+    },
+    "M2_space": {
+      "distribution_scaled_max": 3.589308174688733e-15,
+      "eight_moment_scaled_max": 1.9895196601282805e-13,
+      "old_seconds_20": 3.8203814789885655,
+      "native_seconds_20": 0.3878957799752243,
+      "speedup": 9.848989538459483
+    },
+    "M2_velocity": {
+      "distribution_scaled_max": 3.980872284918974e-15,
+      "eight_moment_scaled_max": 1.9895196601282805e-13,
+      "old_seconds_20": 3.5992566180066206,
+      "native_seconds_20": 0.3784697780502029,
+      "speedup": 9.510023855931742
+    },
+    "M2_halfdt": {
+      "distribution_scaled_max": 4.029242323506749e-15,
+      "eight_moment_scaled_max": 1.7053025658242404e-13,
+      "old_seconds_20": 1.2161321140010841,
+      "native_seconds_20": 0.1876967340358533,
+      "speedup": 6.479239610896917
+    },
+    "M2_domain90": {
+      "distribution_scaled_max": 3.5003896590065095e-15,
+      "eight_moment_scaled_max": 1.4210854715202004e-13,
+      "old_seconds_20": 2.148127068998292,
+      "native_seconds_20": 0.3080384219647385,
+      "speedup": 6.973568606464912
+    }
+  },
+  "bindings": {
+    "bgk.py": "ef7109eddb49baa785bb023fc39c7382a4c5440d051374d8aec14b06041e16bb",
+    "bgk_reference.py": "1013af003e90d06197e1091cb2114f6ee7e3454825dcf09106be8adc261be884",
+    "kernel.c": "f3dbf53df07522b3a9aa3fa94349b9656af586411770213c04ac51ac21d20e76",
+    "kernel.so": "7db64157b44679c334dc20cee874747d536790bc0441969057e66b4755a45d7d",
+    "native_kernel.py": "e995065f3b445958b3d990309012d917af8071a8c4026d0a856675a6cca1360c",
+    "native_gate.py": "6f78ceb7d12578960338eb12678d26f9b0db0de7ab019104c70ca04a456e5278",
+    "manifest.json": "5993adeb5760b6a48168bc022aaf77aaf0963452d14d47fc2f65a072859faf87",
+    "shakhov_reference.py": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64",
+    "bridge.py": "d118b866689b96dadbbeb670c7e0f24597e91c664eed8cd5d37dce1aea030d3b"
+  },
+  "scope": "Cold and exact-cell reservoir-extended saved-state oracles; physical geometry changed prospectively, convergence credit reset",
+  "extended_saved_state_oracles": {
+    "M2_space": {
+      "input_checkpoint": "f065131a76cad7e3745638873751455b9f0df137af5780cc60319b4c8e5b9403",
+      "output_checkpoint": "356a95bdb6417246d7b34727c6dbdca61d1fa57decd069ce785468da24fec102",
+      "original_physical_time": 100.079296875,
+      "physical_time_reset_for_changed_domain": true,
+      "exact_cells_preserved": 640,
+      "reservoir_cells_appended": 640,
+      "distribution_error20": 1.0223950841759848e-15,
+      "moments_error20": 1.7053025658242404e-13,
+      "speedup20": 9.145383936585512,
+      "no_probe_step_saved": true
+    },
+    "M2_velocity": {
+      "input_checkpoint": "33b05e316bc3c9ab11b5b5d6332e1e4ddef55fb495ad603fd2682c838eb405d8",
+      "output_checkpoint": "7e35838cc77628dc3055c00d517a3ffff103f91a5e1ad5edf5c27c0d23f54433",
+      "original_physical_time": 63.658593749999994,
+      "physical_time_reset_for_changed_domain": true,
+      "exact_cells_preserved": 320,
+      "reservoir_cells_appended": 320,
+      "distribution_error20": 3.583784807205517e-15,
+      "moments_error20": 1.4210854715202004e-13,
+      "speedup20": 9.79761785974398,
+      "no_probe_step_saved": true
+    },
+    "M2_halfdt": {
+      "input_checkpoint": "766464bd40d10e9494c10651fe75d685e1e5197b9e8b9c48a968448ba66923a4",
+      "output_checkpoint": "f9db6c7a67d73bf23324063eee6ea68b6310c745c1e53e471b2bbc0e3290f848",
+      "original_physical_time": 71.896875,
+      "physical_time_reset_for_changed_domain": true,
+      "exact_cells_preserved": 320,
+      "reservoir_cells_appended": 320,
+      "distribution_error20": 9.222205234943674e-16,
+      "moments_error20": 1.4210854715202004e-13,
+      "speedup20": 6.5912667545994275,
+      "no_probe_step_saved": true
+    },
+    "M2_domain90": {
+      "input_checkpoint": "0dfcbbf6d82aef68a38e45813b96dea9a3f8d70c4c95b3118e92aa64e21de504",
+      "output_checkpoint": "753703c3a4c5773bcf6c7f74156749329f02d13fcf488eeced98044a9aaad70e",
+      "original_physical_time": 382.98046875,
+      "physical_time_reset_for_changed_domain": true,
+      "exact_cells_preserved": 320,
+      "reservoir_cells_appended": 640,
+      "distribution_error20": 2.2722569364157065e-15,
+      "moments_error20": 1.7053025658242404e-13,
+      "speedup20": 6.098700839253695,
+      "no_probe_step_saved": true
+    }
+  }
+}

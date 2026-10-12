@@ -1,0 +1,375 @@
+{
+  "inputs": [
+    {
+      "model": "DSMC",
+      "mach": 2,
+      "unchanged_archived_csv": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\figure14_matched_models_20261011\\raw_DSMC_M2.csv",
+      "csv_sha256": "9a85f827a4137a683b7b1d1f47543855df2b2e0938ff80a8fb3701a35e058c96"
+    },
+    {
+      "model": "BGK",
+      "mach": 2,
+      "unchanged_archived_csv": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\figure14_matched_models_20261011\\BGK_M2_profiles.csv",
+      "csv_sha256": "2867d4ac1dd5e6b69ae73215072fe3f85d169249a11e5227b9227af8a6687c1a"
+    },
+    {
+      "model": "Shakhov DVM",
+      "mach": 2,
+      "unchanged_archived_csv": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\figure14_matched_models_20261011\\raw_DVM_M2.csv",
+      "csv_sha256": "c52d35fd73116f12969a80a33128ee374e712ca76b56d1de97dfbb2c9c7d1854"
+    },
+    {
+      "model": "Shakhov R26",
+      "mach": 2,
+      "unchanged_archived_csv": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\figure14_matched_models_20261011\\raw_R26_M2.csv",
+      "csv_sha256": "d5241b98dd158418c86d869800ad6dfd3dc61ff29198a0cd0a14a734edc3332b"
+    },
+    {
+      "model": "ES-FP",
+      "mach": 2,
+      "unchanged_archived_csv": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\figure14_matched_models_20261011\\ESFP_M2_profiles.csv",
+      "csv_sha256": "97dec437d392bc0ddf64cc5e0606b05d0169fbeb1ac1d973aa3858abcb3eaca8"
+    },
+    {
+      "model": "DSMC",
+      "mach": 3,
+      "unchanged_archived_csv": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\figure15_matched_models_20261011\\M3_DSMC.csv",
+      "csv_sha256": "00cd4053effe1badd1501fbfeaa9690c9e7c584bfef6a2dda4a959472d3d5277"
+    },
+    {
+      "model": "BGK",
+      "mach": 3,
+      "unchanged_archived_csv": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\figure15_matched_models_20261011\\M3_BGK.csv",
+      "csv_sha256": "c56006e302b90b53cb106705d48ef0a1fe6252987e7881b60cf8b33b9c9bfb1e"
+    },
+    {
+      "model": "Shakhov DVM",
+      "mach": 3,
+      "unchanged_archived_csv": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\figure15_matched_models_20261011\\M3_Shakhov_DVM.csv",
+      "csv_sha256": "5c38033a54cef03fad1989decd7e87c7e63f81941f390e00810b0a8440340787"
+    },
+    {
+      "model": "Shakhov R26",
+      "mach": 3,
+      "unchanged_archived_csv": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\figure15_matched_models_20261011\\M3_Shakhov_R26.csv",
+      "csv_sha256": "c5288a9f3d6cc0c4a2878401237c2d19ca7d5c18a0ac630f9b254f35afdc2d6e"
+    },
+    {
+      "model": "DSMC",
+      "mach": 4,
+      "unchanged_archived_csv": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\figure15_matched_models_20261011\\M4_DSMC.csv",
+      "csv_sha256": "5df9ad7043df3d47efa5d77483881370294d1bce0a7f6a4cecb7300f3ff92f13"
+    },
+    {
+      "model": "BGK",
+      "mach": 4,
+      "unchanged_archived_csv": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\figure15_matched_models_20261011\\M4_BGK.csv",
+      "csv_sha256": "cee861bf84cce865acb74c4a240289250c224358583a71add1f23efa4cad48ba"
+    },
+    {
+      "model": "Shakhov DVM",
+      "mach": 4,
+      "unchanged_archived_csv": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\figure15_matched_models_20261011\\M4_Shakhov_DVM.csv",
+      "csv_sha256": "cfd0847266c791637c033505ad7e43e784aa3841c63b08ff6a850a5c40d003ff"
+    },
+    {
+      "model": "DSMC",
+      "mach": 5,
+      "unchanged_archived_csv": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\figure15_matched_models_20261011\\M5_DSMC.csv",
+      "csv_sha256": "5f037779b5c15f5722a85c48a37d8b42714e29a09d9ca5183bc4e4f0c1067d08"
+    },
+    {
+      "model": "Shakhov DVM",
+      "mach": 5,
+      "unchanged_archived_csv": "C:\\Users\\roohie\\.codex\\visualizations\\2026\\10\\03\\01a1023c-6cfa-7133-852d-6a14a4709c20\\figure15_matched_models_20261011\\M5_Shakhov_DVM.csv",
+      "csv_sha256": "cef3a5efadaf6cb05cce831590bc983d186b01cae3a28c8fb0d00d8633fb828c"
+    },
+    {
+      "model": "ESBGK",
+      "mach": 2,
+      "source": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/shock_matrix_tol6_20261011/runs/ESBGK_M2",
+      "profile_sha256": "2db7626cb09141c7d5bae79fb9cc91ed155f6f46141fd337c86b277c0a3cbb3c",
+      "final_rhs": 5.104627545378514e-06,
+      "time": 295.46015625,
+      "config": {
+        "name": "ESBGK_M2",
+        "model": "ESBGK",
+        "mach": 2,
+        "L": 60,
+        "nx": 640,
+        "nv": 801,
+        "vmax": 40,
+        "Pr": 0.6666666666666666,
+        "mu1": 1,
+        "omega": 1,
+        "CFL": 0.5,
+        "tmax": 2000,
+        "wall_budget": 21000,
+        "tolerance": 1e-06,
+        "launch": true
+      },
+      "user_rhs_converged": true,
+      "original_stationary_flag": false,
+      "plot_model": "ES-BGK",
+      "density_midpoint_shift": -0.14247618382318575,
+      "csv_sha256": "111cfbfb9d023d13e3d91acd83bc6246b767e33455afee0248ec3500f897ca2d"
+    },
+    {
+      "model": "ESBGK",
+      "mach": 3,
+      "source": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/shock_matrix_tol6_20261011/runs/ESBGK_M3",
+      "profile_sha256": "0143c923dab5fcfc4377a9a1a1d01cc7d3e903863592d50495010b11e866860d",
+      "final_rhs": 8.275650760314478e-05,
+      "time": 175.1015625,
+      "config": {
+        "name": "ESBGK_M3",
+        "model": "ESBGK",
+        "mach": 3,
+        "L": 90,
+        "nx": 960,
+        "nv": 801,
+        "vmax": 40,
+        "Pr": 0.6666666666666666,
+        "mu1": 1,
+        "omega": 1,
+        "CFL": 0.5,
+        "tmax": 2000,
+        "wall_budget": 21000,
+        "tolerance": 1e-06,
+        "launch": true
+      },
+      "user_rhs_converged": true,
+      "original_stationary_flag": false,
+      "plot_model": "ES-BGK",
+      "density_midpoint_shift": -0.05385973258368377,
+      "csv_sha256": "10e53a15b3bc9b1cee7d8cf82b1c34d51d7db5a67abb8dbecf895a22d1cb1adf"
+    },
+    {
+      "model": "ESBGK",
+      "mach": 4,
+      "source": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/shock_longtime_20261011/matched_matrix_v1/runs/ESBGK_M4_base",
+      "profile_sha256": "2f6cea1d71926c1c6b39fd24df3a94db2ab20824aec2d0b9dbefe52ab294062b",
+      "final_rhs": 4.949110653047367e-05,
+      "time": 2000.0024999999998,
+      "config": {
+        "mach": 4,
+        "name": "ESBGK_M4_base",
+        "nx": 640,
+        "L": 60,
+        "nv": 401,
+        "vmax": 40,
+        "Pr": 0.6666666666666666,
+        "mu1": 1,
+        "omega": 1,
+        "CFL": 0.8,
+        "tmax": 2000,
+        "wall_budget": 21000
+      },
+      "user_rhs_converged": true,
+      "original_stationary_flag": false,
+      "plot_model": "ES-BGK",
+      "density_midpoint_shift": 0.15221448723521377,
+      "csv_sha256": "85e671313448056ad5ab2dad2aefe4b73f84ff406eb138898d96ce4017d5c4b5"
+    },
+    {
+      "model": "ESBGK",
+      "mach": 5,
+      "source": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/shock_longtime_20261011/matched_matrix_v1/runs/ESBGK_M5_base",
+      "profile_sha256": "999d4fa156c547a8ac0bce05dcf86a3d00422c482dee1ae4a3c384c9b0f605ec",
+      "final_rhs": 4.6800292833933736e-05,
+      "time": 2000.0024999999998,
+      "config": {
+        "mach": 5,
+        "name": "ESBGK_M5_base",
+        "nx": 800,
+        "L": 75,
+        "nv": 401,
+        "vmax": 40,
+        "Pr": 0.6666666666666666,
+        "mu1": 1,
+        "omega": 1,
+        "CFL": 0.8,
+        "tmax": 2000,
+        "wall_budget": 21000
+      },
+      "user_rhs_converged": true,
+      "original_stationary_flag": false,
+      "plot_model": "ES-BGK",
+      "density_midpoint_shift": 0.21117353709913744,
+      "csv_sha256": "09d05db8bcef82c313f2f5b21f50b2366b0dbcdd85249fa39074c8869593c4ab"
+    },
+    {
+      "model": "ESFP",
+      "mach": 3,
+      "source": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/shock_matrix_tol6_20261011/runs/ESFP_M3",
+      "profile_sha256": "f7da3c8d94ccae3c9a780905e59ad8b2fecfa641f6a30e5950c110eaf3dbca24",
+      "final_rhs": 9.13559156191227e-05,
+      "time": 65.36953125,
+      "config": {
+        "name": "ESFP_M3",
+        "model": "ESFP",
+        "mach": 3,
+        "L": 90,
+        "nx": 960,
+        "nv": 800,
+        "vmax": 40,
+        "Pr": 0.6666666666666666,
+        "mu1": 1,
+        "omega": 1,
+        "CFL": 0.5,
+        "tmax": 2000,
+        "wall_budget": 21000,
+        "tolerance": 1e-06,
+        "launch": true
+      },
+      "user_rhs_converged": true,
+      "original_stationary_flag": false,
+      "plot_model": "ES-FP",
+      "density_midpoint_shift": 0.10455019737821672,
+      "csv_sha256": "4623f22163178fe36dceaae001ec1fbdd5af53b6fe5eeab399cd91f4efff3bc0"
+    },
+    {
+      "model": "BGK",
+      "mach": 5,
+      "source": "/scratch3/workspace/roohie_umass_edu-jfm1439-r26-m2-20261007/bgk_fei_m3_m5_native_v1/runs/BGK_M5_base",
+      "profile_sha256": "f890d997095e355bd28cfc4dd77291c10869d0fa0d5346f5fbfeaba3aadaf94c",
+      "final_rhs": 3.31232795079735e-09,
+      "time": 573.77578125,
+      "config": {
+        "name": "BGK_M5_base",
+        "mach": 5,
+        "nx": 1280,
+        "L": 120,
+        "nv": 801,
+        "vmax": 40,
+        "Pr": 1,
+        "mu1": 1,
+        "omega": 1,
+        "CFL": 0.5,
+        "tmax": 2000,
+        "wall_budget": 6900
+      },
+      "user_rhs_converged": true,
+      "original_stationary_flag": true,
+      "plot_model": "BGK",
+      "density_midpoint_shift": -0.1892625783210348,
+      "csv_sha256": "d1b88c18afa39000a8a1c525c82a4eea126d892022bb02aa40cd6473d978f32f"
+    },
+    {
+      "mach": 4,
+      "step": 12400,
+      "time": 29.06250000000621,
+      "config": {
+        "name": "ESFP_M4_velocity_refined_pilot",
+        "model": "ESFP",
+        "mach": 4,
+        "L": 120,
+        "nx": 1280,
+        "nv": 6400,
+        "vmax": 40,
+        "Pr": 0.6666666666666666,
+        "mu1": 1,
+        "omega": 1,
+        "CFL": 0.5,
+        "tmax": 2000,
+        "wall_budget": 1500,
+        "tolerance": 0.0001,
+        "launch": true,
+        "max_steps": 800
+      },
+      "checkpoint_sha256": "6273533f6c5130dc0919847f78fbe3fad6bdc8370958efdba47fa2d69048d53f",
+      "profile_sha256": "461ef0d807173fb7df9ab973d9d542b10a5911d9b208e89f31146f1c7bb8a874",
+      "binding": {
+        "continue.py": "068c8203216e04f02df3a2d4fde2771f854e377c66a9faab03bf61f02ed5dc19",
+        "fp.py": "de829b1bab7de6bcb315f93ee987ab26962f0bcdf0a95386e5c4fcbb3cdd1cac",
+        "fp_kernel.c": "559c51cc17ba500f0f3fde41fab5d094ef6ca68ec3f278d77be3cea06d625b74",
+        "fp_kernel.so": "e946e2eaf64e4269f8870f3cf993dad999c61bec9c36408588642f9455a96084",
+        "resource_watchdog.py": "14d9f33b7d7743575e9b595aa67bcfdc73b2fa36d6e99b2ecfe681870c58269c",
+        "shakhov_reference.py": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64"
+      },
+      "progress": {
+        "max_effective_Pr": 0.6666666666666666,
+        "active_beta_cells": 0,
+        "step": 12400,
+        "time": 29.06250000000621,
+        "nv": 6400,
+        "rhs": 0.0006207484525910491,
+        "drift": 0.00028842805676841703,
+        "maximum_balance": 7.753604208547525e-15,
+        "minimum_diffusion": 0.7748405994455598,
+        "max_relative_fit": 0.00017925277699926134,
+        "seconds": 3196.1930780769326
+      },
+      "scope": "Saved live checkpoint; transient profile, no convergence claim",
+      "model": "ESFP",
+      "final_rhs": 0.0006207484525910491,
+      "transient": true,
+      "plot_model": "ES-FP",
+      "density_midpoint_shift": 0.2797097906174144,
+      "csv_sha256": "2452c096b4d59592a7f62039bf141150fb1631078706315e35c1a27a3a2958e0"
+    },
+    {
+      "mach": 5,
+      "step": 5200,
+      "time": 12.177447509764496,
+      "config": {
+        "name": "ESFP_M5_tol4",
+        "model": "ESFP",
+        "mach": 5,
+        "L": 150,
+        "nx": 1600,
+        "nv": 12800,
+        "vmax": 40,
+        "Pr": 0.6666666666666666,
+        "mu1": 1,
+        "omega": 1,
+        "CFL": 0.5,
+        "tmax": 2000,
+        "wall_budget": 21000,
+        "tolerance": 0.0001,
+        "launch": true
+      },
+      "checkpoint_sha256": "0923f921c00b07112c8116ab06090fd2e0e3043c8230507374b5a331a6672df3",
+      "profile_sha256": "8d6a4f9f13ebd4d89679bf308d05ca002f528a690f6bd24b68ae76bde20ee77a",
+      "binding": {
+        "continue.py": "b401ae2076c71d030a47bbc313bad74ec310a6e8dd64116a208485ed86969760",
+        "fp.py": "de829b1bab7de6bcb315f93ee987ab26962f0bcdf0a95386e5c4fcbb3cdd1cac",
+        "fp_kernel.c": "faf06002602c87c34eac8b457f924d094581f41aac45c5d2bfc4a2c8d82cf6b6",
+        "fp_kernel.so": "c7381f1c33cbf04f18a7a17e5f777c0f185545107140fd4c9fdc2c2d0965fd02",
+        "resource_watchdog.py": "14d9f33b7d7743575e9b595aa67bcfdc73b2fa36d6e99b2ecfe681870c58269c",
+        "shakhov_reference.py": "9a20d251b6328e1e49c67e53663f4339ea907c2732bcc89ccb7559c9af20cd64"
+      },
+      "progress": {
+        "dt": 0.00234375,
+        "max_effective_Pr": 0.6666666666666666,
+        "active_beta_cells": 0,
+        "step": 5200,
+        "time": 12.177447509764496,
+        "nv": 12800,
+        "rhs": 0.004522466941058807,
+        "drift": 0.0022393010885644565,
+        "maximum_balance": 5.34761169795134e-15,
+        "minimum_diffusion": 0.5936648978381025,
+        "max_positive_projection": 3.402178161033875e-08,
+        "seconds": 3039.3470439170487
+      },
+      "scope": "Saved live checkpoint; transient profile, no convergence claim",
+      "model": "ESFP",
+      "final_rhs": 0.004522466941058807,
+      "transient": true,
+      "plot_model": "ES-FP",
+      "density_midpoint_shift": 0.46809115622699415,
+      "csv_sha256": "3e37d38545f509061da1b6462fd50529b649d0b9d4d73ebcd675dc1c68e77ea6"
+    }
+  ],
+  "criterion": "User-requested max scaled original-map eight-field RHS <1e-4. Drift recorded independently; no mesh-independence inference.",
+  "alignment": "one density-midpoint translation only; no smoothing, width fitting, amplitude fitting or plateau subtraction",
+  "missing": {
+    "ES-FP": [],
+    "Shakhov R26": [
+      4,
+      5
+    ]
+  },
+  "replaced": "Latest checked closed ESBGK2--5, ESFP3 and BGK5 profiles replace earlier snapshots"
+}
